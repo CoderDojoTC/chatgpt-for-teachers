@@ -8,13 +8,13 @@ You want to generate a mkdocs configuration file that includes:
 ## Prompt
 
 ```
-I want to create a new microsite using mkdocs and the material theme.  Generate a samle mkdocs.yaml file that includes a left-side nav bar and pages for home, lessons, a glossary, references and contacts.  Add an the extension that allows me to create a custom footer html for my license.
+I want to create a new microsite using mkdocs and the material theme.  Generate a sample mkdocs.yml file that includes a left-side nav bar and pages for home, lessons, a glossary, references and contacts.  Add extensions that allows me to create a custom html footer for my license on every page.  Add an extension for code highlighting.
 ```
 
 ## Response
 
 ```
-site_name: My Microsite
+site_name: ChatGPT for Teachers
 
 theme:
   name: 'material'

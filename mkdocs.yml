@@ -1,12 +1,46 @@
-site_name: My Microsite
+site_name: ChatGPT For Teachers
+site_description: 'Resources for showing teachers how to use ChatGPT to generate curriculum.  All content licensed Creative Commons ShareAlike Attribution Noncommercial'
+site_author: 'Dan McCreary'
+repo_name: 'GitHub Repo'
+repo_url: 'https://github.com/CoderDojoTC/chat-gpt-for-teachers'
 
+# CoderDojo Microsite Standards from here down
+
+edit_uri: 'blob/master/docs'
 theme:
-  name: 'material'
+  # should be name: material
   language: en
+  name: material
+  logo: img/coderdojo-logo.png
+  palette:
+    primary: '#642580'
+    accent: '#41BAC1'
+  custom_dir: 'theme'
+  include_sidebar: true
+plugins:
+  - search
+  # - mermaid2 - takes too long to build - use a screen image for now
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - pymdownx.highlight:
+      linenums: true
 
 nav:
   - Home: index.md
-  - Lessons: lessons.md
+  - Getting Started: getting-started.md
+  - Sample Prompts:
+    - Intro: index.md
+    - Syllabus: 01-syllabus.md
+    - Code of Conduct: code-of-conduct.md
+    - License: 03-license.md
+    - License Footer: 04-license-footer.md
+    - Mkdocs Config: 05-mkdocs.md
+    - Lessons: 06-lessons.md
+    - Glossary; 07-glossary.md
+  - Tips and Tricks: tips-and-tricks.md
   - Glossary: glossary.md
   - References: references.md
   - Contacts: contacts.md

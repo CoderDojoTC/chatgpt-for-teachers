@@ -10,8 +10,9 @@ This is a course to help teachers use ChatGPT to generate content for their clas
    3. Legal and ethical issues
 2. Key Concepts
    1. Prompts and responses
-   2. Tokens
-   3. Markdown
+   2. Tokens (with a lab)
+   3. Temperature
+   4. Markdown
 3. Creating Great Prompts
    1. Making prompts clear
    2. Giving context

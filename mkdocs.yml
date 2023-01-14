@@ -27,19 +27,21 @@ markdown_extensions:
   - attr_list
   - pymdownx.highlight:
       linenums: true
+  - footnotes
+  - codehilite
 
 nav:
   - Home: index.md
   - Getting Started: getting-started.md
   - Sample Prompts:
-    - Intro: index.md
-    - Syllabus: 01-syllabus.md
-    - Code of Conduct: code-of-conduct.md
-    - License: 03-license.md
-    - License Footer: 04-license-footer.md
-    - Mkdocs Config: 05-mkdocs.md
-    - Lessons: 06-lessons.md
-    - Glossary; 07-glossary.md
+    - Intro: prompts/index.md
+    - Syllabus: prompts/01-syllabus.md
+    - Code of Conduct: prompts/code-of-conduct.md
+    - License: prompts/03-license.md
+    - License Footer: prompts/04-license-footer.md
+    - Mkdocs Config: prompts/05-mkdocs.md
+    - Lessons: prompts/06-lessons.md
+    - Glossary: prompts/07-glossary.md
   - Tips and Tricks: tips-and-tricks.md
   - Glossary: glossary.md
   - References: references.md
@@ -51,9 +53,7 @@ extra_css:
 extra_javascript:
   - custom.js
 
-markdown_extensions:
-  - footnotes
-  - codehilite
+
 
 footer_html:
   - <p>Copyright © 2020 My Microsite. All rights reserved.</p>

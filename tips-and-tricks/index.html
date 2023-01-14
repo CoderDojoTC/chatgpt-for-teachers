@@ -18,7 +18,7 @@
     
     
       
-        <title>Prompt Guide - ChatGPT For Teachers</title>
+        <title>Tips and Tricks - ChatGPT For Teachers</title>
       
     
     
@@ -99,7 +99,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              Prompt Guide
+              Tips and Tricks
             
           </span>
         </div>
@@ -259,7 +259,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../prompts/" class="md-nav__link">
         Intro
       </a>
     </li>
@@ -271,7 +271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-syllabus.md" class="md-nav__link">
+      <a href="../prompts/01-syllabus/" class="md-nav__link">
         Syllabus
       </a>
     </li>
@@ -283,7 +283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../code-of-conduct.md" class="md-nav__link">
+      <a href="../prompts/code-of-conduct.md" class="md-nav__link">
         Code of Conduct
       </a>
     </li>
@@ -295,7 +295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-license.md" class="md-nav__link">
+      <a href="../prompts/03-license/" class="md-nav__link">
         License
       </a>
     </li>
@@ -307,7 +307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04-license-footer.md" class="md-nav__link">
+      <a href="../prompts/04-license-footer/" class="md-nav__link">
         License Footer
       </a>
     </li>
@@ -319,7 +319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05-mkdocs.md" class="md-nav__link">
+      <a href="../prompts/05-mkdocs/" class="md-nav__link">
         Mkdocs Config
       </a>
     </li>
@@ -331,7 +331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../06-lessons.md" class="md-nav__link">
+      <a href="../prompts/06-lessons/" class="md-nav__link">
         Lessons
       </a>
     </li>
@@ -343,8 +343,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../Glossary; 07-glossary.md" class="md-nav__link">
-        None
+      <a href="../prompts/07-glossary/" class="md-nav__link">
+        Glossary
       </a>
     </li>
   
@@ -363,11 +363,77 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../tips-and-tricks.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Tips and Tricks
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Tips and Tricks
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#provide-context" class="md-nav__link">
+    Provide Context
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#give-examples" class="md-nav__link">
+    Give Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ask-questions" class="md-nav__link">
+    Ask questions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-format" class="md-nav__link">
+    Output Format
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#try-line-art-formats" class="md-nav__link">
+    Try Line Art Formats
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -491,7 +557,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/CoderDojoTC/chat-gpt-for-teachers/blob/master/docs/prompt-guide.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/CoderDojoTC/chat-gpt-for-teachers/blob/master/docs/tips-and-tricks.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -505,15 +571,21 @@
 </ol>
 <h2 id="give-examples">Give Examples</h2>
 <p>Include in your prompt examples of what you are looking for.  If you want a list of things include the first items from a list.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">Generate</span> <span class="n">a</span> <span class="n">list</span> <span class="k">of</span> <span class="n">topics</span> <span class="k">for</span> <span class="n">a</span> <span class="k">class</span> <span class="k">on</span> <span class="n">Python</span><span class="p">:</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Generate a list of topics for a class on Python:
 
-<span class="mi">1</span><span class="p">.</span> <span class="n">Getting</span> <span class="n">started</span>
-<span class="mi">2</span><span class="p">.</span> <span class="n">Variables</span>
-<span class="mi">3</span><span class="p">.</span> <span class="n">Conditionals</span>
-<span class="mi">4</span><span class="p">.</span> <span class="n">Loops</span>
-<span class="mi">5</span><span class="p">.</span> <span class="n">Debugging</span>
+1. Getting started
+2. Variables
+3. Conditionals
+4. Loops
+5. Debugging
 </code></pre></div>
-
+</td></tr></table>
 <h2 id="ask-questions">Ask questions</h2>
 <p>To ensure the output is relevant and helpful, ask specific questions within the prompt. This will give the model a better understanding of what you’re looking for.</p>
 <h2 id="output-format">Output Format</h2>
@@ -538,6 +610,41 @@ Practice makes perfect. Keep practicing and refining your prompts. As you gain m
       
         
   <footer class="md-footer">
+    
+      <div class="md-footer-nav">
+        <nav class="md-footer-nav__inner md-grid">
+          
+            <a href="../prompts/07-glossary/" title="Glossary" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+              <div class="md-flex__cell md-flex__cell--shrink">
+                <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+              </div>
+              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+                <span class="md-flex__ellipsis">
+                  <span class="md-footer-nav__direction">
+                    Previous
+                  </span>
+                  Glossary
+                </span>
+              </div>
+            </a>
+          
+          
+            <a href="../glossary/" title="Glossary" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+                <span class="md-flex__ellipsis">
+                  <span class="md-footer-nav__direction">
+                    Next
+                  </span>
+                  Glossary
+                </span>
+              </div>
+              <div class="md-flex__cell md-flex__cell--shrink">
+                <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+              </div>
+            </a>
+          
+        </nav>
+      </div>
     
     <div class="md-footer-meta md-typeset">
       <div class="md-footer-meta__inner md-grid">

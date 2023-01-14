@@ -259,7 +259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../" class="md-nav__link">
         Intro
       </a>
     </li>
@@ -271,7 +271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01-syllabus.md" class="md-nav__link">
+      <a href="../01-syllabus/" class="md-nav__link">
         Syllabus
       </a>
     </li>
@@ -283,7 +283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../code-of-conduct.md" class="md-nav__link">
+      <a href="../code-of-conduct.md" class="md-nav__link">
         Code of Conduct
       </a>
     </li>
@@ -295,7 +295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03-license.md" class="md-nav__link">
+      <a href="../03-license/" class="md-nav__link">
         License
       </a>
     </li>
@@ -307,7 +307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04-license-footer.md" class="md-nav__link">
+      <a href="../04-license-footer/" class="md-nav__link">
         License Footer
       </a>
     </li>
@@ -319,7 +319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05-mkdocs.md" class="md-nav__link">
+      <a href="../05-mkdocs/" class="md-nav__link">
         Mkdocs Config
       </a>
     </li>
@@ -331,7 +331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06-lessons.md" class="md-nav__link">
+      <a href="../06-lessons/" class="md-nav__link">
         Lessons
       </a>
     </li>
@@ -343,8 +343,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Glossary; 07-glossary.md" class="md-nav__link">
-        None
+      <a href="../07-glossary/" class="md-nav__link">
+        Glossary
       </a>
     </li>
   
@@ -365,7 +365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tips-and-tricks.md" class="md-nav__link">
+      <a href="../../tips-and-tricks/" class="md-nav__link">
         Tips and Tricks
       </a>
     </li>
@@ -510,30 +510,46 @@
 <h2 id="response">Response</h2>
 <p>To see if ChatGPT understands the idea of concept order we want to get a response that shows that you need to understand functions before you use function parameters or recursion.</p>
 <p>here is the response:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">    D --&gt; G(Data Structures)</span>
-<span class="err">    F --&gt; G</span>
-<span class="err">    G --&gt; H(Functions)</span>
-<span class="err">    H --&gt; I(Function Parameters)</span>
-<span class="err">    H --&gt; J(Random Numbers)</span>
-<span class="err">    H --&gt; K(Recursion)</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    D --&gt; G(Data Structures)
+    F --&gt; G
+    G --&gt; H(Functions)
+    H --&gt; I(Function Parameters)
+    H --&gt; J(Random Numbers)
+    H --&gt; K(Recursion)
 </code></pre></div>
-
+</td></tr></table>
 <p>Yes indeed! ChatGPT knew that concept H(Functions) needs to be taught before Function Parameters and Recursion.</p>
 <p>Here is the entire list</p>
-<div class="codehilite"><pre><span></span><code><span class="err">graph LR</span>
-<span class="err">    A(Intro) --&gt; B(Getting Started)</span>
-<span class="err">    B --&gt; C(Variables)</span>
-<span class="err">    C --&gt; D(Loops)</span>
-<span class="err">    C --&gt; E(Conditionals)</span>
-<span class="err">    C --&gt; F(Lists)</span>
-<span class="err">    D --&gt; G(Data Structures)</span>
-<span class="err">    F --&gt; G</span>
-<span class="err">    G --&gt; H(Functions)</span>
-<span class="err">    H --&gt; I(Function Parameters)</span>
-<span class="err">    H --&gt; J(Random Numbers)</span>
-<span class="err">    H --&gt; K(Recursion)</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>graph LR
+    A(Intro) --&gt; B(Getting Started)
+    B --&gt; C(Variables)
+    C --&gt; D(Loops)
+    C --&gt; E(Conditionals)
+    C --&gt; F(Lists)
+    D --&gt; G(Data Structures)
+    F --&gt; G
+    G --&gt; H(Functions)
+    H --&gt; I(Function Parameters)
+    H --&gt; J(Random Numbers)
+    H --&gt; K(Recursion)
 </code></pre></div>
-
+</td></tr></table>
 <h2 id="concept-graph_1">Concept Graph</h2>
 <p><a href="https://mermaid.live/edit#pako:eNpdkMFqwzAMhl_F6ORA-wI5DNZkSbuFMVLYKRc11lqz2g6KfBil7z43WQuZT9b3f7ZsXaAPhiCHI-NwUk3beZXWs9554ZCp9fpJbXRNItYf1V6QhUw2S5spLfQnssXDmcY_Xky81E0Iw5K96CJ4Y8UGj-dlVOnGjnJn5cRqXaJg6sqxl8iPBtWczkU9FVtdRd_fLr5L24nvHlx9IKMjIV4ar7pFb4JT79Ed_odvuqU-8pjOZ7ACR-zQmjSuy83qQE7kqIM8bQ3ydwedvyYPo4T9j-8hT0-nFcTBoFBpMU3ZQf6VPk_XXzpjb_o">Link to Mermaid Live</a></p>
 <p>~<a href="../../img/concept-graph.png">Image of Concept Graph</a></p>

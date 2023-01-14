@@ -36,24 +36,22 @@ nav:
   - Sample Prompts:
     - Intro: prompts/index.md
     - Syllabus: prompts/01-syllabus.md
-    - Code of Conduct: prompts/code-of-conduct.md
+    - Code of Conduct: prompts/02-code-of-conduct.md
+    - Concept Graph: prompts/08-concept-graph.md 
     - License: prompts/03-license.md
     - License Footer: prompts/04-license-footer.md
     - Mkdocs Config: prompts/05-mkdocs.md
     - Lessons: prompts/06-lessons.md
     - Glossary: prompts/07-glossary.md
   - Tips and Tricks: tips-and-tricks.md
+  - Slides: slides.md
   - Glossary: glossary.md
   - References: references.md
   - Contacts: contacts.md
 
-extra_css:
-  - custom.css
 
-extra_javascript:
-  - custom.js
-
-
-
-footer_html:
-  - <p>Copyright © 2020 My Microsite. All rights reserved.</p>
+#extra_css:
+#  - custom.css
+# Lets put the Google Analytics in here
+# extra_javascript:
+#  - custom.js

@@ -1,0 +1,25 @@
+site_name: My Microsite
+
+theme:
+  name: 'material'
+  language: en
+
+nav:
+  - Home: index.md
+  - Lessons: lessons.md
+  - Glossary: glossary.md
+  - References: references.md
+  - Contacts: contacts.md
+
+extra_css:
+  - custom.css
+
+extra_javascript:
+  - custom.js
+
+markdown_extensions:
+  - footnotes
+  - codehilite
+
+footer_html:
+  - <p>Copyright © 2020 My Microsite. All rights reserved.</p>

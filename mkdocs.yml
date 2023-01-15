@@ -11,7 +11,7 @@ theme:
   # should be name: material
   language: en
   name: material
-  logo: img/coderdojo-logo.png
+  logo: img/code-savvy-logo.png
   palette:
     primary: '#642580'
     accent: '#41BAC1'

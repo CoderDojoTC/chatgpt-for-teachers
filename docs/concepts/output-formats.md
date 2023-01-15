@@ -5,8 +5,7 @@ Just text today
 Text types:
 
 * Markdown
-* Markdown table
+* Markdown tables
 * HTML
 * SVG
 * Mermaid
-* 

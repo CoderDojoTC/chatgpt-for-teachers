@@ -37,6 +37,7 @@ nav:
     - Intro: concepts/index.md
     - Prompts: concepts/prompts.md
     - Tokens: concepts/tokens.md
+    - Output Formats: concepts/output-formats.md
   - Sample Prompts:
     - Intro: prompts/index.md
     - Syllabus: prompts/01-syllabus.md

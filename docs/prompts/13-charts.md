@@ -35,9 +35,9 @@ fig.update_layout(title_text='Area of Continents')
 fig.show()
 ```
 
-![](../img/bar-chart.pngbar-chart.png)
+![](../img/bar-chart.png)
 
-Note the area is million of square miles.
+Note the area is millions of square kilometers.
 
 ## Prompt
 ```

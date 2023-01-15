@@ -42,6 +42,12 @@ nav:
     - License Footer: prompts/04-license-footer.md
     - Mkdocs Config: prompts/05-mkdocs.md
     - Lessons: prompts/06-lessons.md
+    - Sample Code: prompts/09-sample-code.md
+    - Turtle Graphics: prompts/09a-turtle-graphics.md
+    - HTML: prompts/10-html.md
+    - SVG: prompts/11-svg.md
+    - Debugging: prompts/12-debugging.md
+    - Charts and Plotting: prompts/13.charts.md
     - Glossary: prompts/07-glossary.md
   - Tips and Tricks: tips-and-tricks.md
   - Slides: slides.md

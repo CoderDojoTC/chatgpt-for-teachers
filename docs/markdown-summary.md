@@ -54,3 +54,8 @@ Image
 ```
 ![Alt Text](../img/path)
 ```
+
+Code
+
+Tables
+

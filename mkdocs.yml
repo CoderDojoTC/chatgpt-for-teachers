@@ -35,6 +35,7 @@ nav:
   - Getting Started: getting-started.md
   - Concepts:
     - Intro: concepts/index.md
+    - Ethics: concepts/ethics.md
     - Prompts: concepts/prompts.md
     - Tokens: concepts/tokens.md
     - Output Formats: concepts/output-formats.md
@@ -52,10 +53,13 @@ nav:
     - HTML: prompts/10-html.md
     - SVG: prompts/11-svg.md
     - Debugging: prompts/12-debugging.md
+    - Explaining Code: prompts/17-explaining-code.md
     - Charts and Plotting: prompts/13-charts.md
     - Tables: prompts/14-tables.md
     - Glossary: prompts/07-glossary.md
   - Tips and Tricks: tips-and-tricks.md
+  - Advanced Topics:
+    - Intro: advanced-topics/index.md
   - Slides: slides.md
   - Glossary: glossary.md
   - Markdown Summary: markdown-summary.md

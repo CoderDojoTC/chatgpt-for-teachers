@@ -43,7 +43,7 @@ nav:
     - Prompts: concepts/prompts.md
     - Tokens: concepts/tokens.md
     - Output Formats: concepts/output-formats.md
-  - Sample Prompts:
+  - Basic Prompts:
     - Intro: prompts/index.md
     - Syllabus: prompts/01-syllabus.md
     - Code of Conduct: prompts/02-code-of-conduct.md
@@ -58,6 +58,7 @@ nav:
     - SVG: prompts/11-svg.md
     - Debugging: prompts/12-debugging.md
     - Explaining Code: prompts/17-explaining-code.md
+  - Intermediate Prompts:
     - Designing Robots: prompts/18-designing-robots.md
     - Comparing Microcontrollers: prompts/19-comparing-microcontrollers.md
     - Charts and Plotting: prompts/13-charts.md

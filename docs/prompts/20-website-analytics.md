@@ -82,3 +82,11 @@ extra:
 pip3 install --upgrade mkdocs-material
 Successfully installed mkdocs-material-8.2.11 mkdocs-material-extensions-1.0.3 pygments-2.11.2 pymdown-extensions-9.1
 ```
+
+## Verify Google Analytics
+
+Use the Google Chrome More Tools -> Developer Tools -> Elements menus.
+
+Then click on the <head> arrow to open the head element.  There you should see the Google Analytics scripts:
+
+![](../img/verify-google-analytics.png)

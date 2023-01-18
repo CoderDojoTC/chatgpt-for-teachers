@@ -55,13 +55,21 @@ nav:
     - Debugging: prompts/12-debugging.md
     - Explaining Code: prompts/17-explaining-code.md
     - Designing Robots: prompts/18-designing-robots.md
-    - Comparing Microcontrollers: prompts/18-comparing-microcontrollers.md
+    - Comparing Microcontrollers: prompts/19-comparing-microcontrollers.md
     - Charts and Plotting: prompts/13-charts.md
     - Tables: prompts/14-tables.md
     - Glossary: prompts/07-glossary.md
+    - prompts/16-quiz.md 
   - Tips and Tricks: tips-and-tricks.md
   - Advanced Topics:
     - Intro: advanced-topics/index.md
+    - advanced-topics/alternatives.md
+    - advanced-topics/classification.md
+    - advanced-topics/costs.md
+    - advanced-topics/embeddings.md
+    - advanced-topics/fine-tuning.md
+    - prompts/15-micropython.md
+
   - Slides: slides.md
   - Glossary: glossary.md
   - Markdown Summary: markdown-summary.md

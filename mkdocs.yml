@@ -33,7 +33,7 @@ markdown_extensions:
 extra:
   analytics:
     provider: google
-    property: G-HPYNX9B8QZ
+    property: G-20VNY7Q9TB
 nav:
   - Home: index.md
   - Getting Started: getting-started.md

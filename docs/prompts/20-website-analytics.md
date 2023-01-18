@@ -62,6 +62,8 @@ How do I install a Google Analytics Tracking Code on my website?
 
 ## Actual process
 
+[mkdocs material site analytics](https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/#configuration)
+
 Open your mkdocs.yml and add the following lines
 
 ```yml

@@ -72,3 +72,13 @@ extra:
     provider: google
     property: G-HPYNX9B8QZ
 ```
+
+![Google Analytics Configuration](../img/google-analyics-configuration.png)
+
+!!! Note
+  To use this feature, you must be on mkdocs-material [7.1.8](https://github.com/squidfunk/mkdocs-material/releases/tag/7.1.8) or later.
+
+```sh
+pip3 install --upgrade mkdocs-material
+Successfully installed mkdocs-material-8.2.11 mkdocs-material-extensions-1.0.3 pygments-2.11.2 pymdown-extensions-9.1
+```

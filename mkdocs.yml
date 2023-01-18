@@ -73,6 +73,7 @@ nav:
     - advanced-topics/embeddings.md
     - advanced-topics/fine-tuning.md
     - prompts/15-micropython.md
+    - prompts/20-website-analytics.md 
 
   - Slides: slides.md
   - Glossary: glossary.md

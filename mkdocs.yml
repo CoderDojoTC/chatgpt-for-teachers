@@ -30,6 +30,10 @@ markdown_extensions:
   - footnotes
   - codehilite
 
+extra:
+  analytics:
+    provider: google
+    property: G-HPYNX9B8QZ
 nav:
   - Home: index.md
   - Getting Started: getting-started.md

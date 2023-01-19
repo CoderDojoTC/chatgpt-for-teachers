@@ -71,7 +71,9 @@ nav:
     - Designing Robots: prompts/18-designing-robots.md
     - Comparing Microcontrollers: prompts/19-comparing-microcontrollers.md
     - Charts and Plotting: prompts/13-charts.md
+    - List: prompts/22.lists.md
     - Tables: prompts/14-tables.md
+    - Scatter Plots: prompts/21-scatter-plots.md
     - Glossary: prompts/07-glossary.md
     - prompts/16-quiz.md 
   - Tips and Tricks: tips-and-tricks.md

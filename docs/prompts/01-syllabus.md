@@ -8,13 +8,15 @@
 
 ## Prompt
 
+```
+Create a syllabus for a 10-week course for junior high school
+students on computational thinking. Provide the first four lessons.
+For each lesson, include a summary of the topics covered, prerequisites,
+and learning objectives.  Results in markdown format.
+```
 ## Response
 
 ```
-Create a syllabus for a 10-week course for junior high school students on computational thinking. Provide the first four lessons. For each lesson, include a summary of the topics covered, prerequisites, and learning objectives.  Results in markdown format.
-
-
-
 # Computational Thinking Course Syllabus 
 
 ## Course Description

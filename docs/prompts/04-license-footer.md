@@ -1,4 +1,6 @@
-# License Footer
+# Adding a License to the Footer
+
+[mkdocs material footer](https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/)
 
 ## Prompt
 

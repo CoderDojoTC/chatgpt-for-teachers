@@ -17,6 +17,10 @@ theme:
     accent: '#41BAC1'
   custom_dir: 'theme'
   include_sidebar: true
+  features:
+    - navigation.footer
+  extra:
+    generator: false
 plugins:
   - search
   # - mermaid2 - takes too long to build - use a screen image for now
@@ -34,6 +38,7 @@ extra:
   analytics:
     provider: google
     property: G-20VNY7Q9TB
+
 nav:
   - Home: index.md
   - Getting Started: getting-started.md
@@ -81,10 +86,3 @@ nav:
   - Markdown Summary: markdown-summary.md
   - References: references.md
   - Contacts: contacts.md
-
-
-#extra_css:
-#  - custom.css
-# Lets put the Google Analytics in here
-# extra_javascript:
-#  - custom.js

@@ -21,6 +21,7 @@ theme:
     - navigation.footer
   extra:
     generator: false
+    custom_dir: theme/
 plugins:
   - search
   # - mermaid2 - takes too long to build - use a screen image for now

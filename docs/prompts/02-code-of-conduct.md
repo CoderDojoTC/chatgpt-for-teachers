@@ -2,13 +2,15 @@
 
 ChatGPT can generate a code of conduct for your classroom that can be easily customized.
 
-## Prompt 1
+## High School Example
+
+### Prompt 1
 
 ```
 Create a code of conduct for a high school programming class.
 ```
 
-## Result
+### Result
 
 ```
 Code of Conduct for High School Programming Class
@@ -27,13 +29,16 @@ Code of Conduct for High School Programming Class
 Failure to adhere to this code of conduct may result in disciplinary action.
 ```
 
-## Prompt 2
+### Junior High Grouped Prompt 
+
+In this example we ask ChatGPT to group the code into topics.
 
 ```
 Create a code of conduct for a junior high school classroom.  
 Include topics of values, diversity and respect.
 ```
 
+### Response
 ```
 Code of Conduct for Junior High School Classroom
 
@@ -56,3 +61,9 @@ Respect:
 
 Failure to adhere to this code of conduct may result in disciplinary action.
 ```
+
+## Online Classes
+
+For online classrooms add the words "Contributor Covenant Code of Conduct" to your prompt
+
+[Contributor Covenant](https://www.contributor-covenant.org/)

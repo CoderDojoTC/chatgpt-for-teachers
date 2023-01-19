@@ -74,6 +74,7 @@ nav:
     - List: prompts/22.lists.md
     - Tables: prompts/14-tables.md
     - Scatter Plots: prompts/21-scatter-plots.md
+    - Dataframes: prompts/23-dataframes.md
     - Glossary: prompts/07-glossary.md
     - prompts/16-quiz.md 
   - Tips and Tricks: tips-and-tricks.md

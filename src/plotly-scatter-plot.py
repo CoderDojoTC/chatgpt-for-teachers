@@ -10,5 +10,5 @@ data = {'Country': ['USA', 'Canada', 'Mexico', 'Brazil', 'Chile', 'Peru', 'Argen
 df = pd.DataFrame(data)
 
 # Create the scatter plot
-fig = px.scatter(df, x='Life Expectancy', y='Healthcare Cost', text='Country')
+fig = px.scatter(df, y='Life Expectancy', x='Healthcare Cost', text='Country')
 fig.show()

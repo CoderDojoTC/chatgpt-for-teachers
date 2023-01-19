@@ -1,5 +1,11 @@
 # Scatter Plots
 
+We want to create a graph like this:
+
+[Life Expectancy vs Healthcare Costs](https://ourworldindata.org/grapher/life-expectancy-vs-health-expenditure)
+
+We will do this by having ChatGPT generate some sample data and the Python Plotly code to view that data in a scatter plot.  There is a tutorial on this topic on the [Plotly Line and Scatter](https://plotly.com/python/line-and-scatter/) website.
+
 ## Prompt
 
 ```

@@ -650,6 +650,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../22.lists/" class="md-nav__link">
+        List
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -699,10 +713,52 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tables-with-data" class="md-nav__link">
+    Tables with Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt" class="md-nav__link">
+    Prompt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-conversion" class="md-nav__link">
+    Data Conversion
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../21-scatter-plots/" class="md-nav__link">
+        Scatter Plots
+      </a>
     </li>
   
 
@@ -1018,6 +1074,34 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tables-with-data" class="md-nav__link">
+    Tables with Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt" class="md-nav__link">
+    Prompt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-conversion" class="md-nav__link">
+    Data Conversion
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1115,6 +1199,107 @@ and a pale orange tinge to them.
 </tr>
 </tbody>
 </table>
+<h2 id="tables-with-data">Tables with Data</h2>
+<p>You can also ask ChatGPT to create tables with data in them.</p>
+<h2 id="prompt">Prompt</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Create a markdown table with three columns.
+In the first column, put the name of the countries in north and south america.
+In the second column, put the average life expectancy.
+In the third column, put the average annual cost of healthcare.
+</code></pre></div>
+</td></tr></table>
+<h2 id="response">Response</h2>
+<table>
+<thead>
+<tr>
+<th>Country</th>
+<th>Average Life Expectancy</th>
+<th>Average Annual Cost of Healthcare</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>USA</td>
+<td>78.9 years</td>
+<td>$10,348</td>
+</tr>
+<tr>
+<td>Canada</td>
+<td>82.2 years</td>
+<td>$4,826</td>
+</tr>
+<tr>
+<td>Mexico</td>
+<td>75.9 years</td>
+<td>$1,845</td>
+</tr>
+<tr>
+<td>Brazil</td>
+<td>75.2 years</td>
+<td>$1,845</td>
+</tr>
+<tr>
+<td>Chile</td>
+<td>79.7 years</td>
+<td>$2,845</td>
+</tr>
+<tr>
+<td>Peru</td>
+<td>74.9 years</td>
+<td>$1,845</td>
+</tr>
+<tr>
+<td>Argentina</td>
+<td>76.7 years</td>
+<td>$2,845</td>
+</tr>
+<tr>
+<td>Colombia</td>
+<td>73.7 years</td>
+<td>$1,845</td>
+</tr>
+<tr>
+<td>Venezuela</td>
+<td>73.7 years</td>
+<td>$1,845</td>
+</tr>
+<tr>
+<td>Costa Rica</td>
+<td>79.2 years</td>
+<td>$2,845</td>
+</tr>
+</tbody>
+</table>
+<h2 id="data-conversion">Data Conversion</h2>
+<p><strong>Prompt:</strong> Convert the following into a Pandas dataframe</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># Create a dictionary containing the data</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Country&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;USA&#39;</span><span class="p">,</span> <span class="s1">&#39;Canada&#39;</span><span class="p">,</span> <span class="s1">&#39;Mexico&#39;</span><span class="p">,</span> <span class="s1">&#39;Brazil&#39;</span><span class="p">,</span> <span class="s1">&#39;Chile&#39;</span><span class="p">,</span> <span class="s1">&#39;Peru&#39;</span><span class="p">,</span> <span class="s1">&#39;Argentina&#39;</span><span class="p">,</span> <span class="s1">&#39;Colombia&#39;</span><span class="p">,</span> <span class="s1">&#39;Venezuela&#39;</span><span class="p">,</span> <span class="s1">&#39;Costa Rica&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Life Expectancy&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">78.9</span><span class="p">,</span> <span class="mf">82.2</span><span class="p">,</span> <span class="mf">75.9</span><span class="p">,</span> <span class="mf">75.2</span><span class="p">,</span> <span class="mf">79.7</span><span class="p">,</span> <span class="mf">74.9</span><span class="p">,</span> <span class="mf">76.7</span><span class="p">,</span> <span class="mf">73.7</span><span class="p">,</span> <span class="mf">73.7</span><span class="p">,</span> <span class="mf">79.2</span><span class="p">],</span>
+        <span class="s1">&#39;Healthcare Cost&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">10348</span><span class="p">,</span> <span class="mi">4826</span><span class="p">,</span> <span class="mi">1845</span><span class="p">,</span> <span class="mi">1845</span><span class="p">,</span> <span class="mi">2845</span><span class="p">,</span> <span class="mi">1845</span><span class="p">,</span> <span class="mi">2845</span><span class="p">,</span> <span class="mi">1845</span><span class="p">,</span> <span class="mi">1845</span><span class="p">,</span> <span class="mi">2845</span><span class="p">]}</span>
+
+<span class="c1"># Create a DataFrame from the dictionary</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c1"># Print the DataFrame</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 
               
             </article>
@@ -1129,7 +1314,7 @@ and a pale orange tinge to them.
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../13-charts/" title="Charts and Plotting" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../22.lists/" title="List" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1138,19 +1323,19 @@ and a pale orange tinge to them.
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Charts and Plotting
+                List
               </span>
             </div>
           </a>
         
         
-          <a href="../07-glossary/" title="Glossary" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../21-scatter-plots/" title="Scatter Plots" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Glossary
+                Scatter Plots
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

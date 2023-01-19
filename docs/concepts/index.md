@@ -1,4 +1,4 @@
-# GPT Concepts
+# ChatGPT Concepts
 
 1. Prompts
 2. Tokens

@@ -14,9 +14,9 @@ The way this course runs is that the instructor will show you a suggested prompt
 ChatGPT can only generate plain text.  If you want to display graphics, tables and charts you will need
 to copy the text into another tool.
 
-### No installation web rendering tools
+### No installation web-rendering tools
 
-Use these if you have only a web browser or Chromebook
+Use these if you have only a web browser or Chromebook.  No apps need to be installed.
 
 1. [Trinket.io](http://trinket.io) good for rendering basic Python and turtle graphics
 2. [JSFiddle.com](http://JSFiddle.com) - good for testing HTML, JavaScript and SVG

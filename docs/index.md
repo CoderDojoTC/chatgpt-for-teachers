@@ -13,11 +13,11 @@ This is a course to help teachers use ChatGPT to generate content for their clas
    2. Tokens (with a lab)
    3. Temperature
    4. Markdown
-3. Part 3: Creating Great Prompts
+3. Part 3: Basic Prompts
    1. Making prompts clear
    2. Giving context
    3. Refining prompts
-4. Part 4: Sample Prompts
+4. Part 4: Intermediate Prompts
    1. Syllabus
    2. Code of Conduct
    3. Selecting a License

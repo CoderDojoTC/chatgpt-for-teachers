@@ -94,3 +94,48 @@ Make the table head be white text on a blue background.  Make the row be alterna
     </tr>
   </tbody>
 </table>
+
+## HTML Definition Lists
+
+### Prompt
+
+```
+What are the most common HTML elements used by 7th grade students?
+List the elements and how they are used in an HTML definition list.
+```
+
+```
+<dl>
+  <dt>Heading</dt>
+  <dd>Used to define the title of a document or section.</dd>
+  <dt>Paragraph</dt>
+  <dd>Used to define a section of text.</dd>
+  <dt>Hyperlink</dt>
+  <dd>Used to link to other webpages or documents.</dd>
+  <dt>Image</dt>
+  <dd>Used to add an image to a webpage.</dd>
+  <dt>List</dt>
+  <dd>Used to create a list of items.</dd>
+  <dt>Table</dt>
+  <dd>Used to create a data table.</dd>
+  <dt>Form</dt>
+  <dd>Used to create an interactive form for collecting user data.</dd>
+</dl>
+```
+
+<dl>
+  <dt>Heading</dt>
+  <dd>Used to define the title of a document or section.</dd>
+  <dt>Paragraph</dt>
+  <dd>Used to define a section of text.</dd>
+  <dt>Hyperlink</dt>
+  <dd>Used to link to other webpages or documents.</dd>
+  <dt>Image</dt>
+  <dd>Used to add an image to a webpage.</dd>
+  <dt>List</dt>
+  <dd>Used to create a list of items.</dd>
+  <dt>Table</dt>
+  <dd>Used to create a data table.</dd>
+  <dt>Form</dt>
+  <dd>Used to create an interactive form for collecting user data.</dd>
+</dl>

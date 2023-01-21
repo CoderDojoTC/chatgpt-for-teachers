@@ -25,13 +25,14 @@ You can use this to copy the prompts into ChatGPT and the code into Trinket.
 
 We need to tell ChatGPT to use the Python turtle library.
 
-``` linenums="None"
+```
 Use the Python turtle library to draw a square.
 ```
 
 ### Response
 
 ```python
+# GPT Prompt: Use the Python turtle library to draw a square.
 import turtle
 
 # Create a turtle object

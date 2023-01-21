@@ -1,18 +1,23 @@
 # Turtle Graphics
 
-We can use ChatGPT to generate turtle graphics code and then use [trinket.io](http://trinket.io) to execute the code.
-In these labs we will use ChatGPT to generate Python code and they we will copy
+We can use ChatGPT to generate turtle graphics code and then use [trinket.io](http://trinket.io) 
+to execute the code.  Trinket is a free kid-safe website that runs you turtle graphs programs.
+
+In these labs, we will use ChatGPT to generate Python code and then we can copy
 the code and paste it into Trinket to test the drawing of the code.  You might want to
 create your own account in trinket so you can save your work.  We will
 be using the older (free) Python (not Python 3) for our labs.
 
-We will be drawing on
+With turtle graphics, we usually draw on
 a standard screen that is 400x400 in size and the point (0,0) is in the middle of the screen
 so that ```forward(100)``` will move about 1/4 the length of the screen.
 
 When we need to turn a turtle, we need to give
 it a command such as ```right(90)``` that tells it to take a 90-degree right turn.
 We need 360 degrees to make a turtle turn fully around.
+
+The sample code on this page has a small "copy code" icon in the upper right corner of the screen.
+You can use this to copy the prompts into ChatGPT and the code into Trinket.
 
 ## Draw a Square
 
@@ -138,8 +143,8 @@ a range of 0 to 1.  The drawing library within Trinket uses a color range of 0 t
 we were using the 0 to 255 standard so the following lines:
 
 ```python
-    # Set the random color
-    t.fillcolor(random.random(), random.random(), random.random())
+# Set the random color
+t.fillcolor(random.random(), random.random(), random.random())
 ```
 
 The function ```random.random()``` generates a random decimal number from 0 to 1
@@ -147,8 +152,8 @@ The function ```random.random()``` generates a random decimal number from 0 to 1
 are not correct for Trinket.  Here is the correct version:
 
 ```python
-    # Set the random colors as r,g,b values that are integers from 0 to 255
-    t.fillcolor(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
+# Set the random colors as r,g,b values that are integers from 0 to 255
+t.fillcolor(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
 ```
 
 We could manually fix this by scaling the colors by 255.  But that means

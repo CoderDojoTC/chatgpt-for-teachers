@@ -554,16 +554,50 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#format-a-button" class="md-nav__link">
+    Format a Button
+  </a>
+  
+    <nav class="md-nav" aria-label="Format a Button">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#prompt" class="md-nav__link">
     Prompt
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#result" class="md-nav__link">
-    Result
+        
+          <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    Response
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html-table-formatting" class="md-nav__link">
+    HTML Table Formatting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompt_1" class="md-nav__link">
+    Prompt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_1" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1047,16 +1081,50 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#format-a-button" class="md-nav__link">
+    Format a Button
+  </a>
+  
+    <nav class="md-nav" aria-label="Format a Button">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#prompt" class="md-nav__link">
     Prompt
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#result" class="md-nav__link">
-    Result
+        
+          <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    Response
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html-table-formatting" class="md-nav__link">
+    HTML Table Formatting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompt_1" class="md-nav__link">
+    Prompt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_1" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1079,7 +1147,8 @@
 
 
 <h1 id="html-output">HTML Output</h1>
-<h2 id="prompt">Prompt</h2>
+<h2 id="format-a-button">Format a Button</h2>
+<h3 id="prompt">Prompt</h3>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1089,11 +1158,96 @@ Make the text white.
 When clicked the button should take you to the site http://example.com
 </code></pre></div>
 </td></tr></table>
-<h2 id="result">Result</h2>
+<h3 id="response">Response</h3>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>&lt;a href=&quot;http://example.com&quot; style=&quot;background-color: #00FF00; border:2px solid black; padding: 10px 20px; color: #FFFFFF; font-size: 16px; font-weight: bold;&quot;&gt;Press Me&lt;/a&gt;
 </code></pre></div>
 </td></tr></table>
 <p><a href="http://example.com" style="background-color: #00FF00; border:2px solid black; padding: 10px 20px; color: #FFFFFF; font-size: 16px; font-weight: bold;">Press Me</a></p>
+<h3 id="html-table-formatting">HTML Table Formatting</h3>
+<h3 id="prompt_1">Prompt</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Create an HTML table with three columns:
+
+1. Full name of a state in the US
+2. State abbreviation code
+3. State population
+
+Make the table hearer be white text on a blue background.  Make the row be alternating white and light gray.
+</code></pre></div>
+</td></tr></table>
+<h3 id="response_1">Response</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>&lt;table style=&quot;background-color: #0000FF; color: #FFFFFF;&quot;&gt;
+  &lt;tr style=&quot;background-color: #FFFFFF;&quot;&gt;
+    &lt;th&gt;Full Name of a State in the US&lt;/th&gt;
+    &lt;th&gt;State Abbreviation Code&lt;/th&gt;
+    &lt;th&gt;State Population&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr style=&quot;background-color: #EEEEEE;&quot;&gt;
+    &lt;td&gt;California&lt;/td&gt;
+    &lt;td&gt;CA&lt;/td&gt;
+    &lt;td&gt;39,512,223&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr style=&quot;background-color: #FFFFFF;&quot;&gt;
+    &lt;td&gt;Texas&lt;/td&gt;
+    &lt;td&gt;TX&lt;/td&gt;
+    &lt;td&gt;28,995,881&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr style=&quot;background-color: #EEEEEE;&quot;&gt;
+    &lt;td&gt;Florida&lt;/td&gt;
+    &lt;td&gt;FL&lt;/td&gt;
+    &lt;td&gt;21,477,737&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre></div>
+</td></tr></table>
+<table style="background-color: #0000FF; color: #FFFFFF;">
+  <tr style="background-color: #FFFFFF;">
+    <th>Full Name of a State in the US</th>
+    <th>State Abbreviation Code</th>
+    <th>State Population</th>
+  </tr>
+  <tr style="background-color: #EEEEEE;">
+    <td>California</td>
+    <td>CA</td>
+    <td>39,512,223</td>
+  </tr>
+  <tr style="background-color: #FFFFFF;">
+    <td>Texas</td>
+    <td>TX</td>
+    <td>28,995,881</td>
+  </tr>
+  <tr style="background-color: #EEEEEE;">
+    <td>Florida</td>
+    <td>FL</td>
+    <td>21,477,737</td>
+  </tr>
+</table>
 
               
             </article>

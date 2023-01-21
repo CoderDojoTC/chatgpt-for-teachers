@@ -554,13 +554,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#response" class="md-nav__link">
-    Response
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -582,7 +575,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#response_1" class="md-nav__link">
+  <a href="#response" class="md-nav__link">
     Response
   </a>
   
@@ -1135,13 +1128,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#response" class="md-nav__link">
-    Response
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -1163,7 +1149,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#response_1" class="md-nav__link">
+  <a href="#response" class="md-nav__link">
     Response
   </a>
   
@@ -1244,10 +1230,8 @@ You can use this to copy the prompts into ChatGPT and the code into Trinket.</p>
 <h2 id="draw-a-square">Draw a Square</h2>
 <h3 id="draw-square-prompt">Draw Square Prompt</h3>
 <p>We need to tell ChatGPT to use the Python turtle library.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Use the Python turtle library to draw a square.
-</code></pre></div>
-</td></tr></table>
-<h3 id="response">Response</h3>
+<p>``` linenums="None"
+Use the Python turtle library to draw a square.
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1275,36 +1259,42 @@ You can use this to copy the prompts into ChatGPT and the code into Trinket.</p>
 <span class="normal">25</span>
 <span class="normal">26</span>
 <span class="normal">27</span>
-<span class="normal">28</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">turtle</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>### Response
 
-<span class="c1"># Create a turtle object</span>
-<span class="n">t</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+```python
+import turtle
 
-<span class="c1"># Move the turtle forward by 100 pixels</span>
-<span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+# Create a turtle object
+t = turtle.Turtle()
 
-<span class="c1"># Turn the turtle 90 degrees to the right</span>
-<span class="n">t</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+# Move the turtle forward by 100 pixels
+t.forward(100)
 
-<span class="c1"># Move the turtle forward by 100 pixels</span>
-<span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+# Turn the turtle 90 degrees to the right
+t.right(90)
 
-<span class="c1"># Turn the turtle 90 degrees to the right</span>
-<span class="n">t</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+# Move the turtle forward by 100 pixels
+t.forward(100)
 
-<span class="c1"># Move the turtle forward by 100 pixels</span>
-<span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+# Turn the turtle 90 degrees to the right
+t.right(90)
 
-<span class="c1"># Turn the turtle 90 degrees to the right</span>
-<span class="n">t</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+# Move the turtle forward by 100 pixels
+t.forward(100)
 
-<span class="c1"># Move the turtle forward by 100 pixels</span>
-<span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+# Turn the turtle 90 degrees to the right
+t.right(90)
 
-<span class="c1"># Turn the turtle 90 degrees to the right</span>
-<span class="n">t</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+# Move the turtle forward by 100 pixels
+t.forward(100)
+
+# Turn the turtle 90 degrees to the right
+t.right(90)
 </code></pre></div>
-</td></tr></table>
+</td></tr></table></p>
 <p><img alt="" src="../../img/turtle-draw-square.png" /></p>
 <p><a href="https://trinket.io/library/trinkets/a8d83baa81">Watch the turtle draw on Trinket.io</a></p>
 <div class="admonition challenges">
@@ -1337,7 +1327,7 @@ filled in with random colors.
 Place the squares randomly on the page.
 </code></pre></div>
 </td></tr></table>
-<h3 id="response_1">Response</h3>
+<h3 id="response">Response</h3>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>

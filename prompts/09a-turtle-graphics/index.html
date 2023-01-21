@@ -540,16 +540,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#simple-turtle-prompt" class="md-nav__link">
-    Simple Turtle Prompt
+  <a href="#draw-a-square" class="md-nav__link">
+    Draw a Square
+  </a>
+  
+    <nav class="md-nav" aria-label="Draw a Square">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#draw-square-prompt" class="md-nav__link">
+    Draw Square Prompt
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#response" class="md-nav__link">
     Response
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1108,16 +1121,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#simple-turtle-prompt" class="md-nav__link">
-    Simple Turtle Prompt
+  <a href="#draw-a-square" class="md-nav__link">
+    Draw a Square
+  </a>
+  
+    <nav class="md-nav" aria-label="Draw a Square">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#draw-square-prompt" class="md-nav__link">
+    Draw Square Prompt
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#response" class="md-nav__link">
     Response
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1201,15 +1227,24 @@
 
 
 <h1 id="turtle-graphics">Turtle Graphics</h1>
-<p>You can use ChatGPT to generate turtle graphics code and then use trinket.io to execute the code.</p>
-<p>Before we begin, we should mention that when we need to turn a turtle, we need to give
+<p>We can use ChatGPT to generate turtle graphics code and then use <a href="http://trinket.io">trinket.io</a> to execute the code.
+In these labs we will use ChatGPT to generate Python code and they we will copy
+the code and paste it into Trinket to test the drawing of the code.  You might want to
+create your own account in trinket so you can save your work.  We will
+be using the older (free) Python (not Python 3) for our labs.</p>
+<p>We will be drawing on
+a standard screen that is 400x400 in size and the point (0,0) is in the middle of the screen
+so that <code>forward(100)</code> will move about 1/4 the length of the screen.</p>
+<p>When we need to turn a turtle, we need to give
 it a command such as <code>right(90)</code> that tells it to take a 90-degree right turn.
 We need 360 degrees to make a turtle turn fully around.</p>
-<h2 id="simple-turtle-prompt">Simple Turtle Prompt</h2>
+<h2 id="draw-a-square">Draw a Square</h2>
+<h3 id="draw-square-prompt">Draw Square Prompt</h3>
+<p>We need to tell ChatGPT to use the Python turtle library.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Use the Python turtle library to draw a square.
 </code></pre></div>
 </td></tr></table>
-<h2 id="response">Response</h2>
+<h3 id="response">Response</h3>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1269,10 +1304,23 @@ We need 360 degrees to make a turtle turn fully around.</p>
 </td></tr></table>
 <p><img alt="" src="../../img/turtle-draw-square.png" /></p>
 <p><a href="https://trinket.io/library/trinkets/a8d83baa81">Watch the turtle draw on Trinket.io</a></p>
-<div class="admonition challenge">
-<p class="admonition-title">Challenge</p>
+<div class="admonition challenges">
+<p class="admonition-title">Challenges</p>
+<ol>
+<li>
+<p>Can you ask ChatGPT to change the name of your turtle?</p>
+</li>
+<li>
+<p>Can you ask ChatGPT to use a for loop to draw the square?</p>
+</li>
+<li>
+<p>Can you ask ChatGPT to draw a square with a specific size and starting location?</p>
+</li>
+<li>
 <p>What other patterns can you draw?  Can you generate a triangle, a circle, a hexagon,
 an octagon and a five-pointed star?</p>
+</li>
+</ol>
 </div>
 <p>We learned that just by using a few functions such as <code>forward()</code> and <code>right()</code> that we can create
 some cool drawings!</p>
@@ -1280,7 +1328,9 @@ some cool drawings!</p>
 <p>Let's start with a simple program that draws a bunch of random squares on the screen.</p>
 <h3 id="random-squares-prompt-1">Random Squares Prompt #1</h3>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Use the Python turtle library to draw a set squares that are filled in with random colors.
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Use the Python turtle library to draw a set squares that are
+filled in with random colors.
 Place the squares randomly on the page.
 </code></pre></div>
 </td></tr></table>
@@ -1389,8 +1439,12 @@ draw_square() function and tell it to use color, x and y as input
 parameters.</p>
 <h3 id="force-function-prompt">Force Function Prompt</h3>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Use the Python turtle library to draw a squares of different
-colors at random locations.  Create a function called draw_square that has inputs of color, x and y.  Make sure to begin the fill and end the fill and remember that colors range from 0 to 255.
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Use the Python turtle library to draw a squares of different
+colors at random locations.  Create a function called draw_square
+that has inputs of color, x and y.  Make sure to begin the fill
+and end the fill and remember that colors range from 0 to 255.
 </code></pre></div>
 </td></tr></table>
 <h3 id="force-function-response">Force Function Response</h3>

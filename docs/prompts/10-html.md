@@ -29,55 +29,63 @@ Create an HTML table with three columns:
 2. State abbreviation code
 3. State population
 
-Make the table hearer be white text on a blue background.  Make the row be alternating white and light gray.
+Make the table head be white text on a blue background.  Make the row be alternating white and light gray.
 ```
 
 ### Response
 
 ```
-<table style="background-color: #0000FF; color: #FFFFFF;">
-  <tr style="background-color: #FFFFFF;">
-    <th>Full Name of a State in the US</th>
-    <th>State Abbreviation Code</th>
-    <th>State Population</th>
-  </tr>
-  <tr style="background-color: #EEEEEE;">
-    <td>California</td>
-    <td>CA</td>
-    <td>39,512,223</td>
-  </tr>
-  <tr style="background-color: #FFFFFF;">
-    <td>Texas</td>
-    <td>TX</td>
-    <td>28,995,881</td>
-  </tr>
-  <tr style="background-color: #EEEEEE;">
-    <td>Florida</td>
-    <td>FL</td>
-    <td>21,477,737</td>
-  </tr>
+<table style="background-color: blue; color: white;">
+  <thead>
+    <tr>
+      <th>Full Name of State</th>
+      <th>State Abbreviation Code</th>
+      <th>State Population</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background-color: white; color: black;">
+      <td>California</td>
+      <td>CA</td>
+      <td>39.5 million</td>
+    </tr>
+    <tr style="background-color: lightgray; color: black;">
+      <td>Texas</td>
+      <td>TX</td>
+      <td>28.7 million</td>
+    </tr>
+    <tr style="background-color: white; color: black;">
+      <td>Florida</td>
+      <td>FL</td>
+      <td>21.3 million</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
-<table style="background-color: #0000FF; color: #FFFFFF;">
-  <tr style="background-color: #FFFFFF;">
-    <th>Full Name of a State in the US</th>
-    <th>State Abbreviation Code</th>
-    <th>State Population</th>
-  </tr>
-  <tr style="background-color: #EEEEEE;">
-    <td>California</td>
-    <td>CA</td>
-    <td>39,512,223</td>
-  </tr>
-  <tr style="background-color: #FFFFFF;">
-    <td>Texas</td>
-    <td>TX</td>
-    <td>28,995,881</td>
-  </tr>
-  <tr style="background-color: #EEEEEE;">
-    <td>Florida</td>
-    <td>FL</td>
-    <td>21,477,737</td>
-  </tr>
+<table style="background-color: blue; color: white;">
+  <thead>
+    <tr>
+      <th>Full Name of State</th>
+      <th>State Abbreviation Code</th>
+      <th>State Population</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background-color: white; color: black;">
+      <td>California</td>
+      <td>CA</td>
+      <td>39.5 million</td>
+    </tr>
+    <tr style="background-color: lightgray; color: black;">
+      <td>Texas</td>
+      <td>TX</td>
+      <td>28.7 million</td>
+    </tr>
+    <tr style="background-color: white; color: black;">
+      <td>Florida</td>
+      <td>FL</td>
+      <td>21.3 million</td>
+    </tr>
+  </tbody>
 </table>

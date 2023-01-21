@@ -1,8 +1,12 @@
 # Turtle Graphics
 
-You can use GPT to generate turtle graphics code and then use trinket.io to execute the code.
+You can use ChatGPT to generate turtle graphics code and then use trinket.io to execute the code.
 
-## Prompt
+Before we begin, we should mention that when we need to turn a turtle, we need to give
+it a command such as ```right(90)``` that tells it to take a 90-degree right turn.
+We need 360 degrees to make a turtle turn fully around.
+
+## Simple Turtle Prompt
 
 ```
 Use the Python turtle library to draw a square.
@@ -45,20 +49,12 @@ t.right(90)
 
 [Watch the turtle draw on Trinket.io](https://trinket.io/library/trinkets/a8d83baa81)
 
-### Other Patterns
+!!! Challenge
+    What other patterns can you draw?  Can you generate a triangle, a circle, a hexagon,
+    an octagon and a five-pointed star?
 
-```py
-import turtle
-
-my_turtle = turtle.Turtle()
-my_turtle.speed(0)
-
-for i in range(100):
-    my_turtle.forward(i*5)
-    my_turtle.right(144)
-
-turtle.done()
-```
+We learned that just by using a few functions such as ```forward()``` and ```right()``` that we can create
+some cool drawings!
 
 ## Random Squares
 
@@ -85,7 +81,7 @@ t.speed(0)
 
 # Create a loop to draw the squares
 for i in range(20):
-    # Set the random color
+    # Set the random color to be a decimal number from 0 to 1
     t.fillcolor(random.random(), random.random(), random.random())
     # Begin filling the square
     t.begin_fill()
@@ -106,7 +102,15 @@ turtle.done()
 
 ![Random Squares Black](../img/random-squares-black.png)
 
-This program kind of works.  But all the squares are filled with black!  Not very colorful. 
+[Run Random Squares (black) on Trinket](https://trinket.io/library/trinkets/62bafe5b6b)
+
+There are some cool things that ChatGPT just "knows".  It knows that humans like to see about
+20 items on a screen and that a reasonable size of screen is about 400x400 with (0,0) being
+right in the middle of the screen.
+
+This program kind of works.  But all the squares are filled with black!  Not very colorful.
+Now lets take a look at what went wrong and how we can give ChatGPT a little hint
+at how to create better code for us.
 
 ### Fixing the Prompt
 
@@ -118,6 +122,8 @@ we were using the 0 to 255 standard so the following lines:
     # Set the random color
     t.fillcolor(random.random(), random.random(), random.random())
 ```
+
+The function ```random.random()``` generates a random decimal number from 0 to 1
 
 are not correct for Trinket.  Here is the correct version:
 
@@ -187,3 +193,6 @@ turtle.done()
 ![](../img/random-squares.png)
 
 [Random Squares on Trinket](https://trinket.io/library/trinkets/4c45c68256)
+
+!!! Challenge
+    Ask ChatGPT to create new functions for drawing triangles, circles, hexagons and stars.

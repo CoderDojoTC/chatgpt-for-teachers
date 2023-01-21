@@ -76,6 +76,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#html-output" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -521,10 +526,50 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          HTML
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         HTML
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prompt" class="md-nav__link">
+    Prompt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#result" class="md-nav__link">
+    Result
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -992,6 +1037,30 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prompt" class="md-nav__link">
+    Prompt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#result" class="md-nav__link">
+    Result
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1009,9 +1078,16 @@
 
 
 
-  <h1>HTML</h1>
-
-
+<h1 id="html-output">HTML Output</h1>
+<h2 id="prompt">Prompt</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Create an HTML element for a large green button with the label &quot;Press Me&quot;.  Make the text white.  When clicked the button should take you to the site http://example.com
+</code></pre></div>
+</td></tr></table>
+<h2 id="result">Result</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>&lt;a href=&quot;http://example.com&quot; style=&quot;background-color: #00FF00; padding: 10px 20px; color: #FFFFFF; font-size: 16px; font-weight: bold;&quot;&gt;Press Me&lt;/a&gt;
+</code></pre></div>
+</td></tr></table>
+<p><a href="http://example.com" style="background-color: #00FF00; padding: 10px 20px; color: #FFFFFF; font-size: 16px; font-weight: bold;">Press Me</a></p>
 
               
             </article>

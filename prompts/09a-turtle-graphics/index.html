@@ -540,8 +540,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prompt" class="md-nav__link">
-    Prompt
+  <a href="#simple-turtle-prompt" class="md-nav__link">
+    Simple Turtle Prompt
   </a>
   
 </li>
@@ -550,19 +550,6 @@
   <a href="#response" class="md-nav__link">
     Response
   </a>
-  
-    <nav class="md-nav" aria-label="Response">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#other-patterns" class="md-nav__link">
-    Other Patterns
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1121,8 +1108,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prompt" class="md-nav__link">
-    Prompt
+  <a href="#simple-turtle-prompt" class="md-nav__link">
+    Simple Turtle Prompt
   </a>
   
 </li>
@@ -1131,19 +1118,6 @@
   <a href="#response" class="md-nav__link">
     Response
   </a>
-  
-    <nav class="md-nav" aria-label="Response">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#other-patterns" class="md-nav__link">
-    Other Patterns
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1227,8 +1201,11 @@
 
 
 <h1 id="turtle-graphics">Turtle Graphics</h1>
-<p>You can use GPT to generate turtle graphics code and then use trinket.io to execute the code.</p>
-<h2 id="prompt">Prompt</h2>
+<p>You can use ChatGPT to generate turtle graphics code and then use trinket.io to execute the code.</p>
+<p>Before we begin, we should mention that when we need to turn a turtle, we need to give
+it a command such as <code>right(90)</code> that tells it to take a 90-degree right turn.
+We need 360 degrees to make a turtle turn fully around.</p>
+<h2 id="simple-turtle-prompt">Simple Turtle Prompt</h2>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Use the Python turtle library to draw a square.
 </code></pre></div>
 </td></tr></table>
@@ -1292,28 +1269,13 @@
 </td></tr></table>
 <p><img alt="" src="../../img/turtle-draw-square.png" /></p>
 <p><a href="https://trinket.io/library/trinkets/a8d83baa81">Watch the turtle draw on Trinket.io</a></p>
-<h3 id="other-patterns">Other Patterns</h3>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">turtle</span>
-
-<span class="n">my_turtle</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
-<span class="n">my_turtle</span><span class="o">.</span><span class="n">speed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
-    <span class="n">my_turtle</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="mi">5</span><span class="p">)</span>
-    <span class="n">my_turtle</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">144</span><span class="p">)</span>
-
-<span class="n">turtle</span><span class="o">.</span><span class="n">done</span><span class="p">()</span>
-</code></pre></div>
-</td></tr></table>
+<div class="admonition challenge">
+<p class="admonition-title">Challenge</p>
+<p>What other patterns can you draw?  Can you generate a triangle, a circle, a hexagon,
+an octagon and a five-pointed star?</p>
+</div>
+<p>We learned that just by using a few functions such as <code>forward()</code> and <code>right()</code> that we can create
+some cool drawings!</p>
 <h2 id="random-squares">Random Squares</h2>
 <p>Let's start with a simple program that draws a bunch of random squares on the screen.</p>
 <h3 id="random-squares-prompt-1">Random Squares Prompt #1</h3>
@@ -1361,7 +1323,7 @@ Place the squares randomly on the page.
 
 <span class="c1"># Create a loop to draw the squares</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
-    <span class="c1"># Set the random color</span>
+    <span class="c1"># Set the random color to be a decimal number from 0 to 1</span>
     <span class="n">t</span><span class="o">.</span><span class="n">fillcolor</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(),</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(),</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">())</span>
     <span class="c1"># Begin filling the square</span>
     <span class="n">t</span><span class="o">.</span><span class="n">begin_fill</span><span class="p">()</span>
@@ -1381,7 +1343,13 @@ Place the squares randomly on the page.
 </code></pre></div>
 </td></tr></table>
 <p><img alt="Random Squares Black" src="../../img/random-squares-black.png" /></p>
-<p>This program kind of works.  But all the squares are filled with black!  Not very colorful. </p>
+<p><a href="https://trinket.io/library/trinkets/62bafe5b6b">Run Random Squares (black) on Trinket</a></p>
+<p>There are some cool things that ChatGPT just "knows".  It knows that humans like to see about
+20 items on a screen and that a reasonable size of screen is about 400x400 with (0,0) being
+right in the middle of the screen.</p>
+<p>This program kind of works.  But all the squares are filled with black!  Not very colorful.
+Now lets take a look at what went wrong and how we can give ChatGPT a little hint
+at how to create better code for us.</p>
 <h3 id="fixing-the-prompt">Fixing the Prompt</h3>
 <p>As a background, there are two different "standards" for drawing color levels.  One sets the color level in
 a range of 0 to 1.  The drawing library within Trinket uses a color range of 0 to 255.  But we didn't tell ChatGPT
@@ -1391,6 +1359,7 @@ we were using the 0 to 255 standard so the following lines:</p>
     <span class="n">t</span><span class="o">.</span><span class="n">fillcolor</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(),</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(),</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">())</span>
 </code></pre></div>
 </td></tr></table>
+<p>The function <code>random.random()</code> generates a random decimal number from 0 to 1</p>
 <p>are not correct for Trinket.  Here is the correct version:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="c1"># Set the random colors as r,g,b values that are integers from 0 to 255</span>
@@ -1474,6 +1443,10 @@ turtle.done()
 </td></tr></table>
 <p><img alt="" src="../../img/random-squares.png" /></p>
 <p><a href="https://trinket.io/library/trinkets/4c45c68256">Random Squares on Trinket</a></p>
+<div class="admonition challenge">
+<p class="admonition-title">Challenge</p>
+<p>Ask ChatGPT to create new functions for drawing triangles, circles, hexagons and stars.</p>
+</div>
 
               
             </article>

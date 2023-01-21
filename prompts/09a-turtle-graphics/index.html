@@ -1227,17 +1227,20 @@
 
 
 <h1 id="turtle-graphics">Turtle Graphics</h1>
-<p>We can use ChatGPT to generate turtle graphics code and then use <a href="http://trinket.io">trinket.io</a> to execute the code.
-In these labs we will use ChatGPT to generate Python code and they we will copy
+<p>We can use ChatGPT to generate turtle graphics code and then use <a href="http://trinket.io">trinket.io</a> 
+to execute the code.  Trinket is a free kid-safe website that runs you turtle graphs programs.</p>
+<p>In these labs, we will use ChatGPT to generate Python code and then we can copy
 the code and paste it into Trinket to test the drawing of the code.  You might want to
 create your own account in trinket so you can save your work.  We will
 be using the older (free) Python (not Python 3) for our labs.</p>
-<p>We will be drawing on
+<p>With turtle graphics, we usually draw on
 a standard screen that is 400x400 in size and the point (0,0) is in the middle of the screen
 so that <code>forward(100)</code> will move about 1/4 the length of the screen.</p>
 <p>When we need to turn a turtle, we need to give
 it a command such as <code>right(90)</code> that tells it to take a 90-degree right turn.
 We need 360 degrees to make a turtle turn fully around.</p>
+<p>The sample code on this page has a small "copy code" icon in the upper right corner of the screen.
+You can use this to copy the prompts into ChatGPT and the code into Trinket.</p>
 <h2 id="draw-a-square">Draw a Square</h2>
 <h3 id="draw-square-prompt">Draw Square Prompt</h3>
 <p>We need to tell ChatGPT to use the Python turtle library.</p>
@@ -1405,15 +1408,15 @@ at how to create better code for us.</p>
 a range of 0 to 1.  The drawing library within Trinket uses a color range of 0 to 255.  But we didn't tell ChatGPT
 we were using the 0 to 255 standard so the following lines:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="c1"># Set the random color</span>
-    <span class="n">t</span><span class="o">.</span><span class="n">fillcolor</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(),</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(),</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">())</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># Set the random color</span>
+<span class="n">t</span><span class="o">.</span><span class="n">fillcolor</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(),</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(),</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">())</span>
 </code></pre></div>
 </td></tr></table>
 <p>The function <code>random.random()</code> generates a random decimal number from 0 to 1</p>
 <p>are not correct for Trinket.  Here is the correct version:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="c1"># Set the random colors as r,g,b values that are integers from 0 to 255</span>
-    <span class="n">t</span><span class="o">.</span><span class="n">fillcolor</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># Set the random colors as r,g,b values that are integers from 0 to 255</span>
+<span class="n">t</span><span class="o">.</span><span class="n">fillcolor</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
 </code></pre></div>
 </td></tr></table>
 <p>We could manually fix this by scaling the colors by 255.  But that means

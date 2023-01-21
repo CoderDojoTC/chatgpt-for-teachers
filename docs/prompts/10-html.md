@@ -18,7 +18,12 @@ When clicked the button should take you to the site http://example.com
 ### Response
 
 ```
-<a href="http://example.com" style="background-color: darkgreen; border:2px solid black; padding: 10px 20px; color: #FFFFFF; font-size: 16px; font-weight: bold;">Press Me</a>
+<a href="http://example.com" style="background-color: darkgreen; 
+   border:2px solid black;
+   padding: 10px 20px;
+   color: #FFFFFF;
+   font-size: 16px; 
+   font-weight: bold;">Press Me</a>
 ```
 
 <a href="http://example.com" style="background-color: darkgreen; border:2px solid black; padding: 10px 20px; color: #FFFFFF; font-size: 16px; font-weight: bold;">Press Me</a>
@@ -34,7 +39,8 @@ Create an HTML table with three columns:
 2. State abbreviation code
 3. State population
 
-Make the table head be white text on a blue background.  Make the row be alternating white and light gray.
+Make the table head be white text on a blue background.
+Make the row be alternating white and light gray.
 ```
 
 ### Response
@@ -140,3 +146,75 @@ List the elements and how they are used in an HTML definition list.
   <dt>Form</dt>
   <dd>Used to create an interactive form for collecting user data.</dd>
 </dl>
+
+## HTML Form
+
+### Prompt
+
+```
+Create an HTML form for gathering background information for students.
+Include questions about their name, birthday, their favorite color
+and what they did over summer vacation.
+When the form is complete have them press a "Save" button that will
+send the form data to http://example.com/myschool/mydatabase
+```
+
+### Response
+
+<form action="http://example.com/myschool/mydatabase" method="post">
+  <p>
+    <label>Name:</label>
+    <input type="text" name="name" />
+  </p>
+  <p>
+    <label>Birthday:</label>
+    <input type="date" name="birthday" />
+  </p>
+  <p>
+    <label>Favorite Color:</label>
+    <input type="text" name="fav_color" />
+  </p>
+  <p>
+    <label>What did you do over summer vacation?</label>
+    <input type="text" name="summer_vacation" />
+  </p>
+  <input type="submit" value="Save" />
+</form>
+
+## Radio Button
+
+```
+Create an HTML form for gathering information about a favorite color.
+Make the form have a radio button with the options 
+red, orange, yellow, green, blue, purple or other.
+If they select other, add a text field for them to
+put the name of the color in.
+```
+
+### Response
+
+```
+<form>
+    <label><b>What is your favorite color?</b></label><br>
+    <input type="radio" name="fav_color" value="red" >Red<br>
+    <input type="radio" name="fav_color" value="orange" >Orange<br>
+    <input type="radio" name="fav_color" value="yellow" >Yellow<br>
+    <input type="radio" name="fav_color" value="green" >Green<br>
+    <input type="radio" name="fav_color" value="blue" >Blue<br>
+    <input type="radio" name="fav_color" value="purple" >Purple<br>
+    <input type="radio" name="fav_color" value="other" >Other:
+    <input type="text" name="other_fav_color">
+</form>
+```
+
+<form>
+    <label><b>What is your favorite color?</b></label><br>
+    <input type="radio" name="fav_color" value="red" >Red<br>
+    <input type="radio" name="fav_color" value="orange" >Orange<br>
+    <input type="radio" name="fav_color" value="yellow" >Yellow<br>
+    <input type="radio" name="fav_color" value="green" >Green<br>
+    <input type="radio" name="fav_color" value="blue" >Blue<br>
+    <input type="radio" name="fav_color" value="purple" >Purple<br>
+    <input type="radio" name="fav_color" value="other" >Other:
+    <input type="text" name="other_fav_color">
+</form>

@@ -23,7 +23,7 @@ When clicked the button should take you to the site http://example.com
 
 <a href="http://example.com" style="background-color: darkgreen; border:2px solid black; padding: 10px 20px; color: #FFFFFF; font-size: 16px; font-weight: bold;">Press Me</a>
 
-### HTML Table Formatting
+## HTML Table Formatting
 
 ### Prompt
 
@@ -104,6 +104,7 @@ What are the most common HTML elements used by 7th grade students?
 List the elements and how they are used in an HTML definition list.
 ```
 
+### Response
 ```
 <dl>
   <dt>Heading</dt>

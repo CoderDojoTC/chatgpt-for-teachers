@@ -1,18 +1,30 @@
 # Turtle Graphics
 
-You can use ChatGPT to generate turtle graphics code and then use trinket.io to execute the code.
+We can use ChatGPT to generate turtle graphics code and then use [trinket.io](http://trinket.io) to execute the code.
+In these labs we will use ChatGPT to generate Python code and they we will copy
+the code and paste it into Trinket to test the drawing of the code.  You might want to
+create your own account in trinket so you can save your work.  We will
+be using the older (free) Python (not Python 3) for our labs.
 
-Before we begin, we should mention that when we need to turn a turtle, we need to give
+We will be drawing on
+a standard screen that is 400x400 in size and the point (0,0) is in the middle of the screen
+so that ```forward(100)``` will move about 1/4 the length of the screen.
+
+When we need to turn a turtle, we need to give
 it a command such as ```right(90)``` that tells it to take a 90-degree right turn.
 We need 360 degrees to make a turtle turn fully around.
 
-## Simple Turtle Prompt
+## Draw a Square
+
+### Draw Square Prompt
+
+We need to tell ChatGPT to use the Python turtle library.
 
 ```
 Use the Python turtle library to draw a square.
 ```
 
-## Response
+### Response
 
 ```python
 import turtle
@@ -49,8 +61,14 @@ t.right(90)
 
 [Watch the turtle draw on Trinket.io](https://trinket.io/library/trinkets/a8d83baa81)
 
-!!! Challenge
-    What other patterns can you draw?  Can you generate a triangle, a circle, a hexagon,
+!!! Challenges
+    1. Can you ask ChatGPT to change the name of your turtle?
+
+    2. Can you ask ChatGPT to use a for loop to draw the square?
+
+    3. Can you ask ChatGPT to draw a square with a specific size and starting location?
+
+    4. What other patterns can you draw?  Can you generate a triangle, a circle, a hexagon,
     an octagon and a five-pointed star?
 
 We learned that just by using a few functions such as ```forward()``` and ```right()``` that we can create
@@ -63,7 +81,8 @@ Let's start with a simple program that draws a bunch of random squares on the sc
 ### Random Squares Prompt #1
 
 ```
-Use the Python turtle library to draw a set squares that are filled in with random colors.
+Use the Python turtle library to draw a set squares that are
+filled in with random colors.
 Place the squares randomly on the page.
 ```
 
@@ -148,6 +167,7 @@ Use a color range of 0 to 255.
 ```
 
 ## Forcing a Function
+
 The program above is nice, but it hard to read and hard to figure out where the logic of the square drawing starts and stops.  What if we wanted to write a program that draws both squares and circles at random locations.
 
 The answer is to force ChatGPT to create a function that draws the squares.
@@ -159,7 +179,9 @@ parameters.
 
 ```
 Use the Python turtle library to draw a squares of different
-colors at random locations.  Create a function called draw_square that has inputs of color, x and y.  Make sure to begin the fill and end the fill and remember that colors range from 0 to 255.
+colors at random locations.  Create a function called draw_square
+that has inputs of color, x and y.  Make sure to begin the fill
+and end the fill and remember that colors range from 0 to 255.
 ```
 
 ### Force Function Response

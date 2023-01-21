@@ -634,6 +634,53 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#html-form" class="md-nav__link">
+    HTML Form
+  </a>
+  
+    <nav class="md-nav" aria-label="HTML Form">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prompt_3" class="md-nav__link">
+    Prompt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_3" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#radio-button" class="md-nav__link">
+    Radio Button
+  </a>
+  
+    <nav class="md-nav" aria-label="Radio Button">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#response_4" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1194,6 +1241,53 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#html-form" class="md-nav__link">
+    HTML Form
+  </a>
+  
+    <nav class="md-nav" aria-label="HTML Form">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prompt_3" class="md-nav__link">
+    Prompt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_3" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#radio-button" class="md-nav__link">
+    Radio Button
+  </a>
+  
+    <nav class="md-nav" aria-label="Radio Button">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#response_4" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1227,7 +1321,17 @@ When clicked the button should take you to the site http://example.com
 </code></pre></div>
 </td></tr></table>
 <h3 id="response">Response</h3>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>&lt;a href=&quot;http://example.com&quot; style=&quot;background-color: darkgreen; border:2px solid black; padding: 10px 20px; color: #FFFFFF; font-size: 16px; font-weight: bold;&quot;&gt;Press Me&lt;/a&gt;
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>&lt;a href=&quot;http://example.com&quot; style=&quot;background-color: darkgreen; 
+   border:2px solid black;
+   padding: 10px 20px;
+   color: #FFFFFF;
+   font-size: 16px; 
+   font-weight: bold;&quot;&gt;Press Me&lt;/a&gt;
 </code></pre></div>
 </td></tr></table>
 <p><a href="http://example.com" style="background-color: darkgreen; border:2px solid black; padding: 10px 20px; color: #FFFFFF; font-size: 16px; font-weight: bold;">Press Me</a></p>
@@ -1239,13 +1343,15 @@ When clicked the button should take you to the site http://example.com
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Create an HTML table with three columns:
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Create an HTML table with three columns:
 
 1. Full name of a state in the US
 2. State abbreviation code
 3. State population
 
-Make the table head be white text on a blue background.  Make the row be alternating white and light gray.
+Make the table head be white text on a blue background.
+Make the row be alternating white and light gray.
 </code></pre></div>
 </td></tr></table>
 <h3 id="response_1">Response</h3>
@@ -1386,6 +1492,88 @@ List the elements and how they are used in an HTML definition list.
   <dt>Form</dt>
   <dd>Used to create an interactive form for collecting user data.</dd>
 </dl>
+
+<h2 id="html-form">HTML Form</h2>
+<h3 id="prompt_3">Prompt</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Create an HTML form for gathering background information for students.
+Include questions about their name, birthday, their favorite color
+and what they did over summer vacation.
+When the form is complete have them press a &quot;Save&quot; button that will
+send the form data to http://example.com/myschool/mydatabase
+</code></pre></div>
+</td></tr></table>
+<h3 id="response_3">Response</h3>
+<form action="http://example.com/myschool/mydatabase" method="post">
+  <p>
+    <label>Name:</label>
+    <input type="text" name="name" />
+  </p>
+  <p>
+    <label>Birthday:</label>
+    <input type="date" name="birthday" />
+  </p>
+  <p>
+    <label>Favorite Color:</label>
+    <input type="text" name="fav_color" />
+  </p>
+  <p>
+    <label>What did you do over summer vacation?</label>
+    <input type="text" name="summer_vacation" />
+  </p>
+  <input type="submit" value="Save" />
+</form>
+
+<h2 id="radio-button">Radio Button</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Create an HTML form for gathering information about a favorite color.
+Make the form have a radio button with the options 
+red, orange, yellow, green, blue, purple or other.
+If they select other, add a text field for them to
+put the name of the color in.
+</code></pre></div>
+</td></tr></table>
+<h3 id="response_4">Response</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>&lt;form&gt;
+    &lt;label&gt;&lt;b&gt;What is your favorite color?&lt;/b&gt;&lt;/label&gt;&lt;br&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;fav_color&quot; value=&quot;red&quot; &gt;Red&lt;br&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;fav_color&quot; value=&quot;orange&quot; &gt;Orange&lt;br&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;fav_color&quot; value=&quot;yellow&quot; &gt;Yellow&lt;br&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;fav_color&quot; value=&quot;green&quot; &gt;Green&lt;br&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;fav_color&quot; value=&quot;blue&quot; &gt;Blue&lt;br&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;fav_color&quot; value=&quot;purple&quot; &gt;Purple&lt;br&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;fav_color&quot; value=&quot;other&quot; &gt;Other:
+    &lt;input type=&quot;text&quot; name=&quot;other_fav_color&quot;&gt;
+&lt;/form&gt;
+</code></pre></div>
+</td></tr></table>
+<form>
+    <label><b>What is your favorite color?</b></label><br>
+    <input type="radio" name="fav_color" value="red" >Red<br>
+    <input type="radio" name="fav_color" value="orange" >Orange<br>
+    <input type="radio" name="fav_color" value="yellow" >Yellow<br>
+    <input type="radio" name="fav_color" value="green" >Green<br>
+    <input type="radio" name="fav_color" value="blue" >Blue<br>
+    <input type="radio" name="fav_color" value="purple" >Purple<br>
+    <input type="radio" name="fav_color" value="other" >Other:
+    <input type="text" name="other_fav_color">
+</form>
 
               
             </article>

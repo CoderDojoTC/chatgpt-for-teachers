@@ -1,12 +1,56 @@
 # Dataframes
 
-Dataframes are the standard Python data structure for holding tabular data.  They are part of the Python pandas library.
+In this lesson, we will explore how ChatGPT can help us quickly learn about an important Python library.
 
-In this lab, we will use a list of countries and their life expectancy data from the Plotly Express library
-# Viewing Sample Data
+Dataframes are the standard Python data structure for holding tabular data.
+Just like Microsoft Excel(TM) is used to manage tables of data, dataframes are one of the most commonly used data structures in Python.  So it is important for data scientists to be familiar with dataframe operations.
+Note that in our case, we are only concerned with dataframes that are part of the very popular Python pandas library.
+We should specifiy "Python panda dataframe" when we ask ChatGPAT questions since there might be other
+libraries that use the term "dataframe".
+
+Most data science classes begin with learning pandas first and then proceed to libraries like numpy that focus on
+multi-dimentional arrays.
+
+There are many functions that you can use with dataframes.  To start out, let's look at the most commonly used functions.
+
+## Finding Popular Dataframe Functions
+
+**Prompt:**
+```
+What are the most common functions used in Python pandas dataframes? Return a markdown table with two columns:
+
+1. The name of the function with a header "Function Name"
+2. A short description of what the function does with the header "Function Description"
+```
+
+**Response:**
+
+| Function Name | Function Description |
+| ------------- | -------------------- |
+| head()        | Returns the first n rows of a dataframe |
+| tail()        | Returns the last n rows of a dataframe |
+| describe()    | Generates descriptive statistics of the dataframe |
+| info()        | Returns information about the dataframe |
+| mean()        | Computes the mean of the dataframe |
+| sum()         | Computes the sum of the dataframe |
+| max()         | Computes the maximum value of the dataframe |
+| min()         | Computes the minimum value of the dataframe |
+| count()       | Counts the number of non-null values in the dataframe |
+| median()      | Computes the median of the dataframe |
+| std()         | Computes the standard deviation of the dataframe |
+| corr()        | Computes the correlation between columns in the dataframe |
+
+You can see from this table that the first four most common functions are used just to
+understand what is in the table.  The remaining functions in the table are common statistical
+functions that are used on a single column of numbers.  The exception is ```corr()``` that works
+on two columns.
+
+In this lab, we will use a list of countries and their life expectancy data from the Plotly Express library.
+
+## Viewing Sample Data
+We just need a short prompt to understand how to get the gapminder data into a data frame.
 
 **Prompt:** How do I view sample data from gapminder as a Pandas dataframe?
-
 
 **Response**
 
@@ -17,6 +61,9 @@ print(df.head())
 ```
 
 ## Reading a CSV File
+Using the plotly.express library is nice because loading gapminder is just a single line that will always
+work in the future.  If we need to load a specific CSV file we can just use pandas and get the result
+into a dataframe.
 
 ```py
 import pandas as pd
@@ -36,6 +83,11 @@ print(df.head())
 3  Afghanistan      Asia  1967   34.020  11537966  836.197138       AFG        4
 4  Afghanistan      Asia  1972   36.088  13079460  739.981106       AFG        4
 ```
+
+!!! Challenge
+       1. Use the tail(), describe() and info() functions on the gapminder dataframe
+       2. Use the sum(), min(), max(), mean(), median() and std() on the data column: year, lifeExp, pop and gdpPercap.
+       3. Use the corr() function on the leftExp and gdpPercap columns
 
 ```
 How do I list all the distinct values in a column of a Pandas dataframe?

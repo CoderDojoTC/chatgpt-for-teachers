@@ -12,6 +12,9 @@ Create a Python plotly program to draw a vertical bar chart showing the area of 
 ### Response
 
 ```python
+import plotly.graph_objects as go
+import numpy as np
+
 # Data
 labels = ['Africa', 'Antarctica', 'Asia', 'Australia', 'Europe', 'North America', 'South America']
 values = [30.37, 14.2, 44.6, 8.5, 10.2, 24.2, 17.8]

@@ -112,3 +112,29 @@ Draw a blue least-squares fit line on the plot.
     <line x1="0" y1="20" x2="400" y2="380" stroke="blue" stroke-width="2" />
   </g>
 </svg>
+
+## Icons with a Heart
+
+### Heart Icon Prompt
+
+```
+Generate a SVG icon with a size of 64X64.
+Draw a red heart on a light blue background.
+```
+
+
+### Response
+
+```html
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="64" height="64" fill="#add8e6" />
+  <path d="M32,48 C13.4,48 0,34.6 0,16 C0,7.2 7.2,0 16,0 C24.8,0 32,7.2 32,16 C32,34.6 18.6,48 32,48 Z M32,24 C25.5,24 20,28.5 20,35 C20,41.5 25.5,46 32,46 C38.5,46 44,41.5 44,35 C44,28.5 38.5,24 32,24 Z" fill="#ff0000" />
+</svg>
+```
+
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="64" height="64" fill="#add8e6" />
+  <path d="M32,48 C13.4,48 0,34.6 0,16 C0,7.2 7.2,0 16,0 C24.8,0 32,7.2 32,16 C32,34.6 18.6,48 32,48 Z M32,24 C25.5,24 20,28.5 20,35 C20,41.5 25.5,46 32,46 C38.5,46 44,41.5 44,35 C44,28.5 38.5,24 32,24 Z" fill="#ff0000" />
+</svg>
+
+

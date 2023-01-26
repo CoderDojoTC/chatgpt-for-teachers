@@ -4,6 +4,12 @@
 
 #### Code Highlighter
 
+#### Computational Thinking
+
+Computational thinking is a way of solving problems and analyzing data by breaking it down into smaller parts and using algorithms and other tools to solve the problem.
+
+It is a thought process that is used in many different fields, from engineering to economics, and it is often used in computing and programming. Computational thinking involves breaking down a problem into smaller pieces and understanding how the pieces interact with one another, to create a solution.
+
 #### Deep Links
 
 The feature of a website that allows any subsection of a document to have its own URL that can be bookmarked and sent via chat.

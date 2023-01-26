@@ -1,5 +1,6 @@
 # DataFrames
 
+<<<<<<< HEAD
 DataFrames are the standard Python data structure for holding tabular data.  Spreadsheets and CSV files are examples of tabular data. DataFrames are part of the Python pandas library.  There are hundreds of things that we can do with a DataFrame, but what are the key categories
 of operations that we should learn?  Let's ask ChatGPT:
 
@@ -8,7 +9,7 @@ What are the most common operations on a Python Pandas DataFrame?  Return the li
 
 ## Result
 
-1. **Selection**: Selecting rows, columns, or both rows and columns from a DataFrame.
+1. **Selection**: Selecting rows, columns, or both rows and columns from a Dataframe.
 2. **Filtering**: Creating a new DataFrame with rows that meet certain criteria.
 3. **Sorting**: Sorting the rows of a DataFrame by one or more columns.
 4. **Grouping**: Grouping rows of a DataFrame by one or more columns.
@@ -25,6 +26,58 @@ In this lab, we will use a list of countries and their life expectancy data from
 # Viewing Sample Data
 
 **Prompt:** How do I view sample data from Gapminder as a Pandas dataframe?
+=======
+In this lesson, we will explore how ChatGPT can help us quickly learn about an important Python library.
+
+DataFrames are the standard Python data structure for holding tabular data.
+Just like Microsoft Excel(TM) is used to manage tables of data, dataframes are one of the most commonly used data structures in Python.  So it is important for data scientists to be familiar with dataframe operations.
+Note that in our case, we are only concerned with dataframes that are part of the very popular Python pandas library.
+We should specifiy "Python panda dataframe" when we ask ChatGPAT questions since there might be other
+libraries that use the term "dataframe".
+
+Most data science classes begin with learning pandas first and then proceed to libraries like numpy that focus on
+multi-dimentional arrays.
+
+There are many functions that you can use with dataframes.  To start out, let's look at the most commonly used functions.
+
+## Finding Popular Dataframe Functions
+
+**Prompt:**
+```
+What are the most common functions used in Python pandas dataframes? Return a markdown table with two columns:
+
+1. The name of the function with a header "Function Name"
+2. A short description of what the function does with the header "Function Description"
+```
+
+**Response:**
+
+| Function Name | Function Description |
+| ------------- | -------------------- |
+| head()        | Returns the first n rows of a DataFrame |
+| tail()        | Returns the last n rows of a DataFrame |
+| describe()    | Generates descriptive statistics of the DataFrame |
+| info()        | Returns information about the DataFrame |
+| mean()        | Computes the mean of the DataFrame |
+| sum()         | Computes the sum of the DataFrame |
+| max()         | Computes the maximum value of the DataFrame |
+| min()         | Computes the minimum value of the DataFrame |
+| count()       | Counts the number of non-null values in the DataFrame |
+| median()      | Computes the median of the DataFrame |
+| std()         | Computes the standard deviation of the DataFrame |
+| corr()        | Computes the correlation between columns in the DataFrame |
+
+You can see from this table that the first four most common functions are used just to
+understand what is in the table.  The remaining functions in the table are common statistical
+functions that are used on a single column of numbers.  The exception is ```corr()``` that works
+on two columns.
+
+In this lab, we will use a list of countries and their life expectancy data from the Plotly Express library.
+
+## Viewing Sample Data
+We just need a short prompt to understand how to get the gapminder data into a data frame.
+
+**Prompt:** How do I view sample data from gapminder as a Pandas DataFrame?
 
 **Response**
 
@@ -46,6 +99,9 @@ We can execute this in our IDE and we will get the following result:
 ```
 
 ## Reading a CSV File
+Using the plotly.express library is nice because loading gapminder is just a single line that will always
+work in the future.  If we need to load a specific CSV file we can just use pandas and get the result
+into a dataframe.
 
 Because the Gapminer dataset is popular in many classes, the Plotly express library makes
 it a built-in function that allows us to load it with a single consistent command.  Because
@@ -78,6 +134,15 @@ This returns the same results:
 We can see from the head() output that one of the names of the continents is "Asia".  But how can we get a distinct list of all the continents?
 
 **Prompt:** How do I list all the distinct values in a column of a Pandas DataFrame?
+=======
+!!! Challenge
+       1. Use the tail(), describe() and info() functions on the gapminder dataframe
+       2. Use the sum(), min(), max(), mean(), median() and std() on the data column: year, lifeExp, pop and gdpPercap.
+       3. Use the corr() function on the leftExp and gdpPercap columns
+
+```
+How do I list all the distinct values in a column of a Pandas dataframe?
+```
 
 **Response:**  The responses have lots of text, but here is the key new line:
 

@@ -571,9 +571,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prompt" class="md-nav__link">
-    prompt
+  <a href="#simple-drawing" class="md-nav__link">
+    Simple Drawing
   </a>
+  
+    <nav class="md-nav" aria-label="Simple Drawing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prompt" class="md-nav__link">
+    Prompt
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -581,6 +594,40 @@
   <a href="#result" class="md-nav__link">
     Result
   </a>
+  
+    <nav class="md-nav" aria-label="Result">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#row-of-colored-circles" class="md-nav__link">
+    Row Of Colored Circles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blink-circles" class="md-nav__link">
+    Blink Circles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plotting" class="md-nav__link">
+    Plotting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1050,9 +1097,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prompt" class="md-nav__link">
-    prompt
+  <a href="#simple-drawing" class="md-nav__link">
+    Simple Drawing
   </a>
+  
+    <nav class="md-nav" aria-label="Simple Drawing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prompt" class="md-nav__link">
+    Prompt
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1060,6 +1120,40 @@
   <a href="#result" class="md-nav__link">
     Result
   </a>
+  
+    <nav class="md-nav" aria-label="Result">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#row-of-colored-circles" class="md-nav__link">
+    Row Of Colored Circles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blink-circles" class="md-nav__link">
+    Blink Circles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plotting" class="md-nav__link">
+    Plotting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1082,7 +1176,8 @@
 
 
 <h1 id="generating-svg">Generating SVG</h1>
-<h2 id="prompt">prompt</h2>
+<h2 id="simple-drawing">Simple Drawing</h2>
+<h3 id="prompt">Prompt</h3>
 <p>Generate the SVG code for a red circle within a blue square.</p>
 <h2 id="result">Result</h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -1096,6 +1191,120 @@
 <p><svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
   <rect width="100" height="100" style="fill:blue;" />
   <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+</svg></p>
+<h3 id="row-of-colored-circles">Row Of Colored Circles</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>Create an SVG drawing.
+First draw a black rectangle background 400px wide.
+Then draw seven circles in a horizontal row with the colors
+red, orange, yellow, green, blue, indigo and violet
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;svg width=&quot;400&quot; height=&quot;100&quot;&gt;
+  &lt;rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;400&quot; height=&quot;100&quot; fill=&quot;black&quot; /&gt;
+  &lt;circle cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;20&quot; fill=&quot;red&quot; /&gt;
+  &lt;circle cx=&quot;100&quot; cy=&quot;50&quot; r=&quot;20&quot; fill=&quot;orange&quot; /&gt;
+  &lt;circle cx=&quot;150&quot; cy=&quot;50&quot; r=&quot;20&quot; fill=&quot;yellow&quot; /&gt;
+  &lt;circle cx=&quot;200&quot; cy=&quot;50&quot; r=&quot;20&quot; fill=&quot;green&quot; /&gt;
+  &lt;circle cx=&quot;250&quot; cy=&quot;50&quot; r=&quot;20&quot; fill=&quot;blue&quot; /&gt;
+  &lt;circle cx=&quot;300&quot; cy=&quot;50&quot; r=&quot;20&quot; fill=&quot;indigo&quot; /&gt;
+  &lt;circle cx=&quot;350&quot; cy=&quot;50&quot; r=&quot;20&quot; fill=&quot;violet&quot; /&gt;
+&lt;/svg&gt;
+</code></pre></div></td></tr></table></div>
+<p><svg width="400" height="100">
+  <rect x="0" y="0" width="400" height="100" fill="black" />
+  <circle cx="50" cy="50" r="20" fill="red" />
+  <circle cx="100" cy="50" r="20" fill="orange" />
+  <circle cx="150" cy="50" r="20" fill="yellow" />
+  <circle cx="200" cy="50" r="20" fill="green" />
+  <circle cx="250" cy="50" r="20" fill="blue" />
+  <circle cx="300" cy="50" r="20" fill="indigo" />
+  <circle cx="350" cy="50" r="20" fill="violet" />
+</svg></p>
+<h3 id="blink-circles">Blink Circles</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>Write Javascript to make the colors in the SVG circles blink black and white every second.
+
+&lt;svg width=&quot;400&quot; height=&quot;100&quot;&gt;
+  &lt;rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;400&quot; height=&quot;100&quot; fill=&quot;black&quot; /&gt;
+  &lt;circle cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;20&quot; fill=&quot;red&quot; /&gt;
+  &lt;circle cx=&quot;100&quot; cy=&quot;50&quot; r=&quot;20&quot; fill=&quot;orange&quot; /&gt;
+  &lt;circle cx=&quot;150&quot; cy=&quot;50&quot; r=&quot;20&quot; fill=&quot;yellow&quot; /&gt;
+  &lt;circle cx=&quot;200&quot; cy=&quot;50&quot; r=&quot;20&quot; fill=&quot;green&quot; /&gt;
+  &lt;circle cx=&quot;250&quot; cy=&quot;50&quot; r=&quot;20&quot; fill=&quot;blue&quot; /&gt;
+  &lt;circle cx=&quot;300&quot; cy=&quot;50&quot; r=&quot;20&quot; fill=&quot;indigo&quot; /&gt;
+  &lt;circle cx=&quot;350&quot; cy=&quot;50&quot; r=&quot;20&quot; fill=&quot;violet&quot; /&gt;
+&lt;/svg&gt;
+</code></pre></div></td></tr></table></div>
+<h3 id="response">Response</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>let svgCircles = document.querySelectorAll(&quot;circle&quot;);
+
+setInterval(() =&gt; {
+  svgCircles.forEach(circle =&gt; {
+    if (circle.getAttribute(&#39;fill&#39;) === &#39;white&#39;) {
+      circle.setAttribute(&#39;fill&#39;, &#39;black&#39;);
+    } else {
+      circle.setAttribute(&#39;fill&#39;, &#39;white&#39;);
+    }
+  });
+}, 1000);
+</code></pre></div></td></tr></table></div>
+<h3 id="plotting">Plotting</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>Create a SVG drawing width=400 and height=400
+Draw 10 points in the X-Y plot.
+Make all the points fall within 10 random pixels of the line y = 4x + 20
+Draw a blue least-squares fit line on the plot.
+</code></pre></div></td></tr></table></div>
+<p><svg width="400" height="400">
+  <g>
+    <rect x="0" y="0" width="400" height="400" fill="white" />
+    <!-- Plot ten points -->
+    <circle cx="20" cy="64" r="2" fill="black" />
+    <circle cx="50" cy="92" r="2" fill="black" />
+    <circle cx="120" cy="164" r="2" fill="black" />
+    <circle cx="170" cy="212" r="2" fill="black" />
+    <circle cx="210" cy="248" r="2" fill="black" />
+    <circle cx="270" cy="316" r="2" fill="black" />
+    <circle cx="320" cy="356" r="2" fill="black" />
+    <circle cx="360" cy="384" r="2" fill="black" />
+    <circle cx="90" cy="116" r="2" fill="black" />
+    <circle cx="280" cy="308" r="2" fill="black" />
+    <!-- Draw least-squares fit line -->
+    <line x1="0" y1="20" x2="400" y2="380" stroke="blue" stroke-width="2" />
+  </g>
 </svg></p>
 
 

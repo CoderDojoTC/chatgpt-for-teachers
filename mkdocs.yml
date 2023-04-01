@@ -2,46 +2,7 @@ site_name: ChatGPT For Teachers
 site_description: 'Resources for showing teachers how to use ChatGPT to generate curriculum.  All content licensed Creative Commons ShareAlike Attribution Noncommercial'
 site_author: 'Dan McCreary'
 repo_name: 'GitHub Repo'
-repo_url: 'https://github.com/CoderDojoTC/chat-gpt-for-teachers'
-copyright: # should remain a link to the original theme
-   <div>
-     <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
-   </div>
-# CoderDojo Microsite Standards from here down
-
-edit_uri: 'blob/master/docs'
-theme:
-  # should be name: material
-  language: en
-  name: material
-  logo: img/code-savvy-logo.png
-  palette:
-    primary: '#642580'
-    accent: '#41BAC1'
-  custom_dir: 'theme'
-  include_sidebar: true
-  features:
-    - navigation.footer
-  extra:
-    generator: false
-    custom_dir: theme/
-plugins:
-  - search
-  # - mermaid2 - takes too long to build - use a screen image for now
-markdown_extensions:
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
-  - attr_list
-  - pymdownx.highlight:
-      linenums: true
-  - footnotes
-  - codehilite
-
-extra:
-  analytics:
-    provider: google
-    property: G-20VNY7Q9TB
+repo_url: 'https://github.com/CoderDojoTC/chatgpt-for-teachers'
 
 nav:
   - Home: index.md
@@ -93,3 +54,44 @@ nav:
   - Markdown Summary: markdown-summary.md
   - References: references.md
   - Contacts: contacts.md
+  
+copyright: # should remain a link to the original theme
+   <div>
+     <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+   </div>
+# CoderDojo Microsite Standards from here down
+
+edit_uri: 'blob/master/docs'
+theme:
+  # should be name: material
+  language: en
+  name: material
+  logo: img/code-savvy-logo.png
+  palette:
+    primary: '#642580'
+    accent: '#41BAC1'
+  custom_dir: 'theme'
+  include_sidebar: true
+  features:
+    - navigation.footer
+  extra:
+    generator: false
+    custom_dir: theme/
+plugins:
+  - search
+  # - mermaid2 - takes too long to build - use a screen image for now
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - pymdownx.highlight:
+      linenums: true
+  - footnotes
+  - codehilite
+
+extra:
+  analytics:
+    provider: google
+    property: G-20VNY7Q9TB
+

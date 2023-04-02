@@ -17,7 +17,7 @@
     
     
       
-        <title>Scikit Learn - ChatGPT For Teachers</title>
+        <title>Linear Regression - ChatGPT For Teachers</title>
       
     
     
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#scikit-learn" class="md-skip">
+        <a href="#linear-regression" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Scikit Learn
+              Linear Regression
             
           </span>
         </div>
@@ -580,12 +580,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
       
@@ -694,6 +696,89 @@
     <li class="md-nav__item">
       <a href="../23-dataframes/" class="md-nav__link">
         Dataframes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../24-numpy/" class="md-nav__link">
+        NumPy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Linear Regression
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Linear Regression
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#examples-of-linear-regression" class="md-nav__link">
+    Examples of Linear Regression
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../25-sklearn.md" class="md-nav__link">
+        SciKit Learn
       </a>
     </li>
   
@@ -990,6 +1075,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#examples-of-linear-regression" class="md-nav__link">
+    Examples of Linear Regression
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1000,19 +1100,119 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/CoderDojoTC/chatgpt-for-teachers/blob/master/docs/prompts/25-sklearn.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/CoderDojoTC/chatgpt-for-teachers/blob/master/docs/prompts/25-linear-regression.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="scikit-learn">Scikit Learn</h1>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>pip install -U scikit-learn
+<h1 id="linear-regression">Linear Regression</h1>
+<p>Linear regression is a way to find a line that goes through some points on a graph.</p>
+<h2 id="examples-of-linear-regression">Examples of Linear Regression</h2>
+<p>For example, let's say you wanted to see if there is a relationship between the amount of time you spend studying and the grade you get on a test. You could collect data on how long you study and what grade you get on each test, then plot that data on a graph. Linear regression would help you find a line that best fits the points on the graph, which would help you see if there's a pattern or trend in the data.</p>
+<p>In everyday life, linear regression is used to make predictions about things. For example, if you're a farmer and you want to know how much corn you're likely to harvest based on how much fertilizer you use, you could use linear regression to find a line that best fits the data you collect on how much fertilizer you use and how much corn you harvest. Then, you could use that line to predict how much corn you're likely to harvest if you use a certain amount of fertilizer.</p>
+<p>Another example could be if a company wants to predict how much money it will make in the future based on its current revenue, it could use linear regression to find a line that best fits its revenue data. Then, they could use that line to predict how much money they will make in the future based on their projected revenue.</p>
+<p>ere's a sample dataset for linear regression that shows the price of houses based on their square footage:</p>
+<table>
+<thead>
+<tr>
+<th>Square Footage</th>
+<th>Price of House (in $)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1,200  150,000</td>
+<td></td>
+</tr>
+<tr>
+<td>1,500  175,000</td>
+<td></td>
+</tr>
+<tr>
+<td>1,800  200,000</td>
+<td></td>
+</tr>
+<tr>
+<td>2,200  250,000</td>
+<td></td>
+</tr>
+<tr>
+<td>2,600  300,000</td>
+<td></td>
+</tr>
+<tr>
+<td>3,000  350,000</td>
+<td></td>
+</tr>
+<tr>
+<td>To create a formula that predicts the price of a house based on its square footage, we can again use linear regression.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>First, we need to plot the data points on a graph with the square footage on the x-axis and the price of the house on the y-axis. We can see from the data that there appears to be a positive correlation between the square footage and the price of the house.</p>
+<p>Next, we can use a linear regression calculator or software to find the equation of the line of best fit for the data points. This line will have the form of y = mx + b, where y is the price of the house, x is the square footage, m is the slope of the line, and b is the y-intercept.</p>
+<p>Using the sample dataset, the equation of the line of best fit would be: y = 83.33x - 10,000</p>
+<p>This means that for every additional square footage of the house, the price of the house increases by $83.33, and the initial price of the house (when x=0) is -$10,000, which is not realistic, so we can ignore the y-intercept in this case.</p>
+<p>So if you wanted to predict the price of a new house with a square footage of 2500 sq. ft., you could use the formula:</p>
+<p>y = 83.33(2500) - 10,000</p>
+<p>y = 208,325</p>
+<p>This predicts that the price of the house with a square footage of 2500 sq. ft. would be $208,325. However, it's important to note that this is just a prediction based on the data we have, and there may be other factors that affect the price of a house beyond its square footage, such as location, age, number of bedrooms/bathrooms, and more.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># create data</span>
+<span class="n">sq_ft</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1200</span><span class="p">,</span> <span class="mi">1500</span><span class="p">,</span> <span class="mi">1800</span><span class="p">,</span> <span class="mi">2200</span><span class="p">,</span> <span class="mi">2600</span><span class="p">,</span> <span class="mi">3000</span><span class="p">])</span>
+<span class="n">price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">150000</span><span class="p">,</span> <span class="mi">175000</span><span class="p">,</span> <span class="mi">200000</span><span class="p">,</span> <span class="mi">250000</span><span class="p">,</span> <span class="mi">300000</span><span class="p">,</span> <span class="mi">350000</span><span class="p">])</span>
+
+<span class="c1"># calculate line of best fit</span>
+<span class="n">m</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">sq_ft</span><span class="p">,</span> <span class="n">price</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">line</span> <span class="o">=</span> <span class="n">m</span> <span class="o">*</span> <span class="n">sq_ft</span> <span class="o">+</span> <span class="n">b</span>
+
+<span class="c1"># create plotly chart</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+
+<span class="c1"># add data points</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">sq_ft</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">price</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;markers&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)))</span>
+
+<span class="c1"># add line of best fit</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">sq_ft</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">line</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;lines&#39;</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)))</span>
+
+<span class="c1"># set axis labels and title</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Relationship Between House Price and Square Footage&#39;</span><span class="p">,</span>
+                   <span class="n">xaxis_title</span><span class="o">=</span><span class="s1">&#39;Square Footage (sq. ft.)&#39;</span><span class="p">,</span>
+                   <span class="n">yaxis_title</span><span class="o">=</span><span class="s1">&#39;Price of House ($)&#39;</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
 </td></tr></table>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>pip install --user --install-option=&quot;--prefix=&quot; -U scikit-learn
-</code></pre></div>
-</td></tr></table>
+<p><img alt="" src="../../img/linear-regression.png" /></p>
 
               
             </article>
@@ -1023,6 +1223,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../24-numpy/" title="NumPy" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                NumPy
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../07-glossary/" title="Glossary" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Glossary
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

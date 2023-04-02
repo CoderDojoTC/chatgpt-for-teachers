@@ -17,7 +17,7 @@
     
     
       
-        <title>Designing Robots - ChatGPT For Teachers</title>
+        <title>Scikit Learn - ChatGPT For Teachers</title>
       
     
     
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#designing-robots" class="md-skip">
+        <a href="#scikit-learn" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Designing Robots
+              Scikit Learn
             
           </span>
         </div>
@@ -580,14 +580,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       
       
@@ -608,21 +606,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../18-designing-robots/" class="md-nav__link">
         Designing Robots
       </a>
-      
     </li>
   
 
@@ -1044,6 +1032,49 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-scikit-learn" class="md-nav__link">
+    Testing Scikit Learn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simple-linear-regression" class="md-nav__link">
+    Simple Linear Regression
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-table-of-home-prices" class="md-nav__link">
+    Sample Table of Home Prices
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1054,20 +1085,161 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/CoderDojoTC/chatgpt-for-teachers/blob/master/docs/prompts/18-designing-robots.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/CoderDojoTC/chatgpt-for-teachers/blob/master/docs/prompts/25-skikit-learn.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="designing-robots">Designing Robots</h1>
-<p>Not everyone is good at designing fun but low-cost robots.  But you have nothing to fear!  ChatGPT is here!</p>
-<p>Here is a sample prompt and response and some analysis of the response from some subject-matter experts.</p>
-<h1 id="sample-prompt">Sample Prompt</h1>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Design a low-cost robot to teach STEM (science, technology, engineering, and math) concepts.  Use low-cost parts so all students could program their own robots with MicroPython.
+<h1 id="scikit-learn">Scikit Learn</h1>
+<p>Scikit Learn is a Python library for predictive data analysis.  Given a dataset of numbers, it can build a predictive model that can be used to predict new values for similar inputs.</p>
+<p>Scikit Learn is built on NumPy, SciPy, and matplotlib.</p>
+<h2 id="installation">Installation</h2>
+<p>We can use the <code>pip</code> program to install the Scikit-learn Python libraries.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>pip install -U scikit-learn
 </code></pre></div>
 </td></tr></table>
-<h2 id="response">Response</h2>
+<p>This will typically take a few minutes to run.  At the end of the installation, you should see the text <code>Successfully installed scikit-learn</code>.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Collecting scikit-learn
+  Downloading scikit_learn-0.24.2-cp36-cp36m-macosx_10_13_x86_64.whl (7.2 MB)
+     |████████████████████████████████| 7.2 MB 2.5 MB/s 
+Requirement already satisfied: numpy&gt;=1.13.3 in /Users/dan/opt/miniconda3/envs/mkdocs/lib/python3.6/site-packages (from scikit-learn) (1.19.5)
+Requirement already satisfied: joblib&gt;=0.11 in /Users/dan/opt/miniconda3/envs/mkdocs/lib/python3.6/site-packages (from scikit-learn) (1.0.0)
+Collecting scipy&gt;=0.19.1
+  Downloading scipy-1.5.4-cp36-cp36m-macosx_10_9_x86_64.whl (28.8 MB)
+     |████████████████████████████████| 28.8 MB 7.0 MB/s 
+Collecting threadpoolctl&gt;=2.0.0
+  Using cached threadpoolctl-3.1.0-py3-none-any.whl (14 kB)
+Installing collected packages: threadpoolctl, scipy, scikit-learn
+Successfully installed scikit-learn-0.24.2 scipy-1.5.4 threadpoolctl-3.1.0
+</code></pre></div>
+</td></tr></table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some users might need to use the following user install:
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>pip install --user --install-option=&quot;--prefix=&quot; -U scikit-learn
+</code></pre></div>
+</td></tr></table></p>
+</div>
+<h2 id="testing-scikit-learn">Testing Scikit Learn</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">sklearn</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The scikit-learn version is </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sklearn</span><span class="o">.</span><span class="n">__version__</span><span class="p">))</span>
+</code></pre></div>
+</td></tr></table>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>The scikit-learn version is 0.24.2.
+</code></pre></div>
+</td></tr></table>
+<h2 id="simple-linear-regression">Simple Linear Regression</h2>
+<p>Linear regression attempts to draw a straight line on a chart that will best fit some data points.  From this line, we can derive a simple model of the form <code>y = mx + b</code> where m is the slope and b is the intercept.</p>
+<h2 id="sample-table-of-home-prices">Sample Table of Home Prices</h2>
+<p>We can use ChatGPT to generate some sample data for us.</p>
+<p>Prompt:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Generate a list of 20 home sales in two columns using pipe delimited format.  Put a pipe before and at the end of each line.  Make the square footage range from 1,000 to 3,000 square feet and the home prices range from $130,000 to $300,000.
+</code></pre></div>
+</td></tr></table>
+<table>
+<thead>
+<tr>
+<th>Square Feet</th>
+<th>Home Sale Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1000</td>
+<td>$130,000</td>
+</tr>
+<tr>
+<td>1200</td>
+<td>$146,000</td>
+</tr>
+<tr>
+<td>1400</td>
+<td>$162,000</td>
+</tr>
+<tr>
+<td>1600</td>
+<td>$178,000</td>
+</tr>
+<tr>
+<td>1800</td>
+<td>$194,000</td>
+</tr>
+<tr>
+<td>2000</td>
+<td>$210,000</td>
+</tr>
+<tr>
+<td>2200</td>
+<td>$226,000</td>
+</tr>
+<tr>
+<td>2400</td>
+<td>$242,000</td>
+</tr>
+<tr>
+<td>2600</td>
+<td>$258,000</td>
+</tr>
+<tr>
+<td>2800</td>
+<td>$274,000</td>
+</tr>
+<tr>
+<td>3000</td>
+<td>$290,000</td>
+</tr>
+<tr>
+<td>1100</td>
+<td>$136,000</td>
+</tr>
+<tr>
+<td>1300</td>
+<td>$152,000</td>
+</tr>
+<tr>
+<td>1500</td>
+<td>$168,000</td>
+</tr>
+<tr>
+<td>1700</td>
+<td>$184,000</td>
+</tr>
+<tr>
+<td>1900</td>
+<td>$200,000</td>
+</tr>
+<tr>
+<td>2100</td>
+<td>$216,000</td>
+</tr>
+<tr>
+<td>2300</td>
+<td>$232,000</td>
+</tr>
+<tr>
+<td>2500</td>
+<td>$248,000</td>
+</tr>
+<tr>
+<td>2700</td>
+<td>$264,000</td>
+</tr>
+</tbody>
+</table>
+<p>Regenerated response:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1084,34 +1256,45 @@
 <span class="normal">14</span>
 <span class="normal">15</span>
 <span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>The robot design should include: 
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
 
-1. An affordable chassis made from lightweight material such as plastic or cardboard.
+<span class="c1"># Create synthetic dataset</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">sqft</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">price</span> <span class="o">=</span> <span class="n">sqft</span> <span class="o">*</span> <span class="mi">300</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">low</span><span class="o">=-</span><span class="mi">50000</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">50000</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
 
-2. A motor controller that can be programmed with micropython to control the robot’s movements.
+<span class="c1"># Fit linear regression model</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">sqft</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">price</span><span class="p">)</span>
 
-3. Two DC motors with encoders that provide feedback on the robot’s speed and direction.
+<span class="c1"># Generate predictions</span>
+<span class="n">x_pred</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_pred</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
 
-4. Sensors such as an infrared distance sensor, light sensor, and touch sensor for the robot to interact with its environment.
-
-5. An onboard battery to power the robot.
-
-6. A USB port to connect the robot to a laptop or other device for programming with micropython.
-
-7. A low-cost microcontroller with enough memory to run micropython code.
-
-8. A set of instructions and sample programs to get students started with programming their robot.
+<span class="c1"># Plot data and linear regression line</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">sqft</span><span class="p">,</span> <span class="n">price</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_pred</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Square Footage&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Sale Price&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Linear Regression Plot of Home Prices&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
 </td></tr></table>
-<p>We agree with everything but a small detail of #3.  We find that DC motors only cost about $1.50 each.  But motors with encoders usually run around $15.  This doubles the cost of the kits and we have also found that the algorithms to control
-the robots from the encoder data is too complex for most students to understand.</p>
-<p>Other than this minor point, we agree with all the items on this list.</p>
-<p>Examples of robots with these designs are listed below:</p>
-<ol>
-<li><a href="https://www.coderdojotc.org/micropython/robots/01-intro/">Raspberry Pi Pico Robot</a></li>
-<li><a href="https://dmccreary.medium.com/raspberry-pi-pico-robot-in-micropython-51f956486270">Medium Blog on the Raspberry Pi Pico Robot</a></li>
-<li><a href="https://www.coderdojotc.org/micropython/kits/maker-pi-rp2040-robot/01-intro/">Cytron Robot</a></li>
-</ol>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://scikit-learn.org">Scikit Learn Website</a></li>
+<li><a href="https://scikit-learn.org/stable/tutorial/statistical_inference/supervised_learning.html#linear-regression">Scikit Learn Linear Regression Tutorial</a></li>
+<li><a href="https://scikit-learn.org/stable/auto_examples/linear_model/plot_ols.html#sphx-glr-auto-examples-linear-model-plot-ols-py">Linear Regression Model</a></li>
+</ul>
 
               
             </article>
@@ -1122,41 +1305,6 @@ the robots from the encoder data is too complex for most students to understand.
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-        
-          <a href="../17-explaining-code/" title="Explaining Code" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Explaining Code
-              </span>
-            </div>
-          </a>
-        
-        
-          <a href="../19-comparing-microcontrollers/" title="Comparing Microcontrollers" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Comparing Microcontrollers
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

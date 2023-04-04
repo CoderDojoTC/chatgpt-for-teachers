@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- draft generate by ChatGPT -->
 <html>
 <head>
   <meta charset="UTF-8">
@@ -22,14 +23,14 @@
   </style>
 </head>
 <body>
-  <svg id="plot"></svg>
+  <svg id="plot" viewBox="0 0 1200 1200"></svg>
 
   <script>
     // generate random data points
     var points = [];
     for (var i = 0; i < 10; i++) {
-      var x = Math.random() * 500;
-      var y = Math.random() * 500;
+      var x = i * 50 + 10;
+      var y = 450 - (Math.random() * 200 + i*30);
       points.push({ x: x, y: y });
     }
 
@@ -50,6 +51,10 @@
 
     // generate SVG elements
     var svg = document.getElementById("plot");
+
+    // TODO generate the grid lines
+
+    // draw the points
     for (var i = 0; i < n; i++) {
       var circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
       circle.setAttribute("cx", points[i].x);
@@ -57,12 +62,28 @@
       circle.setAttribute("r", 5);
       svg.appendChild(circle);
     }
+
+    // draw the line
     var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
     line.setAttribute("x1", 0);
     line.setAttribute("y1", intercept);
     line.setAttribute("x2", 500);
     line.setAttribute("y2", slope * 500 + intercept);
     svg.appendChild(line);
+
+    // draw the legend
+    var text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    text.setAttribute("x", 10)
+    text.setAttribute("y", 20)
+    text.textContent='Slope= ' + Math.round(-slope * 1000)/1000
+    svg.appendChild(text);
+
+    // the intercept
+    var itext = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    itext.setAttribute("x", 10)
+    itext.setAttribute("y", 40)
+    itext.textContent='Intercept= ' + Math.round(intercept * 1000)/1000
+    svg.appendChild(itext);
   </script>
 </body>
 </html>

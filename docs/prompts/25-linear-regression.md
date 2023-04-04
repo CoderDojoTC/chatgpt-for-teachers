@@ -110,3 +110,9 @@ In this analogy, the line represents the linear model that we are trying to fit 
 We can think of the distance between each point and the line as the tension in the spring connecting the point to the line. Our goal is to adjust the springs (i.e., the coefficients) in such a way that the tension in each spring is minimized, or in other words, the distance between the point and the line is minimized.
 
 Through the process of linear regression, we adjust the coefficients (i.e., the springs) until we have the best possible fit between the data points and the line. This fit allows us to make predictions about the dependent variable (the points) based on the independent variable (the line).
+
+## Generate JavaScript SVG demo
+
+We can now ask ChatGPT to generate an interactive JavaScript Demo:
+
+[Relative path to ../demos/linear-regression.html](../demos/linear-regression.html)

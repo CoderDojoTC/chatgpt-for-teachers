@@ -5,4 +5,4 @@ in the classroom.
 
 Microsite:
 
-[http://www.coderdojotc.org/chatgpt-for-teachers/](http://www.coderdojotc.org/chat-gpt-for-teachers/)
+[http://www.coderdojotc.org/chatgpt-for-teachers/](http://www.coderdojotc.org/chatgpt-for-teachers/)

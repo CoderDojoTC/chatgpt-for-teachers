@@ -38,7 +38,7 @@ nav:
     - Dataframes: prompts/23-dataframes.md
     - NumPy: prompts/24-numpy.md
     - Linear Regression: prompts/25-linear-regression.md
-    - SciKit Learn: prompts/25-sklearn.md
+    - SciKit Learn: prompts/25-scikit-learn.md
     - Glossary: prompts/07-glossary.md
     - prompts/16-quiz.md 
   - Tips and Tricks: tips-and-tricks.md

@@ -7,6 +7,7 @@
         "pendown",
         "penup",
         "randint",
-        "Rica"
+        "Rica",
+        "scikit"
     ]
 }

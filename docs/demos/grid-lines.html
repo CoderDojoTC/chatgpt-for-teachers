@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>SVG Grid Lines Example</title>
+  <style>
+    svg {
+      width: 500px;
+      height: 500px;
+      background-color: #f0f0ff;
+    }
+    line {
+      stroke: #88f;
+      stroke-width: 1;
+      stroke-dasharray: 5, 5;
+    }
+    .solid {
+      stroke-dasharray: none;
+    }
+    .regression {
+        stroke: red;
+        stroke-width: 2;
+        stroke-dasharray: none;
+    }
+  </style>
+</head>
+<body>
+  <!--We have a 500x500 grid with (0,0) in the lower-left corner-->
+  <svg viewBox="-10 -10 520 520" id="chart">
+  </svg>
+  
+  <script>
+    const chart = document.getElementById("chart");
+
+    // generate random data points
+    var points = [];
+    for (var i = 0; i < 10; i++) {
+      var x = i * 50;
+      var y = 450 - (Math.random() * 200 + i*30);
+      points.push({ x: x, y: y });
+    }
+
+    // calculate linear regression line
+    var xSum = 0;
+    var ySum = 0;
+    var xySum = 0;
+    var x2Sum = 0;
+    var n = points.length;
+    for (var i = 0; i < n; i++) {
+      xSum += points[i].x;
+      ySum += points[i].y;
+      xySum += points[i].x * points[i].y;
+      x2Sum += points[i].x * points[i].x;
+    }
+    var slope = (n * xySum - xSum * ySum) / (n * x2Sum - xSum * xSum);
+    var intercept = (ySum - slope * xSum) / n;
+
+    // generate SVG elements
+    var svg = document.getElementById("chart");
+    
+    for (let i = 0; i <= 500; i += 50) {
+      const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+      line.setAttribute("x1", 0);
+      line.setAttribute("y1", i);
+      line.setAttribute("x2", 500);
+      line.setAttribute("y2", i);
+      
+      if (i % 100 === 0) {
+        line.classList.add("solid");
+      }
+      
+      chart.appendChild(line);
+    }
+    
+    // draw the grid lines
+    for (let i = 0; i <= 500; i += 50) {
+      const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+      line.setAttribute("x1", i);
+      line.setAttribute("y1", 0);
+      line.setAttribute("x2", i);
+      line.setAttribute("y2", 500);
+      
+      if (i % 100 === 0) {
+        line.classList.add("solid");
+      }
+      
+      chart.appendChild(line);
+    }
+
+    // draw the points
+    for (var i = 0; i < n; i++) {
+      var circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      circle.setAttribute("cx", points[i].x);
+      circle.setAttribute("cy", points[i].y);
+      circle.setAttribute("r", 5);
+      chart.appendChild(circle);
+    }
+
+    // draw the slope legend
+    var text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    text.setAttribute("x", 10)
+    text.setAttribute("y", 20)
+    text.textContent='Slope= ' + -(Math.round(slope * 1000)/1000)
+    chart.appendChild(text);
+
+    // draw the intercept legend
+    var itext = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    itext.setAttribute("x", 10)
+    itext.setAttribute("y", 40)
+    itext.textContent='Intercept= ' + Math.round((500 - intercept) * 1000)/1000
+    chart.appendChild(itext);
+
+    // draw the regression line
+    var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    line.setAttribute("x1", 0);
+    line.setAttribute("y1", intercept);
+    line.setAttribute("x2", 500);
+    line.setAttribute("y2", slope * 500 + intercept);
+    line.classList.add("regression");
+    chart.appendChild(line);
+  </script>
+</body>
+</html>

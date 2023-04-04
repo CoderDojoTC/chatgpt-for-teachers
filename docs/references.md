@@ -5,3 +5,5 @@
 2. [Dan McCreary's Blog](https://medium.com/@dmccreary/chatgpt-and-knowledge-strategy-864ff31ee03c)
 
 3. [GPT Prompt Trends](https://flowgpt.com/prompts/e60db05a-56f3-4130-b17f-7df01a845fea)
+
+4. [ChatGPT as a Teacher: Where have you been all of my life?](https://www.reddit.com/r/ChatGPT/comments/12a3b9z/chatgpt_as_a_teacher_where_have_you_been_all_of/) by Redditor SquatDeadliftBench on April 2nd, 2023

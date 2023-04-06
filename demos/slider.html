@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>S4</title>
+  <style>
+    svg {
+      width: 200px;
+      height: 200px;
+      background-color: #f0f0ff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    line {
+      stroke: black;
+      stroke-width: 2;
+    }
+    </style>
+</head>
+<body>
+  <svg viewBox="0 0 200 200" id="chart">
+  </svg>
+  <form>
+    <label for="slope">Slope:</label>
+    <input type="range" id="slope" min="-2" max="2" step="0.01" value=".5" style="width:200px">
+    <br>
+    <label for="intercept">Intercept:</label>
+    <input type="range" id="intercept" min="0" max="200" step="1" value="50" style="width:200px">
+  </form>
+  
+  <script>
+    const chart = document.getElementById("chart");
+    
+    // Get the slope and intercept from the form range controls
+    var slope = parseFloat(document.getElementById('slope').value);
+    var intercept = parseFloat(document.getElementById('intercept').value);
+    var y1 = 200 - intercept;
+    var y2 = 200 - (slope * 200 + intercept);
+
+    // Draw a regression line with SVG
+    const rline = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    rline.setAttribute("x1", 0);
+    rline.setAttribute("y1", y1);
+    rline.setAttribute("x2", 200);
+    rline.setAttribute("y2", y2);
+    chart.appendChild(rline);
+
+    // draw the slope legend
+    var text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    text.setAttribute("x", 10)
+    text.setAttribute("y", 20)
+    text.textContent='Slope= ' + (Math.round(slope * 1000)/1000)
+    chart.appendChild(text);
+
+    // draw the intercept legend
+    var itext = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    itext.setAttribute("x", 10)
+    itext.setAttribute("y", 40)
+    itext.textContent='Intercept= ' + Math.round((intercept) * 1000)/1000
+    chart.appendChild(itext);
+    
+    // Add event listeners to the input elements
+    document.getElementById('slope').addEventListener('input', function() {
+      slope = parseFloat(document.getElementById('slope').value);
+      y2 = 200 - (slope * 200 + intercept);
+      rline.setAttribute("y2", y2);
+      text.textContent='Slope= ' + (Math.round(slope * 1000)/1000)
+    });
+
+    document.getElementById('intercept').addEventListener('input', function() {
+      intercept = parseFloat(document.getElementById('intercept').value);
+      y1 = 200 - intercept;
+      y2 = 200 - (slope * 200 + intercept);
+      rline.setAttribute("y1", y1);
+      rline.setAttribute("y2", y2);  
+      itext.textContent='Intercept= ' + Math.round(intercept * 1000)/1000
+    });
+  </script>
+</body>
+</html>

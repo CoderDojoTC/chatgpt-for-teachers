@@ -118,3 +118,5 @@ We can now ask ChatGPT to generate an interactive JavaScript Demo:
 [Linear Regression Demo with JavaScript and SVG](../demos/linear-regression.html)
 
 [Linear Regression with Grid Lines](../demos/grid-lines.html)
+
+[Sliders](../demos/slider.html)

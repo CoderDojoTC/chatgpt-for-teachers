@@ -59,6 +59,7 @@
     // generate SVG elements
     var svg = document.getElementById("chart");
     
+    // draw the horizontal grid lines
     for (let i = 0; i <= 500; i += 50) {
       const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
       line.setAttribute("x1", 0);
@@ -73,7 +74,7 @@
       chart.appendChild(line);
     }
     
-    // draw the grid lines
+    // draw the vertical grid lines
     for (let i = 0; i <= 500; i += 50) {
       const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
       line.setAttribute("x1", i);

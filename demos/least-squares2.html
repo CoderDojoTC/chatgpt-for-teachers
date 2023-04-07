@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Sliders for Slope and Intercept</title>
+  <title>S4</title>
   <style>
     svg {
       width: 400px;
       height: 400px;
-      background-color: #f0f0ff;
+      background-color: #f2f2ff;
       font-family: Arial, Helvetica, sans-serif;
     }
     line {
-      stroke: #88f;
+      stroke: #ccf;
       stroke-width: 1;
       stroke-dasharray: 5, 5;
     }
     .solid {
       stroke-dasharray: none;
     }
+    .base {
+        stroke: silver;
+        stroke-width: 1;
+        stroke-dasharray: none;
+    }
     .regression {
         stroke: red;
         stroke-width: 2;
+        stroke-dasharray: none;
+    }
+    .rpoint {
+        fill:none;
+    }
+    .rpl {
+        stroke:orange;
+        stroke-width: 4;
         stroke-dasharray: none;
     }
     </style>
@@ -38,39 +51,70 @@
   <script>
     const chart = document.getElementById("chart");
     
-    // draw the horizontal grid lines
+    // Draw the horizontal grid lines
     for (let i = 0; i <= 500; i += 50) {
       const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
       line.setAttribute("x1", 0);
       line.setAttribute("y1", i);
       line.setAttribute("x2", 500);
       line.setAttribute("y2", i);
-      
       if (i % 100 === 0) {
         line.classList.add("solid");
       }
-      
       chart.appendChild(line);
     }
 
-    // draw the vertical grid lines
+    // Draw the vertical grid lines
     for (let i = 0; i <= 500; i += 50) {
       const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
       line.setAttribute("x1", i);
       line.setAttribute("y1", 0);
       line.setAttribute("x2", i);
       line.setAttribute("y2", 500);
-      
       if (i % 100 === 0) {
         line.classList.add("solid");
       }
-      
       chart.appendChild(line);
     }
 
-    // Get the slope and intercept from the form range controls
-    var slope = parseFloat(document.getElementById('slope').value);
-    var intercept = parseFloat(document.getElementById('intercept').value);
+    // Draw a the base line that we will draw random points around
+    /*
+    const bline = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    bline.setAttribute("x1", 0);
+    bline.setAttribute("y1", 300);
+    bline.setAttribute("x2", 400);
+    bline.setAttribute("y2", 100);
+    bline.classList.add("base");
+    chart.appendChild(bline);
+    */
+
+    // create n points near a line i=100 s=.5
+    var points = [];
+    num_points = 9
+    for (var i = 0; i < num_points; i++) {
+      // draw every 50 points
+      var x = i * 50;
+      // distance from the top of the grid
+      var y = 400 - (Math.random() * 100 + i*25 + 50);
+      points.push({ x: x, y: y });
+    }
+    var n = points.length;
+
+    // calculate linear regression line
+    var xSum = 0;
+    var ySum = 0;
+    var xySum = 0;
+    var x2Sum = 0;
+    for (var i = 0; i < n; i++) {
+      xSum += points[i].x;
+      ySum += points[i].y;
+      xySum += points[i].x * points[i].y;
+      x2Sum += points[i].x * points[i].x;
+    }
+    // use least squares method
+    var slope = -((n * xySum - xSum * ySum) / (n * x2Sum - xSum * xSum));
+    var intercept = (ySum - slope * xSum) / n;
+    // Calculate distances from top to line endpoints
     var y1 = 400 - intercept;
     var y2 = 400 - (slope * 400 + intercept);
 
@@ -82,6 +126,48 @@
     rline.setAttribute("y2", y2);
     rline.classList.add("regression");
     chart.appendChild(rline);
+
+    var points_on_r = [];
+    for (var i = 0; i < num_points; i++) {
+      // draw every 50 points
+      var x = i * 50;
+      // distance from the top of the grid
+      var y = 400 - (slope * x + intercept);
+      points_on_r.push({ x: x, y: y });
+    }
+
+    // draw the points on the regression line
+    for (var i = 0; i < num_points; i++) {
+      var rcircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      rcircle.setAttribute("cx", points_on_r[i].x);
+      rcircle.setAttribute("cy", points_on_r[i].y);
+      rcircle.setAttribute("r", 3);
+      // rcircle.setAttribute("fill", 'pink');
+      rcircle.classList.add("rpoint");
+      chart.appendChild(rcircle);
+    }
+
+    // draw a line that is the distance to the regression line
+    for (var i = 0; i < num_points; i++) {
+      var rpl = document.createElementNS("http://www.w3.org/2000/svg", "line");
+      rpl.setAttribute("x1", i*50);
+      rpl.setAttribute("y1", points[i].y);
+      rpl.setAttribute("x2", i*50);
+      rpl.setAttribute("y2", points_on_r[i].y);
+      // rcircle.setAttribute("fill", 'pink');
+      rpl.classList.add("rpl");
+      chart.appendChild(rpl);
+    }
+
+    // draw the data points
+    for (var i = 0; i < num_points; i++) {
+      var circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      circle.setAttribute("cx", points[i].x);
+      circle.setAttribute("cy", points[i].y);
+      circle.setAttribute("r", 3);
+      chart.appendChild(circle);
+    }
+
 
     // draw the slope legend
     var text = document.createElementNS("http://www.w3.org/2000/svg", "text");

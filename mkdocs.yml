@@ -50,7 +50,12 @@ nav:
     - advanced-topics/embeddings.md
     - advanced-topics/fine-tuning.md
     - prompts/15-micropython.md
-    - prompts/20-website-analytics.md 
+    - prompts/20-website-analytics.md
+  - The Future of AI:
+    - Introduction: future/index.md
+    - Today: future/ai-today.md
+    - Near Term: future/near-term.md
+    - Long Term: future/long-term.md
 
   - Slides: slides.md
   - Glossary: glossary.md

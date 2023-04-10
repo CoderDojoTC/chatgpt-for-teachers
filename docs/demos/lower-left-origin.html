@@ -13,6 +13,9 @@
       stroke: #88f;
       stroke-width: 1;
     }
+    svg > g text {
+        transform: scaleY(-1);
+    }
     </style>
 </head>
 <body>
@@ -40,9 +43,10 @@
           <line x1="0" y1="400" x2="400" y2="400"/>
           <!-- draw a circle at (50,70)-->
           <circle cx="50" cy="70" r="5" fill="blue"/>
+          <text x="50" y="70">Text within group</text>
           </g>
           <!-- the labels can't be drawn within the transformed grid -->
-          <text x="57" y="335">(50,70)</text>
+          <text x="57" y="335">(50,70) out</text>
       </svg>
       <p>Demonstration of doing drawing on a grid with the origin in the lower</p>
 </body>

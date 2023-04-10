@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+        <head>
+            <style>
+                svg.cartesian {
+                display:flex;
+                }
+
+                /* Flip the vertical axis in <g> to emulate cartesian. */
+                svg.cartesian > g {
+                transform: scaleY(-1);
+                }
+
+                /* Re-flip all <text> element descendants to their original side up. */
+                svg.cartesian > g text {
+                transform: scaleY(-1);
+                }
+            </style>
+        </head>
+        <body>
+      
+        <svg class="cartesian" viewBox="-100 -100 200 200">
+        <g>
+          <!-- SVG Start -->
+      
+          <!-- Vertical / Horizontal Axis: Can be removed if you don't want x/y axes. -->
+          <path d="M0 -100 V 200" stroke="green" stroke-width="0.5" stroke-opacity="0.5" />
+          <path d="M-100 0 H 200" stroke="green" stroke-width="0.5" stroke-opacity="0.5" />
+          
+          <!-- Plotting: This is an example plotting two points at (20, 20) and (-50, -35), replace it with your data. -->
+          <g transform="translate(20, 20)">
+            <circle r="1" />
+            <text>(20, 20)</text>
+          </g>
+          <g transform="translate(-50, -35)">
+            <circle r="0.5" />
+            <text>(-50, -35)</text>
+          </g>
+      
+          <!-- SVG End -->
+        </g>
+        </svg>
+          </body>
+        </html>
+      

@@ -3,6 +3,7 @@
         "Dataframe",
         "dataframes",
         "fillcolor",
+        "micropython",
         "mkdocs",
         "pendown",
         "penup",

@@ -19,9 +19,14 @@ Here are the top three issues.
 
 ## Sample Prompt
 
-I am a teacher that is creating new lesson plans.  I want other teachers to be able to reuse my content and modify it for their classrooms.  However, I want them to give me attribution and I don't want anyone to be able to resell my content.
+```linenums="0"
+I am a teacher that is creating new lesson plans.  I want other teachers
+to be able to reuse my content and modify it for their classrooms. 
+However, I want them to give me attribution and I don't want anyone
+to be able to resell my content.
 
 What creative commons license should I use?
+```
 
 ## Sample Response
 

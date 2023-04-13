@@ -350,12 +350,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
@@ -521,6 +523,95 @@
       <a href="../10-html/" class="md-nav__link">
         HTML
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Slope and Intercept
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Slope and Intercept
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-for-slope" class="md-nav__link">
+    Prompt for Slope
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response-for-slope" class="md-nav__link">
+    Response for Slope
+  </a>
+  
+    <nav class="md-nav" aria-label="Response for Slope">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explanation" class="md-nav__link">
+    Explanation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-version" class="md-nav__link">
+    Advanced Version
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1129,8 +1220,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prompt" class="md-nav__link">
-    Prompt
+  <a href="#prompt-for-slope" class="md-nav__link">
+    Prompt for Slope
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response-for-slope" class="md-nav__link">
+    Response for Slope
+  </a>
+  
+    <nav class="md-nav" aria-label="Response for Slope">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explanation" class="md-nav__link">
+    Explanation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-version" class="md-nav__link">
+    Advanced Version
   </a>
   
 </li>
@@ -1156,13 +1281,101 @@
 <h1 id="slope-and-intercept">Slope and Intercept</h1>
 <p>ChatGPT can be used to create interactive "hands-on" demos.  In this lesson we will generate
 a program that will interactivly draw a line but allow the students to change the slope of the line.</p>
-<h2 id="prompt">Prompt</h2>
+<h2 id="prompt-for-slope">Prompt for Slope</h2>
 <div class="highlight"><pre><span></span><code>Create an HTML page that allows students to change the slope of a line.
 Add an input range control slider that goes from -2 to 2 and controls
 a JavaScript variable called &quot;slope&quot;.  When the slider moves, update
 the slope of a line.  Use a 400x400 SVG Grid.
 Place the origin in the lower left corner.
 </code></pre></div>
+<h2 id="response-for-slope">Response for Slope</h2>
+<h3 id="code">Code</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Line Slope<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+      <span class="kd">var</span> <span class="nx">slope</span> <span class="o">=</span> <span class="mf">1</span><span class="p">;</span> <span class="c1">// initial value of slope</span>
+
+      <span class="kd">function</span> <span class="nx">updateSlope</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">slope</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span>
+        <span class="nx">drawLine</span><span class="p">();</span>
+      <span class="p">}</span>
+
+      <span class="kd">function</span> <span class="nx">drawLine</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">svg</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;grid&quot;</span><span class="p">);</span>
+        <span class="kd">var</span> <span class="nx">x1</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+        <span class="kd">var</span> <span class="nx">y1</span> <span class="o">=</span> <span class="mf">400</span><span class="p">;</span>
+        <span class="kd">var</span> <span class="nx">x2</span> <span class="o">=</span> <span class="mf">400</span><span class="p">;</span>
+        <span class="kd">var</span> <span class="nx">y2</span> <span class="o">=</span> <span class="mf">400</span> <span class="o">-</span> <span class="nx">slope</span><span class="o">*</span><span class="mf">400</span><span class="p">;</span>
+        <span class="nx">svg</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s1">&#39;&lt;line x1=&quot;&#39;</span><span class="o">+</span><span class="nx">x1</span><span class="o">+</span><span class="s1">&#39;&quot; y1=&quot;&#39;</span><span class="o">+</span><span class="nx">y1</span><span class="o">+</span><span class="s1">&#39;&quot; x2=&quot;&#39;</span><span class="o">+</span><span class="nx">x2</span><span class="o">+</span><span class="s1">&#39;&quot; y2=&quot;&#39;</span><span class="o">+</span><span class="nx">y2</span><span class="o">+</span><span class="s1">&#39;&quot; stroke=&quot;black&quot; stroke-width=&quot;2&quot;/&gt;&#39;</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Line Slope<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;range&quot;</span> <span class="na">min</span><span class="o">=</span><span class="s">&quot;-2&quot;</span> <span class="na">max</span><span class="o">=</span><span class="s">&quot;2&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;1&quot;</span> <span class="na">step</span><span class="o">=</span><span class="s">&quot;0.1&quot;</span> <span class="na">oninput</span><span class="o">=</span><span class="s">&quot;updateSlope(this.value);&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">svg</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;grid&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;400&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;400&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">line</span> <span class="na">x1</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">y1</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">x2</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">y2</span><span class="o">=</span><span class="s">&quot;400&quot;</span> <span class="na">stroke</span><span class="o">=</span><span class="s">&quot;gray&quot;</span> <span class="na">stroke-width</span><span class="o">=</span><span class="s">&quot;1&quot;</span><span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">line</span> <span class="na">x1</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">y1</span><span class="o">=</span><span class="s">&quot;400&quot;</span> <span class="na">x2</span><span class="o">=</span><span class="s">&quot;400&quot;</span> <span class="na">y2</span><span class="o">=</span><span class="s">&quot;400&quot;</span> <span class="na">stroke</span><span class="o">=</span><span class="s">&quot;gray&quot;</span> <span class="na">stroke-width</span><span class="o">=</span><span class="s">&quot;1&quot;</span><span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">line</span> <span class="na">x1</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">y1</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">x2</span><span class="o">=</span><span class="s">&quot;400&quot;</span> <span class="na">y2</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">stroke</span><span class="o">=</span><span class="s">&quot;gray&quot;</span> <span class="na">stroke-width</span><span class="o">=</span><span class="s">&quot;1&quot;</span><span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">line</span> <span class="na">x1</span><span class="o">=</span><span class="s">&quot;400&quot;</span> <span class="na">y1</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">x2</span><span class="o">=</span><span class="s">&quot;400&quot;</span> <span class="na">y2</span><span class="o">=</span><span class="s">&quot;400&quot;</span> <span class="na">stroke</span><span class="o">=</span><span class="s">&quot;gray&quot;</span> <span class="na">stroke-width</span><span class="o">=</span><span class="s">&quot;1&quot;</span><span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="explanation">Explanation</h3>
+<p>The following explanation was generated by ChatGPT:</p>
+<p>This code defines a JavaScript variable called "slope" and two functions: "updateSlope" and "drawLine". The "updateSlope" function is called whenever the value of the input range control slider changes. It updates the value of "slope" and calls the "drawLine" function to redraw the line with the new slope.</p>
+<p>The "drawLine" function calculates the endpoints of the line based on the current value of "slope" and updates the SVG element with a new "line" element using the "innerHTML" property.</p>
+<p>The HTML code includes an input range control slider, an SVG element with a 400x400 grid, and four "line" elements to draw the grid. The origin is in the lower left corner, which means that the y-axis goes up and the x-axis goes to the right.</p>
+<p>Here is what the user interface looks like:
+<img alt="Slope" src="../../img/slope.png" /></p>
+<p>You can run the demo by clicking on the link below:</p>
+<p><a href="../../demos/slope.html">Run the Slope Demo</a></p>
+<h2 id="advanced-version">Advanced Version</h2>
+<p>Although generating a high-quality interactive app with over 50 lines is beyond the scope of
+what ChatGPT can do today, you can break the program down into components and then
+assemble the components together.  For example I wrote a prompt to display
+the grid lines on a 400x400 grid and another to display the slope and intercept
+values on the grid.</p>
+<p>Here is a more detailed demo of this.</p>
+<p><a href="../../demos/slope.html">Slope and Intercept Demo</a></p>
 
               
             </article>
@@ -1173,6 +1386,41 @@ Place the origin in the lower left corner.
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../10-html/" title="HTML" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                HTML
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../11-svg/" title="SVG" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                SVG
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

@@ -81,4 +81,4 @@ values on the grid.
 
 Here is a more detailed demo of this.
 
-[Slope and Intercept Demo](../demos/slope.html)
+[Slope and Intercept Demo](../demos/slope-intercept.html)

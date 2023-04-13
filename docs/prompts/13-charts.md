@@ -5,7 +5,8 @@ You can give GPT a set of points and have it generate the Python code to plot th
 ## Vertical Bar Chart
 
 ### Vertical Bar Chart Prompt
-```
+
+```linenums="0"
 Create a Python plotly program to draw a vertical bar chart 
 showing the area of all the continents.
 ```
@@ -51,7 +52,8 @@ Note the area is millions of square kilometers.
 ## Drawing a Sine Wave
 
 ### Drawing a Sine Wave Prompt
-```
+
+```linenums="0"
 Create a Python program to draw a sine wave using Plotly.
 ```
 
@@ -93,7 +95,7 @@ fig.show()
 We can also use ChatGPT to create plots of complex non-linear functions.  To do this we need to use
 a notation for exponents that uses the up arrow character "^".
 
-```
+```linenums="0"
 Create a Python program to draw a plot of the function y =2x^2 - 20x + 50 from x=0 to 13 using plotly
 ```
 
@@ -122,5 +124,7 @@ fig.show()
 
 ## Least Squares Plot
 
-One of the key charts we want to create is a scatter plot that shows a correlation between two variables.
+One of the key charts we want to create is a scatter 
+plot that shows a correlation between two variables.
+We will explore this in a future lesson.
 

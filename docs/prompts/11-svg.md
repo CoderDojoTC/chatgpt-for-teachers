@@ -4,7 +4,9 @@
 
 ### Prompt
 
+```linenums="0"
 Generate the SVG code for a red circle within a blue square.
+```
 
 ## Result
 ```
@@ -21,7 +23,7 @@ Generate the SVG code for a red circle within a blue square.
 
 ### Row Of Colored Circles
 
-```
+```linenums="0"
 Create an SVG drawing.
 First draw a black rectangle background 400px wide.
 Then draw seven circles in a horizontal row with the colors
@@ -54,9 +56,11 @@ red, orange, yellow, green, blue, indigo and violet
 
 ### Blink Circles
 
-```
+```linenums="0"
 Write Javascript to make the colors in the SVG circles blink black and white every second.
+```
 
+```html
 <svg width="400" height="100">
   <rect x="0" y="0" width="400" height="100" fill="black" />
   <circle cx="50" cy="50" r="20" fill="red" />
@@ -87,7 +91,7 @@ setInterval(() => {
 
 ### Plotting
 
-```
+```linenums="0"
 Create a SVG drawing width=400 and height=400
 Draw 10 points in the X-Y plot.
 Make all the points fall within 10 random pixels of the line y = 4x + 20
@@ -117,7 +121,7 @@ Draw a blue least-squares fit line on the plot.
 
 ### Heart Icon Prompt
 
-```
+```linenums="0"
 Generate a SVG icon with a size of 64X64.
 Draw a red heart on a light blue background.
 ```

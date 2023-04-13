@@ -4,8 +4,12 @@
 
 ## Prompt
 
-```
-I want to create a web page with a license on the footer of each page.  I am using mkdocs.  How can I add some HTML to the footer to indicate my license is covered under "The Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"?
+```linenums="0"
+I want to create a web page with a license on the footer of each page.  
+I am using mkdocs.  How can I add some HTML to the footer to indicate 
+my license is covered under 
+"The Creative Commons Attribution-NonCommercial-ShareAlike 4.0 
+International (CC BY-NC-SA 4.0)"?
 ```
 
 ## Response

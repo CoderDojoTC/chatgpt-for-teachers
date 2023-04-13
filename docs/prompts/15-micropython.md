@@ -1,7 +1,10 @@
 # MicroPython
 
 ## Prompt
+
+```linenums="0"
 create a micropython program to blink an LED every half second.  
+```
 
 ## Response
 

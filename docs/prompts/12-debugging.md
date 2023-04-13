@@ -4,7 +4,7 @@ You can give GPT a sample program and ask it to find the bugs or change the outp
 
 ## Prompt
 
-```
+```linenums="0"
 Find the bug and fix it in this program:
 
 # Create a Python program to draw a plot of the function y = 3 * x * x + 4 * x - 5

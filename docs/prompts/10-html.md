@@ -8,11 +8,13 @@ You can tell ChatGPT the colors, size and actions for buttons.
 
 ### Prompt
 
-```
-Create an HTML element for a large dark green button with the label "Press Me".
+```linenums="0"
+Create an HTML element for a large dark green button 
+with the label "Press Me".
 Make the border of the button black.
 Make the text white.
-When clicked the button should take you to the site http://example.com
+When clicked the button should take you to the 
+site http://example.com
 ```
 
 ### Response
@@ -32,7 +34,7 @@ When clicked the button should take you to the site http://example.com
 
 ### Prompt
 
-```
+```linenums="0"
 Create an HTML table with three columns:
 
 1. Full name of a state in the US
@@ -105,7 +107,7 @@ Make the row be alternating white and light gray.
 
 ### Prompt
 
-```
+```linenums="0"
 What are the most common HTML elements used by 7th grade students?
 List the elements and how they are used in an HTML definition list.
 ```
@@ -151,7 +153,7 @@ List the elements and how they are used in an HTML definition list.
 
 ### Prompt
 
-```
+```linenums="0"
 Create an HTML form for gathering background information for students.
 Include questions about their name, birthday, their favorite color
 and what they did over summer vacation.
@@ -183,7 +185,7 @@ send the form data to http://example.com/myschool/mydatabase
 
 ## Radio Button
 
-```
+```linenums="0"
 Create an HTML form for gathering information about a favorite color.
 Make the form have a radio button with the options 
 red, orange, yellow, green, blue, purple or other.

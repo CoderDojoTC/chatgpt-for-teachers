@@ -25,7 +25,7 @@ You can use this to copy the prompts into ChatGPT and the code into Trinket.
 
 We need to tell ChatGPT to use the Python turtle library.
 
-```
+```linenums="0"
 Use the Python turtle library to draw a square.
 ```
 
@@ -80,13 +80,17 @@ t.right(90)
 We learned that just by using a few functions such as ```forward()``` and ```right()``` that we can create
 some cool drawings!
 
+## Using a For Loop
+
+![ChatGPT Turtle Square Code](../img/turtle-square-code.png)
+
 ## Random Squares
 
 Let's start with a simple program that draws a bunch of random squares on the screen.
 
 ### Random Squares Prompt #1
 
-```
+```linenums="0"
 Use the Python turtle library to draw a set squares that are
 filled in with random colors.
 Place the squares randomly on the page.
@@ -165,7 +169,8 @@ one additional sentence to the prompt.
 "Use a color range of 0 to 255."
 
 Here is the new prompt:
-```
+
+```linenums="0"
 Use the Python turtle library to draw a
 set squares that are filled in with random colors.
 Place the squares randomly on the page.
@@ -183,7 +188,7 @@ parameters.
 
 ### Force Function Prompt
 
-```
+```linenums="0"
 Use the Python turtle library to draw a squares of different
 colors at random locations.  Create a function called draw_square
 that has inputs of color, x and y.  Make sure to begin the fill
@@ -192,7 +197,7 @@ and end the fill and remember that colors range from 0 to 255.
 
 ### Force Function Response
 
-```
+```python
 import turtle
 import random
 
@@ -223,4 +228,4 @@ turtle.done()
 [Random Squares on Trinket](https://trinket.io/library/trinkets/4c45c68256)
 
 !!! Challenge
-    Ask ChatGPT to create new functions for drawing triangles, circles, hexagons and stars.
+    1. Ask ChatGPT to create new functions for drawing triangles, circles, hexagons and stars.

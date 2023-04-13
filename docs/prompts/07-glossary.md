@@ -1,9 +1,19 @@
 # Glossary of Terms
 
+One of the best ways for students to validate they understand a topic is to
+view the terminology used in the lessons.  Students can quickly
+scan the terms and check to see if they understand the defintions.
+
+Unfortunately, creating glossaries that have precise definitions
+that are clear, consistent and age-appropriate takes time.  Luckily, 
+ChatGPT can make these tasks much easier.  Here is an example.
+
 ## Prompt
 
-```
-Create a glossary of terms for an introductory class in Python.  For each term, return the markdown format using four hashtags before each term name followed by the definition.
+```linenums="0"
+Create a glossary of terms for an introductory class in Python.  
+For each term, return the markdown format using four hashtags 
+before each term name followed by the definition.
 
 #### Term Name
 Definition
@@ -11,8 +21,6 @@ Definition
 ```
 
 ## Response
-
-
 
 #### Variable
 Definition: A named memory location used to store data
@@ -43,3 +51,8 @@ Example: my_dict = {'name': 'John', 'age': 30}
 Definition: A sequence of characters
 
 Example: my_string = 'Hello World!'
+
+## References
+
+* [WikiHow: How to Write a Glossary](https://www.wikihow.com/Write-a-Glossary)
+* [What Is a Glossary? | Definition, Templates, & Examples](https://www.scribbr.com/dissertation/glossary-of-a-dissertation/) - Scribbr

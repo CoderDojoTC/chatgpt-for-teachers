@@ -6,7 +6,7 @@ to create a table out of facts in the narrative text.
 Note that the first line of the Markdown table format is included in the prompt.
 
 ## Sample Prompt
-```
+```linenums="0"
 Create a markdown table summarizing the fruits from Goocrux:
 
 There are many fruits that were found on the recently discovered planet Goocrux. 
@@ -46,7 +46,7 @@ You can also ask ChatGPT to create tables with data in them.
 
 ## Prompt
 
-```
+```linenums="0"
 Create a markdown table with three columns.
 In the first column, put the name of the countries in north and south america.
 In the second column, put the average life expectancy.

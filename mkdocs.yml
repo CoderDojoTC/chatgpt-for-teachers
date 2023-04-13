@@ -52,6 +52,7 @@ nav:
     - advanced-topics/fine-tuning.md
     - prompts/15-micropython.md
     - prompts/20-website-analytics.md
+    - prompts/26-systems-thinking.md
   - The Future of AI:
     - Introduction: future/index.md
     - Today: future/ai-today.md

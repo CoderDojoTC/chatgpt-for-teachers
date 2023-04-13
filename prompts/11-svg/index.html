@@ -1361,7 +1361,8 @@
 <h1 id="generating-svg">Generating SVG</h1>
 <h2 id="simple-drawing">Simple Drawing</h2>
 <h3 id="prompt">Prompt</h3>
-<p>Generate the SVG code for a red circle within a blue square.</p>
+<div class="highlight"><pre><span></span><code>Generate the SVG code for a red circle within a blue square.
+</code></pre></div>
 <h2 id="result">Result</h2>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -1377,15 +1378,11 @@
   <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
 </svg></p>
 <h3 id="row-of-colored-circles">Row Of Colored Circles</h3>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Create an SVG drawing.
+<div class="highlight"><pre><span></span><code>Create an SVG drawing.
 First draw a black rectangle background 400px wide.
 Then draw seven circles in a horizontal row with the colors
 red, orange, yellow, green, blue, indigo and violet
 </code></pre></div>
-</td></tr></table>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1418,6 +1415,8 @@ red, orange, yellow, green, blue, indigo and violet
   <circle cx="350" cy="50" r="20" fill="violet" />
 </svg></p>
 <h3 id="blink-circles">Blink Circles</h3>
+<div class="highlight"><pre><span></span><code>Write Javascript to make the colors in the SVG circles blink black and white every second.
+</code></pre></div>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1427,20 +1426,16 @@ red, orange, yellow, green, blue, indigo and violet
 <span class="normal"> 7</span>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Write Javascript to make the colors in the SVG circles blink black and white every second.
-
-&lt;svg width=&quot;400&quot; height=&quot;100&quot;&gt;
-  &lt;rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;400&quot; height=&quot;100&quot; fill=&quot;black&quot; /&gt;
-  &lt;circle cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;20&quot; fill=&quot;red&quot; /&gt;
-  &lt;circle cx=&quot;100&quot; cy=&quot;50&quot; r=&quot;20&quot; fill=&quot;orange&quot; /&gt;
-  &lt;circle cx=&quot;150&quot; cy=&quot;50&quot; r=&quot;20&quot; fill=&quot;yellow&quot; /&gt;
-  &lt;circle cx=&quot;200&quot; cy=&quot;50&quot; r=&quot;20&quot; fill=&quot;green&quot; /&gt;
-  &lt;circle cx=&quot;250&quot; cy=&quot;50&quot; r=&quot;20&quot; fill=&quot;blue&quot; /&gt;
-  &lt;circle cx=&quot;300&quot; cy=&quot;50&quot; r=&quot;20&quot; fill=&quot;indigo&quot; /&gt;
-  &lt;circle cx=&quot;350&quot; cy=&quot;50&quot; r=&quot;20&quot; fill=&quot;violet&quot; /&gt;
-&lt;/svg&gt;
+<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">svg</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;400&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;100&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">rect</span> <span class="na">x</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">y</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;400&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;100&quot;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&quot;black&quot;</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;</span><span class="nt">circle</span> <span class="na">cx</span><span class="o">=</span><span class="s">&quot;50&quot;</span> <span class="na">cy</span><span class="o">=</span><span class="s">&quot;50&quot;</span> <span class="na">r</span><span class="o">=</span><span class="s">&quot;20&quot;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&quot;red&quot;</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;</span><span class="nt">circle</span> <span class="na">cx</span><span class="o">=</span><span class="s">&quot;100&quot;</span> <span class="na">cy</span><span class="o">=</span><span class="s">&quot;50&quot;</span> <span class="na">r</span><span class="o">=</span><span class="s">&quot;20&quot;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&quot;orange&quot;</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;</span><span class="nt">circle</span> <span class="na">cx</span><span class="o">=</span><span class="s">&quot;150&quot;</span> <span class="na">cy</span><span class="o">=</span><span class="s">&quot;50&quot;</span> <span class="na">r</span><span class="o">=</span><span class="s">&quot;20&quot;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&quot;yellow&quot;</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;</span><span class="nt">circle</span> <span class="na">cx</span><span class="o">=</span><span class="s">&quot;200&quot;</span> <span class="na">cy</span><span class="o">=</span><span class="s">&quot;50&quot;</span> <span class="na">r</span><span class="o">=</span><span class="s">&quot;20&quot;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&quot;green&quot;</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;</span><span class="nt">circle</span> <span class="na">cx</span><span class="o">=</span><span class="s">&quot;250&quot;</span> <span class="na">cy</span><span class="o">=</span><span class="s">&quot;50&quot;</span> <span class="na">r</span><span class="o">=</span><span class="s">&quot;20&quot;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&quot;blue&quot;</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;</span><span class="nt">circle</span> <span class="na">cx</span><span class="o">=</span><span class="s">&quot;300&quot;</span> <span class="na">cy</span><span class="o">=</span><span class="s">&quot;50&quot;</span> <span class="na">r</span><span class="o">=</span><span class="s">&quot;20&quot;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&quot;indigo&quot;</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;</span><span class="nt">circle</span> <span class="na">cx</span><span class="o">=</span><span class="s">&quot;350&quot;</span> <span class="na">cy</span><span class="o">=</span><span class="s">&quot;50&quot;</span> <span class="na">r</span><span class="o">=</span><span class="s">&quot;20&quot;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&quot;violet&quot;</span> <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span>
 </code></pre></div>
 </td></tr></table>
 <h3 id="response">Response</h3>
@@ -1468,15 +1463,11 @@ setInterval(() =&gt; {
 </code></pre></div>
 </td></tr></table>
 <h3 id="plotting">Plotting</h3>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Create a SVG drawing width=400 and height=400
+<div class="highlight"><pre><span></span><code>Create a SVG drawing width=400 and height=400
 Draw 10 points in the X-Y plot.
 Make all the points fall within 10 random pixels of the line y = 4x + 20
 Draw a blue least-squares fit line on the plot.
 </code></pre></div>
-</td></tr></table>
 <p><svg width="400" height="400">
   <g>
     <rect x="0" y="0" width="400" height="400" fill="white" />
@@ -1497,11 +1488,9 @@ Draw a blue least-squares fit line on the plot.
 </svg></p>
 <h2 id="icons-with-a-heart">Icons with a Heart</h2>
 <h3 id="heart-icon-prompt">Heart Icon Prompt</h3>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Generate a SVG icon with a size of 64X64.
+<div class="highlight"><pre><span></span><code>Generate a SVG icon with a size of 64X64.
 Draw a red heart on a light blue background.
 </code></pre></div>
-</td></tr></table>
 <h3 id="response_1">Response</h3>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>

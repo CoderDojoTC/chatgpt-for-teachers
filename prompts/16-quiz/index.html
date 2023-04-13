@@ -819,6 +819,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#prompt_1" class="md-nav__link">
+    Prompt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_1" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1227,6 +1241,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#prompt_1" class="md-nav__link">
+    Prompt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_1" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1266,19 +1294,11 @@
 
 <h1 id="generating-quiz">Generating Quiz</h1>
 <h2 id="open-answer">Open Answer</h2>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Generate a set of questions about the use of Python dataframes for a high school progamming course.
+<h3 id="prompt">Prompt</h3>
+<div class="highlight"><pre><span></span><code>Generate a set of questions about the use of Python dataframes for a high school progamming course.
 </code></pre></div>
-</td></tr></table>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>1. What is a Python dataframe?
+<h3 id="response">Response</h3>
+<div class="highlight"><pre><span></span><code>1. What is a Python dataframe?
 2. How do you create a dataframe in Python?
 3. What are the advantages of using a dataframe to store data?
 4. What are the different methods used to access data in a dataframe?
@@ -1289,9 +1309,97 @@
 9. What are the best practices for working with dataframes?
 10. What are the most important considerations when using dataframes in a programming course?
 </code></pre></div>
-</td></tr></table>
-<h3 id="prompt">Prompt</h3>
-<h3 id="response">Response</h3>
+<h3 id="prompt_1">Prompt</h3>
+<div class="highlight"><pre><span></span><code>Create a multiple choice quiz about the use of Python lists.  
+Create 10 questions with four
+responses each.  Make sure there is only one correct 
+response and add the string &quot;[CORRECT]&quot;
+at the end of the correct answer.
+Return the quiz in Markdown format where each question has
+a #### followed by a number.
+</code></pre></div>
+<h3 id="response_1">Response</h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Some of these answers are incorrect!</p>
+</div>
+<div class="highlight"><pre><span></span><code>1. What is the correct syntax to create an empty list in Python?
+a) list() [CORRECT]
+b) []
+c) set()
+d) dict()
+
+2. How do you access the last element of a list in Python?
+a) list[last]
+b) list[-1] [CORRECT]
+c) list[last()]
+d) list[-last()]
+
+3. Which method in Python is used to add an element at the end of a list?
+a) add()
+b) push()
+c) append() [CORRECT]
+d) insert()
+
+4. What is the output of the following code?
+my_list = [1, 2, 3, 4, 5]
+print(my_list[1:3])
+
+a) [1, 2]
+b) [2, 3]
+c) [3, 4] [CORRECT]
+d) [2, 3, 4]
+
+What is the output of the following code?
+my_list = [1, 2, 3, 4, 5]
+del my_list[2]
+print(my_list)
+a) [1, 2, 3, 4, 5]
+b) [1, 2, 4, 5] [CORRECT]
+c) [1, 3, 4, 5]
+d) [1, 2, 3, 5]
+
+Which method in Python is used to sort a list in ascending order?
+a) sort()
+b) ascending()
+c) sorted()
+d) None of the above [CORRECT]
+
+What is the output of the following code?
+my_list = [1, 2, 3, 4, 5]
+new_list = my_list.copy()
+new_list[0] = 0
+print(my_list)
+
+a) [1, 2, 3, 4, 5]
+b) [0, 2, 3, 4, 5]
+c) [1, 2, 3, 4, 5] [CORRECT]
+d) [0, 0, 0, 0, 0]
+
+What is the output of the following code?
+my_list = [1, 2, 3]
+my_list.extend([4, 5])
+print(my_list)
+a) [1, 2, 3]
+b) [4, 5]
+c) [1, 2, 3, 4, 5] [CORRECT]
+d) [1, 2, 3, [4, 5]]
+
+Which method in Python is used to remove the first occurrence of an element from a list?
+a) pop()
+b) remove() [CORRECT]
+c) discard()
+d) delete()
+
+What is the output of the following code?
+my_list = [1, 2, 3, 4, 5]
+print(my_list[-3:-1])
+
+a) [1, 2]
+b) [2, 3] [CORRECT]
+c) [3, 4]
+d) [4, 5]
+</code></pre></div>
 <h2 id="truefalse">True/False</h2>
 <h2 id="multiple-choice">Multiple Choice</h2>
 

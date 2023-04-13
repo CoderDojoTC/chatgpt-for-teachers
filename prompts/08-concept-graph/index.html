@@ -470,8 +470,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#concept-graph_1" class="md-nav__link">
-    Concept Graph
+  <a href="#concept-graph-references" class="md-nav__link">
+    Concept Graph References
   </a>
   
 </li>
@@ -1200,8 +1200,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#concept-graph_1" class="md-nav__link">
-    Concept Graph
+  <a href="#concept-graph-references" class="md-nav__link">
+    Concept Graph References
   </a>
   
 </li>
@@ -1225,60 +1225,49 @@
 
 
 <h1 id="concept-graph">Concept Graph</h1>
-<p>Teachers frequently have a list of topics that they would like to cover, but they are not expert enough in the topic to know what order to teach the concepts. ChatGPT can help!  ChatGPT can return a textual representation of how concepts depend on other concepts.</p>
+<p>Teachers frequently have a list of topics that they would like to cover, but they are not expert enough in the topic to know what <strong>order</strong> to teach the concepts. ChatGPT can help!  ChatGPT can return a textual representation of how concepts depend on other concepts.</p>
 <p>A concept graph is a document that suggests the order that concepts should be taught in a course.  The format of the document is usually a dependency structure with each concept being a node on the graph that indicates what other concepts must be mastered before this concept is introduced.</p>
 <h2 id="prompt">Prompt</h2>
-<p>You are an AI that helps teachers figure out what order to teach topics in the classroom.  Create an ordered dependency list for the following topics in a Python Course:</p>
-<ol>
-<li>Introduction</li>
-<li>Getting Started</li>
-<li>Variables</li>
-<li>Conditionals</li>
-<li>Loops</li>
-<li>Lists</li>
-<li>Data Structures</li>
-<li>Functions</li>
-<li>Function Parameters</li>
-<li>Random Numbers</li>
-<li>Recursion</li>
-</ol>
-<p>Return the results in Mermaid dependency format like this:</p>
-<p>graph LR
+<div class="highlight"><pre><span></span><code>You are an AI that helps teachers
+figure out what order to teach topics in the classroom.  Create an ordered dependency list for the following topics in a Python Course:
+
+1. Introduction
+2. Getting Started
+3. Variables
+4. Conditionals
+5. Loops
+6. Lists
+7. Data Structures
+8. Functions
+9. Function Parameters
+10. Random Numbers
+11. Recursion
+
+Return the results in Mermaid dependency format like this:
+</code></pre></div>
+<p>Response</p>
+<div class="highlight"><pre><span></span><code>graph LR
     A(Intro) --&gt; B(Getting Started)
     B --&gt; C(Variables)
     C --&gt; D(Loops)
     C --&gt; E(Conditionals)
-    C --&gt; F(Lists)</p>
+    C --&gt; F(Lists)
+</code></pre></div>
 <h2 id="response">Response</h2>
 <p>To see if ChatGPT understands the idea of concept order we want to get a response that shows that you need to understand functions before you use function parameters or recursion.</p>
 <p>here is the response:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    D --&gt; G(Data Structures)
+<div class="highlight"><pre><span></span><code>    D --&gt; G(Data Structures)
     F --&gt; G
     G --&gt; H(Functions)
     H --&gt; I(Function Parameters)
     H --&gt; J(Random Numbers)
     H --&gt; K(Recursion)
 </code></pre></div>
-</td></tr></table>
+<p>And here is the rendering:</p>
+<p><img alt="Image of Concept Graph" src="../../img/concept-graph.png" /></p>
 <p>Yes indeed! ChatGPT knew that concept H(Functions) needs to be taught before Function Parameters and Recursion.</p>
 <p>Here is the entire list</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>graph LR
+<div class="highlight"><pre><span></span><code>graph LR
     A(Intro) --&gt; B(Getting Started)
     B --&gt; C(Variables)
     C --&gt; D(Loops)
@@ -1291,10 +1280,11 @@
     H --&gt; J(Random Numbers)
     H --&gt; K(Recursion)
 </code></pre></div>
-</td></tr></table>
-<h2 id="concept-graph_1">Concept Graph</h2>
-<p><a href="https://mermaid.live/edit#pako:eNpdkMFqwzAMhl_F6ORA-wI5DNZkSbuFMVLYKRc11lqz2g6KfBil7z43WQuZT9b3f7ZsXaAPhiCHI-NwUk3beZXWs9554ZCp9fpJbXRNItYf1V6QhUw2S5spLfQnssXDmcY_Xky81E0Iw5K96CJ4Y8UGj-dlVOnGjnJn5cRqXaJg6sqxl8iPBtWczkU9FVtdRd_fLr5L24nvHlx9IKMjIV4ar7pFb4JT79Ed_odvuqU-8pjOZ7ACR-zQmjSuy83qQE7kqIM8bQ3ydwedvyYPo4T9j-8hT0-nFcTBoFBpMU3ZQf6VPk_XXzpjb_o">Link to Mermaid Live</a></p>
-<p><img alt="Image of Concept Graph" src="../../img/concept-graph.png" /></p>
+<h2 id="concept-graph-references">Concept Graph References</h2>
+<ul>
+<li><a href="https://dmccreary.medium.com/lost-in-knowledge-space-14be123ea083">Lost in Knowledge Space</a> - a blog on the topic of how learning management is dependent on a graph representation of concepts and there relationships.</li>
+<li><a href="https://mermaid.live/edit#pako:eNpdkMFqwzAMhl_F6ORA-wI5DNZkSbuFMVLYKRc11lqz2g6KfBil7z43WQuZT9b3f7ZsXaAPhiCHI-NwUk3beZXWs9554ZCp9fpJbXRNItYf1V6QhUw2S5spLfQnssXDmcY_Xky81E0Iw5K96CJ4Y8UGj-dlVOnGjnJn5cRqXaJg6sqxl8iPBtWczkU9FVtdRd_fLr5L24nvHlx9IKMjIV4ar7pFb4JT79Ed_odvuqU-8pjOZ7ACR-zQmjSuy83qQE7kqIM8bQ3ydwedvyYPo4T9j-8hT0-nFcTBoFBpMU3ZQf6VPk_XXzpjb_o">Link to Mermaid Live</a></li>
+</ul>
 
               
             </article>

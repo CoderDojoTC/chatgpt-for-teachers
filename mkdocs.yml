@@ -79,6 +79,7 @@ theme:
   language: en
   name: material
   logo: img/code-savvy-logo.png
+  favicon: img/code-savvy-logo.png
   palette:
     primary: '#642580'
     accent: '#41BAC1'

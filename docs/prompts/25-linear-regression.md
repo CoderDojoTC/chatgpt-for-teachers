@@ -115,7 +115,7 @@ Through the process of linear regression, we adjust the coefficients (i.e., the 
 
 We can now ask ChatGPT to generate an interactive JavaScript Demo:
 
-[Linear Regression Demo with JavaScript and SVG](../demos/linear-regression.html)
+[Linear Regression Demo with JavaScript and SVG](../demos/linear-regression.html) - use your browser refresh to generate new values
 
 [Linear Regression with Grid Lines](../demos/grid-lines.html)
 

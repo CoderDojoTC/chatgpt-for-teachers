@@ -3,7 +3,9 @@
 ## Prompt
 
 ```linenums="0"
-Generate a sample python program using the turtle library that will draw 7 boxes filled with the colors of the rainbow.  Start at (-200,0) and make the boxes 50 on each side. Space the boxes 55 apart.
+Generate a sample python program using the turtle library that will draw 
+7 boxes filled with the colors of the rainbow.  Start at (-200,0) and 
+make the boxes 50 on each side. Space the boxes 55 apart.
 Don't bother with the setup including screen size, background color and title.
 ```
 

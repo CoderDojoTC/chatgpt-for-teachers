@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SVG Drawing</title>
+	<style>
+		svg {
+			width: 400px;
+			height: 400px;
+			border: 1px solid black;
+            font-family: Arial, Helvetica, sans-serif;
+		}
+	</style>
+</head>
+<body>
+	<svg viewBox="0 0 400 400">
+		<!-- SVG elements will be added here -->
+	</svg>
+    <p><b>Prompt: </b>Create a SVG drawing width=400 and height=400 and place the origin in the lower-left corner.
+        Draw 10 points in the X-Y plot.
+        Make all the points fall within 10 random pixels of the line y = 4x + 20
+        Draw a blue least-squares fit line on the plot.</p>
+</body>
+<script>
+
+// Generate 8 points within 8 pixels of the line y = 4x + 20
+var points = [];
+for (var i = 0; i < 8; i++) {
+	var x = i * 50;
+	var y = (4 * x + 20 + Math.floor(Math.random() * 21) - 10);
+	points.push({x: x, y: y});
+}
+
+// Calculate the least-squares fit line
+var sum_x = 0;
+var sum_y = 0;
+var sum_xy = 0;
+var sum_x2 = 0;
+for (var i = 0; i < points.length; i++) {
+	sum_x += points[i].x;
+	sum_y += points[i].y;
+	sum_xy += points[i].x * points[i].y;
+	sum_x2 += points[i].x * points[i].x;
+}
+var n = points.length;
+var slope = (n * sum_xy - sum_x * sum_y) / (n * sum_x2 - sum_x * sum_x);
+var intercept = (sum_y - slope * sum_x) / n;
+
+// Draw the points and least-squares fit line on the SVG element
+var svg = document.querySelector('svg');
+
+var d = '';
+for (var i = 0; i < points.length; i++) {
+	var circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+	circle.setAttribute('cx', points[i].x);
+	circle.setAttribute('cy', points[i].y);
+	circle.setAttribute('r', 3);
+	svg.appendChild(circle);
+	d += (i == 0 ? 'M' : 'L') + points[i].x + ',' + points[i].y;
+}
+
+var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+path.setAttribute('d', d);
+path.setAttribute('stroke', 'blue');
+path.setAttribute('stroke-width', 2);
+path.setAttribute('fill', 'none');
+path.setAttribute('transform', 'translate(0,400) scale(1,-1)');
+svg.appendChild(path);
+
+// Add the axis labels
+var text_x = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+text_x.setAttribute('x', 200);
+text_x.setAttribute('y', 390);
+text_x.setAttribute('text-anchor', 'middle');
+text_x.textContent = 'X';
+svg.appendChild(text_x);
+
+var text_y = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+text_y.setAttribute('x', -190);
+text_y.setAttribute('y', 10);
+text_y.setAttribute('text-anchor', 'middle');
+text_y.setAttribute('transform', 'rotate(-90)');
+text_y.textContent = 'Y';
+svg.appendChild(text_y);
+
+
+</script>
+</html>

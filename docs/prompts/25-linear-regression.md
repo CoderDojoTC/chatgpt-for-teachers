@@ -120,3 +120,9 @@ We can now ask ChatGPT to generate an interactive JavaScript Demo:
 [Linear Regression with Grid Lines](../demos/grid-lines.html)
 
 [Sliders for Slope and Intercept](../demos/slider.html)
+
+[Least Squares V1](../demos/least-squares-1.html)
+
+[Least Squares V2](../demos/least-squares-2.html)
+
+[Least Squares V1](../demos/least-squares-3.html)

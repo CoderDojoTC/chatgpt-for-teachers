@@ -1,5 +1,12 @@
 # Rainbow Boxes
 
+## Initial Prompt
+
+```linenums="0"
+Generate a sample python program using the turtle library that will
+draw 7 boxes filled with the colors of the rainbow.  
+```
+
 ## Prompt
 
 ```linenums="0"

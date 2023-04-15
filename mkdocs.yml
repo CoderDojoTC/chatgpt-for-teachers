@@ -22,6 +22,7 @@ nav:
     - License Footer: prompts/04-license-footer.md
     - Mkdocs Config: prompts/05-mkdocs.md
     - Lessons: prompts/06-lessons.md
+    - Scratch: prompts/09c-scratch-block.md
     - Sample Code: prompts/09-sample-code.md
     - Turtle Graphics: prompts/09a-turtle-graphics.md
     - Rainbow Boxes: prompts/09b-rainbow-boxes.md

@@ -1,13 +1,19 @@
 # DataFrames
 
-<<<<<<< HEAD
 DataFrames are the standard Python data structure for holding tabular data.  Spreadsheets and CSV files are examples of tabular data. DataFrames are part of the Python pandas library.  There are hundreds of things that we can do with a DataFrame, but what are the key categories
 of operations that we should learn?  Let's ask ChatGPT:
 
-**Prompt:**
-What are the most common operations on a Python Pandas DataFrame?  Return the list in markdown with the name of the function in bold:
+## What Are Dataframes Used For?
 
-## Result
+The first thing we want to do is to get a handle on what things people do with DataFrames.  ChatGPT can give us a list with the most common functions listed first.
+
+### Sample Prompt
+
+```linenums="0"
+What are the most common operations on a Python Pandas DataFrame?  Return the list in markdown with the name of the operations in bold:
+```
+
+### Result
 
 1. **Selection**: Selecting rows, columns, or both rows and columns from a Dataframe.
 2. **Filtering**: Creating a new DataFrame with rows that meet certain criteria.
@@ -23,17 +29,18 @@ For the rest of this lab, we will get a simple dataset and go through the first 
 
 In this lab, we will use a list of countries and their life expectancy data from the Plotly Express Library.  We will use the famous [Gapminder](https://www.gapminder.org/) data file that is used in many DataFrame tutorials.  Gapminder is an independent educational non-proﬁt ﬁghting global misconceptions.
 
-# Viewing Sample Data
+## Viewing Sample Data
 
-**Prompt:** How do I view sample data from Gapminder as a Pandas dataframe?
-=======
+### How do I view sample data from Gapminder as a Pandas DataFrame?
+
 In this lesson, we will explore how ChatGPT can help us quickly learn about an important Python library.
 
 DataFrames are the standard Python data structure for holding tabular data.
 Just like Microsoft Excel(TM) is used to manage tables of data, dataframes are one of the most commonly used data structures in Python.  So it is important for data scientists to be familiar with dataframe operations.
+
 Note that in our case, we are only concerned with dataframes that are part of the very popular Python pandas library.
-We should specifiy "Python panda dataframe" when we ask ChatGPAT questions since there might be other
-libraries that use the term "dataframe".
+We should specify "Python Pandas DataFrame" when we ask ChatGPAT questions since there might be other
+libraries that use the term "DataFrame".
 
 Most data science classes begin with learning pandas first and then proceed to libraries like numpy that focus on
 multi-dimentional arrays.
@@ -42,15 +49,16 @@ There are many functions that you can use with dataframes.  To start out, let's 
 
 ## Finding Popular Dataframe Functions
 
-**Prompt:**
-```
+### Prompt
+
+```linenums="0"
 What are the most common functions used in Python pandas dataframes? Return a markdown table with two columns:
 
 1. The name of the function with a header "Function Name"
 2. A short description of what the function does with the header "Function Description"
 ```
 
-**Response:**
+### Response:
 
 | Function Name | Function Description |
 | ------------- | -------------------- |
@@ -75,11 +83,16 @@ on two columns.
 In this lab, we will use a list of countries and their life expectancy data from the Plotly Express library.
 
 ## Viewing Sample Data
+
 We just need a short prompt to understand how to get the gapminder data into a data frame.
 
-**Prompt:** How do I view sample data from gapminder as a Pandas DataFrame?
+### Prompt
 
-**Response**
+```linenums="0"
+How do I view sample data from gapminder as a Python Pandas DataFrame?
+```
+
+### Response
 
 ```py
 import plotly.express as px
@@ -89,7 +102,7 @@ print(df.head())
 
 We can execute this in our IDE and we will get the following result:
 
-```
+```linenums="0"
        country continent  year  lifeExp       pop   gdpPercap iso_alpha  iso_num
 0  Afghanistan      Asia  1952   28.801   8425333  779.445314       AFG        4
 1  Afghanistan      Asia  1957   30.332   9240934  820.853030       AFG        4
@@ -99,6 +112,7 @@ We can execute this in our IDE and we will get the following result:
 ```
 
 ## Reading a CSV File
+
 Using the plotly.express library is nice because loading gapminder is just a single line that will always
 work in the future.  If we need to load a specific CSV file we can just use pandas and get the result
 into a dataframe.
@@ -121,7 +135,7 @@ As long as this CSV files is not moved around, this code will also work.
 
 This returns the same results:
 
-```
+```linenums="0"
        country continent  year  lifeExp       pop   gdpPercap iso_alpha  iso_num
 0  Afghanistan      Asia  1952   28.801   8425333  779.445314       AFG        4
 1  Afghanistan      Asia  1957   30.332   9240934  820.853030       AFG        4
@@ -131,22 +145,31 @@ This returns the same results:
 ```
 
 ## Enumerating Column Values
+
 We can see from the head() output that one of the names of the continents is "Asia".  But how can we get a distinct list of all the continents?
 
-**Prompt:** How do I list all the distinct values in a column of a Pandas DataFrame?
-=======
+### Prompt
+
+```linenums="0"
+How do I list all the distinct values in a column of a Pandas DataFrame?
+```
+
 !!! Challenge
        1. Use the tail(), describe() and info() functions on the gapminder dataframe
        2. Use the sum(), min(), max(), mean(), median() and std() on the data column: year, lifeExp, pop and gdpPercap.
        3. Use the corr() function on the leftExp and gdpPercap columns
 
-```
+### Prompt
+
+```linenums="0"
 How do I list all the distinct values in a column of a Pandas dataframe?
 ```
 
-**Response:**  The responses have lots of text, but here is the key new line:
+### Response
 
-```
+The responses have lots of text, but here is the key new line:
+
+```py
 types = df["column_name"].unique()
 ```
 
@@ -180,8 +203,9 @@ df = px.data.gapminder().query("continent == 'Americas'")
 print(df.head())
 ```
 
-**Response:**
-```
+### Response
+
+```linenums="0"
 48  Argentina  Americas  1952   62.485  17876956  5911.315053       ARG       32
 49  Argentina  Americas  1957   64.399  19610538  6856.856212       ARG       32
 50  Argentina  Americas  1962   65.142  21283783  7133.166023       ARG       32
@@ -192,15 +216,20 @@ Note that now only data from the Americas is returned.
 
 ## Sorting
 
-**Prompt:** How do I sort the values of a DataFrame?
+### Prompt
 
-**Response**
+```linenums="0"
+How do I sort the values of a DataFrame?
 ```
+
+### Response
+
 To sort the values of a dataframe, you can use the sort_values() method.
 This method takes in the column name you would like to sort the values
 by as an argument. For example, to sort the values of a dataframe by
 the 'Name' column, you could use the following code: 
 
+```py
 df.sort_values(by='Name')
 ```
 
@@ -212,6 +241,8 @@ print(df.sort_values(by='lifeExp'))
 
 The result is the rows that had the shortest life expectancy in the Americas.
 ```
+
+```linenums="0"
           country continent  year  lifeExp       pop     gdpPercap iso_alpha  iso_num
 636         Haiti  Americas  1952   37.579   3201488   1840.366939       HTI      332
 132       Bolivia  Americas  1952   40.414   2883315   2677.326347       BOL       68

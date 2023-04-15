@@ -76,6 +76,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#prompts" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -381,10 +386,84 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Intro
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Intro
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-design-tips" class="md-nav__link">
+    Prompt Design Tips
+  </a>
+  
+    <nav class="md-nav" aria-label="Prompt Design Tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#give-context" class="md-nav__link">
+    Give Context
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specify-your-audience" class="md-nav__link">
+    Specify Your Audience
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#describe-the-tone" class="md-nav__link">
+    Describe The Tone
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provide-examples" class="md-nav__link">
+    Provide Examples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-precise-specific-phrases" class="md-nav__link">
+    Use Precise Specific Phrases
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1180,6 +1259,64 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-design-tips" class="md-nav__link">
+    Prompt Design Tips
+  </a>
+  
+    <nav class="md-nav" aria-label="Prompt Design Tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#give-context" class="md-nav__link">
+    Give Context
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specify-your-audience" class="md-nav__link">
+    Specify Your Audience
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#describe-the-tone" class="md-nav__link">
+    Describe The Tone
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provide-examples" class="md-nav__link">
+    Provide Examples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-precise-specific-phrases" class="md-nav__link">
+    Use Precise Specific Phrases
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1197,9 +1334,32 @@
 
 
 
-  <h1>Intro</h1>
-
-
+<h1 id="prompts">Prompts</h1>
+<p>A prompt is written instructions you give to a language model like
+ChatGPT.  Prompts can begin as a short instruction such as <em>generate
+a lesson plan on Python loops</em>.  If the results are not
+what you want, then you can add more text.  The more context
+you put in your prompts and the more specific you are about
+what you want in the response the more you are likely to get
+what you desire.</p>
+<h2 id="prompt-design-tips">Prompt Design Tips</h2>
+<p>Here are a few tips to help you get started.</p>
+<h3 id="give-context">Give Context</h3>
+<p><em>You are teaching a 6th-grade class in Python programming.
+The students don't have any background in coding.</em></p>
+<h3 id="specify-your-audience">Specify Your Audience</h3>
+<p><em>Generate an explanation of this program at the 8th-grade level.</em></p>
+<h3 id="describe-the-tone">Describe The Tone</h3>
+<p><em>Use a relaxed and friendly tone.</em></p>
+<h3 id="provide-examples">Provide Examples</h3>
+<p><em>Here is a sample list of colors:</em></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;yellow&quot;</span><span class="p">]</span>
+</code></pre></div>
+</td></tr></table>
+<p><em>generate 10 more colors in this format</em></p>
+<h3 id="use-precise-specific-phrases">Use Precise Specific Phrases</h3>
+<p>Not: <em>There is a bug.</em></p>
+<p>Try: <em>There is a compile error on line 10.</em></p>
 
               
             </article>

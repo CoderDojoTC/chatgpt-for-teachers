@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Slope of a Line</title>
+  <style>
+    svg {
+      width: 420px;
+      height: 420px;
+      border: solid black 1px;
+      background-color: #f0f0ff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  
+    .slope {
+        stroke: blue;
+        stroke-width: 2;
+    }
+    </style>
+</head>
+<body>
+    <h1>Slope of a Line</h1>
+    
+    <svg viewBox="0 0 400 400">
+      <g transform="translate(0,400) scale(1,-1)">
+      <line x1="0" y1="0" x2="400" y2="400" stroke="black" />
+      <line x1="0" y1="0" x2="0" y2="400" stroke="black" />
+     </g>
+      <script>
+      function updateGrid() {
+        var slope = document.querySelector("input").value;
+        var x1 = 0;
+        var y1 = 0;
+        var x2 = 400;
+        var y2 = slope * x2 + y1;
+        var line = document.querySelector("line");
+        line.setAttribute("x2", x2);
+        line.setAttribute("y2", y2);
+        line.setAttribute("class", "slope")
+      }
+      </script>
+    </svg>
+    <br/>
+    <label for="slope-input">Slope:</label>
+    <input id="slope-input" type="range" min="0" max="3" value="0" step="0.01" onchange="updateGrid()" style="width:400px">
+
+</body>
+</html>

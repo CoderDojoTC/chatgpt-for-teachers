@@ -13,6 +13,7 @@ nav:
     - Prompts: concepts/prompts.md
     - Tokens: concepts/tokens.md
     - Output Formats: concepts/output-formats.md
+    - Abstraction: concepts/abstraction.md
   - Basic Prompts:
     - Intro: prompts/index.md
     - Syllabus: prompts/01-syllabus.md

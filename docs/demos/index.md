@@ -19,6 +19,9 @@ Generate a cartesian grid drawing using SVG.  Create an SVG canvas of 400x400.  
 
 [Cartesian 1](./cartesian2.html)
 
-## Processsing
+## Processing
 
-Processing is a tool for doing 2D animationsl
+Processing is a tool for doing 2D animations.  I want to thank Val Lockhart and Troy Peterson for suggesting we use ChatGPT to generate processing code.
+
+[Processing Examples](p5/index.md)
+

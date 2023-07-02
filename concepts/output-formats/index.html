@@ -341,9 +341,40 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Output Formats
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Output Formats
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dot-example-from-bard" class="md-nav__link">
+    Dot Example from BARD
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1117,6 +1148,21 @@
   
   
     <li class="md-nav__item">
+      <a href="../../demos/" class="md-nav__link">
+        Demos
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../slides/" class="md-nav__link">
         Slides
       </a>
@@ -1204,6 +1250,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dot-example-from-bard" class="md-nav__link">
+    Dot Example from BARD
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1236,6 +1297,47 @@ advanced graphical formats.</p>
 <li><strong>Mermaid</strong> - a format for graphical layouts such as shapes connected with arrows</li>
 <li><strong>Dot</strong> - </li>
 </ul>
+<h2 id="dot-example-from-bard">Dot Example from BARD</h2>
+<p><strong>Prompt:</strong> Create a causal loop diagram that explains the operation of a thermostat.  Return the results in "dot" layout format.  Label the "Balancing" loop.</p>
+<p>results:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>digraph thermostat {
+  node [shape=box];
+  &quot;Set temperature&quot; -&gt; &quot;Actual temperature&quot;;
+  &quot;Actual temperature&quot; -&gt; &quot;Thermostat&quot;;
+  &quot;Thermostat&quot; -&gt; &quot;Heating&quot;;
+  &quot;Heating&quot; -&gt; &quot;Actual temperature&quot;;
+  &quot;Actual temperature&quot; -&gt; &quot;Cooling&quot;;
+  &quot;Cooling&quot; -&gt; &quot;Actual temperature&quot;;
+  &quot;Set temperature&quot; [label=&quot;Set temperature&quot;];
+  &quot;Actual temperature&quot; [label=&quot;Actual temperature&quot;];
+  &quot;Thermostat&quot; [label=&quot;Thermostat&quot;];
+  &quot;Heating&quot; [label=&quot;Heating&quot;];
+  &quot;Cooling&quot; [label=&quot;Cooling&quot;];
+
+  // Add Balancing label
+  &quot;Actual temperature&quot; -&gt; &quot;Thermostat&quot; [label=&quot;Balancing&quot;];
+}
+</code></pre></div>
+</td></tr></table>
+<p>Online viewer: <a href="https://dreampuf.github.io/GraphvizOnline/">https://dreampuf.github.io/GraphvizOnline/</a></p>
+<p>Image result:</p>
+<p><img alt="" src="./img/thermostat-dot-digraph.png" /></p>
 
               
             </article>

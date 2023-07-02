@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        body {
+            font-family:Arial, Helvetica, sans-serif
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.14.2/matter.min.js"></script>
+</head>
+<body>
+    <div>
+        <label for="gravity">Gravity: </label>
+        <input type="range" min="0" max="2" step="0.01" id="gravity" value="1">
+    </div>
+    <button id="reset">Reset</button>
+    <canvas id="canvas" width="800" height="600"></canvas>
+
+    <script src="simulation.js"></script>
+    <p>Generate a simulation of a ball bouncing in a 2D space using the matter.js JavaScript library. 
+        Add a range control slide for gravity and add a label.
+        Make the ball bounce off the ground at the bottom.
+        Also add a reset that stats the ball bouncing again.</p>
+</body>
+</html>

@@ -16,3 +16,35 @@ Text types:
 * **SVG** - a way to encode scalable vector graphics in your output.  This works well for simple shapes such as a square, a circle or a grid, but does not work for more complex shape such as a heart.
 * **Mermaid** - a format for graphical layouts such as shapes connected with arrows
 * **Dot** - 
+
+## Dot Example from BARD
+
+**Prompt:** Create a causal loop diagram that explains the operation of a thermostat.  Return the results in "dot" layout format.  Label the "Balancing" loop.
+
+results:
+
+```
+digraph thermostat {
+  node [shape=box];
+  "Set temperature" -> "Actual temperature";
+  "Actual temperature" -> "Thermostat";
+  "Thermostat" -> "Heating";
+  "Heating" -> "Actual temperature";
+  "Actual temperature" -> "Cooling";
+  "Cooling" -> "Actual temperature";
+  "Set temperature" [label="Set temperature"];
+  "Actual temperature" [label="Actual temperature"];
+  "Thermostat" [label="Thermostat"];
+  "Heating" [label="Heating"];
+  "Cooling" [label="Cooling"];
+  
+  // Add Balancing label
+  "Actual temperature" -> "Thermostat" [label="Balancing"];
+}
+```
+
+Online viewer: [https://dreampuf.github.io/GraphvizOnline/](https://dreampuf.github.io/GraphvizOnline/)
+
+Image result:
+
+![](./img/thermostat-dot-digraph.png)

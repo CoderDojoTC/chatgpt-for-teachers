@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Line Plot</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div id="canvasContainer"></div>
+    <div id="sliderContainer">
+        <p>Slope: <span id="slopeValue"></span></p>
+        <input type="range" id="slopeSlider" min="-50" max="50" value="0" step="1">
+        <p>Intercept: <span id="interceptValue"></span></p>
+        <input type="range" id="interceptSlider" min="-200" max="200" value="0" step="1">
+    </div>
+</body>
+</html>

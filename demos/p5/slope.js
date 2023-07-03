@@ -1,19 +1,31 @@
-let slope;
+let slopeSlider;
+let interceptSlider;
 
 function setup() {
   createCanvas(400, 400);
-  slope = createSlider(-1, 1, 0, 0.01);
-  slope.id('slope');
+  slopeSlider = createSlider(-1, 1, .5, 0.01);
+  slopeSlider.position(95, 10);
+  slopeSlider.style('width', '310px');
+
+  interceptSlider = createSlider(0, 400, 100, 1);
+  interceptSlider.position(95, 30);
+  interceptSlider.style('width', '310px');
 }
 
 function draw() {
-  background(255);
+  background(250);
+  stroke('black');
+  strokeWeight(1);
+  let slopeValue = slopeSlider.value();
+  let interceptValue = interceptSlider.value();
+  text('Slope: ' + slopeValue, 5, 15);
+  text('Intercept: ' + interceptValue, 5, 35);
   
   // Drawing grid
-  stroke(200);
+
   for(let i = 0; i <= width; i += 50){
     if(i % 100 === 0){
-      strokeWeight(2);
+      strokeWeight(1);
       line(i, 0, i, height);
       line(0, i, width, i);
     } else {
@@ -26,8 +38,8 @@ function draw() {
   }
   
   // Drawing blue line
-  stroke(0, 0, 255);
-  strokeWeight(2);
-  let slopeValue = slope.value();
-  line(0, height / 2, width, height / 2 - slopeValue * width);
+  stroke('blue');
+  strokeWeight(4);
+
+  line(0, 400 - interceptValue, width, 400 - interceptValue - slopeValue * width);
 }

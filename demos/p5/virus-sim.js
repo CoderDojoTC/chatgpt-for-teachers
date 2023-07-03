@@ -44,7 +44,8 @@ function setup() {
   buttons.reset = createButton('Reset');
   buttons.reset.mousePressed(resetSimulation);
 
-  let sliderR = createSlider(0, 1, r, 0.01);
+  let sliderR = createSlider(0, .4, r, 0.01);
+  sliderR.style('width', '340px');
   sliderR.input(() => r = sliderR.value());
 }
 

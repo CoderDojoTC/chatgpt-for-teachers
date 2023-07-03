@@ -33,8 +33,9 @@ we move down the page.</br>
 
 ## Virus Simulation
 
-A classic simulation of the rate that a virus spreads in a network.
+A classic simulation of the rate that a virus spreads in a network.<br/>
 [Virus Simulation](./virus-sim.html)
+TODO - use a force-directed graph to rearrange the network.
 
 ## Sierpinski Fractal Triangle
 

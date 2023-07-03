@@ -25,6 +25,12 @@ we move down the page.</br>
 
 [Brownian Motion](./brownian-motion.html)
 
+## Conway's Game of Life
+
+[Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) is a simple simulator of cells.  This is a class of simulation called [Cellular Automata](https://en.wikipedia.org/wiki/Cellular_automaton)
+
+[Conway's Game of Life](./conways-life.html)
+
 ## Sierpinski Fractal Triangle
 
 [Sierpinski Fractal Triangle](./sierpinski.html)
@@ -39,3 +45,7 @@ we move down the page.</br>
 ## Canon
 
 [Canon Simulator](./canon.html)
+
+## Tutorials
+
+[Tool on Codecademy.com](https://www.codecademy.com/learn/learn-p5js/modules/p5js-introduction-to-creative-coding/cheatsheet)

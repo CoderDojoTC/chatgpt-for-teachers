@@ -1,32 +1,27 @@
-let heightSlider, widthSlider;
-let canvasWidth = 400;
-let canvasHeight = 400;
-let rectWidth, rectHeight;
+let widthSlider;
+let heightSlider;
 
 function setup() {
-  let canvas = createCanvas(canvasWidth, canvasHeight);
-  canvas.parent('canvas');
+  createCanvas(400, 400);
+
+  widthSlider = createSlider(0, 360, 50, 1);
+  widthSlider.position(65, 10);
+  widthSlider.style('width', '340px');
   
-  heightSlider = document.getElementById('heightSlider');
-  widthSlider = document.getElementById('widthSlider');
-  
-  heightSlider.addEventListener('input', updateRectSize);
-  widthSlider.addEventListener('input', updateRectSize);
-  
-  rectWidth = widthSlider.value;
-  rectHeight = heightSlider.value;
+  heightSlider = createSlider(0, 360, 50, 1);
+  heightSlider.position(65, 30);
+  heightSlider.style('width', '340px');
 }
 
 function draw() {
-  background(220);
-  fill(0);
+  background(230);
+  fill(20);
+  width = widthSlider.value()
+  height = heightSlider.value()
+  text('Width: ' + width, 0, 15);
+  text('Height: ' + height, 0, 35);
   
-  let rectX = canvasWidth / 2 - rectWidth / 2;
-  let rectY = canvasHeight / 2 - rectHeight / 2;
-  rect(rectX, rectY, rectWidth, rectHeight);
-}
-
-function updateRectSize() {
-  rectWidth = widthSlider.value;
-  rectHeight = heightSlider.value;
+  let myHeight = heightSlider.value();
+  let myWidth = widthSlider.value();
+  rect(10, 50, myWidth, myHeight);
 }

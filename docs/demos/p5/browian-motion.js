@@ -2,9 +2,11 @@ let molecules = [];
 let sliderTemp, sliderMol;
 
 function setup() {
-    createCanvas(600, 400);
+    createCanvas(800, 400);
     sliderTemp = createSlider(1, 10, 5);
+    sliderTemp.style('width', '340px');
     sliderMol = createSlider(1, 100, 50);
+    sliderMol.style('width', '340px');
     for (let i = 0; i < sliderMol.value(); i++) {
         molecules[i] = new Molecule();
     }
@@ -12,7 +14,12 @@ function setup() {
 
 function draw() {
     background(51);
-    for (let i = 0; i < sliderMol.value(); i++) {
+    let temp = sliderTemp.value();
+    let mol = sliderMol.value();
+    fill('white');
+    text('Temperature: ' + temp, 10, 390);
+    text('Molecules: ' + mol, 350, 390);
+    for (let i = 0; i < mol; i++) {
         if (i < molecules.length) {
             molecules[i].update();
             molecules[i].show();
@@ -22,7 +29,7 @@ function draw() {
             molecules.push(m);
         }
     }
-    while (molecules.length > sliderMol.value()) {
+    while (molecules.length > mol) {
         molecules.pop();
     }
 }

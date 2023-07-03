@@ -1,13 +1,17 @@
 
-let slider;
+let simpleSlider;
+
 function setup() {
-  colorMode(HSB);
-  slider = createSlider(0, 360, 60, 40);
-  slider.position(10, 10);
-  slider.style('width', '80px');
+  createCanvas(400, 400);
+  simpleSlider = createSlider(0, 360, 50, 1);
+  simpleSlider.position(65, 10);
+  simpleSlider.style('width', '340px');
 }
 
 function draw() {
-  let val = slider.value();
-  background(val, 400, 400, 1);
+  background('white');
+  let val = simpleSlider.value();
+  fill('black');
+  text('Value: ' + val, 0, 15);
+  circle(width/2, height/2, val);
 }

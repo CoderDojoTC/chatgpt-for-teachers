@@ -31,6 +31,11 @@ we move down the page.</br>
 
 [Conway's Game of Life](./conways-life.html)
 
+## Virus Simulation
+
+A classic simulation of the rate that a virus spreads in a network.
+[Virus Simulation](./virus-sim.html)
+
 ## Sierpinski Fractal Triangle
 
 [Sierpinski Fractal Triangle](./sierpinski.html)

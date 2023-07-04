@@ -45,6 +45,44 @@ See the [p5.js parent](https://p5js.org/reference/#/p5.Element/parent) reference
 
 ## Basic Examples
 
+### Circle Slider
+
+Here is a simple example that you can start with.  The ChatGPT prompt would be the following:
+
+```
+Generate a p5.js sketch file that draws a blue circle in the center of a 400x400 canvas.  Create a range control slider that allows the radius to be adjusted from 0 to 200.  Use the text() function within the draw() function to display the current value of the radius in the canvas.
+```
+
+[Circle Slider](./circle-slider.html)
+
+```javascript
+let radiusSlider;
+let radius = 0;
+
+function setup() {
+  createCanvas(400, 400);
+  
+  // Create the radius slider
+  radiusSlider = createSlider(0, 200, 100);
+  radiusSlider.position(10, 10);
+}
+
+function draw() {
+  background(220);
+  
+  // Fetch the current radius from the slider
+  radius = radiusSlider.value();
+
+  // Draw the circle
+  fill(0, 0, 255);
+  noStroke();
+  circle(width / 2, height / 2, radius * 2);
+
+  // Display the radius value
+  fill(0);
+  text("Radius: " + radius, 10, 50);
+}
+```
 ### Gold Star
 
 Here is a p5 sketch that generates a multi-pointed star.  

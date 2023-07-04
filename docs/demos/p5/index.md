@@ -84,6 +84,21 @@ TODO - use a force-directed graph to rearrange the network.
 
 [Canon Simulator](./canon.html)
 
+## Spring
+
+This is a simulator of a mass on the end of a coiled spring.
+
+The user can change:
+
+1. The mass amount (M)
+2. The spring constant (K)
+3. The damping factor (D)
+
+[Spring Simulator](./spring.html)
+
+The simulation still needs some UX work.  The drag-down operation is not clean and the spring could
+be compressed more.
+
 ## Tutorials
 
 * [p5.js Learn](https://p5js.org/learn/)

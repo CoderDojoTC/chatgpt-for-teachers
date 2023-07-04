@@ -1,18 +1,28 @@
 # Processing Examples
 
-## Sliders
+All of these examples were inspired by the wonderful Val Lockhart and Troy Peterson.  They were the
+first to get the idea to generate Processing code from ChagGPT.
 
-Sliders are the input range controls that allow users to change a value.
+## Prompting Tips
+
+There really is not a log of current high-quality p5.js code available.  So ChatGPT really has to
+guess based on prior versions of Processing.  Here are some of my tips.
+
+### Sliders
+
+Sliders are the input range controls that allow users to change a value of a simulation.  To get the sliders to work you need to give ChatGPT some sample code like the code below.
 
 1. A single slider on a 400x400 canvas with label and text value. This demo
 controls the radius of a circle.<br/>
 [Single Slider Radius](./slider.html)
 
-1. Two sliders on a 400x400 canvas that control width and height of a rectangle.
+1. Two sliders on a 400x400 canvas that control the width and height of a rectangle.
 <br/>
 [Two Sliders Controlling a Rectangle](./sliders.html)
 
-## Sketch Container Placement
+### Sketch Container Placement
+
+ChatGPT is not really good at placing graphic components on the screen and placing the canvas so it renders well within an HTML file.
 
 In the ```setup()``` function we can use the ```canvas.parent()``` method to indicate the ID of the enclosing HTML div id.
 
@@ -33,18 +43,22 @@ See the [p5.js parent](https://p5js.org/reference/#/p5.Element/parent) reference
 
 [Container Placement Example](./container-placement.html)
 
-## Star
+## Basic Examples
+
+### Gold Star
+
+Here is a p5 sketch that generates a multi-pointed star.  
 
 [Multi-pointed Star](./star.html)
 
-Here is a p5 sketch that generates a multi-pointed star.  Here is the prompt I used to generate
+Here is the prompt I used to generate
 this program.
 
 ```
 Generate a p5.js sketch that draws a star at the center of a 400x400 canvas.  Add a slider for the number of points on the star that ranges from 4 to 20.  Make the slider width be 380px and display the number of points using the text() function at the end of the draw() function.
 ```
 
-## Slope and Intercept
+### Slope and Intercept
 
 Students that are learning charts and plotting will learn about the slope and intercept of a line.
 This one is tricky since processing uses the upper-left corner as the origin and y increases as
@@ -53,38 +67,43 @@ we move down the page.</br>
 
 [Supply and Demand](./supply-and-demand.html)
 
-## Brownian Motion
+### Brownian Motion
+
+A classic physics simulation where the user can adjust the temperature and number of molecules in the simulation.
 
 [Brownian Motion](./brownian-motion.html)
 
-## Conway's Game of Life
+### Conway's Game of Life
 
 [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) is a simple simulator of cells.  This is a class of simulation called [Cellular Automata](https://en.wikipedia.org/wiki/Cellular_automaton)
 
 [Conway's Game of Life](./conways-life.html)
 
-## Virus Simulation
+### Virus Simulation
 
 A classic simulation of the rate that a virus spreads in a network.<br/>
 [Virus Simulation](./virus-sim.html)
 TODO - use a force-directed graph to rearrange the network.
 
-## Sierpinski Fractal Triangle
+### Sierpinski Fractal Triangle
 
 [Sierpinski Fractal Triangle](./sierpinski.html)
 
-## Koch Fractal Curve
+### Koch Fractal Curve
+
 [Koch Fractal Curve](./koch-fractal-curve.html)
 
-## Rabbit and Foxes
+### Rabbit and Foxes
+
+Simulate foxes eating rabbits. <br/>
 
 [Rabbit and Foxes](./rabbit-and-foxes.html)
 
-## Canon
+### Projectile Motion
 
 [Canon Simulator](./canon.html)
 
-## Spring
+### Mass on A Spring
 
 This is a simulator of a mass on the end of a coiled spring.
 

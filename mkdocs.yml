@@ -61,7 +61,7 @@ nav:
     - Today: future/ai-today.md
     - Near Term: future/near-term.md
     - Long Term: future/long-term.md
-  - Demos: demos/index.md
+  - Interactive Demos: demos/index.md
   - Slides: slides.md
   - Glossary: glossary.md
   - Markdown Summary: markdown-summary.md

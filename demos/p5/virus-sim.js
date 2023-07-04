@@ -75,14 +75,10 @@ function draw() {
   
   // display sim statistics
   fill('white)');
-  rect(0,height-25, 300, 25);
-  fill('black)');
-  stroke('black');
-  //sliderR.input(() => r = sliderR.value());
-  text('r: ' + r, 10, height-10);
-  text('steps: ' + simSteps, 60, height-10);
-  text('infected: ' + currentInfectedCount, 130, height-10);
-  text('Status: ' + simulationStatus, 210, height-10);
+  rect(0,height-25, 400, 25);
+  fill(0);
+  textSize(16);
+  text('r: ' + r + '   Steps: ' + simSteps + '   Infected: ' + currentInfectedCount + '   Status: ' + simulationStatus, 10, height-10);
 }
 
 function stepSimulation() {

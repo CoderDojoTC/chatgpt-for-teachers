@@ -1221,6 +1221,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#sketch-container-placement" class="md-nav__link">
+    Sketch Container Placement
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#star" class="md-nav__link">
+    Star
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#slope-and-intercept" class="md-nav__link">
     Slope and Intercept
   </a>
@@ -1316,6 +1330,38 @@ controls the radius of a circle.<br/>
 <a href="sliders.html">Two Sliders Controlling a Rectangle</a></p>
 </li>
 </ol>
+<h2 id="sketch-container-placement">Sketch Container Placement</h2>
+<p>In the <code>setup()</code> function we can use the <code>canvas.parent()</code> method to indicate the ID of the enclosing HTML div id.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// Create a p5.js canvas inside the div with id &quot;sketch-container&quot;</span>
+  <span class="kd">const</span> <span class="nx">canvas</span> <span class="o">=</span> <span class="nx">createCanvas</span><span class="p">(</span><span class="mf">400</span><span class="p">,</span> <span class="mf">400</span><span class="p">);</span>
+  <span class="nx">canvas</span><span class="p">.</span><span class="nx">parent</span><span class="p">(</span><span class="s1">&#39;sketch-container&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">draw</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">background</span><span class="p">(</span><span class="mf">220</span><span class="p">);</span>
+  <span class="c1">// Your drawing code goes here</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<p>See the <a href="https://p5js.org/reference/#/p5.Element/parent">p5.js parent</a> reference document.</p>
+<p><a href="container-placement.html">Container Placement Example</a></p>
+<h2 id="star">Star</h2>
+<p><a href="star.html">Multi-pointed Star</a></p>
+<p>Here is a p5 sketch that generates a multi-pointed star.  Here is the prompt I used to generate
+this program.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Generate a p5.js sketch that draws a star at the center of a 400x400 canvas.  Add a slider for the number of points on the star that ranges from 4 to 20.  Make the slider width be 380px and display the number of points using the text() function at the end of the draw() function.
+</code></pre></div>
+</td></tr></table>
 <h2 id="slope-and-intercept">Slope and Intercept</h2>
 <p>Students that are learning charts and plotting will learn about the slope and intercept of a line.
 This one is tricky since processing uses the upper-left corner as the origin and y increases as
@@ -1340,7 +1386,17 @@ TODO - use a force-directed graph to rearrange the network.</p>
 <h2 id="canon">Canon</h2>
 <p><a href="canon.html">Canon Simulator</a></p>
 <h2 id="tutorials">Tutorials</h2>
+<ul>
+<li>
+<p><a href="https://p5js.org/learn/">p5.js Learn</a></p>
+</li>
+<li>
+<p><a href="https://github.com/processing/p5.js/wiki">p5.js wiki</a></p>
+</li>
+<li>
 <p><a href="https://www.codecademy.com/learn/learn-p5js/modules/p5js-introduction-to-creative-coding/cheatsheet">Tool on Codecademy.com</a></p>
+</li>
+</ul>
 
               
             </article>

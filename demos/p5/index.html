@@ -1214,86 +1214,112 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#prompting-tips" class="md-nav__link">
+    Prompting Tips
+  </a>
+  
+    <nav class="md-nav" aria-label="Prompting Tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#sliders" class="md-nav__link">
     Sliders
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#sketch-container-placement" class="md-nav__link">
     Sketch Container Placement
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#star" class="md-nav__link">
-    Star
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#basic-examples" class="md-nav__link">
+    Basic Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gold-star" class="md-nav__link">
+    Gold Star
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#slope-and-intercept" class="md-nav__link">
     Slope and Intercept
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#brownian-motion" class="md-nav__link">
     Brownian Motion
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#conways-game-of-life" class="md-nav__link">
     Conway's Game of Life
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#virus-simulation" class="md-nav__link">
     Virus Simulation
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#sierpinski-fractal-triangle" class="md-nav__link">
     Sierpinski Fractal Triangle
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#koch-fractal-curve" class="md-nav__link">
     Koch Fractal Curve
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#rabbit-and-foxes" class="md-nav__link">
     Rabbit and Foxes
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#canon" class="md-nav__link">
-    Canon
+        
+          <li class="md-nav__item">
+  <a href="#projectile-motion" class="md-nav__link">
+    Projectile Motion
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#spring" class="md-nav__link">
-    Spring
+        
+          <li class="md-nav__item">
+  <a href="#mass-on-a-spring" class="md-nav__link">
+    Mass on A Spring
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1323,8 +1349,13 @@
 
 
 <h1 id="processing-examples">Processing Examples</h1>
-<h2 id="sliders">Sliders</h2>
-<p>Sliders are the input range controls that allow users to change a value.</p>
+<p>All of these examples were inspired by the wonderful Val Lockhart and Troy Peterson.  They were the
+first to get the idea to generate Processing code from ChagGPT.</p>
+<h2 id="prompting-tips">Prompting Tips</h2>
+<p>There really is not a log of current high-quality p5.js code available.  So ChatGPT really has to
+guess based on prior versions of Processing.  Here are some of my tips.</p>
+<h3 id="sliders">Sliders</h3>
+<p>Sliders are the input range controls that allow users to change a value of a simulation.  To get the sliders to work you need to give ChatGPT some sample code like the code below.</p>
 <ol>
 <li>
 <p>A single slider on a 400x400 canvas with label and text value. This demo
@@ -1332,12 +1363,13 @@ controls the radius of a circle.<br/>
 <a href="slider.html">Single Slider Radius</a></p>
 </li>
 <li>
-<p>Two sliders on a 400x400 canvas that control width and height of a rectangle.
+<p>Two sliders on a 400x400 canvas that control the width and height of a rectangle.
 <br/>
 <a href="sliders.html">Two Sliders Controlling a Rectangle</a></p>
 </li>
 </ol>
-<h2 id="sketch-container-placement">Sketch Container Placement</h2>
+<h3 id="sketch-container-placement">Sketch Container Placement</h3>
+<p>ChatGPT is not really good at placing graphic components on the screen and placing the canvas so it renders well within an HTML file.</p>
 <p>In the <code>setup()</code> function we can use the <code>canvas.parent()</code> method to indicate the ID of the enclosing HTML div id.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -1362,37 +1394,41 @@ controls the radius of a circle.<br/>
 </td></tr></table>
 <p>See the <a href="https://p5js.org/reference/#/p5.Element/parent">p5.js parent</a> reference document.</p>
 <p><a href="container-placement.html">Container Placement Example</a></p>
-<h2 id="star">Star</h2>
+<h2 id="basic-examples">Basic Examples</h2>
+<h3 id="gold-star">Gold Star</h3>
+<p>Here is a p5 sketch that generates a multi-pointed star.  </p>
 <p><a href="star.html">Multi-pointed Star</a></p>
-<p>Here is a p5 sketch that generates a multi-pointed star.  Here is the prompt I used to generate
+<p>Here is the prompt I used to generate
 this program.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Generate a p5.js sketch that draws a star at the center of a 400x400 canvas.  Add a slider for the number of points on the star that ranges from 4 to 20.  Make the slider width be 380px and display the number of points using the text() function at the end of the draw() function.
 </code></pre></div>
 </td></tr></table>
-<h2 id="slope-and-intercept">Slope and Intercept</h2>
+<h3 id="slope-and-intercept">Slope and Intercept</h3>
 <p>Students that are learning charts and plotting will learn about the slope and intercept of a line.
 This one is tricky since processing uses the upper-left corner as the origin and y increases as
 we move down the page.</br>
 <a href="slope.html">Slope and Intercept</a></p>
 <p><a href="supply-and-demand.html">Supply and Demand</a></p>
-<h2 id="brownian-motion">Brownian Motion</h2>
+<h3 id="brownian-motion">Brownian Motion</h3>
+<p>A classic physics simulation where the user can adjust the temperature and number of molecules in the simulation.</p>
 <p><a href="brownian-motion.html">Brownian Motion</a></p>
-<h2 id="conways-game-of-life">Conway's Game of Life</h2>
+<h3 id="conways-game-of-life">Conway's Game of Life</h3>
 <p><a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway's Game of Life</a> is a simple simulator of cells.  This is a class of simulation called <a href="https://en.wikipedia.org/wiki/Cellular_automaton">Cellular Automata</a></p>
 <p><a href="conways-life.html">Conway's Game of Life</a></p>
-<h2 id="virus-simulation">Virus Simulation</h2>
+<h3 id="virus-simulation">Virus Simulation</h3>
 <p>A classic simulation of the rate that a virus spreads in a network.<br/>
 <a href="virus-sim.html">Virus Simulation</a>
 TODO - use a force-directed graph to rearrange the network.</p>
-<h2 id="sierpinski-fractal-triangle">Sierpinski Fractal Triangle</h2>
+<h3 id="sierpinski-fractal-triangle">Sierpinski Fractal Triangle</h3>
 <p><a href="sierpinski.html">Sierpinski Fractal Triangle</a></p>
-<h2 id="koch-fractal-curve">Koch Fractal Curve</h2>
+<h3 id="koch-fractal-curve">Koch Fractal Curve</h3>
 <p><a href="koch-fractal-curve.html">Koch Fractal Curve</a></p>
-<h2 id="rabbit-and-foxes">Rabbit and Foxes</h2>
+<h3 id="rabbit-and-foxes">Rabbit and Foxes</h3>
+<p>Simulate foxes eating rabbits. <br/></p>
 <p><a href="rabbit-and-foxes.html">Rabbit and Foxes</a></p>
-<h2 id="canon">Canon</h2>
+<h3 id="projectile-motion">Projectile Motion</h3>
 <p><a href="canon.html">Canon Simulator</a></p>
-<h2 id="spring">Spring</h2>
+<h3 id="mass-on-a-spring">Mass on A Spring</h3>
 <p>This is a simulator of a mass on the end of a coiled spring.</p>
 <p>The user can change:</p>
 <ol>

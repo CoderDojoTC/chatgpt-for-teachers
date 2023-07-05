@@ -14,7 +14,7 @@ A large number of subjects in a high school curriculum can be enhanced with the 
 
 **Economics:** Concepts like supply and demand, market equilibrium, effects of fiscal and monetary policy, and international trade can be explained using interactive graphs.
 
-**Computer Science:**** Algorithms and data structures can be better understood by visualizing them. Coding concepts like loops, functions, and recursion can also be visualized.
+**Computer Science:** Algorithms and data structures can be better understood by visualizing them. Coding concepts like loops, functions, and recursion can also be visualized.
 
 **History:** Interactive timelines can be a great way to understand the sequence of historical events, how they overlap, and their impact on each other.
 
@@ -22,18 +22,19 @@ A large number of subjects in a high school curriculum can be enhanced with the 
 
 **Astronomy:** The movement of celestial bodies, phases of the moon, solar and lunar eclipses, or understanding constellations are much easier with interactive simulations.
 
-These are just a few examples. The potential for interactive teaching and learning is vast, and can enhance understanding and retention of complex concepts across virtually any subject.
+These are just a few examples. The potential for interactive teaching and learning is vast and can enhance understanding and retention of complex concepts across virtually any subject.
 
+## Using Generative AI To Generate Interactive Simulations
 
+In the past, most learning happen when students read books and listened to lectures.  Today
+we can use generative AI to generate fun and exciting interactive web pages that
+allow students to interact with their subjects.
 
+There are many libraries of tools to allow us to use tools like ChatGPT to generate these
+web applications directly from our prompts.  We just need to know what library to reference
+and how to test the apps that generative AI generates.
 
-
-
-Regenerate response
-
-Allow your students to learn via direct interaction with simulations.
-
-## Ball Bounce
+## Matter.js Ball Bounce Example
 
 Matter.js is a tool that does simple physic simulations.
 
@@ -43,7 +44,7 @@ Matter.js is a tool that does simple physic simulations.
 
 ### Prompt: 
 
-```inenums="0"
+```linenums="0"
 Generate a cartesian grid drawing using SVG.  Create an SVG canvas of 400x400.  Place the origin in the lower-left corner.  Draw grids that are solid lines ever 100 and dashed lines every 50.
 ```
 [Cartesian 1](./cartesian.html)

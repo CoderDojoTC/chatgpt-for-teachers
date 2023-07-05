@@ -5,10 +5,12 @@ first to get the idea to generate Processing code from ChagGPT.
 
 ## Prompting Tips
 
-There really is not a log of current high-quality p5.js code available.  So ChatGPT really has to
-guess based on prior versions of Processing.  Here are some of my tips.
+Unlike popular languages like Python, there are not a lot of high-quality p5.js simulations available.
+So ChatGPT has to guess based on the examples it found online.  Here are some of my tips.
 
 ### Sliders
+
+![](../../img/p5-slider-circle.png){: style="height:300px;width:300px"}
 
 Sliders are the input range controls that allow users to change a value of a simulation.  To get the sliders to work you need to give ChatGPT some sample code like the code below.
 
@@ -21,6 +23,8 @@ controls the radius of a circle.<br/>
 [Two Sliders Controlling a Rectangle](./sliders.html)
 
 ### Sketch Container Placement
+
+![](./../../img/p5-canvas-placement.png)
 
 ChatGPT is not really good at placing graphic components on the screen and placing the canvas so it renders well within an HTML file.
 
@@ -49,8 +53,11 @@ See the [p5.js parent](https://p5js.org/reference/#/p5.Element/parent) reference
 
 Here is a simple example that you can start with.  The ChatGPT prompt would be the following:
 
-```
-Generate a p5.js sketch file that draws a blue circle in the center of a 400x400 canvas.  Create a range control slider that allows the radius to be adjusted from 0 to 200.  Use the text() function within the draw() function to display the current value of the radius in the canvas.
+```linenums="0"
+Generate a p5.js sketch file that draws a blue circle in the center of a
+400x400 canvas.  Create a range control slider that allows the radius
+to be adjusted from 0 to 200.  Use the text() function within the draw()
+function to display the current value of the radius in the canvas.
 ```
 
 [Circle Slider](./circle-slider.html)
@@ -83,7 +90,32 @@ function draw() {
   text("Radius: " + radius, 10, 50);
 }
 ```
-### Gold Star
+
+### Polygon
+
+In this example, we will use a more detailed prompt to control the placement of the
+sliders and their values.
+
+Prompt:
+```linenums="0"
+Generate a p5.js sketch file that draws filled polygons on a 400x400 canvas.
+
+Create one range control slider that allows the color inside the polygon
+to be changed to any color.  Make the default value be 170 (blue).
+
+Create second range control slider that allows the number of points on
+the polygon to vary from 3 to 10 in steps of 1.  Make the default be 10.
+
+Make the sliders be the width of the canvas.  Place the sliders at the bottom
+of the canvas 100 points in from the left.
+
+Use the text() function at the end of the draw() function to display the
+name and current values of the sliders.
+```
+
+[Polygon Demonstration](./polygon.html)
+
+### Multi-pointed Star
 
 Here is a p5 sketch that generates a multi-pointed star.  
 
@@ -92,8 +124,11 @@ Here is a p5 sketch that generates a multi-pointed star.
 Here is the prompt I used to generate
 this program.
 
-```
-Generate a p5.js sketch that draws a star at the center of a 400x400 canvas.  Add a slider for the number of points on the star that ranges from 4 to 20.  Make the slider width be 380px and display the number of points using the text() function at the end of the draw() function.
+```linenums="0"
+Generate a p5.js sketch that draws a star at the center of a 400x400 canvas. 
+Add a slider for the number of points on the star that ranges from 4 to 20. 
+Make the slider width be 360px and display the number of points by using the
+text() function at the end of the draw() function.
 ```
 
 ### Slope and Intercept
@@ -101,9 +136,16 @@ Generate a p5.js sketch that draws a star at the center of a 400x400 canvas.  Ad
 Students that are learning charts and plotting will learn about the slope and intercept of a line.
 This one is tricky since processing uses the upper-left corner as the origin and y increases as
 we move down the page.</br>
+
 [Slope and Intercept](./slope.html)
 
 [Supply and Demand](./supply-and-demand.html)
+
+### Sine Wave
+
+In this demo, we use three range controls to change the amplitude, period and phase of a sine wave.
+
+[Sine Wave Demo](./sine.html)
 
 ### Brownian Motion
 

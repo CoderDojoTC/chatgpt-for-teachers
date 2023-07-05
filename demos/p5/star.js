@@ -2,12 +2,12 @@
 let pointsSlider;
 
 function setup() {
-  const canvas = createCanvas(400, 400);
+  const canvas = createCanvas(400, 410);
   // connect the canvas to this HTML id
   canvas.parent('canvas-container');
   pointsSlider = createSlider(4, 20, 4);
-  pointsSlider.position(10, 410);
-  pointsSlider.style('width', '380px');
+  pointsSlider.position(70, 395);
+  pointsSlider.style('width', '330px');
 }
 
 function draw() {
@@ -26,10 +26,10 @@ function draw() {
   push();
   translate(cx, cy);
   rotate(-HALF_PI);
-  star(0, 0, r * 0.6, r, points);
+  star(0, 0, r * 0.4, r, points);
   pop();
   
-  text(`Points: ${points}`, 10, height - 20);
+  text(`Points: ${points}`, 10, height - 10);
 }
 
 function star(x, y, radius1, radius2, npoints) {

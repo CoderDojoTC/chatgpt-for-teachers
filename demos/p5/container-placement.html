@@ -1,21 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table {
+            border: solid 1px gray;
+        }
+        td {
+            border: solid 1px silver;
+        }
+    </style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
   <script src="container-placement.js"></script>
 </head>
 <body>
+    <p>Placement of canvas within a table cell.</p>
     <table>
         <thead>
-            <th>Description</th>
-            <th>Example</th>
+            <th>Table Header Row 1</th>
+            <th>Cell above canvas</th>
         </thead>
         <tbody>
             <tr>
-                <td>This is a circle</td>
+                <td>Table cell left of canvas</td>
                 <td><div id="sketch-container"></div></td>
+                <td>Cell to the right of the canvas</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Cell below</td>
+                <td></td>
             </tr>
         </tbody>
     </table>
+    <p>The table cell must have a div with and id of "sketch-container"</p>
 </body>
 </html>

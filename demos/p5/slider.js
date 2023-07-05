@@ -3,15 +3,18 @@ let simpleSlider;
 
 function setup() {
   createCanvas(400, 400);
-  simpleSlider = createSlider(0, 360, 50, 1);
-  simpleSlider.position(65, 10);
-  simpleSlider.style('width', '340px');
+  // min, max, default, increment
+  simpleSlider = createSlider(0, 360, 100, 1);
+  // x and y position
+  simpleSlider.position(70, 10);
+  // how wide the slider should be
+  simpleSlider.style('width', '330px');
 }
 
 function draw() {
-  background('white');
+  background(220);
   let val = simpleSlider.value();
   fill('black');
-  text('Value: ' + val, 0, 15);
   circle(width/2, height/2, val);
+  text('Value: ' + val, 5, 15);
 }

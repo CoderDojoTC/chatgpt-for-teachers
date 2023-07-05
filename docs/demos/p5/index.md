@@ -147,6 +147,12 @@ In this demo, we use three range controls to change the amplitude, period and ph
 
 [Sine Wave Demo](./sine.html)
 
+### Wave Sums
+
+This lab demonstrates calculating the sum of different sine waves.
+
+[Wave Sums](./wave-sums.html)
+
 ### Brownian Motion
 
 A classic physics simulation where the user can adjust the temperature and number of molecules in the simulation.

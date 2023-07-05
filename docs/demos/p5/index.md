@@ -204,6 +204,50 @@ The user can change:
 The simulation still needs some UX work.  The drag-down operation is not clean and the spring could
 be compressed more.
 
+## To Dos
+
+Here is a list of small animations that I have yet to do:
+
+1. EE - Simple circuits - battery, switch and light
+2. EE - Current measurement - measure the current in an LED circuit
+3. EE - H-Bridge - how to make a motor turn both forward and reverse using switches
+4. EE - Pulse-Width Modulation - how to send information from a microcontroller to a motor driver indicating the speed of a motor and the direction of a motor.
+5. EE - RGB LEDs - make any color by combining red, green a blue LEDs
+6. EE - LED Circuit
+7. EE - Distance sensor
+8. Robotics - Collision avoidance
+9. Robotics - Maze solving
+10. Robotics - Digital compass
+11. EE - Seven-segment display
+12. EE - Alphanumeric display
+13. EE - Character display (2 rows by 40 characters)
+14. EE - LED bar display
+15. EE - Addressable LED strip simulator
+16. EE - Physical computing - Microcontrollers, sensors, actuators, displays
+17. Robotics - Swarm robots
+18. EE - Color displays from red, green and blue LEDs
+19. Network science - vertices and edge counts - network complexity
+20. Network science - average degree
+21. Network science - in-degree and out-degree
+22. Network science - directed and undirected graphs
+23. Network science - acyclic graphs
+24. Network science - local communities
+25. Network science - traveling salesperson
+26. Machine learning - self-driving car
+27. Robot arms - degrees of freedom
+28. Simple gears
+29. AI - perceptron
+30. AI - bias and weights
+31. AI - activation functions
+32. AI - neural network
+33. AI - deep neural network
+34. AI - network complexity - parameter counting
+35. CS - bits, bytes and words
+36. CS - data types: strings, bytes, decimals and floats
+37. CS - data structures - lists, sets, arrays
+38. CS - sorting
+39. CS - recursion
+
 ## Tutorials
 
 * [p5.js Learn](https://p5js.org/learn/)
@@ -211,3 +255,7 @@ be compressed more.
 * [p5.js wiki](https://github.com/processing/p5.js/wiki)
 
 * [Tool on Codecademy.com](https://www.codecademy.com/learn/learn-p5js/modules/p5js-introduction-to-creative-coding/cheatsheet)
+
+## Other Examples
+
+[oscillation sandbox](https://ffd8.github.io/oscillation-sandbox/)

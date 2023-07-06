@@ -153,6 +153,12 @@ This lab demonstrates calculating the sum of different sine waves.
 
 [Wave Sums](./wave-sums.html)
 
+### Pulse-Width Modulation
+
+Pulse-width modulation is the way that microcontrollers send a precise signal to a devise such as a motor controller.  This simulation models an old CRT oscilloscope display.
+
+[Pulse-Width Modulation](./pwm.html)
+
 ### Brownian Motion
 
 A classic physics simulation where the user can adjust the temperature and number of molecules in the simulation.
@@ -164,6 +170,12 @@ A classic physics simulation where the user can adjust the temperature and numbe
 [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) is a simple simulator of cells.  This is a class of simulation called [Cellular Automata](https://en.wikipedia.org/wiki/Cellular_automaton)
 
 [Conway's Game of Life](./conways-life.html)
+
+### Wire Animation
+
+When animating circuits, we need an animation of electrons moving down a wire.
+
+[Wire Animation](./wire-animate.html)
 
 ### Virus Simulation
 
@@ -203,6 +215,27 @@ The user can change:
 
 The simulation still needs some UX work.  The drag-down operation is not clean and the spring could
 be compressed more.
+
+### Simple Maze Runner
+
+A simple grid layout of a maze and a mouse that can only move right or down.
+
+[Simple Maze Runner](./simple-maze.html)
+
+### Maze Generator
+
+This sample program was not created by ChatGPT but it demonstrates an algorithm for generating maze diagrams.
+
+Videos
+1. [Coding Challenge #10.1: Maze Generator with p5.js - Part 1](https://youtu.be/HyK_Q5rrcr4)
+2. [Coding Challenge #10.2: Maze Generator with p5.js - Part 2](https://youtu.be/D8UgRyRnvXU)
+3. [Coding Challenge #10.3: Maze Generator with p5.js - Part 3](https://youtu.be/8Ju_uxJ9v44)
+4. [Coding Challenge #10.4: Maze Generator with p5.js - Part 4](https://youtu.be/_p5IH0L63wo)
+
+[Depth-first search Recursive backtracker Wikipedia Page](https://en.wikipedia.org/wiki/Maze_generation_algorithm)
+
+
+[Maze Generator](./maze-gen/maze-gen.html)
 
 ## To Dos
 

@@ -177,6 +177,10 @@ When animating circuits, we need an animation of electrons moving down a wire.
 
 [Wire Animation](./wire-animate.html)
 
+### Battery Circuit
+
+[Battery Circuit]
+
 ### Virus Simulation
 
 A classic simulation of the rate that a virus spreads in a network.<br/>

@@ -17,7 +17,7 @@
     
     
       
-        <title>Processing Examples - ChatGPT For Teachers</title>
+        <title>P5.js Demos - ChatGPT For Teachers</title>
       
     
     
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Processing Examples
+              P5.js Demos
             
           </span>
         </div>
@@ -1013,23 +1013,335 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
       
       
       
       
         <label class="md-nav__link" for="__nav_8">
+          Interactive Demos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Interactive Demos" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Interactive Demos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Intro
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          P5.js Demos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        P5.js Demos
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#structure-of-a-p5js-sketch" class="md-nav__link">
+    Structure of a p5.js Sketch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompting-tips" class="md-nav__link">
+    Prompting Tips
+  </a>
+  
+    <nav class="md-nav" aria-label="Prompting Tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#range-control-sliders" class="md-nav__link">
+    Range Control Sliders
+  </a>
+  
+    <nav class="md-nav" aria-label="Range Control Sliders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-slider-with-label-and-value" class="md-nav__link">
+    Simple Slider with Label and Value
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-slider-example" class="md-nav__link">
+    Multiple Slider Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-examples" class="md-nav__link">
+    Basic Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#circle-slider" class="md-nav__link">
+    Circle Slider
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#polygon" class="md-nav__link">
+    Polygon
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-pointed-star" class="md-nav__link">
+    Multi-pointed Star
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slope-and-intercept" class="md-nav__link">
+    Slope and Intercept
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sine-wave" class="md-nav__link">
+    Sine Wave
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wave-sums" class="md-nav__link">
+    Wave Sums
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pulse-width-modulation" class="md-nav__link">
+    Pulse-Width Modulation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brownian-motion" class="md-nav__link">
+    Brownian Motion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conways-game-of-life" class="md-nav__link">
+    Conway's Game of Life
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wire-animation" class="md-nav__link">
+    Wire Animation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#battery-circuit" class="md-nav__link">
+    Battery Circuit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virus-simulation" class="md-nav__link">
+    Virus Simulation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sierpinski-fractal-triangle" class="md-nav__link">
+    Sierpinski Fractal Triangle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#koch-fractal-curve" class="md-nav__link">
+    Koch Fractal Curve
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rabbit-and-foxes" class="md-nav__link">
+    Rabbit and Foxes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#projectile-motion" class="md-nav__link">
+    Projectile Motion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mass-on-a-spring" class="md-nav__link">
+    Mass on A Spring
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simple-maze-runner" class="md-nav__link">
+    Simple Maze Runner
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maze-generator" class="md-nav__link">
+    Maze Generator
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#to-dos" class="md-nav__link">
+    To Dos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorials" class="md-nav__link">
+    Tutorials
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-examples" class="md-nav__link">
+    Other Examples
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
           The Future of AI
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="The Future of AI" data-md-level="1">
-        <label class="md-nav__title" for="__nav_8">
+        <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           The Future of AI
         </label>
@@ -1093,21 +1405,6 @@
           
         </ul>
       </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
-        Interactive Demos
-      </a>
     </li>
   
 
@@ -1214,6 +1511,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#structure-of-a-p5js-sketch" class="md-nav__link">
+    Structure of a p5.js Sketch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#prompting-tips" class="md-nav__link">
     Prompting Tips
   </a>
@@ -1222,16 +1526,29 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sliders" class="md-nav__link">
-    Sliders
+  <a href="#range-control-sliders" class="md-nav__link">
+    Range Control Sliders
+  </a>
+  
+    <nav class="md-nav" aria-label="Range Control Sliders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-slider-with-label-and-value" class="md-nav__link">
+    Simple Slider with Label and Value
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#sketch-container-placement" class="md-nav__link">
-    Sketch Container Placement
+  <a href="#multiple-slider-example" class="md-nav__link">
+    Multiple Slider Example
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1426,51 +1743,90 @@
 
 
 <h1 id="processing-examples">Processing Examples</h1>
-<p>All of these examples were inspired by the wonderful Val Lockhart and Troy Peterson.  They were the
-first to get the idea to generate Processing code from ChagGPT.</p>
-<h2 id="prompting-tips">Prompting Tips</h2>
-<p>Unlike popular languages like Python, there are not a lot of high-quality p5.js simulations available.
-So ChatGPT has to guess based on the examples it found online.  Here are some of my tips.</p>
-<h3 id="sliders">Sliders</h3>
-<p><img alt="" src="../../img/p5-slider-circle.png" style="height:300px;width:300px" /></p>
-<p>Sliders are the input range controls that allow users to change a value of a simulation.  To get the sliders to work you need to give ChatGPT some sample code like the code below.</p>
+<p>All of these <a href="https://p5js.org/">p5.js</a> examples were inspired by the wonderful <a href="https://www.linkedin.com/in/valockhart/">Val Lockhart</a> and <a href="https://www.linkedin.com/in/troyapeterson/">Troy Peterson</a>.  They were the
+first to get the idea to generate p5.js code using ChatGPT.</p>
+<p>If you are not familiar with p5.js, it is a high-quality JavaScript library for building interactive animations.  It has been around since 2014 and it is supported by a large community of educators and creative people that combine programming with art.  Because there is a strong ethos of sharing open-source p5.js scripts there is ample material for ChatGPT to be trained on.  There are currently over <a href="https://github.com/search?q=p5.js&amp;type=repositories">21,000 p5.js sketches</a> found on GitHub!</p>
+<h2 id="structure-of-a-p5js-sketch">Structure of a p5.js Sketch</h2>
+<p>Each sketch (the name of a p5.js program) is usually a single JavaScript file that has an extension of .js.
+It has two main functions:</p>
 <ol>
-<li>
-<p>A single slider on a 400x400 canvas with label and text value. This demo
-controls the radius of a circle.<br/>
-<a href="slider.html">Single Slider Radius</a></p>
-</li>
-<li>
-<p>Two sliders on a 400x400 canvas that control the width and height of a rectangle.
-<br/>
-<a href="sliders.html">Two Sliders Controlling a Rectangle</a></p>
-</li>
+<li><code>setup()</code> - which is run once on sketch startup.</li>
+<li><code>draw()</code> - which run continually with a default redraw interval of 60 frames per second.</li>
 </ol>
-<h3 id="sketch-container-placement">Sketch Container Placement</h3>
-<p><img alt="" src="../../img/p5-canvas-placement.png" /></p>
-<p>ChatGPT is not really good at placing graphic components on the screen and placing the canvas so it renders well within an HTML file.</p>
-<p>In the <code>setup()</code> function we can use the <code>canvas.parent()</code> method to indicate the ID of the enclosing HTML div id.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
-  <span class="c1">// Create a p5.js canvas inside the div with id &quot;sketch-container&quot;</span>
-  <span class="kd">const</span> <span class="nx">canvas</span> <span class="o">=</span> <span class="nx">createCanvas</span><span class="p">(</span><span class="mf">400</span><span class="p">,</span> <span class="mf">400</span><span class="p">);</span>
-  <span class="nx">canvas</span><span class="p">.</span><span class="nx">parent</span><span class="p">(</span><span class="s1">&#39;sketch-container&#39;</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="kd">function</span> <span class="nx">draw</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">background</span><span class="p">(</span><span class="mf">220</span><span class="p">);</span>
-  <span class="c1">// Your drawing code goes here</span>
-<span class="p">}</span>
+<p>A sketch runs in an area called a <code>canvas</code> which typically has a size such as 400x400.</p>
+<h2 id="prompting-tips">Prompting Tips</h2>
+<p>My suggestion is to always start your p5.js prompts with a statement such as:</p>
+<p><em>Generate a single file p5.js sketch on a 400x400 canvas.</em></p>
+<p>ChatGPT is very good at generating algorithms, but it is not good at doing layout.  This is also compounded
+by the fact that many programs are designed to draw on a cartesian coordinate system with the origin being
+placed in the lower left corner of a canvas.  Unfortunately, p5.js (like other HTML rendering tools) assumes that the origin is in the upper right corner of the screen.  This causes ChatGPT to get confused and requires us to flip our diagrams on the y-axis by hand.  See <a href="https://p5js.org/examples/structure-coordinates.html">p5.js Coordinates</a> and <a href="https://p5js.org/learn/coordinate-system-and-shapes.html">The p5.js Coordinate System and Shapes</a> for some details.</p>
+<p>Here are some of my tips.</p>
+<h3 id="range-control-sliders">Range Control Sliders</h3>
+<p><img alt="" src="../../img/p5-slider-circle.png" style="height:300px;width:300px" /></p>
+<p>Sliders are the input range controls that allow users to change a value of a simulation.  I use
+sliders extensively in my examples because they are visible and intuitive.  To get the sliders to work you need to give ChatGPT clear instructions to include both the slider, its label and its current value in the program.</p>
+<p>Note that many p5.js examples don't use sliders, but they use a mouse position on the canvas.  This is
+usually a poor design choice since there is no clear hints the simulation us using the values and there
+is no label or feedback on what the current value is.</p>
+<p>Sliders have the following properties:</p>
+<ol>
+<li>Their initial position (x and y)</li>
+<li>Their min and max values</li>
+<li>The default value</li>
+<li>The step or increment (default is 1)</li>
+<li>The width of a slider</li>
+</ol>
+<p>See the <a href="https://p5js.org/reference/#/p5/createSlider">p5.js createSlider</a> page for details.</p>
+<p>Unfortunately, there is no simple way to change many of the display details such as drawing the tick marks on a range control and changing the color.</p>
+<p>Here are two examples.</p>
+<h4 id="simple-slider-with-label-and-value">Simple Slider with Label and Value</h4>
+<p>Here is some sample text you can give ChatGPT to precisely create and position sliders.</p>
+<p><strong>ChatGPT Prompt:</strong></p>
+<div class="highlight"><pre><span></span><code>Add a slider that controls the radius at the bottom of the canvas.
+The slider has values that ranges from 0 to 200 with a default value of 100.
+Place the slider to the right of the slider label and value at the bottom of the canvas.
+Place a label of &quot;Radius:&quot; and the current radius value using text() at the end of the draw() function.
 </code></pre></div>
-</td></tr></table>
+<p>Here is the full prompt:</p>
+<div class="highlight"><pre><span></span><code>Generate a single file p5.js sketch on a 400x400 canvas.
+
+The sketch will draw a blue circle at the center of the canvas.
+
+Add a slider that controls the radius of the circle at the bottom of the canvas.
+The slider has values that ranges from 0 to 200 with a default value of 100.
+Place the slider at the bottom of the canvas.
+Place a label of &quot;Radius:&quot; and the current radius value using text() at the end of the draw() function.
+</code></pre></div>
+<p><a href="slider.html">Demo of Single Slider Radius Example</a></p>
+<h4 id="multiple-slider-example">Multiple Slider Example</h4>
+<p>The trick here is to get ChatGPT to layout the sliders correctly at the bottom of the canvas with the label, value and sliders aligned.</p>
+<p><strong>ChatGPT Prompt:</strong>
+<div class="highlight"><pre><span></span><code>Add two sliders placed on the bottom of a 400x400 canvas.
+One controls the height of a rectangle and one controls the width of the rectangle.
+Place both the slider label and value to the left of the sliders.*
+&lt;br/&gt;
+[Two Sliders Controlling a Rectangle](./sliders.html)
+
+### Sketch Container Placement
+
+![](./../../img/p5-canvas-placement.png)
+
+ChatGPT is not really good at placing graphic components on the screen and placing the canvas so it renders well within an HTML file.
+
+In the ```setup()``` function we can use the ```canvas.parent()``` method to indicate the ID of the enclosing HTML div id.
+
+```js
+function setup() {
+  // Create a p5.js canvas inside the div with id &quot;sketch-container&quot;
+  const canvas = createCanvas(400, 400);
+  canvas.parent(&#39;sketch-container&#39;);
+}
+
+function draw() {
+  background(220);
+  // Your drawing code goes here
+}
+</code></pre></div></p>
 <p>See the <a href="https://p5js.org/reference/#/p5.Element/parent">p5.js parent</a> reference document.</p>
 <p><a href="container-placement.html">Container Placement Example</a></p>
 <h2 id="basic-examples">Basic Examples</h2>
@@ -1693,6 +2049,41 @@ be compressed more.</p>
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../" title="Intro" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Intro
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../future/" title="Introduction" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Introduction
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

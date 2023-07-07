@@ -88,10 +88,14 @@ The trick here is to get ChatGPT to layout the sliders correctly at the bottom o
 **ChatGPT Prompt:**
 ```linenums="0"
 Add two sliders placed on the bottom of a 400x400 canvas.
-One controls the height of a rectangle and one controls the width of the rectangle.
-Place both the slider label and value to the left of the sliders.*
+One slider controls the height of a rectangle and one slider controls the width of the rectangle.
+Place both the slider label and value to the left of the sliders.
+Make the sliders span the remaining width of the canvas after the label and values.
 <br/>
 [Two Sliders Controlling a Rectangle](./sliders.html)
+```
+
+Note that you might have to manually adjust the placement of the text() and change width of the slider to get the alignment correct.
 
 ### Sketch Container Placement
 

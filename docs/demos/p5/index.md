@@ -5,6 +5,8 @@ first to get the idea to generate p5.js code using ChatGPT.
 
 If you are not familiar with p5.js, it is a high-quality JavaScript library for building interactive animations.  It has been around since 2014 and it is supported by a large community of educators and creative people that combine programming with art.  Because there is a strong ethos of sharing open-source p5.js scripts there is ample material for ChatGPT to be trained on.  There are currently over [21,000 p5.js sketches](https://github.com/search?q=p5.js&type=repositories) found on GitHub!
 
+Our goal here is to teach you how to write precise ChatGPT prompts that will generate a working p5.js simulation without having to understand how to write JavaScript.
+
 ## Structure of a p5.js Sketch
 
 Each sketch (the name of a p5.js program) is usually a single JavaScript file that has an extension of .js.

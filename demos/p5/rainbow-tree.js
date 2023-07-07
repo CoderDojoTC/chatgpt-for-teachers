@@ -2,7 +2,7 @@
 let sliderLength, sliderAngle;
 let rainbowColors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', 'cyan'];
 let lenLabel, angleLabel;
-let labelWidth = 90;
+let labelWidth = 100;
 
 function setup() {
   const canvas = createCanvas(450, 450);
@@ -10,14 +10,14 @@ function setup() {
   background(0);
   
   lenLabel = createDiv('Length:');
-  lenLabel.position(5, 410);
+  lenLabel.position(10, 410);
   lenLabel.style('color', 'white');
   sliderLength = createSlider(0, 200, 150);
   sliderLength.position(labelWidth, 410);
   sliderLength.style('width', width - labelWidth + 'px');
 
   angleLabel = createDiv('Angle:');
-  angleLabel.position(5, 430);
+  angleLabel.position(10, 430);
   angleLabel.style('color', 'white');
   sliderAngle = createSlider(0, PI / 2, PI / 8, 0.01);
   sliderAngle.position(labelWidth, 430);

@@ -244,6 +244,8 @@ This lab demonstrates calculating the sum of different sine waves.
 
 ### Pulse-Width Modulation
 
+![PWM](./../../img/pwm.png)
+
 Pulse-width modulation is the way that microcontrollers send a precise signal to a devise such as a motor controller.  This simulation models an old CRT oscilloscope display.
 
 [Pulse-Width Modulation](./pwm.html)

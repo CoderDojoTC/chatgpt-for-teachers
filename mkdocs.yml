@@ -58,7 +58,7 @@ nav:
     - prompts/26-systems-thinking.md
   - Interactive Demos:
     - Intro: demos/index.md
-    - P5.js Demos: demos/p5/index.md
+    - p5.js Demos: demos/p5/index.md
   - The Future of AI:
     - Introduction: future/index.md
     - Today: future/ai-today.md

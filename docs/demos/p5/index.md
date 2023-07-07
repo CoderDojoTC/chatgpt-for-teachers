@@ -83,38 +83,46 @@ Place a label of "Radius:" and the current radius value using text() at the end 
 
 #### Multiple Slider Example
 
-The trick here is to get ChatGPT to layout the sliders correctly at the bottom of the canvas with the label, value and sliders aligned.
+Our simulations sometimes have multiple parameters that the user can change.  But how can we make the sliders
+align correctly?
+The trick here is to get ChatGPT to lay out the sliders correctly at the bottom of the canvas with the label, value and sliders aligned.
 
 **ChatGPT Prompt:**
 ```linenums="0"
-Add two sliders placed on the bottom of a 400x400 canvas.
-One slider controls the height of a rectangle and one slider controls the width of the rectangle.
-Place both the slider label and value to the left of the sliders.
-Make the sliders span the remaining width of the canvas after the label and values.
-<br/>
-[Two Sliders Controlling a Rectangle](./sliders.html)
+Generate a single file p5.js sketch on a 400x400 canvas.
+
+The sketch draws a green rectangle at (100,100).
+
+Add two sliders placed on the bottom of the canvas to the right of the labels and values.
+
+One slider controls the height of a rectangle and one slider controls
+the width of the rectangle.  The labels are "Height:" and "Width:".  The values are placed
+to the right of the labels.
+
+Place both the slider labels and their values to the left of the sliders.
+
+Make the sliders widths span the remaining width of the canvas after the label and values.
 ```
 
-Note that you might have to manually adjust the placement of the text() and change width of the slider to get the alignment correct.
+[Two Sliders Controlling a Rectangle](./sliders.html)
+
+Note that you might have to manually adjust the placement of the labels, values and sliders and change width of the sliders to get the alignment correct.  Element layout is not a strength of ChatGPT.
 
 ### Sketch Container Placement
 
+ChatGPT is not really good at placing graphic components on the screen and placing the canvas so it renders well within an HTML file.  We focus on just getting ChatGPT to generate the correct sketch and then we place
+the sketch within an HTML file.  Here is an example of placing a canvas within an HTML table.
+
 ![](./../../img/p5-canvas-placement.png)
 
-ChatGPT is not really good at placing graphic components on the screen and placing the canvas so it renders well within an HTML file.
 
-In the ```setup()``` function we can use the ```canvas.parent()``` method to indicate the ID of the enclosing HTML div id.
+To do this, within the ```setup()``` function we can use the ```canvas.parent()``` method to indicate the ID of the enclosing HTML div id.  Here is some sample ```setup()`` code:
 
 ```js
 function setup() {
   // Create a p5.js canvas inside the div with id "sketch-container"
   const canvas = createCanvas(400, 400);
   canvas.parent('sketch-container');
-}
-
-function draw() {
-  background(220);
-  // Your drawing code goes here
 }
 ```
 
@@ -129,10 +137,9 @@ See the [p5.js parent](https://p5js.org/reference/#/p5.Element/parent) reference
 Here is a simple example that you can start with.  The ChatGPT prompt would be the following:
 
 ```linenums="0"
-Generate a p5.js sketch file that draws a blue circle in the center of a
-400x400 canvas.  Create a range control slider that allows the radius
-to be adjusted from 0 to 200.  Use the text() function within the draw()
-function to display the current value of the radius in the canvas.
+Generate a p5.js sketch file that draws a blue circle in the center of a 400x400 canvas. 
+Create a range control slider that allows the radius to be adjusted from 0 to 200.
+Use the text() function within the draw() function to display the current value of the radius.
 ```
 
 [Circle Slider](./circle-slider.html)

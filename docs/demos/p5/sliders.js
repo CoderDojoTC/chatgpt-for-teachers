@@ -1,27 +1,45 @@
-let widthSlider;
-let heightSlider;
+// Generated using ChagGPT with small changes to place the sketch in the HTML file
+let heightSlider, widthSlider;
+let rectHeight = 50;
+let rectWidth = 50;
+
+let heightLabel, widthLabel;
 
 function setup() {
-  createCanvas(400, 400);
-
-  widthSlider = createSlider(0, 360, 50, 1);
-  widthSlider.position(70, 10);
-  widthSlider.style('width', '340px');
+  const canvas = createCanvas(400, 400);
+  canvas.parent('sketch-container');
   
-  heightSlider = createSlider(0, 360, 50, 1);
-  heightSlider.position(70, 30);
-  heightSlider.style('width', '340px');
+  // Make sure the range controls get aligned correctly
+  // The width of the labels and values of the sliders
+  let sliderStartX = 100;
+  let sliderStartY = height - 50;
+  let sliderWidth = width - sliderStartX;
+  
+  // we create screen elements to hold the label and values
+  heightLabel = createElement('label', 'Height: ' + rectHeight).position(10, sliderStartY);
+  widthLabel = createElement('label', 'Width: ' + rectWidth).position(10, sliderStartY + 20);
+  
+  heightSlider = createSlider(0, height - 100, rectHeight, 1);
+  heightSlider.position(sliderStartX, sliderStartY);
+  heightSlider.style('width', sliderWidth + 'px');
+  
+  widthSlider = createSlider(0, width - 100, rectWidth, 1);
+  widthSlider.position(sliderStartX, sliderStartY + 20);
+  widthSlider.style('width', sliderWidth + 'px');
 }
 
 function draw() {
-  background(230);
-  fill(20);
-  width = widthSlider.value()
-  height = heightSlider.value()
-  text('Width: ' + width, 0, 15);
-  text('Height: ' + height, 0, 35);
+  // light gray background
+  background(240);
   
-  let myHeight = heightSlider.value();
-  let myWidth = widthSlider.value();
-  rect(10, 50, myWidth, myHeight);
+  rectHeight = heightSlider.value();
+  rectWidth = widthSlider.value();
+  
+  // update the values for each draw
+  heightLabel.html('Height: ' + rectHeight);
+  widthLabel.html('Width: ' + rectWidth);
+  
+  // draw green
+  fill(50, 200, 50);
+  rect(100, 100, rectWidth, rectHeight);
 }

@@ -214,6 +214,11 @@ Add a slider for the number of points on the star that ranges from 4 to 20.
 Make the slider width be 360px and display the number of points by using the
 text() function at the end of the draw() function.
 ```
+### Rainbow Tree
+
+Generating a fractal tree is a fun way to demonstrate recursion.
+
+[Rainbow Tree](./rainbow-tree.html)
 
 ### Slope and Intercept
 

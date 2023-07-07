@@ -1132,6 +1132,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#sketch-container-placement" class="md-nav__link">
+    Sketch Container Placement
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1552,6 +1559,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#sketch-container-placement" class="md-nav__link">
+    Sketch Container Placement
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1802,31 +1816,38 @@ Place a label of &quot;Radius:&quot; and the current radius value using text() a
 <p>The trick here is to get ChatGPT to layout the sliders correctly at the bottom of the canvas with the label, value and sliders aligned.</p>
 <p><strong>ChatGPT Prompt:</strong>
 <div class="highlight"><pre><span></span><code>Add two sliders placed on the bottom of a 400x400 canvas.
-One controls the height of a rectangle and one controls the width of the rectangle.
-Place both the slider label and value to the left of the sliders.*
+One slider controls the height of a rectangle and one slider controls the width of the rectangle.
+Place both the slider label and value to the left of the sliders.
+Make the sliders span the remaining width of the canvas after the label and values.
 &lt;br/&gt;
 [Two Sliders Controlling a Rectangle](./sliders.html)
-
-### Sketch Container Placement
-
-![](./../../img/p5-canvas-placement.png)
-
-ChatGPT is not really good at placing graphic components on the screen and placing the canvas so it renders well within an HTML file.
-
-In the ```setup()``` function we can use the ```canvas.parent()``` method to indicate the ID of the enclosing HTML div id.
-
-```js
-function setup() {
-  // Create a p5.js canvas inside the div with id &quot;sketch-container&quot;
-  const canvas = createCanvas(400, 400);
-  canvas.parent(&#39;sketch-container&#39;);
-}
-
-function draw() {
-  background(220);
-  // Your drawing code goes here
-}
 </code></pre></div></p>
+<p>Note that you might have to manually adjust the placement of the text() and change width of the slider to get the alignment correct.</p>
+<h3 id="sketch-container-placement">Sketch Container Placement</h3>
+<p><img alt="" src="../../img/p5-canvas-placement.png" /></p>
+<p>ChatGPT is not really good at placing graphic components on the screen and placing the canvas so it renders well within an HTML file.</p>
+<p>In the <code>setup()</code> function we can use the <code>canvas.parent()</code> method to indicate the ID of the enclosing HTML div id.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// Create a p5.js canvas inside the div with id &quot;sketch-container&quot;</span>
+  <span class="kd">const</span> <span class="nx">canvas</span> <span class="o">=</span> <span class="nx">createCanvas</span><span class="p">(</span><span class="mf">400</span><span class="p">,</span> <span class="mf">400</span><span class="p">);</span>
+  <span class="nx">canvas</span><span class="p">.</span><span class="nx">parent</span><span class="p">(</span><span class="s1">&#39;sketch-container&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">draw</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">background</span><span class="p">(</span><span class="mf">220</span><span class="p">);</span>
+  <span class="c1">// Your drawing code goes here</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
 <p>See the <a href="https://p5js.org/reference/#/p5.Element/parent">p5.js parent</a> reference document.</p>
 <p><a href="container-placement.html">Container Placement Example</a></p>
 <h2 id="basic-examples">Basic Examples</h2>

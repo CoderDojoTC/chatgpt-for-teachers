@@ -56,12 +56,15 @@ nav:
     - prompts/15-micropython.md
     - prompts/20-website-analytics.md
     - prompts/26-systems-thinking.md
+  - Interactive Demos:
+    - Intro: demos/index.md
+    - P5.js Demos: demos/p5/index.md
   - The Future of AI:
     - Introduction: future/index.md
     - Today: future/ai-today.md
     - Near Term: future/near-term.md
     - Long Term: future/long-term.md
-  - Interactive Demos: demos/index.md
+
   - Slides: slides.md
   - Glossary: glossary.md
   - Markdown Summary: markdown-summary.md

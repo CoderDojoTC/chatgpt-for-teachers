@@ -17,7 +17,7 @@
     
     
       
-        <title>P5.js Demos - ChatGPT For Teachers</title>
+        <title>p5.js Demos - ChatGPT For Teachers</title>
       
     
     
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              P5.js Demos
+              p5.js Demos
             
           </span>
         </div>
@@ -1067,12 +1067,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          P5.js Demos
+          p5.js Demos
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        P5.js Demos
+        p5.js Demos
       </a>
       
         
@@ -1813,38 +1813,39 @@ Place a label of &quot;Radius:&quot; and the current radius value using text() a
 </code></pre></div>
 <p><a href="slider.html">Demo of Single Slider Radius Example</a></p>
 <h4 id="multiple-slider-example">Multiple Slider Example</h4>
-<p>The trick here is to get ChatGPT to layout the sliders correctly at the bottom of the canvas with the label, value and sliders aligned.</p>
+<p>Our simulations sometimes have multiple parameters that the user can change.  But how can we make the sliders
+align correctly?
+The trick here is to get ChatGPT to lay out the sliders correctly at the bottom of the canvas with the label, value and sliders aligned.</p>
 <p><strong>ChatGPT Prompt:</strong>
-<div class="highlight"><pre><span></span><code>Add two sliders placed on the bottom of a 400x400 canvas.
-One slider controls the height of a rectangle and one slider controls the width of the rectangle.
-Place both the slider label and value to the left of the sliders.
-Make the sliders span the remaining width of the canvas after the label and values.
-&lt;br/&gt;
-[Two Sliders Controlling a Rectangle](./sliders.html)
+<div class="highlight"><pre><span></span><code>Generate a single file p5.js sketch on a 400x400 canvas.
+
+The sketch draws a green rectangle at (100,100).
+
+Add two sliders placed on the bottom of the canvas to the right of the labels and values.
+
+One slider controls the height of a rectangle and one slider controls
+the width of the rectangle.  The labels are &quot;Height:&quot; and &quot;Width:&quot;.  The values are placed
+to the right of the labels.
+
+Place both the slider labels and their values to the left of the sliders.
+
+Make the sliders widths span the remaining width of the canvas after the label and values.
 </code></pre></div></p>
-<p>Note that you might have to manually adjust the placement of the text() and change width of the slider to get the alignment correct.</p>
+<p><a href="sliders.html">Two Sliders Controlling a Rectangle</a></p>
+<p>Note that you might have to manually adjust the placement of the labels, values and sliders and change width of the sliders to get the alignment correct.  Element layout is not a strength of ChatGPT.</p>
 <h3 id="sketch-container-placement">Sketch Container Placement</h3>
+<p>ChatGPT is not really good at placing graphic components on the screen and placing the canvas so it renders well within an HTML file.  We focus on just getting ChatGPT to generate the correct sketch and then we place
+the sketch within an HTML file.  Here is an example of placing a canvas within an HTML table.</p>
 <p><img alt="" src="../../img/p5-canvas-placement.png" /></p>
-<p>ChatGPT is not really good at placing graphic components on the screen and placing the canvas so it renders well within an HTML file.</p>
-<p>In the <code>setup()</code> function we can use the <code>canvas.parent()</code> method to indicate the ID of the enclosing HTML div id.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
+<p>To do this, within the <code>setup()</code> function we can use the <code>canvas.parent()</code> method to indicate the ID of the enclosing HTML div id.  Here is some sample <code>`setup()</code> code:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
   <span class="c1">// Create a p5.js canvas inside the div with id &quot;sketch-container&quot;</span>
   <span class="kd">const</span> <span class="nx">canvas</span> <span class="o">=</span> <span class="nx">createCanvas</span><span class="p">(</span><span class="mf">400</span><span class="p">,</span> <span class="mf">400</span><span class="p">);</span>
   <span class="nx">canvas</span><span class="p">.</span><span class="nx">parent</span><span class="p">(</span><span class="s1">&#39;sketch-container&#39;</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="kd">function</span> <span class="nx">draw</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">background</span><span class="p">(</span><span class="mf">220</span><span class="p">);</span>
-  <span class="c1">// Your drawing code goes here</span>
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
@@ -1853,10 +1854,9 @@ Make the sliders span the remaining width of the canvas after the label and valu
 <h2 id="basic-examples">Basic Examples</h2>
 <h3 id="circle-slider">Circle Slider</h3>
 <p>Here is a simple example that you can start with.  The ChatGPT prompt would be the following:</p>
-<div class="highlight"><pre><span></span><code>Generate a p5.js sketch file that draws a blue circle in the center of a
-400x400 canvas.  Create a range control slider that allows the radius
-to be adjusted from 0 to 200.  Use the text() function within the draw()
-function to display the current value of the radius in the canvas.
+<div class="highlight"><pre><span></span><code>Generate a p5.js sketch file that draws a blue circle in the center of a 400x400 canvas. 
+Create a range control slider that allows the radius to be adjusted from 0 to 200.
+Use the text() function within the draw() function to display the current value of the radius.
 </code></pre></div>
 <p><a href="circle-slider.html">Circle Slider</a></p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>

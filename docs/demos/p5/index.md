@@ -139,9 +139,14 @@ See the [p5.js parent](https://p5js.org/reference/#/p5.Element/parent) reference
 Here is a simple example that you can start with.  The ChatGPT prompt would be the following:
 
 ```linenums="0"
-Generate a p5.js sketch file that draws a blue circle in the center of a 400x400 canvas. 
-Create a range control slider that allows the radius to be adjusted from 0 to 200.
-Use the text() function within the draw() function to display the current value of the radius.
+Generate a p5.js sketch file that draws a blue circle
+in the center of a 400x400 canvas.
+
+Create a range control slider that allows the radius to be
+adjusted from 0 to 200.
+
+Use the text() function within the draw() function to display the
+label and current value of the radius.
 ```
 
 [Circle Slider](./circle-slider.html)

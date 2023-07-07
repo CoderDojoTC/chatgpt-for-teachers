@@ -5,7 +5,7 @@ let lenLabel, angleLabel;
 let labelWidth = 90;
 
 function setup() {
-  const canvas createCanvas(450, 450);
+  const canvas = createCanvas(450, 450);
   canvas.parent('canvas-container');
   background(0);
   

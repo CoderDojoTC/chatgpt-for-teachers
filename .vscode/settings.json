@@ -5,6 +5,7 @@
         "fillcolor",
         "linenums",
         "micropython",
+        "millis",
         "mkdocs",
         "pendown",
         "penup",

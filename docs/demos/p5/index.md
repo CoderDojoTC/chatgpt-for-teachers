@@ -269,13 +269,19 @@ A classic physics simulation where the user can adjust the temperature and numbe
 
 ### Wire Animation
 
-When animating circuits, we need an animation of electrons moving down a wire.
+When animating circuits, we need an animation of electrons moving down a wire.  In
+this lesson, we use ChatGPT to generate a function to help us
+draw a wire that has an animation of small circles (think electrons) going though the wire
+when the wire is carrying a current.
+
+Requesting ChatGPT to generate an explicit function is a great way to break larger
+problems into smaller tasks that ChatGPT can be successful at.
 
 [Wire Animation](./wire-animate.html)
 
 ### Battery Circuit
 
-[Battery Circuit]
+[Battery Circuit](./battery-circuit.html)
 
 ### Virus Simulation
 

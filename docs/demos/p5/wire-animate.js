@@ -1,20 +1,23 @@
 let state = false;
 let button;
 let speedSlider;
-let lineWidth = 10
+let lineWidth = 10;
+// were to place the controls at the bottom of the canvas.
+let controlHeight = 375;
 
 function setup() {
-    createCanvas(400, 400);
+    const canvas = createCanvas(400, 400);
+    canvas.parent('canvas-container');
     frameRate(30);
 
     // Create the on/off button
     button = createButton('ON/OFF');
-    button.position(300, 370);
+    button.position(300, controlHeight);
     button.mousePressed(toggleState);
 
     // Create the speed slider
     speedSlider = createSlider(0.03, 1.5, 1, 0.1);
-    speedSlider.position(90, 370);
+    speedSlider.position(90, controlHeight);
     speedSlider.style('width', '200px')
 }
 
@@ -30,7 +33,7 @@ function draw() {
     drawAnimatedWire(350, 50, 50, 50, currentSeed, state);
     fill('black')
     noStroke()
-    text('Speed:' + currentSeed, 10, 380)
+    text('Speed:' + currentSeed, 10, controlHeight+10)
 }
 
 // Function for drawing an animated wire

@@ -1,46 +1,63 @@
+let state = false;
+let button;
 let speedSlider;
+let lineWidth = 10
 
 function setup() {
-  createCanvas(400, 400);
-  speedSlider = createSlider(1, 20, 10);
-  speedSlider.position(120, 10);
-  speedSlider.style('width', '250px')
+    createCanvas(400, 400);
+    frameRate(30);
+
+    // Create the on/off button
+    button = createButton('ON/OFF');
+    button.position(300, 370);
+    button.mousePressed(toggleState);
+
+    // Create the speed slider
+    speedSlider = createSlider(0.03, 1.5, 1, 0.1);
+    speedSlider.position(90, 370);
+    speedSlider.style('width', '200px')
 }
 
 function draw() {
-  background(240);
+    background(220);
 
-  // Get speed from the slider
-  speed1 = speedSlider.value()
-  speed2 = speed1 / 10000;
+    let currentSeed = speedSlider.value();
 
-  // Draw animate wires
-  animatedWire(100, 100, 300, 100, speed2);
-  animatedWire(300, 100, 300, 300, speed2);
-  animatedWire(300, 300, 100, 300, speed2);
-  animatedWire(100, 300, 100, 100, speed2);
-  stroke('black')
-  fill(0)
-  textSize(24)
-  strokeWeight(0);
-  text('Speed:' + speed1, 10, 30)
+    // Draw the four wires in a square
+    drawAnimatedWire(50, 50, 50, 350, currentSeed, state);
+    drawAnimatedWire(50, 350, 350, 350, currentSeed, state);
+    drawAnimatedWire(350, 350, 350, 50, currentSeed, state);
+    drawAnimatedWire(350, 50, 50, 50, currentSeed, state);
+    fill('black')
+    noStroke()
+    text('Speed:' + currentSeed, 10, 380)
 }
 
-function animatedWire(x1, y1, x2, y2, speed1) {
-  // get a timestamp and do a remainder with modulo
-  let t = (millis() * speed1) % 1;
+// Function for drawing an animated wire
+function drawAnimatedWire(x1, y1, x2, y2, speed1, state) {
+    if (state) {
+        let distance = dist(x1, y1, x2, y2);
+        let circlePos = map((millis() * speed1) % distance, 0, distance, 0, 1);
 
-  // Calculate the current position
-  // lerp is linear interval between points
-  // Calculates a new number between two numbers at a specific increment.
-  let x = lerp(x1, x2, t);
-  let y = lerp(y1, y2, t);
-  // draw black wire
-  stroke('black');
-  strokeWeight(15);
-  line(x1, y1, x2, y2);
-  // Draw the moving circle along the line
-  fill(220);
-  noStroke();
-  ellipse(x, y, 10, 10);
+        // lerp generates the percent between two values
+        let x = lerp(x1, x2, circlePos);
+        let y = lerp(y1, y2, circlePos);
+
+        stroke(0);
+        strokeWeight(lineWidth)
+        line(x1, y1, x2, y2); // Draw the wire
+
+        fill(255, 0, 0);
+        noStroke();
+        circle(x, y, 10); // Draw the moving circle (electron)
+    } else {
+        stroke(0);
+        strokeWeight(lineWidth)
+        line(x1, y1, x2, y2); // Draw the wire
+    }
+}
+
+// Function to toggle state
+function toggleState() {
+    state = !state;
 }

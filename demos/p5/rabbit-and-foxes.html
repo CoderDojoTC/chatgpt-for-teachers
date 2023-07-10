@@ -1,121 +1,23 @@
 <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <meta charset="UTF-8">
+    <title>p5.js Demo</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    <!-- Put your script file name here -->
+    <script src="rabbit-and-foxes.js"></script>
 </head>
 <body>
-  <div>
-    <label for="rabbitCount">Number of Rabbits: </label>
-    <input type="range" id="rabbitCount" min="10" max="100" step="10" value="50">
-  </div>
-  <button id="resetButton">Reset</button>
-  <script>
-    let rabbits = [];
-    let foxes = [];
-    let rabbitCountSlider;
-    let resetButton;
-
-    function setup() {
-      createCanvas(800, 400);
-
-      rabbitCountSlider = document.getElementById('rabbitCount');
-      resetButton = document.getElementById('resetButton');
-      resetButton.addEventListener('click', resetSimulation);
-
-      resetSimulation();
-    }
-
-    function resetSimulation() {
-      rabbits = [];
-      foxes = [];
-
-      const rabbitCount = rabbitCountSlider.value;
-      for (let i = 0; i < rabbitCount; i++) {
-        rabbits.push(new Rabbit(random(width), random(height)));
-      }
-
-      for (let i = 0; i < rabbitCount / 10; i++) {
-        foxes.push(new Fox(random(width), random(height)));
-      }
-    }
-
-    function draw() {
-      background(220);
-
-      for (let rabbit of rabbits) {
-        rabbit.update();
-        rabbit.display();
-      }
-
-      for (let fox of foxes) {
-        fox.update();
-        fox.display();
-      }
-
-      // Remove dead rabbits
-      rabbits = rabbits.filter(rabbit => rabbit.isAlive());
-      // Remove dead foxes
-      foxes = foxes.filter(fox => fox.isAlive());
-
-      // Check for rabbit-fox interactions
-      for (let fox of foxes) {
-        for (let rabbit of rabbits) {
-          if (rabbit.isIntersecting(fox)) {
-            rabbit.die();
-            fox.eat();
-          }
-        }
-      }
-    }
-
-    class Rabbit {
-      constructor(x, y) {
-        this.position = createVector(x, y);
-        this.velocity = p5.Vector.random2D();
-        this.acceleration = createVector();
-        this.maxSpeed = 3;
-        this.maxForce = 0.1;
-        this.health = 1;
-      }
-
-      update() {
-        this.position.add(this.velocity);
-        this.velocity.add(this.acceleration);
-        this.velocity.limit(this.maxSpeed);
-        this.acceleration.mult(0);
-        this.health -= 0.001;
-
-        if (this.health <= 0) {
-          this.die();
-        }
-      }
-
-      applyForce(force) {
-        this.acceleration.add(force);
-      }
-
-      display() {
-        fill(0, 255, 0);
-        ellipse(this.position.x, this.position.y, 10, 10);
-      }
-
-      isAlive() {
-        return this.health > 0;
-      }
-
-      die() {
-        this.health = 0;
-      }
-
-      isIntersecting(fox) {
-        const distance = p5.Vector.dist(this.position, fox.position);
-        return distance < 10;
-      }
-    }
-
-    class Fox {
-      constructor(x, y) {
-        this.position = createVector(x, y);
-        this.velocity = p5.Vector.random2D();
-        this.acceleration = createVector();
-        this
+    <!-- Put the following lines in your setup() function
+    const canvas = createCanvas(400, 400);
+    canvas.parent('canvas-container');
+    -->
+    <div id="canvas-container"></div>
+</body>
+</html>

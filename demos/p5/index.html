@@ -1230,8 +1230,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#battery-circuit" class="md-nav__link">
-    Battery Circuit
+  <a href="#battery-and-led-circuit" class="md-nav__link">
+    Battery and LED Circuit
   </a>
   
 </li>
@@ -1664,8 +1664,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#battery-circuit" class="md-nav__link">
-    Battery Circuit
+  <a href="#battery-and-led-circuit" class="md-nav__link">
+    Battery and LED Circuit
   </a>
   
 </li>
@@ -1987,15 +1987,29 @@ we move down the page.</br></p>
 <p><a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway's Game of Life</a> is a simple simulator of cells.  This is a class of simulation called <a href="https://en.wikipedia.org/wiki/Cellular_automaton">Cellular Automata</a></p>
 <p><a href="conways-life.html">Conway's Game of Life</a></p>
 <h3 id="wire-animation">Wire Animation</h3>
+<p><img alt="" src="../../img/animate-circuit.gif" /></p>
 <p>When animating circuits, we need an animation of electrons moving down a wire.  In
 this lesson, we use ChatGPT to generate a function to help us
-draw a wire that has an animation of small circles (think electrons) going though the wire
+draw a wire that has an animation of small circles (think electrons) going through the wire
 when the wire is carrying a current.</p>
 <p>Requesting ChatGPT to generate an explicit function is a great way to break larger
 problems into smaller tasks that ChatGPT can be successful at.</p>
-<p><a href="wire-animate.html">Wire Animation</a></p>
-<h3 id="battery-circuit">Battery Circuit</h3>
-<p><a href="battery-circuit.html">Battery Circuit</a></p>
+<p><a href="wire-animate.html">Run the Wire Animation Demo</a></p>
+<h3 id="battery-and-led-circuit">Battery and LED Circuit</h3>
+<p><img alt="" src="../../img/circuit-on-off.png" /></p>
+<p>This is the most complex program we have generated so far.  It requires us
+to first use ChatGPT to create several functions:</p>
+<ol>
+<li>A drawBattery function</li>
+<li>A drawSwitch function that will toggle on or off</li>
+<li>A resistor function that draws a resistor zig-zag symbol</li>
+<li>An LED function that is black in the off state and red in the on state</li>
+<li>An animate wire function that animates the flow of current (see the previous example)</li>
+</ol>
+<p>Once we have functions for all these components, we can then assemble them together in
+an entire simulation.  You will find that ChatGPT will not usually get the the layout
+wrong and you will need to adjust the positions of the wires.</p>
+<p><a href="battery-circuit.html">Battery and LED Circuit</a></p>
 <h3 id="virus-simulation">Virus Simulation</h3>
 <p>A classic simulation of the rate that a virus spreads in a network.<br/>
 <a href="virus-sim.html">Virus Simulation</a>

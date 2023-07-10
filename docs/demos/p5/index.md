@@ -57,6 +57,7 @@ Unfortunately, there is no simple way to change many of the display details such
 Here are two examples.
 
 #### Simple Slider with Label and Value
+
 Here is some sample text you can give ChatGPT to precisely create and position sliders.
 
 **ChatGPT Prompt:**
@@ -88,6 +89,8 @@ using text() at the end of the draw() function.
 [Demo of Single Slider Radius Example](./slider.html)
 
 #### Multiple Slider Example
+
+![p5 two slider example](./../../img/p5-two-sliders.png)
 
 Our simulations sometimes have multiple parameters that the user can change.  But how can we make the sliders
 align correctly?

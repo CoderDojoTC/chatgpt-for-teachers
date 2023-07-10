@@ -5,7 +5,8 @@ let rabbitSlider, foxSlider, resetButton;
 let initialRabbits, initialFoxes;
 
 function setup() {
-  createCanvas(800, 800);
+  const canvas = createCanvas(800, 800);
+  canvas.parent('canvas-container');
   rabbitSlider = createSlider(0, 100, 50);  // Slider for number of rabbits
   foxSlider = createSlider(0, 100, 25);  // Slider for number of foxes
   resetButton = createButton('Reset');  // Reset button

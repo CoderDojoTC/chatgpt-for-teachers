@@ -4,7 +4,8 @@ let len = 600;
 let angle = 60;
 
 function setup() {
-    createCanvas(620, 400);
+    const canvas = createCanvas(620, 400);
+    canvas.parent('canvas-container');
     recursionSlider = createSlider(0, 6, 0);
     recursionSlider.position(10, 10);
     recursionSlider.style('width', '400px');

@@ -134,7 +134,7 @@ To do this, within the ```setup()``` function we can use the ```canvas.parent()`
 function setup() {
   // Create a p5.js canvas inside the div with id "sketch-container"
   const canvas = createCanvas(400, 400);
-  canvas.parent('sketch-container');
+  canvas.parent('canvas-container');
 }
 ```
 
@@ -257,9 +257,14 @@ text() function at the end of the draw() function.
 ```
 ### Rainbow Tree
 
-Generating a fractal tree is a fun way to demonstrate recursion.
+![](./../../img/p5-rainbow-tree.png)
 
-[Rainbow Tree](./rainbow-tree.html)
+Generating a fractal tree is a fun way to demonstrate recursion.  This example has two sliders:
+
+1. One changes the length of the branch of a tree
+2. The second changes the angle between the branches
+
+[Rainbow Tree Demo Sketch](./rainbow-tree.html)
 
 ### Slope and Intercept
 

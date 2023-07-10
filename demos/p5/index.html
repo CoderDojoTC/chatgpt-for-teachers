@@ -1872,12 +1872,32 @@ the sketch within an HTML file.  Here is an example of placing a canvas within a
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
+<p>Your HTML file that goes with this script MUST have a single HTML element with the id of <code>sketch-container</code> like this:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;canvas-container&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</code></pre></div>
+</td></tr></table>
 <p>See the <a href="https://p5js.org/reference/#/p5.Element/parent">p5.js parent</a> reference document.</p>
+<p>Here is an example that places the p5.js drawing canvas in a specific cell of an html <code>table</code> data element:</p>
 <p><a href="container-placement.html">Container Placement Example</a></p>
 <h2 id="basic-examples">Basic Examples</h2>
+<p>We are going to start with some basic examples that ChatGPT can easily handle.
+To test these examples we ask ChatGPT to generate a single p5.js sketch file
+that we can easily test and debug using the <a href="https://editor.p5js.org/">p5 Editor</a>.
+You simply copy and paste the code into the editor overwriting the default setup and
+draw functions.</p>
+<p>Just be warned that when you press the <code>play</code> button, the sketch runs <strong>continually</strong>
+which can quickly drain your battery if you are using a portable device.<br />
+It does this even if there is no visible motion on the canvas.  p5.js
+continually runs the draw function until you press stop or the battery runs out.</p>
+<p>My suggestion
+is to quickly press the <code>stop</code> button if you are on a battery-powered device.</p>
 <h3 id="circle-slider">Circle Slider</h3>
 <p>Here is a simple example that you can start with.  The ChatGPT prompt would be the following:</p>
-<div class="highlight"><pre><span></span><code>Generate a p5.js sketch file that draws a blue circle
+<div class="highlight"><pre><span></span><code>Generate a single p5.js sketch file that draws a blue circle
 in the center of a 400x400 canvas.
 
 Create a range control slider that allows the radius to be

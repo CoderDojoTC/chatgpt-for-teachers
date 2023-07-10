@@ -269,19 +269,36 @@ A classic physics simulation where the user can adjust the temperature and numbe
 
 ### Wire Animation
 
+![](./../../img/animate-circuit.gif)
+
 When animating circuits, we need an animation of electrons moving down a wire.  In
 this lesson, we use ChatGPT to generate a function to help us
-draw a wire that has an animation of small circles (think electrons) going though the wire
+draw a wire that has an animation of small circles (think electrons) going through the wire
 when the wire is carrying a current.
 
 Requesting ChatGPT to generate an explicit function is a great way to break larger
 problems into smaller tasks that ChatGPT can be successful at.
 
-[Wire Animation](./wire-animate.html)
+[Run the Wire Animation Demo](./wire-animate.html)
 
-### Battery Circuit
+### Battery and LED Circuit
 
-[Battery Circuit](./battery-circuit.html)
+![](./../../img/circuit-on-off.png)
+
+This is the most complex program we have generated so far.  It requires us
+to first use ChatGPT to create several functions:
+
+1. A drawBattery function
+2. A drawSwitch function that will toggle on or off
+3. A resistor function that draws a resistor zig-zag symbol
+4. An LED function that is black in the off state and red in the on state
+5. An animate wire function that animates the flow of current (see the previous example)
+
+Once we have functions for all these components, we can then assemble them together in
+an entire simulation.  You will find that ChatGPT will not usually get the the layout
+wrong and you will need to adjust the positions of the wires.
+
+[Battery and LED Circuit](./battery-circuit.html)
 
 ### Virus Simulation
 

@@ -19,11 +19,12 @@ function setup() {
   heightLabel = createElement('label', 'Height: ' + rectHeight).position(10, sliderStartY);
   widthLabel = createElement('label', 'Width: ' + rectWidth).position(10, sliderStartY + 20);
   
-  heightSlider = createSlider(0, height - 100, rectHeight, 1);
+  // x, y, default, incremnt
+  heightSlider = createSlider(0, height - 100, 100, 1);
   heightSlider.position(sliderStartX, sliderStartY);
   heightSlider.style('width', sliderWidth + 'px');
   
-  widthSlider = createSlider(0, width - 100, rectWidth, 1);
+  widthSlider = createSlider(0, width - 100, 100, 1);
   widthSlider.position(sliderStartX, sliderStartY + 20);
   widthSlider.style('width', sliderWidth + 'px');
 }

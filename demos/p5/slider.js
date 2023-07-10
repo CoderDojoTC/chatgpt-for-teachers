@@ -7,7 +7,9 @@ function setup() {
     const canvas = createCanvas(400, 400);
     canvas.parent('canvas-container');
     radiusSlider = createSlider(0, 200, circleRadius);
-    radiusSlider.position(20, 370);
+    radiusSlider.position(100, 380);
+    // added by hand
+    radiusSlider.style('width', '300px')
 }
 
 function draw() {
@@ -22,5 +24,5 @@ function draw() {
 
     // Draw the label and the current radius value
     fill(0); // black color for the text
-    text("Radius: " + circleRadius, radiusSlider.x + radiusSlider.width + 10, 385);
+    text("Radius: " + circleRadius, 10, 385);
 }

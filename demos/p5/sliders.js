@@ -7,7 +7,7 @@ let heightLabel, widthLabel;
 
 function setup() {
   const canvas = createCanvas(400, 400);
-  canvas.parent('sketch-container');
+  canvas.parent('canvas-container');
   
   // Make sure the range controls get aligned correctly
   // The width of the labels and values of the sliders
@@ -41,5 +41,5 @@ function draw() {
   
   // draw green
   fill(50, 200, 50);
-  rect(100, 100, rectWidth, rectHeight);
+  rect(50, 50, rectWidth, rectHeight);
 }

@@ -1868,7 +1868,7 @@ the sketch within an HTML file.  Here is an example of placing a canvas within a
 <span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
   <span class="c1">// Create a p5.js canvas inside the div with id &quot;sketch-container&quot;</span>
   <span class="kd">const</span> <span class="nx">canvas</span> <span class="o">=</span> <span class="nx">createCanvas</span><span class="p">(</span><span class="mf">400</span><span class="p">,</span> <span class="mf">400</span><span class="p">);</span>
-  <span class="nx">canvas</span><span class="p">.</span><span class="nx">parent</span><span class="p">(</span><span class="s1">&#39;sketch-container&#39;</span><span class="p">);</span>
+  <span class="nx">canvas</span><span class="p">.</span><span class="nx">parent</span><span class="p">(</span><span class="s1">&#39;canvas-container&#39;</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
@@ -1994,8 +1994,13 @@ Make the slider width be 360px and display the number of points by using the
 text() function at the end of the draw() function.
 </code></pre></div>
 <h3 id="rainbow-tree">Rainbow Tree</h3>
-<p>Generating a fractal tree is a fun way to demonstrate recursion.</p>
-<p><a href="rainbow-tree.html">Rainbow Tree</a></p>
+<p><img alt="" src="../../img/p5-rainbow-tree.png" /></p>
+<p>Generating a fractal tree is a fun way to demonstrate recursion.  This example has two sliders:</p>
+<ol>
+<li>One changes the length of the branch of a tree</li>
+<li>The second changes the angle between the branches</li>
+</ol>
+<p><a href="rainbow-tree.html">Rainbow Tree Demo Sketch</a></p>
 <h3 id="slope-and-intercept">Slope and Intercept</h3>
 <p>Students that are learning charts and plotting will learn about the slope and intercept of a line.
 This one is tricky since processing uses the upper-left corner as the origin and y increases as

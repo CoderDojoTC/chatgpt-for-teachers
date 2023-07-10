@@ -7,28 +7,33 @@ let amplitude; // Height of wave
 let period; // How many pixels before the wave repeats
 let dx; // Value for incrementing x
 let yvalues; // Using an array to store height values for the wave
+let canvasHeight = 400;
+let canvasWidth = 700;
+let percentHeightDraw = .75;
+let verticalDrawHight = canvasHeight * percentHeightDraw;
+let horzAxisHeight = (canvasHeight * percentHeightDraw) / 2;
 
 let amplitudeSlider, periodSlider, phaseSlider;
 let animateButton;
 //let animate = true;
 
 function setup() {
-  const canvas = createCanvas(710, 400);
+  const canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.parent('canvas-container');
   w = width + 16;
   
   // Create sliders
-  amplitudeSlider = createSlider(0, 200, 100);
-  amplitudeSlider.position(110, 5);
-  amplitudeSlider.style('width', '200px')
+  amplitudeSlider = createSlider(0, 130, 100);
+  amplitudeSlider.position(110, canvasHeight - 90);
+  amplitudeSlider.style('width', '220px')
   
   periodSlider = createSlider(0, 1000, 500);
-  periodSlider.position(110, 25);
-  periodSlider.style('width', '200px')
+  periodSlider.position(110, canvasHeight - 60);
+  periodSlider.style('width', '220px')
   
   phaseSlider = createSlider(-TWO_PI, TWO_PI, 0, 0.01);
-  phaseSlider.position(110, 45);
-  phaseSlider.style('width', '200px')
+  phaseSlider.position(110, canvasHeight - 30);
+  phaseSlider.style('width', '220px')
   
   // Create animate button
   //animateButton = createButton('Stop Animation');
@@ -47,7 +52,6 @@ function draw() {
   theta = phaseSlider.value();
   dx = (TWO_PI / period) * xspacing;
   
-
   calcWave();
   renderWave();
   
@@ -55,15 +59,18 @@ function draw() {
   stroke(0)
   strokeWeight(0);
   fill('black'); // Text color
-  text('Amplitude: ' + amplitude/100, 10, 10);
-  text('Period: ' + period, 10, 30);
-  text('Phase: ' + theta.toFixed(2), 10, 50);
+  text('Amplitude: ' + amplitude/100, 10, canvasHeight-90);
+  text('Period: ' + period, 10, canvasHeight-60);
+  let theta2 = theta + 1.25;
+  text('Phase: ' + theta2.toFixed(2), 10, canvasHeight-30);
   
   // Draw x and y axis
   stroke('gray');
   strokeWeight(1);
-  line(0, height / 2, width, height / 2); // x-axis
-  line(width / 2, 0, width / 2, height); // y-axis
+  // horizontal axis
+  line(0, horzAxisHeight, width, horzAxisHeight); // x-axis
+  // vertical
+  line(width / 2, 0, width / 2, verticalDrawHight); // y-axis
 }
 
 // used for animation
@@ -86,7 +93,7 @@ function renderWave() {
   stroke('blue'); // wave color
   beginShape();
   for (let x = 0; x < yvalues.length; x++) {
-    vertex(x * xspacing, height / 2 + yvalues[x]);
+    vertex(x * xspacing, horzAxisHeight + yvalues[x]);
   }
   endShape();
 }

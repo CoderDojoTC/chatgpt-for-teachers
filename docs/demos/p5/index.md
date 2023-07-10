@@ -160,10 +160,11 @@ that we can easily test and debug using the [p5 Editor](https://editor.p5js.org/
 You simply copy and paste the code into the editor overwriting the default setup and
 draw functions.
 
-Just be warned that when you press the ```play``` button, the sketch runs **continually**
-which can quickly drain your battery if you are using a portable device.  
-It does this even if there is no visible motion on the canvas.  p5.js
-continually runs the draw function until you press stop or the battery runs out.
+!!! Warning
+    When you press the ```play``` button, the sketch runs **continually**
+    which can quickly drain your battery if you are using a portable device.  
+    It does this even if there is no visible motion on the canvas.  p5.js
+    continually runs the draw function until you press stop or the battery runs out.
 
 My suggestion
 is to quickly press the ```stop``` button if you are on a battery-powered device.

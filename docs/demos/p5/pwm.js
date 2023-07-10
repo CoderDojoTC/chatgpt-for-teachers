@@ -6,7 +6,8 @@ let cycles = 6;
 let waveHeight = height/3
 
 function setup() {
-  createCanvas(600, 200);
+  const canvas = createCanvas(600, 200);
+  canvas.parent('canvas-container');
   
   dutyCycleSlider = createSlider(0, 1, 0.5, 0.01); // Range from 0 to 1, default value 0.5, step size 0.01
   dutyCycleSlider.style('width', '400px'); // Set width of slider

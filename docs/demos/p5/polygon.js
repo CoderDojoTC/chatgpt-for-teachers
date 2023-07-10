@@ -11,9 +11,11 @@ function setup() {
     // number of points (or edges) in polygon
     pointSlider = createSlider(3, 20, 10);
     pointSlider.position(105, canvasSize - 30);
+    pointSlider.style('width', '300px')
 
     colorSlider = createSlider(0, 255, 170);
     colorSlider.position(105, canvasSize - 10);
+    colorSlider.style('width', '300px')
 }
 
 function draw() {

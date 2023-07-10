@@ -63,9 +63,12 @@ Here is some sample text you can give ChatGPT to precisely create and position s
 
 ```linenums="0"
 Add a slider that controls the radius at the bottom of the canvas.
-The slider has values that ranges from 0 to 200 with a default value of 100.
-Place the slider to the right of the slider label and value at the bottom of the canvas.
-Place a label of "Radius:" and the current radius value using text() at the end of the draw() function.
+The slider has values that ranges from 0 to 200 with a default
+value of 100.
+Place the slider to the right of the slider label and value
+at the bottom of the canvas.
+Place a label of "Radius:" and the current radius value
+using text() at the end of the draw() function.
 ```
 
 Here is the full prompt:
@@ -78,7 +81,8 @@ The sketch will draw a blue circle at the center of the canvas.
 Add a slider that controls the radius of the circle at the bottom of the canvas.
 The slider has values that ranges from 0 to 200 with a default value of 100.
 Place the slider at the bottom of the canvas.
-Place a label of "Radius:" and the current radius value using text() at the end of the draw() function.
+Place a label of "Radius:" and the current radius value
+using text() at the end of the draw() function.
 ```
 
 [Demo of Single Slider Radius Example](./slider.html)
@@ -93,17 +97,20 @@ The trick here is to get ChatGPT to lay out the sliders correctly at the bottom 
 ```linenums="0"
 Generate a single file p5.js sketch on a 400x400 canvas.
 
-The sketch draws a green rectangle at (100,100).
+The sketch draws a green rectangle at (50,50).
 
-Add two sliders placed on the bottom of the canvas to the right of the labels and values.
+Add two sliders placed on the bottom of the canvas to the
+right of the labels and values.
 
 One slider controls the height of a rectangle and one slider controls
-the width of the rectangle.  The labels are "Height:" and "Width:".  The values are placed
-to the right of the labels.
+the width of the rectangle.
+The labels are "Height:" and "Width:".
+The values are placed to the right of the labels.
 
 Place both the slider labels and their values to the left of the sliders.
 
-Make the sliders widths span the remaining width of the canvas after the label and values.
+Make the sliders widths span the remaining width of the canvas
+after the label and values.
 ```
 
 [Two Sliders Controlling a Rectangle](./sliders.html)
@@ -189,17 +196,18 @@ Prompt:
 ```linenums="0"
 Generate a p5.js sketch file that draws filled polygons on a 400x400 canvas.
 
-Create one range control slider that allows the color inside the polygon
-to be changed to any color.  Make the default value be 170 (blue).
-
-Create second range control slider that allows the number of points on
+Create one range control slider that allows the number of points on
 the polygon to vary from 3 to 10 in steps of 1.  Make the default be 10.
 
-Make the sliders be the width of the canvas.  Place the sliders at the bottom
+Create a second range control slider that allows the color inside the polygon
+to be changed to any color.  Make the default value be 170 (blue).
+
+Make the sliders be the width of the canvas less the width of the
+labels and values.  Place the sliders at the bottom
 of the canvas 100 points in from the left.
 
 Use the text() function at the end of the draw() function to display the
-name and current values of the sliders.
+name and current values of the sliders in the bottom left of the screen.
 ```
 
 [Polygon Demonstration](./polygon.html)
@@ -242,16 +250,22 @@ In this demo, we use three range controls to change the amplitude, period and ph
 [Sine Wave Demo](./sine.html)
 
 ### Wave Sums
+![](./../../img/sum-of-waveforms.png)
 
-This lab demonstrates calculating the sum of different sine waves.
+This lab demonstrates calculating the sum of sine waves of different lengths.
+Understanding how to convert waves from spacial domains into frequency
+domains is a key component of signal processing and understanding the FFT
+algorithm for doing Fast-Fourier Transforms.
 
-[Wave Sums](./wave-sums.html)
+[Wave Sums Demo](./wave-sums.html)
 
 ### Pulse-Width Modulation
 
 ![PWM](./../../img/pwm.png)
 
-Pulse-width modulation is the way that microcontrollers send a precise signal to a devise such as a motor controller.  This simulation models an old CRT oscilloscope display.
+Pulse-width modulation is the way that microcontrollers send a precise signal to a 
+device such as a motor controller.  This simulation models an old CRT oscilloscope display
+with a bright green line on a black background.
 
 [Pulse-Width Modulation](./pwm.html)
 

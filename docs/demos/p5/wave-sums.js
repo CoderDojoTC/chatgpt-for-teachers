@@ -1,69 +1,65 @@
-// Sum of waveforms
-let waves = [];
-let sumWave = [];
+// add waveforms
 let checkboxes = [];
-let waveHeight = 60;
-let waveMargin = 10
-let waveTotal = waveHeight + waveMargin
-let halfHeight = waveHeight/2;
-let sumHeight = 300;
+let frequencies = [1, 2, 3, 4];
+let margin = 10
+let amplitude = 30;
 
 function setup() {
-  createCanvas(400, 510);
-  
-  // Create sine waves with different frequencies and checkboxes
-  for(let i = 0; i < 4; i++) {
-    waves[i] = [];
-    for(let x = 0; x < width; x++) {
-      // Adjust to change the frequency of the waves
-      waves[i][x] = sin((i+1)*0.02*x) * halfHeight; 
-    }
+  const canvas = createCanvas(400, 600);
+  canvas.parent('canvas-container');
+  for(let i=0; i<4; i++){
     checkboxes[i] = createCheckbox('Include in sum', false);
-    checkboxes[i].position(5, i*waveTotal);
+    checkboxes[i].position(20, i*90+10);
   }
 }
 
 function draw() {
-  background(245);
-
-  // Reset the sum wave
-  sumWave = new Array(width).fill(0);
-
-  stroke(0);
-  noFill();
-  for(let i = 0; i < 4; i++) {
-    rect(0, i*waveHeight + i*waveMargin, width, waveHeight); // Draw bounding box
-    stroke('sliver');
-    strokeWeight(1)
-    downDist = i*waveHeight + i*waveMargin
-    dd2 = downDist + halfHeight
-    line(0, dd2, width, dd2); // Draw zero line
-    stroke('blue');
-    for(let x = 1; x < width; x++) {
-      if(checkboxes[i].checked()) {
-        sumWave[x] += waves[i][x]; // Add to the sum
+  background(240);
+  let y = 10;
+  let sumWave = [];
+  for(let i=0; i<4; i++){
+    if(checkboxes[i].checked()){
+      let wave = drawWave(20, y, width-40, 80, frequencies[i]);
+      if(sumWave.length == 0){
+        sumWave = wave;
+      } else {
+        for(let j=0; j<wave.length; j++){
+          sumWave[j] += wave[j];
+        }
       }
-      line(x-1, dd2+waves[i][x-1], x, dd2+waves[i][x]);
+    } else {
+      drawWave(20, y, width-40, 80, frequencies[i]);
     }
+    y += 90;
   }
+  
+  // Draw sum wave
+  textSize(20);
+  fill('black')
+  text("Sum of Waveforms:", 10, 390);
+  strokeWeight(4)
+  beginShape();
+  noFill();
+  for(let i=0; i<sumWave.length; i++){
+    vertex(i+20, y + 120 - sumWave[i]);
+  }
+  endShape();
+}
 
-  // Display the sum wave
-  stroke('black');
+function drawWave(x, y, w, h, freq) {
+  fill('white')
   strokeWeight(1)
-  text('Sum of waveforms', 0, 290)
-  stroke('green');
-  strokeWeight(2)
-  // Draw bounding box for the sum
-  rect(0, sumHeight, width, waveHeight*4);
-  
-  // Draw the axis line
-  stroke('silver');
-  line(0, 400, width, 400); // Draw zero line
-  
-  // Draw the sum of the waveforms
-  stroke('purple');
-  strokeWeight(3)
-  for(let x = 1; x < width; x++) {
-    line(x-1, 400+sumWave[x-1], x, 400+sumWave[x]);
+  // added bounding box
+  rect(x,y,w,h)
+  let wave = [];
+  beginShape();
+  noFill();
+  for(let i=x; i<=x+w; i++){
+    let angle = map(i, x, x+w, 0, TWO_PI * freq);
+    let sinValue = sin(angle) * amplitude;
+    vertex(i, y + h/2 - sinValue);
+    wave.push(sinValue);
   }
+  endShape();
+  return wave;
 }

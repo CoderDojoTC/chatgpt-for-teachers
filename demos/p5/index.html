@@ -1889,10 +1889,13 @@ To test these examples we ask ChatGPT to generate a single p5.js sketch file
 that we can easily test and debug using the <a href="https://editor.p5js.org/">p5 Editor</a>.
 You simply copy and paste the code into the editor overwriting the default setup and
 draw functions.</p>
-<p>Just be warned that when you press the <code>play</code> button, the sketch runs <strong>continually</strong>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When you press the <code>play</code> button, the sketch runs <strong>continually</strong>
 which can quickly drain your battery if you are using a portable device.<br />
 It does this even if there is no visible motion on the canvas.  p5.js
 continually runs the draw function until you press stop or the battery runs out.</p>
+</div>
 <p>My suggestion
 is to quickly press the <code>stop</code> button if you are on a battery-powered device.</p>
 <h3 id="circle-slider">Circle Slider</h3>

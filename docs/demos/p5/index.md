@@ -138,18 +138,42 @@ function setup() {
 }
 ```
 
+Your HTML file that goes with this script MUST have a single HTML element with the id of ```sketch-container``` like this:
+
+```html
+<body>
+    <div id="canvas-container"></div>
+</body>
+```
+
 See the [p5.js parent](https://p5js.org/reference/#/p5.Element/parent) reference document.
+
+Here is an example that places the p5.js drawing canvas in a specific cell of an html ```table``` data element:
 
 [Container Placement Example](./container-placement.html)
 
 ## Basic Examples
+
+We are going to start with some basic examples that ChatGPT can easily handle.
+To test these examples we ask ChatGPT to generate a single p5.js sketch file
+that we can easily test and debug using the [p5 Editor](https://editor.p5js.org/).
+You simply copy and paste the code into the editor overwriting the default setup and
+draw functions.
+
+Just be warned that when you press the ```play``` button, the sketch runs **continually**
+which can quickly drain your battery if you are using a portable device.  
+It does this even if there is no visible motion on the canvas.  p5.js
+continually runs the draw function until you press stop or the battery runs out.
+
+My suggestion
+is to quickly press the ```stop``` button if you are on a battery-powered device.
 
 ### Circle Slider
 
 Here is a simple example that you can start with.  The ChatGPT prompt would be the following:
 
 ```linenums="0"
-Generate a p5.js sketch file that draws a blue circle
+Generate a single p5.js sketch file that draws a blue circle
 in the center of a 400x400 canvas.
 
 Create a range control slider that allows the radius to be

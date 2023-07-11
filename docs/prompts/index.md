@@ -37,6 +37,10 @@ colors = ["red", "orange", "yellow"]
 
 ### Use Precise Specific Phrases
 
-Not: *There is a bug.*
+Note: *There is a bug.*
 
 Try: *There is a compile error on line 10.*
+
+## Regression Line
+
+[Regression Line](./27-regression-line.md)

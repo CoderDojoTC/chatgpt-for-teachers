@@ -127,7 +127,6 @@ the sketch within an HTML file.  Here is an example of placing a canvas within a
 
 ![](./../../img/p5-canvas-placement.png)
 
-
 To do this, within the ```setup()``` function we can use the ```canvas.parent()``` method to indicate the ID of the enclosing HTML div id.  Here is some sample ```setup()`` code:
 
 ```js
@@ -169,184 +168,12 @@ draw functions.
 My suggestion
 is to quickly press the ```stop``` button if you are on a battery-powered device.
 
-### Circle Slider
-
-Here is a simple example that you can start with.  The ChatGPT prompt would be the following:
-
-```linenums="0"
-Generate a single p5.js sketch file that draws a blue circle
-in the center of a 400x400 canvas.
-
-Create a range control slider that allows the radius to be
-adjusted from 0 to 200.
-
-Use the text() function within the draw() function to display the
-label and current value of the radius.
-```
-
-[Circle Slider](./circle-slider.html)
-
-```javascript
-let radiusSlider;
-let radius = 0;
-
-function setup() {
-  createCanvas(400, 400);
-  
-  // Create the radius slider
-  radiusSlider = createSlider(0, 200, 100);
-  radiusSlider.position(10, 10);
-}
-
-function draw() {
-  background(220);
-  
-  // Fetch the current radius from the slider
-  radius = radiusSlider.value();
-
-  // Draw the circle
-  fill(0, 0, 255);
-  noStroke();
-  circle(width / 2, height / 2, radius * 2);
-
-  // Display the radius value
-  fill(0);
-  text("Radius: " + radius, 10, 50);
-}
-```
-
-### Polygon
-
-In this example, we will use a more detailed prompt to control the placement of the
-sliders and their values.
-
-Prompt:
-```linenums="0"
-Generate a p5.js sketch file that draws filled polygons on a 400x400 canvas.
-
-Create one range control slider that allows the number of points on
-the polygon to vary from 3 to 10 in steps of 1.  Make the default be 10.
-
-Create a second range control slider that allows the color inside the polygon
-to be changed to any color.  Make the default value be 170 (blue).
-
-Make the sliders be the width of the canvas less the width of the
-labels and values.  Place the sliders at the bottom
-of the canvas 100 points in from the left.
-
-Use the text() function at the end of the draw() function to display the
-name and current values of the sliders in the bottom left of the screen.
-```
-
-[Polygon Demonstration](./polygon.html)
-
-### Multi-pointed Star
-
-Here is a p5 sketch that generates a multi-pointed star.  
-
-[Multi-pointed Star](./star.html)
-
-Here is the prompt I used to generate
-this program.
-
-```linenums="0"
-Generate a p5.js sketch that draws a star at the center of a 400x400 canvas. 
-Add a slider for the number of points on the star that ranges from 4 to 20. 
-Make the slider width be 360px and display the number of points by using the
-text() function at the end of the draw() function.
-```
-### Rainbow Tree
-
-![](./../../img/p5-rainbow-tree.png)
-
-Generating a fractal tree is a fun way to demonstrate recursion.  This example has two sliders:
-
-1. One changes the length of the branch of a tree
-2. The second changes the angle between the branches
-
-[Rainbow Tree Demo Sketch](./rainbow-tree.html)
-
-### Slope and Intercept
-
-Students that are learning charts and plotting will learn about the slope and intercept of a line.
-This one is tricky since processing uses the upper-left corner as the origin and y increases as
-we move down the page.</br>
-
-[Slope and Intercept](./slope.html)
 
 [Supply and Demand](./supply-and-demand.html)
 
-### Sine Wave
 
-In this demo, we use three range controls to change the amplitude, period and phase of a sine wave.
 
-[Sine Wave Demo](./sine.html)
-
-### Wave Sums
-![](./../../img/sum-of-waveforms.png)
-
-This lab demonstrates calculating the sum of sine waves of different lengths.
-Understanding how to convert waves from spacial domains into frequency
-domains is a key component of signal processing and understanding the FFT
-algorithm for doing Fast-Fourier Transforms.
-
-[Wave Sums Demo](./wave-sums.html)
-
-### Pulse-Width Modulation
-
-![PWM](./../../img/pwm.png)
-
-Pulse-width modulation is the way that microcontrollers send a precise signal to a 
-device such as a motor controller.  This simulation models an old CRT oscilloscope display
-with a bright green line on a black background.
-
-[Pulse-Width Modulation](./pwm.html)
-
-### Brownian Motion
-
-A classic physics simulation where the user can adjust the temperature and number of molecules in the simulation.
-
-[Brownian Motion](./brownian-motion.html)
-
-### Conway's Game of Life
-
-[Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) is a simple simulator of cells.  This is a class of simulation called [Cellular Automata](https://en.wikipedia.org/wiki/Cellular_automaton)
-
-[Conway's Game of Life](./conways-life.html)
-
-### Wire Animation
-
-![](./../../img/animate-circuit.gif)
-
-When animating circuits, we need an animation of electrons moving down a wire.  In
-this lesson, we use ChatGPT to generate a function to help us
-draw a wire that has an animation of small circles (think electrons) going through the wire
-when the wire is carrying a current.
-
-Requesting ChatGPT to generate an explicit function is a great way to break larger
-problems into smaller tasks that ChatGPT can be successful at.
-
-[Run the Wire Animation Demo](./wire-animate.html)
-
-### Battery and LED Circuit
-
-![](./../../img/circuit-on-off.png)
-
-This is the most complex program we have generated so far.  It requires us
-to first use ChatGPT to create several functions:
-
-1. A drawBattery function
-2. A drawSwitch function that will toggle on or off
-3. A resistor function that draws a resistor zig-zag symbol
-4. An LED function that is black in the off state and red in the on state
-5. An animate wire function that animates the flow of current (see the previous example)
-
-Once we have functions for all these components, we can then assemble them together in
-an entire simulation.  You will find that ChatGPT will not usually get the the layout
-wrong and you will need to adjust the positions of the wires.
-
-[Battery and LED Circuit](./battery-circuit.html)
-
+#
 ### Virus Simulation
 
 A classic simulation of the rate that a virus spreads in a network.<br/>

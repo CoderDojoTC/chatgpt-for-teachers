@@ -64,10 +64,14 @@ nav:
       - Introduction: demos/p5/index.md
       - Circle Slider: demos/p5/circle-slider.md
       - Dual Sliders: demos/p5/sliders.md
+      - Polygon: demos/p5/polygon.md
+      - Star: demos/p5/star.md
+      - Slope and Intercept: demos/p5/slope.md
       - Sine Wave: demos/p5/sine.md
+      - Pulse-Width Modulation: demos/p5/pwm.md
       - Rainbow Tree: demos/p5/rainbow-tree.md
       - Conway's Game of Life: demos/p5/conways-life.md
-      - Wire Animate: demos/p5/wire-animate.md
+      - Wire Animation: demos/p5/wire-animate.md
       - Battery Circuit: demos/p5/battery-circuit.md
   - The Future of AI:
     - Introduction: future/index.md

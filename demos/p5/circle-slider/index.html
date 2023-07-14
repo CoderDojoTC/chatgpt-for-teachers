@@ -76,6 +76,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#circle-slider" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1128,6 +1133,8 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Circle Slider
@@ -1158,8 +1165,64 @@
   
   
     <li class="md-nav__item">
+      <a href="../polygon/" class="md-nav__link">
+        Polygon
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../star/" class="md-nav__link">
+        Star
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slope/" class="md-nav__link">
+        Slope and Intercept
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../sine/" class="md-nav__link">
         Sine Wave
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pwm/" class="md-nav__link">
+        Pulse-Width Modulation
       </a>
     </li>
   
@@ -1201,7 +1264,7 @@
   
     <li class="md-nav__item">
       <a href="../wire-animate/" class="md-nav__link">
-        Wire Animate
+        Wire Animation
       </a>
     </li>
   
@@ -1417,6 +1480,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -1434,8 +1499,71 @@
 
 
 
-  <h1>Circle Slider</h1>
+<h1 id="circle-slider">Circle Slider</h1>
+<p>Here is a simple example that you can start with.  The ChatGPT prompt would be the following:</p>
+<div class="highlight"><pre><span></span><code>Generate a single p5.js sketch file that draws a blue circle
+in the center of a 400x400 canvas.
 
+Create a range control slider that allows the radius to be
+adjusted from 0 to 200.
+
+Use the text() function within the draw() function to display the
+label and current value of the radius.
+</code></pre></div>
+<p><a href="../circle-slider.html">Circle Slider</a></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">radiusSlider</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">radius</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">createCanvas</span><span class="p">(</span><span class="mf">400</span><span class="p">,</span> <span class="mf">400</span><span class="p">);</span>
+
+  <span class="c1">// Create the radius slider</span>
+  <span class="nx">radiusSlider</span> <span class="o">=</span> <span class="nx">createSlider</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span> <span class="mf">200</span><span class="p">,</span> <span class="mf">100</span><span class="p">);</span>
+  <span class="nx">radiusSlider</span><span class="p">.</span><span class="nx">position</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span> <span class="mf">10</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">draw</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">background</span><span class="p">(</span><span class="mf">220</span><span class="p">);</span>
+
+  <span class="c1">// Fetch the current radius from the slider</span>
+  <span class="nx">radius</span> <span class="o">=</span> <span class="nx">radiusSlider</span><span class="p">.</span><span class="nx">value</span><span class="p">();</span>
+
+  <span class="c1">// Draw the circle</span>
+  <span class="nx">fill</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span> <span class="mf">0</span><span class="p">,</span> <span class="mf">255</span><span class="p">);</span>
+  <span class="nx">noStroke</span><span class="p">();</span>
+  <span class="nx">circle</span><span class="p">(</span><span class="nx">width</span> <span class="o">/</span> <span class="mf">2</span><span class="p">,</span> <span class="nx">height</span> <span class="o">/</span> <span class="mf">2</span><span class="p">,</span> <span class="nx">radius</span> <span class="o">*</span> <span class="mf">2</span><span class="p">);</span>
+
+  <span class="c1">// Display the radius value</span>
+  <span class="nx">fill</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+  <span class="nx">text</span><span class="p">(</span><span class="s2">&quot;Radius: &quot;</span> <span class="o">+</span> <span class="nx">radius</span><span class="p">,</span> <span class="mf">10</span><span class="p">,</span> <span class="mf">50</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
 <p><a href="../circle-slider.html">Circle Slider Demo</a></p>
 
               

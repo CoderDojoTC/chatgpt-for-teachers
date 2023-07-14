@@ -60,7 +60,15 @@ nav:
     - prompts/26-systems-thinking.md
   - Interactive Demos:
     - Intro: demos/index.md
-    - p5.js Demos: demos/p5/index.md
+    - p5.js Animations:
+      - Introduction: demos/p5/index.md
+      - Circle Slider: demos/p5/circle-slider.md
+      - Dual Sliders: demos/p5/sliders.md
+      - Sine Wave: demos/p5/sine.md
+      - Rainbow Tree: demos/p5/rainbow-tree.md
+      - Conway's Game of Life: demos/p5/conways-life.md
+      - Wire Animate: demos/p5/wire-animate.md
+      - Battery Circuit: demos/p5/battery-circuit.md
   - The Future of AI:
     - Introduction: future/index.md
     - Today: future/ai-today.md

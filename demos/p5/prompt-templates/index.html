@@ -1196,15 +1196,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-add-controls-and-buttons" class="md-nav__link">
-    Step 2: Add Controls and Buttons
+  <a href="#step-3-specify-labe-value-and-slider-layout" class="md-nav__link">
+    Step 3: Specify Labe, Value and Slider Layout
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-specify-labe-value-and-slider-layout" class="md-nav__link">
-    Step 3: Specify Labe, Value and Slider Layout
+  <a href="#add-the-canvas-const-and-reference" class="md-nav__link">
+    Add the Canvas Const and Reference
   </a>
   
 </li>
@@ -1619,15 +1619,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-add-controls-and-buttons" class="md-nav__link">
-    Step 2: Add Controls and Buttons
+  <a href="#step-3-specify-labe-value-and-slider-layout" class="md-nav__link">
+    Step 3: Specify Labe, Value and Slider Layout
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-specify-labe-value-and-slider-layout" class="md-nav__link">
-    Step 3: Specify Labe, Value and Slider Layout
+  <a href="#add-the-canvas-const-and-reference" class="md-nav__link">
+    Add the Canvas Const and Reference
   </a>
   
 </li>
@@ -1659,15 +1659,33 @@
 
 <h1 id="prompt-templates">Prompt Templates</h1>
 <h2 id="stem-1-generate-a-file">Stem 1: Generate a File</h2>
-<p>Generate a single p5.js sketch file that draws on a 400x400 canvas.</p>
-<h2 id="step-2-add-controls-and-buttons">Step 2: Add Controls and Buttons</h2>
-<p>Add range control sliders at the bottom of the canvas for changing the X and Y.</p>
-<p>Add buttons for "Run", "Stop", "Step" and "Reset" at the bottom of the canvas.</p>
+<div class="highlight"><pre><span></span><code>Generate a single p5.js sketch file that draws on a 400x400 canvas.
+
+## Step 2: Add Controls and Buttons
+
+```linenums=&quot;0&quot;
+Add range control sliders at the bottom of the canvas for changing the X and Y.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Add range control sliders at the bottom of the canvas for changing the X and Y.
+Include the label and values for the sliders.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Add buttons for &quot;Run&quot;, &quot;Stop&quot;, &quot;Step&quot; and &quot;Reset&quot; at the bottom of the canvas.
+</code></pre></div>
 <h2 id="step-3-specify-labe-value-and-slider-layout">Step 3: Specify Labe, Value and Slider Layout</h2>
-<p>Add the slider labels and values to the left of the sliders.
-Have the sliders begin at x=100 and span the rest of the width of the canvas.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Add the slider labels and values to the left of the sliders.
+Have the sliders begin at x=100 and span the rest of the width of the canvas.
+</code></pre></div>
+</td></tr></table>
+<h2 id="add-the-canvas-const-and-reference">Add the Canvas Const and Reference</h2>
+<div class="highlight"><pre><span></span><code>Add the following at the start of the draw function:
+  const canvas = createCanvas(600, 200);
+  // remove comment to place in HTML page with a canvas-container ID
+  // canvas.parent(&#39;canvas-container&#39;);
+</code></pre></div>
 <h2 id="example">Example</h2>
-<p>Generate a p5.js sketch file that teaches trigonometry concepts on a 400x400 canvas.</p>
+<p>```linenums="0"
+Generate a p5.js sketch file that teaches trigonometry concepts on a 400x400 canvas.</p>
 <p>Allow the user to change two values using range control sliders placed at the bottom of the canvas.</p>
 <p>The canvas contains a plot of a sine wave from -2 PI to 2 PI.</p>
 <p>The first slider should control the amplitude of a sine curve ranging from .1 to 2 in .1 steps and the default amplitude of 1.0</p>

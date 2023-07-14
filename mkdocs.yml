@@ -58,6 +58,7 @@ nav:
     - prompts/15-micropython.md
     - prompts/20-website-analytics.md
     - prompts/26-systems-thinking.md
+    - prompts/27-regression-line.md
   - Interactive Demos:
     - Intro: demos/index.md
     - p5.js Animations:

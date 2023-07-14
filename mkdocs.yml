@@ -62,6 +62,8 @@ nav:
     - Intro: demos/index.md
     - p5.js Animations:
       - Introduction: demos/p5/index.md
+      - Sketch Structure: demos/p5/sketch-structure.md
+      - Prompt Templates: demos/p5/prompt-templates.md
       - Circle Slider: demos/p5/circle-slider.md
       - Dual Sliders: demos/p5/sliders.md
       - Polygon: demos/p5/polygon.md
@@ -69,8 +71,10 @@ nav:
       - Slope and Intercept: demos/p5/slope.md
       - Sine Wave: demos/p5/sine.md
       - Pulse-Width Modulation: demos/p5/pwm.md
+      - Wave Sums: demos/p5/wave-sums.md
       - Rainbow Tree: demos/p5/rainbow-tree.md
       - Conway's Game of Life: demos/p5/conways-life.md
+      - Brownian Motion: demos/p5/brownian-motion.md
       - Wire Animation: demos/p5/wire-animate.md
       - Battery Circuit: demos/p5/battery-circuit.md
   - The Future of AI:

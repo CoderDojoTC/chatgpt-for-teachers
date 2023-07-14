@@ -1147,56 +1147,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#structure-of-a-p5js-sketch" class="md-nav__link">
-    Structure of a p5.js Sketch
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prompting-tips" class="md-nav__link">
-    Prompting Tips
-  </a>
-  
-    <nav class="md-nav" aria-label="Prompting Tips">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#range-control-sliders" class="md-nav__link">
-    Range Control Sliders
-  </a>
-  
-    <nav class="md-nav" aria-label="Range Control Sliders">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#simple-slider-with-label-and-value" class="md-nav__link">
-    Simple Slider with Label and Value
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#multiple-slider-example" class="md-nav__link">
     Multiple Slider Example
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sketch-container-placement" class="md-nav__link">
-    Sketch Container Placement
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1211,6 +1164,34 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sketch-structure/" class="md-nav__link">
+        Sketch Structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="prompt-templates/" class="md-nav__link">
+        Prompt Templates
+      </a>
     </li>
   
 
@@ -1320,6 +1301,20 @@
   
   
     <li class="md-nav__item">
+      <a href="wave-sums/" class="md-nav__link">
+        Wave Sums
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="rainbow-tree/" class="md-nav__link">
         Rainbow Tree
       </a>
@@ -1336,6 +1331,20 @@
     <li class="md-nav__item">
       <a href="conways-life/" class="md-nav__link">
         Conway's Game of Life
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="brownian-motion.md" class="md-nav__link">
+        Brownian Motion
       </a>
     </li>
   
@@ -1575,56 +1584,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#structure-of-a-p5js-sketch" class="md-nav__link">
-    Structure of a p5.js Sketch
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prompting-tips" class="md-nav__link">
-    Prompting Tips
-  </a>
-  
-    <nav class="md-nav" aria-label="Prompting Tips">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#range-control-sliders" class="md-nav__link">
-    Range Control Sliders
-  </a>
-  
-    <nav class="md-nav" aria-label="Range Control Sliders">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#simple-slider-with-label-and-value" class="md-nav__link">
-    Simple Slider with Label and Value
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#multiple-slider-example" class="md-nav__link">
     Multiple Slider Example
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sketch-container-placement" class="md-nav__link">
-    Sketch Container Placement
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1658,62 +1620,6 @@
 first to get the idea to generate p5.js code using ChatGPT.</p>
 <p>If you are not familiar with p5.js, it is a high-quality JavaScript library for building interactive animations.  It has been around since 2014 and it is supported by a large community of educators and creative people that combine programming with art.  Because there is a strong ethos of sharing open-source p5.js scripts there is ample material for ChatGPT to be trained on.  There are currently over <a href="https://github.com/search?q=p5.js&amp;type=repositories">21,000 p5.js sketches</a> found on GitHub!</p>
 <p>Our goal here is to teach you how to write precise ChatGPT prompts that will generate a working p5.js simulation without having to understand how to write JavaScript.</p>
-<h2 id="structure-of-a-p5js-sketch">Structure of a p5.js Sketch</h2>
-<p>Each sketch (the name of a p5.js program) is usually a single JavaScript file that has an extension of .js.
-It has two main functions:</p>
-<ol>
-<li><code>setup()</code> - which is run once on sketch startup.</li>
-<li><code>draw()</code> - which run continually with a default redraw interval of 60 frames per second.</li>
-</ol>
-<p>A sketch runs in an area called a <code>canvas</code> which typically has a size such as 400x400.</p>
-<h2 id="prompting-tips">Prompting Tips</h2>
-<p>My suggestion is to always start your p5.js prompts with a statement such as:</p>
-<p><em>Generate a single file p5.js sketch on a 400x400 canvas.</em></p>
-<p>ChatGPT is very good at generating algorithms, but it is not good at doing layout.  This is also compounded
-by the fact that many programs are designed to draw on a cartesian coordinate system with the origin being
-placed in the lower left corner of a canvas.  Unfortunately, p5.js (like other HTML rendering tools) assumes that the origin is in the upper right corner of the screen.  This causes ChatGPT to get confused and requires us to flip our diagrams on the y-axis by hand.  See <a href="https://p5js.org/examples/structure-coordinates.html">p5.js Coordinates</a> and <a href="https://p5js.org/learn/coordinate-system-and-shapes.html">The p5.js Coordinate System and Shapes</a> for some details.</p>
-<p>Here are some of my tips.</p>
-<h3 id="range-control-sliders">Range Control Sliders</h3>
-<p><img alt="" src="../../img/p5-slider-circle.png" style="height:300px;width:300px" /></p>
-<p>Sliders are the input range controls that allow users to change a value of a simulation.  I use
-sliders extensively in my examples because they are visible and intuitive.  To get the sliders to work you need to give ChatGPT clear instructions to include both the slider, its label and its current value in the program.</p>
-<p>Note that many p5.js examples don't use sliders, but they use a mouse position on the canvas.  This is
-usually a poor design choice since there is no clear hints the simulation us using the values and there
-is no label or feedback on what the current value is.</p>
-<p>Sliders have the following properties:</p>
-<ol>
-<li>Their initial position (x and y)</li>
-<li>Their min and max values</li>
-<li>The default value</li>
-<li>The step or increment (default is 1)</li>
-<li>The width of a slider</li>
-</ol>
-<p>See the <a href="https://p5js.org/reference/#/p5/createSlider">p5.js createSlider</a> page for details.</p>
-<p>Unfortunately, there is no simple way to change many of the display details such as drawing the tick marks on a range control and changing the color.</p>
-<p>Here are two examples.</p>
-<h4 id="simple-slider-with-label-and-value">Simple Slider with Label and Value</h4>
-<p>Here is some sample text you can give ChatGPT to precisely create and position sliders.</p>
-<p><strong>ChatGPT Prompt:</strong></p>
-<div class="highlight"><pre><span></span><code>Add a slider that controls the radius at the bottom of the canvas.
-The slider has values that ranges from 0 to 200 with a default
-value of 100.
-Place the slider to the right of the slider label and value
-at the bottom of the canvas.
-Place a label of &quot;Radius:&quot; and the current radius value
-using text() at the end of the draw() function.
-</code></pre></div>
-<p>Here is the full prompt:</p>
-<div class="highlight"><pre><span></span><code>Generate a single file p5.js sketch on a 400x400 canvas.
-
-The sketch will draw a blue circle at the center of the canvas.
-
-Add a slider that controls the radius of the circle at the bottom of the canvas.
-The slider has values that ranges from 0 to 200 with a default value of 100.
-Place the slider at the bottom of the canvas.
-Place a label of &quot;Radius:&quot; and the current radius value
-using text() at the end of the draw() function.
-</code></pre></div>
-<p><a href="slider.html">Demo of Single Slider Radius Example</a></p>
 <h4 id="multiple-slider-example">Multiple Slider Example</h4>
 <p><img alt="p5 two slider example" src="../../img/p5-two-sliders.png" /></p>
 <p>Our simulations sometimes have multiple parameters that the user can change.  But how can we make the sliders
@@ -1739,22 +1645,6 @@ after the label and values.
 </code></pre></div></p>
 <p><a href="sliders.html">Two Sliders Controlling a Rectangle</a></p>
 <p>Note that you might have to manually adjust the placement of the labels, values and sliders and change width of the sliders to get the alignment correct.  Element layout is not a strength of ChatGPT.</p>
-<h3 id="sketch-container-placement">Sketch Container Placement</h3>
-<p>ChatGPT is not really good at placing graphic components on the screen and placing the canvas so it renders well within an HTML file.  We focus on just getting ChatGPT to generate the correct sketch and then we place
-the sketch within an HTML file.  Here is an example of placing a canvas within an HTML table.</p>
-<p><img alt="" src="../../img/p5-canvas-placement.png" /></p>
-<p>To do this, within the <code>setup()</code> function we can use the <code>canvas.parent()</code> method to indicate the ID of the enclosing HTML div id.  Here is some sample <code>`setup()</code> code:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
-  <span class="c1">// Create a p5.js canvas inside the div with id &quot;sketch-container&quot;</span>
-  <span class="kd">const</span> <span class="nx">canvas</span> <span class="o">=</span> <span class="nx">createCanvas</span><span class="p">(</span><span class="mf">400</span><span class="p">,</span> <span class="mf">400</span><span class="p">);</span>
-  <span class="nx">canvas</span><span class="p">.</span><span class="nx">parent</span><span class="p">(</span><span class="s1">&#39;canvas-container&#39;</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
-</td></tr></table>
 <p>Your HTML file that goes with this script MUST have a single HTML element with the id of <code>sketch-container</code> like this:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -1905,13 +1795,13 @@ be compressed more.</p>
           </a>
         
         
-          <a href="circle-slider/" title="Circle Slider" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="sketch-structure/" title="Sketch Structure" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Circle Slider
+                Sketch Structure
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

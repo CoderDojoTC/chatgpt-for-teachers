@@ -76,6 +76,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#two-sliders-demo" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1184,10 +1189,43 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Dual Sliders
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Dual Sliders
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sample-chatgpt-prompt" class="md-nav__link">
+    Sample ChatGPT Prompt
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1543,6 +1581,23 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sample-chatgpt-prompt" class="md-nav__link">
+    Sample ChatGPT Prompt
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1560,9 +1615,35 @@
 
 
 
-  <h1>Dual Sliders</h1>
-
+<h1 id="two-sliders-demo">Two Sliders Demo</h1>
 <p><a href="../sliders.html">Deno</a></p>
+<h2 id="sample-chatgpt-prompt">Sample ChatGPT Prompt</h2>
+<div class="highlight"><pre><span></span><code>Generate a single file p5.js sketch on a 400x400 canvas.
+
+The sketch draws a green rectangle at (50,50).
+
+Add two sliders placed on the bottom of the canvas to the
+right of the labels and values.
+
+One slider controls the height of a rectangle and one slider controls
+the width of the rectangle.
+The labels are &quot;Height:&quot; and &quot;Width:&quot;.
+The values are placed to the right of the labels.
+
+Place both the slider labels and their values to the left of the sliders.
+Make the sliders widths span the remaining width of the canvas
+after the label and values.
+</code></pre></div>
+<div class="admonition challenges">
+<p class="admonition-title">Challenges</p>
+<ol>
+<li>Modify the program to include sliders that change the x and y points.</li>
+<li>Add a slider that changes the color</li>
+<li>Add a checkbox to add a border around the rectangle</li>
+<li>Add a slider that changes the color of the border</li>
+<li>Add a slider that changes the width of the border</li>
+</ol>
+</div>
 
               
             </article>

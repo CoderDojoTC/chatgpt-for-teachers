@@ -15,6 +15,8 @@ the lower-left or center of the page.
 
 ## Canvas Layout
 
+The p5.js canvas uses the upper-left corner as the origin.
+
 ![](./../../img/canvas-origin.webp)
 
 ## Prompting Tips

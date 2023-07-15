@@ -31,6 +31,7 @@ function setup() {
   periodSlider.position(110, canvasHeight - 60);
   periodSlider.style('width', '220px')
   
+  // default is zero
   phaseSlider = createSlider(-TWO_PI, TWO_PI, 0, 0.01);
   phaseSlider.position(110, canvasHeight - 30);
   phaseSlider.style('width', '220px')

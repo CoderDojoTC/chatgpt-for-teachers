@@ -7,55 +7,6 @@ If you are not familiar with p5.js, it is a high-quality JavaScript library for 
 
 Our goal here is to teach you how to write precise ChatGPT prompts that will generate a working p5.js simulation without having to understand how to write JavaScript.
 
-
-#### Multiple Slider Example
-
-![p5 two slider example](./../../img/p5-two-sliders.png)
-
-Our simulations sometimes have multiple parameters that the user can change.  But how can we make the sliders
-align correctly?
-The trick here is to get ChatGPT to lay out the sliders correctly at the bottom of the canvas with the label, value and sliders aligned.
-
-**ChatGPT Prompt:**
-```linenums="0"
-Generate a single file p5.js sketch on a 400x400 canvas.
-
-The sketch draws a green rectangle at (50,50).
-
-Add two sliders placed on the bottom of the canvas to the
-right of the labels and values.
-
-One slider controls the height of a rectangle and one slider controls
-the width of the rectangle.
-The labels are "Height:" and "Width:".
-The values are placed to the right of the labels.
-
-Place both the slider labels and their values to the left of the sliders.
-
-Make the sliders widths span the remaining width of the canvas
-after the label and values.
-```
-
-[Two Sliders Controlling a Rectangle](./sliders.html)
-
-Note that you might have to manually adjust the placement of the labels, values and sliders and change width of the sliders to get the alignment correct.  Element layout is not a strength of ChatGPT.
-
-
-
-Your HTML file that goes with this script MUST have a single HTML element with the id of ```sketch-container``` like this:
-
-```html
-<body>
-    <div id="canvas-container"></div>
-</body>
-```
-
-See the [p5.js parent](https://p5js.org/reference/#/p5.Element/parent) reference document.
-
-Here is an example that places the p5.js drawing canvas in a specific cell of an html ```table``` data element:
-
-[Container Placement Example](./container-placement.html)
-
 ## Basic Examples
 
 We are going to start with some basic examples that ChatGPT can easily handle.
@@ -70,15 +21,14 @@ draw functions.
     It does this even if there is no visible motion on the canvas.  p5.js
     continually runs the draw function until you press stop or the battery runs out.
 
-My suggestion
-is to quickly press the ```stop``` button if you are on a battery-powered device.
+My suggestion is to quickly press the ```stop``` button if you are on a battery-powered device.
+
+
+## TODO
 
 
 [Supply and Demand](./supply-and-demand.html)
 
-
-
-#
 ### Virus Simulation
 
 A classic simulation of the rate that a virus spreads in a network.<br/>

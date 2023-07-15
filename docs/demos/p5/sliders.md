@@ -1,6 +1,6 @@
 # Two Sliders Demo
 
-[Deno](./sliders.html)
+[Run Two Slider Demo](./sliders.html)
 
 ## Sample ChatGPT Prompt
 

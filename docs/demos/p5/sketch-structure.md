@@ -6,7 +6,16 @@ It has two main functions:
 1. ```setup()``` - which is run once on sketch startup.
 2. ```draw()``` - which run continually with a default redraw interval of 60 frames per second.
 
-A sketch runs in an area called a ```canvas``` which typically has a size such as 400x400.
+A sketch runs in an area called a ```canvas``` which typically has a size such as 400x500 to
+indicate a size of width of 400 and height of 500.
+
+Like most other web drawing programs, the origin is the upper-left corner.  This
+is different from most of the other cartesian drawing systems where the origin is
+the lower-left or center of the page.
+
+## Canvas Layout
+
+![](./../../img/canvas-origin.webp)
 
 ## Prompting Tips
 

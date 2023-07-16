@@ -75,9 +75,11 @@ nav:
       - Wave Sums: demos/p5/wave-sums.md
       - Rainbow Tree: demos/p5/rainbow-tree.md
       - Conway's Game of Life: demos/p5/conways-life.md
-      - Brownian Motion: demos/p5/browian-motion.md
+      - Brownian Motion: demos/p5/brownian-motion.md
       - Wire Animation: demos/p5/wire-animate.md
       - Battery Circuit: demos/p5/battery-circuit.md
+      - H-Bridge Circuit: demos/p5/h-bridge.md
+      - Rotating Motor: demos/p5/motor.md
   - The Future of AI:
     - Introduction: future/index.md
     - Today: future/ai-today.md

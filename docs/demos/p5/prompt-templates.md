@@ -20,7 +20,7 @@ Include the label and values for the sliders.
 Add buttons for "Run", "Stop", "Step" and "Reset" at the bottom of the canvas.
 ```
 
-## Step 3: Specify Labe, Value and Slider Layout
+## Step 3: Specify Label, Value and Slider Layout
 
 ```
 Add the slider labels and values to the left of the sliders.

@@ -51,9 +51,22 @@ Sliders have the following properties:
 4. The step or increment (default is 1)
 5. The width of a slider
 
+```js
+let mySliderDefault = 100;
+
+function setup() {
+  // min, max, default
+  mySlider = createSlider(0, 255, mySliderDefault);
+  mySlider.position(10, 10);
+  mySlider.style('width', '80px');
+}
+```
+
 See the [p5.js createSlider](https://p5js.org/reference/#/p5/createSlider) page for details.
 
-Unfortunately, there is no simple way to change many of the display details such as drawing the tick marks on a range control and changing the color.
+Unfortunately, there is no simple way to change many of the display details such as drawing the
+min, max and tick marks below the slider range control.  You also can't easily change the color
+of the background or the knob on the slider.
 
 Here are two examples.
 

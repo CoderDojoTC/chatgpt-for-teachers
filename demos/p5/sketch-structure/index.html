@@ -1390,7 +1390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../browian-motion/" class="md-nav__link">
+      <a href="../brownian-motion/" class="md-nav__link">
         Brownian Motion
       </a>
     </li>
@@ -1420,6 +1420,34 @@
     <li class="md-nav__item">
       <a href="../battery-circuit/" class="md-nav__link">
         Battery Circuit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../h-bridge/" class="md-nav__link">
+        H-Bridge Circuit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../motor/" class="md-nav__link">
+        Rotating Motor
       </a>
     </li>
   
@@ -1732,8 +1760,27 @@ is no label or feedback on what the current value is.</p>
 <li>The step or increment (default is 1)</li>
 <li>The width of a slider</li>
 </ol>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">mySliderDefault</span> <span class="o">=</span> <span class="mf">100</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// min, max, default</span>
+  <span class="nx">mySlider</span> <span class="o">=</span> <span class="nx">createSlider</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span> <span class="mf">255</span><span class="p">,</span> <span class="nx">mySliderDefault</span><span class="p">);</span>
+  <span class="nx">mySlider</span><span class="p">.</span><span class="nx">position</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span> <span class="mf">10</span><span class="p">);</span>
+  <span class="nx">mySlider</span><span class="p">.</span><span class="nx">style</span><span class="p">(</span><span class="s1">&#39;width&#39;</span><span class="p">,</span> <span class="s1">&#39;80px&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
 <p>See the <a href="https://p5js.org/reference/#/p5/createSlider">p5.js createSlider</a> page for details.</p>
-<p>Unfortunately, there is no simple way to change many of the display details such as drawing the tick marks on a range control and changing the color.</p>
+<p>Unfortunately, there is no simple way to change many of the display details such as drawing the
+min, max and tick marks below the slider range control.  You also can't easily change the color
+of the background or the knob on the slider.</p>
 <p>Here are two examples.</p>
 <h4 id="simple-slider-with-label-and-value">Simple Slider with Label and Value</h4>
 <p>Here is some sample text you can give ChatGPT to precisely create and position sliders.</p>

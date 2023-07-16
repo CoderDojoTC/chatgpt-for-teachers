@@ -26,12 +26,12 @@ function setup() {
     reverseButton.mousePressed(turnReverse);
 
     // radiusSlider = createSlider(0, 200, circleRadius);
-    radiusSlider = createSlider(50,350,200);
-    radiusSlider.position(215, height - 35);
-    radiusSlider.style('width', '180px');
+    scaleSlider = createSlider(.1, 2, 1, .1);
+    scaleSlider.position(215, height - 35);
+    scaleSlider.style('width', '180px');
 
         // radiusSlider = createSlider(0, 200, circleRadius);
-    speedSlider = createSlider(0, 20, 2, .1);
+    speedSlider = createSlider(0, 20, 5, .1);
     speedSlider.position(215, height - 16);
     speedSlider.style('width', '180px');
     frameRate(myFrameRate);
@@ -50,47 +50,48 @@ function stop() {
   }
 
 function draw() {
-    background(240);
+     background(240);
+     // center axis
+     line(0, height / 2, width, height / 2)
+     line(width / 2, 0, width/2, height)
 
     // Update the circle radius based on slider value
-    circleRadius = radiusSlider.value();
+    scaleVal = scaleSlider.value();
     motorSpeed = speedSlider.value();
 
     // Center the motor on the canvas
     angle += direction * motorSpeed;
-    drawMotor(width / 2, height / 2, circleRadius, angle, direction, 1)
+    // x,y, scale,  angle, dir, speed
+    drawMotor(width / 2, height / 2, scaleVal, angle, direction)
 
     // Draw the label and the current radius value
     stroke(0);
     strokeWeight(0);
     fill(0); // black color for the text
-    text("Radius: " + circleRadius, 140, height - 30);
+    text("Scale: " + scaleVal, 140, height - 30);
     text("Speed: " + motorSpeed, 140, height - 10);
 }
 
-function drawMotor(x, y, size, angle, direction, speed) {
+function drawMotor(x, y, scaleVal, angle, direction) {
   angleMode(DEGREES);  // Change the mode to 
-  strokeWeight(2);
-  stroke('black')
-  noFill();
-
-  circle(x,y, size)
-  scalePts = 200/size
   push();
-      translate(x, y);
-      noFill();
       
+      translate(x, y);
+      scale(scaleVal);
       rotate(angle);
-
+      
+      noFill();
+      strokeWeight(2);
+      circle(0,0, 220)
       strokeWeight(10);
       stroke('black')
       noFill();
-      // top circle
-      arc(0, 0, size * .8, size * .8, 180, 300, OPEN);
+      // top circle x,y  w,h  start-ang, end-angle
+      arc(0, 0, 180, 180, 180, 310, OPEN);
       // bottom circle
-      arc(0, 0, size * .8, size * .8, 0, 130, OPEN);
+      arc(0, 0, 180, 180,   0, 130, OPEN);
 
-      // fowward
+      // forward
       if (direction == 1) {
         // up right
         drawArrowTip(50,-75, 140)
@@ -99,10 +100,10 @@ function drawMotor(x, y, size, angle, direction, speed) {
       }
       // reverse
       if (direction == -1) {
-        // up right
-        drawArrowTip(90 + int(size/200), 0, -20, size)
+        // up right x,y, ang
+        drawArrowTip(90, 0, -20)
         // lower left
-        drawArrowTip(-90 + int(size/200), -10, 164, size)
+        drawArrowTip(-90, 0, 164)
       }
   pop();
 }

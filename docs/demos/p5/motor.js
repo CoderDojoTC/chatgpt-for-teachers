@@ -52,6 +52,7 @@ function stop() {
 function draw() {
      background(240);
      // center axis
+     stroke(0);
      line(0, height / 2, width, height / 2)
      line(width / 2, 0, width/2, height)
 
@@ -76,11 +77,13 @@ function drawMotor(x, y, scaleVal, angle, direction) {
   angleMode(DEGREES);  // Change the mode to 
   push();
       
+      // order is key
       translate(x, y);
       scale(scaleVal);
       rotate(angle);
-      
-      noFill();
+
+      // gray
+      fill(180);
       strokeWeight(2);
       circle(0,0, 220)
       strokeWeight(10);
@@ -109,14 +112,14 @@ function drawMotor(x, y, scaleVal, angle, direction) {
 }
 
 // draw a triangle with a base at (x,y) in the direction of rotationAngle
-function drawArrowTip(x, y, rotationAngle, size) {
+function drawArrowTip(x, y, rotationAngle) {
   push();  // Save the current drawing style and transformations
     translate(x, y);  // Move the origin to the given location
     rotate(rotationAngle);  // Rotate by the given angle
     fill(0);  // Set the fill color to black
     noStroke();  // Disable drawing an outline
-    // set the size
-    let sz = 10 + int(size*.01);
+    // set the size of the triangle
+    let sz = 10;
     // lower right, top, lower left
     triangle(sz, 0,  0,-3*sz,   -sz,0);  // Draw the arrow tip
   pop();  // Restore the previous drawing style and transformations

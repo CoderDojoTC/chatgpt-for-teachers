@@ -1,7 +1,7 @@
 // define square and velocity
 let square = {
     x: 0,
-    y: 400,
+    y: 380,
     w: 20,
     h: 20,
   };

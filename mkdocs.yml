@@ -81,7 +81,7 @@ nav:
       - Battery Circuit: demos/p5/battery-circuit.md
       - H-Bridge Circuit: demos/p5/h-bridge.md
       - Rotating Motor: demos/p5/motor.md
-      - The Office DVD Logo: demos/p5/the-office-dvd-logo.html
+      - The Office DVD Logo: demos/p5/the-office-dvd-logo.md
   - The Future of AI:
     - Introduction: future/index.md
     - Today: future/ai-today.md

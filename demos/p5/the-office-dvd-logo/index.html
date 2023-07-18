@@ -1402,9 +1402,40 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          The Office DVD Logo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         The Office DVD Logo
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chatgpt-response" class="md-nav__link">
+    ChatGPT Response
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1609,6 +1640,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chatgpt-response" class="md-nav__link">
+    ChatGPT Response
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1626,14 +1672,22 @@
 
 
 <h1 id="the-office-dvd-logo">The Office DVD Logo</h1>
-<p>Inspired by the <a href="https://www.youtube.com/watch?v=QOtuX0jL85Y">The Office</a> and <a href="http://project.jdm">Project.jdm</a>, we have an example of a program that has a small 20x20 rectangle moving diagonally on a rectangle that is not quite exactly square.</p>
+<p>Inspired by <a href="https://www.youtube.com/watch?v=QOtuX0jL85Y">The Office</a> and <a href="http://project.jdm">Project.jdm</a>, we have an example of a program that has a small 20x20 rectangle moving diagonally on a rectangle that is not quite exactly square.</p>
+<p><a href="../the-office-dvd-logo.html">The Office DVD Logo</a></p>
 <p>Here is the prompt we started with:</p>
-<p>```linenumbs="0"
-Generate a single file p5.js sketch on a 410x400 canvas.</p>
-<p>The p5.js sketch is an animation of a small 20x20 square moving diagonally on the canvas.</p>
-<p>The square starts in the lower-left corner of the screen and moves to the upper right corner.</p>
-<p>When the square hits the edge of the canvas it will bounce off the side.</p>
-<p>Make the square leave a colored rainbow pattern as it moves.
+<div class="highlight"><pre><span></span><code>Generate a single file p5.js sketch on a 410x400 canvas.
+
+The p5.js sketch is an animation of a small 20x20 square moving
+diagonally on the canvas.
+
+The square starts in the lower-left corner of the screen and
+moves to the upper right corner.
+
+When the square hits the edge of the canvas it will bounce off the side.
+
+Make the square leave a colored rainbow pattern as it moves.
+</code></pre></div>
+<h2 id="chatgpt-response">ChatGPT Response</h2>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1678,56 +1732,54 @@ Generate a single file p5.js sketch on a 410x400 canvas.</p>
 <span class="normal">42</span>
 <span class="normal">43</span>
 <span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>```js
-// define square and velocity
-let square = {
-  x: 0,
-  y: 400,
-  w: 20,
-  h: 20,
-};
+<span class="normal">45</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// define square and velocity</span>
+<span class="kd">let</span> <span class="nx">square</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">x</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+  <span class="nx">y</span><span class="o">:</span> <span class="mf">400</span><span class="p">,</span> <span class="c1">// should be 380</span>
+  <span class="nx">w</span><span class="o">:</span> <span class="mf">20</span><span class="p">,</span>
+  <span class="nx">h</span><span class="o">:</span> <span class="mf">20</span><span class="p">,</span>
+<span class="p">};</span>
 
-let velocity = {
-  x: 2,
-  y: -2,
-};
+<span class="kd">let</span> <span class="nx">velocity</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">x</span><span class="o">:</span> <span class="mf">2</span><span class="p">,</span>
+  <span class="nx">y</span><span class="o">:</span> <span class="o">-</span><span class="mf">2</span><span class="p">,</span>
+<span class="p">};</span>
 
-let hueValue = 0;
+<span class="kd">let</span> <span class="nx">hueValue</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
 
-function setup() {
-  createCanvas(410, 400);
-  colorMode(HSB);
-}
+<span class="kd">function</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">createCanvas</span><span class="p">(</span><span class="mf">410</span><span class="p">,</span> <span class="mf">400</span><span class="p">);</span>
+  <span class="nx">colorMode</span><span class="p">(</span><span class="nx">HSB</span><span class="p">);</span>
+<span class="p">}</span>
 
-function draw() {
-  // noStroke is used to not have a border around the square
-  noStroke();
+<span class="kd">function</span> <span class="nx">draw</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// noStroke is used to not have a border around the square</span>
+  <span class="nx">noStroke</span><span class="p">();</span>
 
-  // Incrementing hue value to create a rainbow effect
-  hueValue = (hueValue + 1) % 360;
+  <span class="c1">// Incrementing hue value to create a rainbow effect</span>
+  <span class="nx">hueValue</span> <span class="o">=</span> <span class="p">(</span><span class="nx">hueValue</span> <span class="o">+</span> <span class="mf">1</span><span class="p">)</span> <span class="o">%</span> <span class="mf">360</span><span class="p">;</span>
 
-  // Filling square with color and transparency
-  fill(hueValue, 100, 100, 0.1);
+  <span class="c1">// Filling square with color and transparency</span>
+  <span class="nx">fill</span><span class="p">(</span><span class="nx">hueValue</span><span class="p">,</span> <span class="mf">100</span><span class="p">,</span> <span class="mf">100</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">);</span>
 
-  // draw the square
-  rect(square.x, square.y, square.w, square.h);
+  <span class="c1">// draw the square</span>
+  <span class="nx">rect</span><span class="p">(</span><span class="nx">square</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="nx">square</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span> <span class="nx">square</span><span class="p">.</span><span class="nx">w</span><span class="p">,</span> <span class="nx">square</span><span class="p">.</span><span class="nx">h</span><span class="p">);</span>
 
-  // update square position
-  square.x += velocity.x;
-  square.y += velocity.y;
+  <span class="c1">// update square position</span>
+  <span class="nx">square</span><span class="p">.</span><span class="nx">x</span> <span class="o">+=</span> <span class="nx">velocity</span><span class="p">.</span><span class="nx">x</span><span class="p">;</span>
+  <span class="nx">square</span><span class="p">.</span><span class="nx">y</span> <span class="o">+=</span> <span class="nx">velocity</span><span class="p">.</span><span class="nx">y</span><span class="p">;</span>
 
-  // check for collision with edges and reverse if collided
-  if (square.x &gt; width - square.w || square.x &lt; 0) {
-    velocity.x = -velocity.x;
-  }
-  if (square.y &gt; height - square.h || square.y &lt; 0) {
-    velocity.y = -velocity.y;
-  }
-}
+  <span class="c1">// check for collision with edges and reverse if collided</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">square</span><span class="p">.</span><span class="nx">x</span> <span class="o">&gt;</span> <span class="nx">width</span> <span class="o">-</span> <span class="nx">square</span><span class="p">.</span><span class="nx">w</span> <span class="o">||</span> <span class="nx">square</span><span class="p">.</span><span class="nx">x</span> <span class="o">&lt;</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">velocity</span><span class="p">.</span><span class="nx">x</span> <span class="o">=</span> <span class="o">-</span><span class="nx">velocity</span><span class="p">.</span><span class="nx">x</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">square</span><span class="p">.</span><span class="nx">y</span> <span class="o">&gt;</span> <span class="nx">height</span> <span class="o">-</span> <span class="nx">square</span><span class="p">.</span><span class="nx">h</span> <span class="o">||</span> <span class="nx">square</span><span class="p">.</span><span class="nx">y</span> <span class="o">&lt;</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">velocity</span><span class="p">.</span><span class="nx">y</span> <span class="o">=</span> <span class="o">-</span><span class="nx">velocity</span><span class="p">.</span><span class="nx">y</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
-</td></tr></table></p>
-<p>The only bug is the y coordinate of the orignal rectangle.
+</td></tr></table>
+<p>The only bug is the y coordinate of the original rectangle.
 It is 400 and it should be 380.  After we fixed that it worked!</p>
 
               

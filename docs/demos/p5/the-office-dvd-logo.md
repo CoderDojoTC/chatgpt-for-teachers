@@ -1,8 +1,10 @@
 # The Office DVD Logo
 
+![](./../../img/the-office-dvd-logo.png)
+
 Inspired by [The Office](https://www.youtube.com/watch?v=QOtuX0jL85Y) and [Project.jdm](http://project.jdm), we have an example of a program that has a small 20x20 rectangle moving diagonally on a rectangle that is not quite exactly square.
 
-[The Office DVD Logo](./the-office-dvd-logo.html)
+[The Office DVD Logo Demo](./the-office-dvd-logo.html)
 
 Here is the prompt we started with:
 

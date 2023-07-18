@@ -1,26 +1,32 @@
 # The Office DVD Logo
 
-Inspired by the [The Office](https://www.youtube.com/watch?v=QOtuX0jL85Y) and [Project.jdm](http://project.jdm), we have an example of a program that has a small 20x20 rectangle moving diagonally on a rectangle that is not quite exactly square.
+Inspired by [The Office](https://www.youtube.com/watch?v=QOtuX0jL85Y) and [Project.jdm](http://project.jdm), we have an example of a program that has a small 20x20 rectangle moving diagonally on a rectangle that is not quite exactly square.
+
+[The Office DVD Logo](./the-office-dvd-logo.html)
 
 Here is the prompt we started with:
 
-```linenumbs="0"
+```linenums="0"
 Generate a single file p5.js sketch on a 410x400 canvas.
 
-The p5.js sketch is an animation of a small 20x20 square moving diagonally on the canvas.
+The p5.js sketch is an animation of a small 20x20 square moving
+diagonally on the canvas.
 
-The square starts in the lower-left corner of the screen and moves to the upper right corner.
+The square starts in the lower-left corner of the screen and
+moves to the upper right corner.
 
 When the square hits the edge of the canvas it will bounce off the side.
 
 Make the square leave a colored rainbow pattern as it moves.
 ```
 
+## ChatGPT Response
+
 ```js
 // define square and velocity
 let square = {
   x: 0,
-  y: 400,
+  y: 400, // should be 380
   w: 20,
   h: 20,
 };
@@ -64,5 +70,5 @@ function draw() {
 }
 ```
 
-The only bug is the y coordinate of the orignal rectangle.
+The only bug is the y coordinate of the original rectangle.
 It is 400 and it should be 380.  After we fixed that it worked!

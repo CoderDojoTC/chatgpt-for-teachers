@@ -61,6 +61,10 @@ nav:
     - prompts/27-regression-line.md
   - Interactive Demos:
     - Intro: demos/index.md
+    - JavaScript:
+      - Journey Map: demos/js-graphics/journey-map.html
+      - Journey Map Labels: demos/js-graphics/journey-map-labels.html
+      - Journey Map 3: demos/js-graphics/journey-map-3.html
     - p5.js Animations:
       - Introduction: demos/p5/index.md
       - Sketch Structure: demos/p5/sketch-structure.md

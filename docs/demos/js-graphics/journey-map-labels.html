@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Map</title>
+    <style>
+        .area:hover {
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var areas = document.getElementsByClassName("area");
+
+            for (var i = 0; i < areas.length; i++) {
+                //areas[i].onmouseover = function() {
+                //    document.getElementById("description").textContent = "You are hovering over: " + this.alt;
+                //}
+
+                areas[i].onmouseout = function() {
+                    document.getElementById("description").textContent = "";
+                }
+
+                areas[i].onclick = function() {
+                    window.location.hash = this.href;
+                    return false;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <p id="description"></p>
+    <br/>
+    <img src="./../../img/journey-map.png" alt="Journey Map" usemap="#workmap" width="600" height="200">
+
+    <map name="workmap">
+        <area class="area" shape="rect" coords="50,50,150,150" alt="Setup Instructions" href="#setup">
+        <area class="area" shape="rect" coords="200,50,300,150" alt="Calibrate Instructions" href="#calibrate">
+        <area class="area" shape="rect" coords="350,50,450,150" alt="Drive" href="#drive">
+    </map>
+    <br/>
+    <h2 id="setup">Setup instructions.</h2>
+    <h2 id="calibrate">Calibrate instructions.</h2>
+    <h2 id="drive">Drive instructions.</h2>
+</body>
+</html>

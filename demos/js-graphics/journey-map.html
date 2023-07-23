@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <title>Journey Map</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .area:hover {
+                cursor: pointer;
+            }
+        </style>
+        <script>
+            window.onload = function() {
+                var areas = document.getElementsByClassName("area");
+    
+                for (var i = 0; i < areas.length; i++) {
+                    areas[i].onmouseover = function() {
+                        document.getElementById("description").textContent = "You are hovering over: " + this.alt;
+                    }
+    
+                    areas[i].onmouseout = function() {
+                        document.getElementById("description").textContent = "";
+                    }
+    
+                    areas[i].onclick = function(event) {
+                        event.preventDefault();
+                        window.location.href = this.getAttribute('href');
+                    }  
+
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Journey Map</h1>
+            
+            <img src="./../../img/journey-map.png" alt="Journey Map" usemap="#workmap" width="700" height="200">
+
+            <map name="workmap">
+                <!-- x starts at 25 and increments by 150 each column -->
+                <area class="area" shape="rect" coords="25,20,150,70" alt="Setup Instructions" href="#setup">
+                <area class="area" shape="rect" coords="200,20,325,70" alt="Calibrate Instructions" href="#calibrate">
+                <area class="area" shape="rect" coords="375,20,500,70" alt="Drive Manual" href="#drive-manual">
+                <area class="area" shape="rect" coords="550,20,665,70" alt="Gather Images" href="#gather-images">
+
+                <!-- second row -->
+                <area class="area" shape="rect" coords="25,120,150,175" alt="Transfer to GPU" href="#transfer-to-gpu">
+                <area class="area" shape="rect" coords="200,120,325,175" alt="Build Model" href="#build-model">
+                <area class="area" shape="rect" coords="375,120,500,175" alt="Transfer Model to Car" href="#transfer-model-to-car">
+                <area class="area" shape="rect" coords="550,120,665,175" alt="Drive Auto" href="#drive-auto">
+            </map>
+            <p id="description"></p>
+
+            <h2 id="setup">Setup</h2>
+                <p>In the setup we will take the car ouf of the bin and connect
+                    the parts and boot the system.
+                </p>
+
+            <h2 id="calibrate">Calibrate</h2>
+                <p>In the calibrate we will.
+                </p>
+
+            <h2 id="drive-manual">Drive Manual</h2>
+
+                <p>In the drive manual we will learn to use the joystick to drive the car.
+                </p>
+
+            <h2 id="gather-images">Gather Images</h2>
+
+                <p>In the drive manual we will drive around the track 10 times.
+                </p>
+            
+            <h2 id="transfer-to-gpu">Transfer to GPU</h2>
+                <p>Transfer to GPU</p>
+            
+            <h2 id="build-model">Build Model</h2>
+                <p>Build model file on the GPU server</p>
+            
+            <h2 id="transfer-model-to-car">Transfer Model to Care</h2>
+                <p>Transfer Model to Care</p>
+
+            <h2 id="drive-auto">Drive Autonomously</h2>
+                <p>Drive Autonomously around the track using the model</p>  
+            
+            <h2>GPT Prompt</h2>
+            <p>Create a html file with inline CSS and JavaScript that does hover and 
+                click functionality for various regions defined within a html map element
+                with rectangular area elements within the map.
+    
+                Make the hover describe the area and allow a click to move to
+                a labeled header within the HTML page.
+    
+                Use the following areas:</p>
+        </body>
+</html>

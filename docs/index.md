@@ -1,4 +1,4 @@
-# Generative AP for Teachers
+# Generative AI for Teachers
 
 ![Banner](./img/banner.png)
 

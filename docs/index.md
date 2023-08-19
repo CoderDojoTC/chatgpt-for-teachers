@@ -1,8 +1,8 @@
-# ChatGPT for Teachers
+# Generative AP for Teachers
 
 ![Banner](./img/banner.png)
 
-This is a course to help teachers use ChatGPT to generate content for their classrooms.  It is designed to be useful for a broad audience and we include an extensive [glossary](glossary.md) for people that are new to the field of [generative text](#generative-text).
+This is a course to help teachers use ChatGPT and other generative AI programs to generate content for their classrooms.  It is designed to be useful for a broad audience and we include an extensive [glossary](glossary.md) for people that are new to the field of [generative text](#generative-text).  Our goal is to demonstrate a wide variety of uses of generative AI from simple lesson plans to generating lesson-appropriate online interactive simulations.
 
 ## Outline of Course
 
@@ -28,11 +28,16 @@ This is a course to help teachers use ChatGPT to generate content for their clas
     1. Syllabus
     2. Code of Conduct
     3. Selecting a License
-5. **Part 5:** Advanced Topics
+5. **Part 5:** Interactive Simulations
+   1. Generating web pages with interactive Javascript lessons
+   2. Using [p5.js](./demos/p5/index.md) to generate simulations
+   3. Simulating real-world physics
+   4. 
+6. **Part 6:** Advanced Topics
     1. Minimize Costs
     2. Fine-tuning
     3. Embeddings
- 6. **Part 6** The Future of AI
+ 7. **Part 6** The Future of AI
     1. AI today - the limits of large-language-models
     2. AI in the next 10 years
     3. AI in the long-term - regulation and existential risks

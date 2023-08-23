@@ -29,17 +29,19 @@ This is a course to help teachers use ChatGPT and other generative AI programs t
     2. Code of Conduct
     3. Selecting a License
 5. **Part 5:** Interactive Simulations
-   1. Generating web pages with interactive Javascript lessons
-   2. Using [p5.js](./demos/p5/index.md) to generate simulations
-   3. Simulating real-world physics
-   4. 
+
+    1. Generating web pages with interactive Javascript lessons
+    2. Using [p5.js](./demos/p5/index.md) to generate simulations
+    3. Simulating real-world physics
+
 6. **Part 6:** Advanced Topics
-    1. Minimize Costs
-    2. Fine-tuning
-    3. Embeddings
+    1. Using Generative AI to Minimize Kit Part Costs
+    2. Fine-tuning large-language models
+    3. Embeddings - using similar lesson plans to generate new lesson plans
+ 
  7. **Part 6** The Future of AI
     1. AI today - the limits of large-language-models
-    2. AI in the next 10 years
+    2. AI in the next 10 years - teachers and simulation guides
     3. AI in the long-term - regulation and existential risks
 
 This course was originally created to help instructors generate lesson plans for teaching computational thinking.

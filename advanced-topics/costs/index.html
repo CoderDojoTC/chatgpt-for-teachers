@@ -17,7 +17,7 @@
     
     
       
-        <title>Costs - Generative AI for Teachers</title>
+        <title>Minimizing Part Costs - Generative AI for Teachers</title>
       
     
     
@@ -76,6 +76,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#minimizing-part-costs" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -104,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Costs
+              Minimizing Part Costs
             
           </span>
         </div>
@@ -954,10 +959,77 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Minimizing Part Costs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Costs
+        Minimizing Part Costs
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sample-prompt" class="md-nav__link">
+    Sample Prompt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    Response
+  </a>
+  
+    <nav class="md-nav" aria-label="Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#low-cost-parts-for-a-stem-robot" class="md-nav__link">
+    Low-Cost Parts for a STEM Robot
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lesson-plans-for-computational-thinking" class="md-nav__link">
+    Lesson Plans for Computational Thinking:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analysis" class="md-nav__link">
+    Analysis
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1672,6 +1744,57 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sample-prompt" class="md-nav__link">
+    Sample Prompt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    Response
+  </a>
+  
+    <nav class="md-nav" aria-label="Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#low-cost-parts-for-a-stem-robot" class="md-nav__link">
+    Low-Cost Parts for a STEM Robot
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lesson-plans-for-computational-thinking" class="md-nav__link">
+    Lesson Plans for Computational Thinking:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analysis" class="md-nav__link">
+    Analysis
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1689,9 +1812,139 @@
 
 
 
-  <h1>Costs</h1>
-
-
+<h1 id="minimizing-part-costs">Minimizing Part Costs</h1>
+<p>We can use generative AI to help suggest what parts to purchase for science kits</p>
+<h2 id="sample-prompt">Sample Prompt</h2>
+<p>```linenums="none"
+Generate a list of low-cost parts that can be used
+to build a STEM Robot.  Include two DC hobby motors,
+and a Raspberry Pi Pico.  Return the results in
+a table that has three columns:</p>
+<ol>
+<li>Part Name</li>
+<li>Part Description</li>
+<li>Part Cost</li>
+</ol>
+<p>Then suggestion some lesson plans that teach computational thinking.</p>
+<p>Return the entire result in pure raw markdown.  Double check to make
+sure you only return pure raw markdown.
+```</p>
+<h2 id="response">Response</h2>
+<h3 id="low-cost-parts-for-a-stem-robot">Low-Cost Parts for a STEM Robot</h3>
+<table>
+<thead>
+<tr>
+<th>Part Name</th>
+<th>Part Description</th>
+<th>Part Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Raspberry Pi Pico</td>
+<td>A microcontroller board with RP2040 chip, widely used in hobby projects</td>
+<td>$4</td>
+</tr>
+<tr>
+<td>DC Hobby Motor (x2)</td>
+<td>Small motors suitable for driving robot wheels or other moving parts</td>
+<td>$3 each ($6 total)</td>
+</tr>
+<tr>
+<td>L298N Motor Driver</td>
+<td>Allows control of DC motors using the Raspberry Pi Pico</td>
+<td>$5</td>
+</tr>
+<tr>
+<td>2-Wheel Robot Chassis</td>
+<td>A basic frame with holders for motors and wheels</td>
+<td>$7</td>
+</tr>
+<tr>
+<td>Small Breadboard</td>
+<td>For prototyping and connecting components without soldering</td>
+<td>$2</td>
+</tr>
+<tr>
+<td>Jumper Wires (M/F &amp; M/M)</td>
+<td>Wires to connect components on breadboard and Raspberry Pi Pico</td>
+<td>$3</td>
+</tr>
+<tr>
+<td>AA Battery Holder (x2)</td>
+<td>Holds batteries for powering the motors</td>
+<td>$1 each ($2 total)</td>
+</tr>
+<tr>
+<td>AA Batteries (x4)</td>
+<td>Standard AA batteries to power the motors</td>
+<td>$2 (for 4)</td>
+</tr>
+<tr>
+<td>USB Micro Cable</td>
+<td>To power and program the Raspberry Pi Pico</td>
+<td>$2</td>
+</tr>
+<tr>
+<td>IR Sensor Pair</td>
+<td>For basic obstacle detection</td>
+<td>$3</td>
+</tr>
+<tr>
+<td>Push Button</td>
+<td>For triggering specific functions or for starting/stopping the robot</td>
+<td>$0.50</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total Cost: ~$36.50</strong> <em>(Prices may vary depending on the vendor and location.)</em></p>
+<h2 id="lesson-plans-for-computational-thinking">Lesson Plans for Computational Thinking:</h2>
+<ol>
+<li><strong>Algorithm Design with Motor Movements:</strong></li>
+<li><strong>Objective:</strong> Students will learn how to write a sequence of instructions to make the robot move in specific patterns.</li>
+<li>
+<p><strong>Activity:</strong> Provide students with a maze or track. Ask them to write instructions to navigate through it.</p>
+</li>
+<li>
+<p><strong>Looping with Obstacle Avoidance:</strong></p>
+</li>
+<li><strong>Objective:</strong> Introduce the concept of loops in programming.</li>
+<li>
+<p><strong>Activity:</strong> Program the robot to move in a square pattern until it detects an obstacle, then stop.</p>
+</li>
+<li>
+<p><strong>Conditional Statements with Sensors:</strong></p>
+</li>
+<li><strong>Objective:</strong> Understand how to make decisions based on sensor input.</li>
+<li>
+<p><strong>Activity:</strong> Program the robot to move forward until it detects an obstacle. If an obstacle is detected on the left, turn right, and vice versa.</p>
+</li>
+<li>
+<p><strong>Variables and Data:</strong></p>
+</li>
+<li><strong>Objective:</strong> Learn how to use variables to store and manipulate data.</li>
+<li>
+<p><strong>Activity:</strong> Measure the distance the robot travels in a straight line for 5 seconds. Calculate and display the speed of the robot.</p>
+</li>
+<li>
+<p><strong>Functions and Modularity:</strong></p>
+</li>
+<li><strong>Objective:</strong> Introduce the concept of functions to break down a problem into smaller parts.</li>
+<li>
+<p><strong>Activity:</strong> Create functions for common movements like <code>turnLeft()</code>, <code>moveForward()</code>, etc., and use them to simplify the robot's control code.</p>
+</li>
+<li>
+<p><strong>Debugging and Problem Solving:</strong></p>
+</li>
+<li><strong>Objective:</strong> Understand the importance of troubleshooting and refining code.</li>
+<li><strong>Activity:</strong> Introduce intentional errors in a given code. Students should identify and correct them to make the robot function properly.</li>
+</ol>
+<h2 id="analysis">Analysis</h2>
+<p>The result was pretty good.  But by doing high-quality sourcing and bundling we can get the costs under $19 by using a <a href="https://www.ebay.com/sch/i.html?_from=R40&amp;_trksid=p2047675.m570.l1313&amp;_nkw=Chassis+Robotic+2WD+Smartcar&amp;_sacat=0">"Smart Car Chassis 2WD"</a> and a <a href="https://www.cytron.io/p-maker-pi-rp2040-simplifying-robotics-with-raspberry-pi-rp2040">Cytron Maker Pi RP2040</a> board.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Most Smart Car Chassis kits include two DC motors and the battery holder.</p>
+</div>
 
               
             </article>

@@ -4,7 +4,7 @@ We can use generative AI to help suggest what parts to purchase for science kits
 
 ## Sample Prompt
 
-```linenums="none"
+```linenums="0"
 Generate a list of low-cost parts that can be used
 to build a STEM Robot.  Include two DC hobby motors,
 and a Raspberry Pi Pico.  Return the results in
@@ -44,32 +44,34 @@ sure you only return pure raw markdown.
 ## Lesson Plans for Computational Thinking:
 
 1. **Algorithm Design with Motor Movements:**
-   - **Objective:** Students will learn how to write a sequence of instructions to make the robot move in specific patterns.
-   - **Activity:** Provide students with a maze or track. Ask them to write instructions to navigate through it.
+    - **Objective:** Students will learn how to write a sequence of instructions to make the robot move in specific patterns.
+    - **Activity:** Provide students with a maze or track. Ask them to write instructions to navigate through it.
 
 2. **Looping with Obstacle Avoidance:**
-   - **Objective:** Introduce the concept of loops in programming.
-   - **Activity:** Program the robot to move in a square pattern until it detects an obstacle, then stop.
+    - **Objective:** Introduce the concept of loops in programming.
+    - **Activity:** Program the robot to move in a square pattern until it detects an obstacle, then stop.
 
 3. **Conditional Statements with Sensors:**
-   - **Objective:** Understand how to make decisions based on sensor input.
-   - **Activity:** Program the robot to move forward until it detects an obstacle. If an obstacle is detected on the left, turn right, and vice versa.
+    - **Objective:** Understand how to make decisions based on sensor input.
+    - **Activity:** Program the robot to move forward until it detects an obstacle. If an obstacle is detected on the left, turn right, and vice versa.
 
 4. **Variables and Data:**
-   - **Objective:** Learn how to use variables to store and manipulate data.
-   - **Activity:** Measure the distance the robot travels in a straight line for 5 seconds. Calculate and display the speed of the robot.
+    - **Objective:** Learn how to use variables to store and manipulate data.
+    - **Activity:** Measure the distance the robot travels in a straight line for 5 seconds. Calculate and display the speed of the robot.
 
 5. **Functions and Modularity:**
-   - **Objective:** Introduce the concept of functions to break down a problem into smaller parts.
-   - **Activity:** Create functions for common movements like `turnLeft()`, `moveForward()`, etc., and use them to simplify the robot's control code.
+    - **Objective:** Introduce the concept of functions to break down a problem into smaller parts.
+    - **Activity:** Create functions for common movements like `turnLeft()`, `moveForward()`, etc., and use them to simplify the robot's control code.
 
 6. **Debugging and Problem Solving:**
-   - **Objective:** Understand the importance of troubleshooting and refining code.
-   - **Activity:** Introduce intentional errors in a given code. Students should identify and correct them to make the robot function properly.
+    - **Objective:** Understand the importance of troubleshooting and refining code.
+    - **Activity:** Introduce intentional errors in a given code. Students should identify and correct them to make the robot function properly.
 
 ## Analysis
 
 The result was pretty good.  But by doing high-quality sourcing and bundling we can get the costs under $19 by using a ["Smart Car Chassis 2WD"](https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2047675.m570.l1313&_nkw=Chassis+Robotic+2WD+Smartcar&_sacat=0) and a [Cytron Maker Pi RP2040](https://www.cytron.io/p-maker-pi-rp2040-simplifying-robotics-with-raspberry-pi-rp2040) board.
+
+The dataset used to train ChatGPT-4 is "frozen in time" back in September of 2021.  Since then the low-cost $3 [VL53L0X IIC I2C To Time-of-flight Infrared measurement Distance Sensor](https://www.ebay.com/itm/314750102477) have become very popular and have replace the IR sensors.  Because the Cytron boards support IIC interfaces these are a perfect choice for low-cost robots.
 
 !!! Note
     Most Smart Car Chassis kits include two DC motors and the battery holder.

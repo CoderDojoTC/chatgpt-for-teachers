@@ -1027,6 +1027,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1114,6 +1121,20 @@
     <li class="md-nav__item">
       <a href="../../prompts/27-regression-line/" class="md-nav__link">
         Regression Line
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-analysis/" class="md-nav__link">
+        Data Analysis
       </a>
     </li>
   
@@ -1794,6 +1815,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1813,7 +1841,7 @@
 
 
 <h1 id="minimizing-part-costs">Minimizing Part Costs</h1>
-<p>We can use generative AI to help suggest what parts to purchase for science kits</p>
+<p>We can use generative AI to help suggest what parts to purchase for science kits.  One kit that is both really fun and has a high ability to teach computational thinking is a collision avoidance robot.  Here is how we used ChatGPT to guide our purchasing.</p>
 <h2 id="sample-prompt">Sample Prompt</h2>
 <div class="highlight"><pre><span></span><code>Generate a list of low-cost parts that can be used
 to build a STEM Robot.  Include two DC hobby motors,
@@ -1830,6 +1858,7 @@ Return the entire result in pure raw markdown.  Double check to make
 sure you only return pure raw markdown.
 </code></pre></div>
 <h2 id="response">Response</h2>
+<p>ChatGPT did return a table, but it put it in a pretty table within the ChatGPT GUI.  So I had to ask it to "regenerate the prior response again only pure raw markdown" before I could copy and paste the results into this page.</p>
 <h3 id="low-cost-parts-for-a-stem-robot">Low-Cost Parts for a STEM Robot</h3>
 <table>
 <thead>
@@ -1950,6 +1979,13 @@ sure you only return pure raw markdown.
 <p class="admonition-title">Note</p>
 <p>Most Smart Car Chassis kits include two DC motors and the battery holder.</p>
 </div>
+<p>Note that although ChatGPT knew that we could build a robot for under $40, it didn't really understand the consequence that the Raspberry Pi Pico supports IIC and that both motor controllers and sensors that use these standards make it easier for students to learn robotics using low-cost parts.</p>
+<h2 id="references">References</h2>
+<ol>
+<li><a href="https://www.cytron.io/p-maker-pi-rp2040-simplifying-robotics-with-raspberry-pi-rp2040">Cytron Maker Pi RP2040</a></li>
+<li><a href="https://dmccreary.medium.com/raspberry-pi-pico-robot-in-micropython-51f956486270">Raspberry Pi Pico Robot in Micropython</a> - note this is an older design that didn't leverage the IIC and Cytron boards.</li>
+<li><a href="https://medium.com/better-programming/our-2023-stem-robot-update-7bcf8a2fad2e">Our 2023 STEM Robot Update</a></li>
+</ol>
 
               
             </article>

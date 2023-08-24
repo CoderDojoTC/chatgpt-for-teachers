@@ -554,8 +554,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prompt" class="md-nav__link">
-    Prompt
+  <a href="#simple-prompt" class="md-nav__link">
+    Simple Prompt
   </a>
   
 </li>
@@ -568,9 +568,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#prompt_1" class="md-nav__link">
-    Prompt
+  <a href="#more-complex-prompt" class="md-nav__link">
+    More Complex Prompt
   </a>
+  
+    <nav class="md-nav" aria-label="More Complex Prompt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prompts" class="md-nav__link">
+    Prompts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_1" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1094,6 +1114,20 @@
     <li class="md-nav__item">
       <a href="../27-regression-line/" class="md-nav__link">
         Regression Line
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced-topics/data-analysis/" class="md-nav__link">
+        Data Analysis
       </a>
     </li>
   
@@ -1734,8 +1768,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prompt" class="md-nav__link">
-    Prompt
+  <a href="#simple-prompt" class="md-nav__link">
+    Simple Prompt
   </a>
   
 </li>
@@ -1748,9 +1782,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#prompt_1" class="md-nav__link">
-    Prompt
+  <a href="#more-complex-prompt" class="md-nav__link">
+    More Complex Prompt
   </a>
+  
+    <nav class="md-nav" aria-label="More Complex Prompt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prompts" class="md-nav__link">
+    Prompts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_1" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1773,18 +1827,88 @@
 
 
 <h1 id="generating-sample-code">Generating Sample Code</h1>
-<p>ChatGPT is also very good at generating sample software programs for your classrooms.  You can start
-with simple examples and the dive into more complex examples.</p>
-<h2 id="prompt">Prompt</h2>
+<p>ChatGPT is also very good at generating sample software programs for your classrooms. 
+You can start with simple examples and then dive into more complex examples.</p>
+<p>There are two ways you can learn this process.  First, is to just use the standard ChatGPT.  If you have a subscription to ChatGPT Plus you can use the [Code Interpreter] to also generate and execute the code.  If there is a Python library that can generate images you can also have ChatGPT Code Interpreter it generate images!</p>
+<h2 id="simple-prompt">Simple Prompt</h2>
 <div class="highlight"><pre><span></span><code>Create a Python program that prints &quot;Hello World!&quot;
 </code></pre></div>
 <h2 id="response">Response</h2>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
-<h2 id="prompt_1">Prompt</h2>
+<h2 id="more-complex-prompt">More Complex Prompt</h2>
+<h3 id="prompts">Prompts</h3>
+<p>Single Function:</p>
 <div class="highlight"><pre><span></span><code>Create a python function that resizes images to all be 512X512
 </code></pre></div>
+<p>Bulk Transformation</p>
+<div class="highlight"><pre><span></span><code>Generate a Python function that will take a folder that includes images of many sizes.  Have it go through each image and convert it into a 512x512 image and place it in a second folder.  The function takes two parameters: the input folder and the output folder.
+</code></pre></div>
+<h3 id="response_1">Response</h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="k">def</span> <span class="nf">resize_images</span><span class="p">(</span><span class="n">input_folder</span><span class="p">,</span> <span class="n">output_folder</span><span class="p">):</span>
+    <span class="c1"># Check if output_folder exists. If not, create it</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">output_folder</span><span class="p">):</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">output_folder</span><span class="p">)</span>
+
+    <span class="c1"># List all files in the input folder</span>
+    <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">input_folder</span><span class="p">):</span>
+        <span class="c1"># Full file path</span>
+        <span class="n">filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">input_folder</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+
+        <span class="c1"># Check if it&#39;s a file (and not a directory)</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">filepath</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="c1"># Open the image using Pillow</span>
+                <span class="k">with</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span> <span class="k">as</span> <span class="n">im</span><span class="p">:</span>
+                    <span class="c1"># Resize the image to 512x512</span>
+                    <span class="n">im_resized</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="mi">512</span><span class="p">,</span> <span class="mi">512</span><span class="p">))</span>
+
+                    <span class="c1"># Save the resized image to the output folder</span>
+                    <span class="n">im_resized</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_folder</span><span class="p">,</span> <span class="n">filename</span><span class="p">))</span>
+
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error processing </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Processing completed!&quot;</span><span class="p">)</span>
+
+<span class="c1"># Example of usage</span>
+<span class="c1"># resize_images(&#39;path_to_input_folder&#39;, &#39;path_to_output_folder&#39;)</span>
+</code></pre></div>
+</td></tr></table>
 
               
             </article>

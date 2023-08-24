@@ -4,6 +4,10 @@
 
 This is a course to help teachers use ChatGPT and other generative AI programs to generate content for their classrooms.  It is designed to be useful for a broad audience and we include an extensive [glossary](glossary.md) for people that are new to the field of [generative text](#generative-text).  Our goal is to demonstrate a wide variety of uses of generative AI from simple lesson plans to generating lesson-appropriate online interactive simulations.
 
+## YouTube Video
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7uDwEZBl-vs?si=JUFBMVMjEcIloI9H&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Outline of Course
 
 1. **Part 1:** Introduction to ChatGPT?

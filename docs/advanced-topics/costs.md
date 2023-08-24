@@ -1,6 +1,6 @@
 # Minimizing Part Costs
 
-We can use generative AI to help suggest what parts to purchase for science kits
+We can use generative AI to help suggest what parts to purchase for science kits.  One kit that is both really fun and has a high ability to teach computational thinking is a collision avoidance robot.  Here is how we used ChatGPT to guide our purchasing.
 
 ## Sample Prompt
 
@@ -22,10 +22,12 @@ sure you only return pure raw markdown.
 
 ## Response
 
+ChatGPT did return a table, but it put it in a pretty table within the ChatGPT GUI.  So I had to ask it to "regenerate the prior response again only pure raw markdown" before I could copy and paste the results into this page.
+
 
 ### Low-Cost Parts for a STEM Robot
 
-| Part Name               | Part Description                                                              | Part Cost      |
+| Part Name | Part Description | Part Cost |
 |-------------------------|-------------------------------------------------------------------------------|----------------|
 | Raspberry Pi Pico       | A microcontroller board with RP2040 chip, widely used in hobby projects      | $4             |
 | DC Hobby Motor (x2)     | Small motors suitable for driving robot wheels or other moving parts          | $3 each ($6 total) |
@@ -75,3 +77,11 @@ The dataset used to train ChatGPT-4 is "frozen in time" back in September of 202
 
 !!! Note
     Most Smart Car Chassis kits include two DC motors and the battery holder.
+
+Note that although ChatGPT knew that we could build a robot for under $40, it didn't really understand the consequence that the Raspberry Pi Pico supports IIC and that both motor controllers and sensors that use these standards make it easier for students to learn robotics using low-cost parts.
+
+## References
+
+1. [Cytron Maker Pi RP2040](https://www.cytron.io/p-maker-pi-rp2040-simplifying-robotics-with-raspberry-pi-rp2040)
+2. [Raspberry Pi Pico Robot in Micropython](https://dmccreary.medium.com/raspberry-pi-pico-robot-in-micropython-51f956486270) - note this is an older design that didn't leverage the IIC and Cytron boards.
+3. [Our 2023 STEM Robot Update](https://medium.com/better-programming/our-2023-stem-robot-update-7bcf8a2fad2e)

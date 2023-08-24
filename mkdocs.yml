@@ -59,6 +59,7 @@ nav:
     - prompts/20-website-analytics.md
     - prompts/26-systems-thinking.md
     - prompts/27-regression-line.md
+    - advanced-topics/data-analysis.md
   - Interactive Demos:
     - Intro: demos/index.md
     - JavaScript:

@@ -6,7 +6,7 @@ This is a course to help teachers use ChatGPT and other generative AI programs t
 
 ## YouTube Video
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7uDwEZBl-vs?si=JUFBMVMjEcIloI9H&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7uDwEZBl-vs?si=-Jcvoq1EOdkSl8NJ&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Outline of Course
 

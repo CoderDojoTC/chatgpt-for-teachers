@@ -104,6 +104,7 @@ function dec_bin(decNum) {
   } else {
     outputP.html(result.toString());
   }
+  
 }
 
 function toggleBinDec() {

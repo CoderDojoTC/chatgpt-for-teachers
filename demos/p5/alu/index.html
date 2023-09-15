@@ -1505,9 +1505,47 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Arithmetic Logic Unit
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Arithmetic Logic Unit
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#challenges" class="md-nav__link">
+    Challenges
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1739,6 +1777,28 @@
   
     
   
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#challenges" class="md-nav__link">
+    Challenges
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1997,6 +2057,33 @@ Make the default value be decimal.
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
+<h2 id="challenges">Challenges</h2>
+<p>Real ALUs also keep track of several bits if information about the
+result of the arithmetic such as if there were overflows.</p>
+<div class="admonition challenges">
+<p class="admonition-title">Challenges</p>
+<ol>
+<li>Add a bit to indicate the result is non-zero.</li>
+<li>Add a sign flag to indicate the number is non-negative</li>
+<li>Add a carry flag to indicate that the result fits in 16 bits</li>
+<li>Add an overflow flag to indicate that the sum of two numbers is also positive</li>
+</ol>
+</div>
+<h2 id="references">References</h2>
+<p>I love this small simulator from CircuitVerse:</p>
+<p><a href="https://circuitverse.org/simulator/51702">Four Bit ALU on CircuitVerse</a> - This
+shows the process of using an OpCode which is a number for an operation. The carry
+bit does not work in this example.</p>
+<p>A much better example is here:</p>
+<p><a href="http://www.ee.unb.ca/cgi-bin/tervo/alu.pl">University of New Brunswick EE3221 Course</a></p>
+<p>That version is a binary only but it includes the following flags:</p>
+<p>Flags
+The Zero flag (Z) is 0 because the result is non-zero</p>
+<p>The Sign flag (N) is 0 because the result appears non-negative (the MSB is 0)</p>
+<p>The Carry flag (C) is 0 (good) because the addition result did not exceed 16-bits.
+This would be of interest if (RA,RB) represent unsigned integers (0..65535).</p>
+<p>The Overflow flag (V) is 0 (good) because adding two positive numbers gave a positive result.
+This would be of interest if (RA,RB) represent signed integers (-32768..+32767).</p>
 
               
             </article>

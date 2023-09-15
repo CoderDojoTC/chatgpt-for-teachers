@@ -26,7 +26,6 @@ function draw() {
   text('A', 30, 50);
   text('B', 30, 150);
   
-  
   // Draw input wires
   strokeWeight(5)
   stroke(inputA ? 'red' : 'black');
@@ -40,11 +39,11 @@ function draw() {
   fill(255);
   stroke('black')
   beginShape();
-  vertex(150, 20);
-  vertex(200, 20);
-  vertex(220, 50);
-  vertex(200, 80);
-  vertex(150, 80);
+    vertex(150, 20);
+    vertex(200, 20);
+    vertex(220, 50);
+    vertex(200, 80);
+    vertex(150, 80);
   endShape(CLOSE);
   
   strokeWeight(0);
@@ -57,13 +56,34 @@ function draw() {
   strokeWeight(5);
   stroke('black')
   beginShape();
-  vertex(150, 120);
-  vertex(200, 120);
-  vertex(220, 150);
-  vertex(200, 180);
-  vertex(150, 180);
+    vertex(150, 120);
+    vertex(200, 120);
+    vertex(220, 150);
+    vertex(200, 180);
+    vertex(150, 180);
   endShape(CLOSE);
   
   strokeWeight(0);
   fill('black');
   text('OR', 155, 160);
+  
+  // Compute AND and OR outputs
+  let andOutput = inputA && inputB;
+  let orOutput = inputA || inputB;
+  
+  // Draw output wires
+  strokeWeight(5);
+  stroke(andOutput ? 'red' : 'black');
+  line(220, 50, 300, 50);
+  
+  stroke(orOutput ? 'red' : 'black');
+  line(220, 150, 300, 150);
+}
+
+function toggleA() {
+  inputA = !inputA;
+}
+
+function toggleB() {
+  inputB = !inputB;
+}

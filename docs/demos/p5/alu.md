@@ -133,3 +133,39 @@ function toggleBinDec() {
   performOperation("ADD"); // Refresh the value on toggle
 }
 ```
+
+## Challenges
+
+Real ALUs also keep track of several bits if information about the
+result of the arithmetic such as if there were overflows.
+
+!!! Challenges
+    1. Add a bit to indicate the result is non-zero.
+    2. Add a sign flag to indicate the number is non-negative
+    3. Add a carry flag to indicate that the result fits in 16 bits
+    4. Add an overflow flag to indicate that the sum of two numbers is also positive
+
+## References
+
+I love this small simulator from CircuitVerse:
+
+[Four Bit ALU on CircuitVerse](https://circuitverse.org/simulator/51702) - This
+shows the process of using an OpCode which is a number for an operation. The carry
+bit does not work in this example.
+
+A much better example is here:
+
+[University of New Brunswick EE3221 Course](http://www.ee.unb.ca/cgi-bin/tervo/alu.pl)
+
+That version is a binary only but it includes the following flags:
+
+Flags
+The Zero flag (Z) is 0 because the result is non-zero
+
+The Sign flag (N) is 0 because the result appears non-negative (the MSB is 0)
+
+The Carry flag (C) is 0 (good) because the addition result did not exceed 16-bits.
+This would be of interest if (RA,RB) represent unsigned integers (0..65535).
+
+The Overflow flag (V) is 0 (good) because adding two positive numbers gave a positive result.
+This would be of interest if (RA,RB) represent signed integers (-32768..+32767).

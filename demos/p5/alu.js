@@ -12,15 +12,15 @@ function setup() {
 
   // Title
   textSize(16);
-  text("Arithmetic Logic Unit", width/2, 20);
+  text("Arithmetic Logic Unit", 100, 20);
 
   // Register A
-  text("Register A:", 60, 60);
+  text("Register A:", 10, 60);
   inputA = createInput('201');
   inputA.position(110, 50);
 
   // Register B
-  text("Register B:", 60, 100);
+  text("Register B:", 10, 100);
   inputB = createInput('100');
   inputB.position(110, 90);
 
@@ -47,7 +47,7 @@ function setup() {
 
   // Output label
   fill('blue');
-  text("Output:", 60, 200);
+  text("Output:", 10, 200);
 
   // Output display
   outputP = createP("0");

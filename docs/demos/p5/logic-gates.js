@@ -3,7 +3,8 @@ let inputB = false;
 let buttonA, buttonB;
 
 function setup() {
-  createCanvas(400, 400);
+  const canvas = createCanvas(400, 400);
+  canvas.parent('canvas-container');
   
   // Create input buttons for A and B
   buttonA = createButton('Toggle A');

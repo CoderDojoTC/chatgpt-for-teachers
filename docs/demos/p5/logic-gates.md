@@ -1,5 +1,10 @@
 # Logic Gates
 
+In this example, we will generate a graphical simulation of Boolean logic gates.
+This example shows how both "AND" and "OR" gates work.  You can easily change the prompt to perform other operations such as "NOT", "NAND" and "NOR".
+
+You will note that we are explicit on the horizontal line placement location.  Generative AI is not good at doing precise layout.
+
 Prompt:
 
 ```linenums="0"

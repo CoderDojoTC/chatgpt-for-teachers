@@ -23,14 +23,15 @@ This is a wonderful lab to demonstrate some use of the trigonomic functions sine
 
 *Write some Python code that will take in the seconds as a number
 from 0 to 59 and it will return the x and y positions
-of the tip of the second hand.
+of the tip of the second hand.*
 
-```py
+```js
 // Draw second hand
-  // concert the second to radians
-  secondHand = map(sc, 0, 60, 0, TWO_PI) - HALF_PI;
-  // draw a line from the center of the canvas to the endpoint
-  line(0, 0, cos(secondHand) * canvasSize / 2.5, sin(secondHand) * canvasSize / 2.5);
+// convert seconds to radians
+secondHand = map(sc, 0, 60, 0, TWO_PI) - HALF_PI;
+// draw a line from the center of the canvas to the endpoint
+line(0, 0, cos(secondHand) * canvasSize / 2.5, 
+           sin(secondHand) * canvasSize / 2.5);
 ```
 
 ## FUll Program Source
@@ -43,8 +44,10 @@ let manualMode = true;
 
 function setup() {
   const canvas = createCanvas(400, 400);
+  // use this line in the web
   canvas.parent('canvas-container');
-  # createCanvas(canvasSize, canvasSize);
+  // use this in editor
+  // createCanvas(canvasSize, canvasSize);
   background(0);
 
   // Create sliders for manual mode

@@ -11,6 +11,8 @@ The clock as a red second hand.
 There are two modes: manual and automtic
 Manual mode allows the use to manually set the time using three sliders for hours, minute and seconds.
 Automatic mode use the local time to update the display.
+Add labels and values for the sliders.
+Make sure to reenable the controls as we switch back to manual mode.
 ```
 
 [Link to Demo](./analog-clock-face.html)
@@ -70,10 +72,10 @@ function draw() {
     mn = minuteSlider.value();
     sc = secondSlider.value();
   } else {
-    let currentTime = new Date();
-    hr = currentTime.getHours() % 12;
-    mn = currentTime.getMinutes();
-    sc = currentTime.getSeconds();
+    let now = new Date();
+    hr = now.getHours() % 12;
+    mn = now.getMinutes();
+    sc = now.getSeconds();
   }
 
   // Draw hour hand
@@ -96,10 +98,18 @@ function draw() {
 
 function switchMode() {
   manualMode = !manualMode;
+  
+  // disable the controls
+  if manualMode {
+    hourSlider.attribute('disabled', !manualMode);
+    minuteSlider.attribute('disabled', !manualMode);
+    secondSlider.attribute('disabled', !manualMode);
+  } else {
+    hourSlider.attribute('enabled', !manualMode);
+    minuteSlider.attribute('enabled', !manualMode);
+    secondSlider.attribute('enabled', !manualMode);
+  }
 
-  hourSlider.attribute('disabled', !manualMode);
-  minuteSlider.attribute('disabled', !manualMode);
-  secondSlider.attribute('disabled', !manualMode);
 }
 
 ```

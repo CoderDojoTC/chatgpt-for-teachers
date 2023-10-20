@@ -6,17 +6,18 @@ let manualMode = true;
 function setup() {
   const canvas = createCanvas(400, 400);
   canvas.parent('canvas-container');
-  # createCanvas(canvasSize, canvasSize);
+  // createCanvas(canvasSize, canvasSize);
+  // black background
   background(0);
 
   // Create sliders for manual mode
-  hourSlider = createSlider(0, 11, 0);
+  hourSlider = createSlider(0, 11, 8);
   hourSlider.position(10, canvasSize + 10);
 
-  minuteSlider = createSlider(0, 59, 0);
+  minuteSlider = createSlider(0, 59, 20);
   minuteSlider.position(10, canvasSize + 40);
 
-  secondSlider = createSlider(0, 59, 0);
+  secondSlider = createSlider(0, 59, 10);
   secondSlider.position(10, canvasSize + 70);
 
   let modeButton = createButton('Switch Mode');
@@ -26,8 +27,12 @@ function setup() {
 
 function draw() {
   background(0);
+  
   translate(canvasSize / 2, canvasSize / 2);
-
+  noFill()
+  stroke(255);
+  strokeWeight(6);
+  circle(0, 0, 340)
   let hr, mn, sc;
   if (manualMode) {
     hr = hourSlider.value();
@@ -53,7 +58,7 @@ function draw() {
 
   // Draw second hand
   stroke(255, 0, 0);
-  strokeWeight(4);
+  strokeWeight(8);
   secondHand = map(sc, 0, 60, 0, TWO_PI) - HALF_PI;
   line(0, 0, cos(secondHand) * canvasSize / 2.5, sin(secondHand) * canvasSize / 2.5);
 }

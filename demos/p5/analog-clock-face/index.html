@@ -2465,18 +2465,20 @@ Make sure to reenable the controls as we switch back to manual mode.
 <p><a href="../analog-clock-face.html">Link to Demo</a></p>
 <h2 id="code">Code</h2>
 <p>This is a wonderful lab to demonstrate some use of the trigonomic functions sine() and cosine().  We ask the question:</p>
-<p>*Write some Python code that will take in the seconds as a number
+<p><em>Write some Python code that will take in the seconds as a number
 from 0 to 59 and it will return the x and y positions
-of the tip of the second hand.</p>
+of the tip of the second hand.</em></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">//</span> <span class="n">Draw</span> <span class="n">second</span> <span class="n">hand</span>
-  <span class="o">//</span> <span class="n">concert</span> <span class="n">the</span> <span class="n">second</span> <span class="n">to</span> <span class="n">radians</span>
-  <span class="n">secondHand</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="n">sc</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">TWO_PI</span><span class="p">)</span> <span class="o">-</span> <span class="n">HALF_PI</span><span class="p">;</span>
-  <span class="o">//</span> <span class="n">draw</span> <span class="n">a</span> <span class="n">line</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">center</span> <span class="n">of</span> <span class="n">the</span> <span class="n">canvas</span> <span class="n">to</span> <span class="n">the</span> <span class="n">endpoint</span>
-  <span class="n">line</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">cos</span><span class="p">(</span><span class="n">secondHand</span><span class="p">)</span> <span class="o">*</span> <span class="n">canvasSize</span> <span class="o">/</span> <span class="mf">2.5</span><span class="p">,</span> <span class="n">sin</span><span class="p">(</span><span class="n">secondHand</span><span class="p">)</span> <span class="o">*</span> <span class="n">canvasSize</span> <span class="o">/</span> <span class="mf">2.5</span><span class="p">);</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Draw second hand</span>
+<span class="c1">// convert seconds to radians</span>
+<span class="nx">secondHand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">map</span><span class="p">(</span><span class="nx">sc</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">60</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">TWO_PI</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">HALF_PI</span><span class="p">;</span>
+<span class="c1">// draw a line from the center of the canvas to the endpoint</span>
+<span class="nx">line</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">cos</span><span class="p">(</span><span class="nx">secondHand</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">canvasSize</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2.5</span><span class="p">,</span><span class="w"> </span>
+<span class="w">           </span><span class="nx">sin</span><span class="p">(</span><span class="nx">secondHand</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">canvasSize</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2.5</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="full-program-source">FUll Program Source</h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -2553,15 +2555,19 @@ of the tip of the second hand.</p>
 <span class="normal">72</span>
 <span class="normal">73</span>
 <span class="normal">74</span>
-<span class="normal">75</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">let</span> <span class="n">canvasSize</span> <span class="o">=</span> <span class="mi">400</span><span class="p">;</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">let</span> <span class="n">canvasSize</span> <span class="o">=</span> <span class="mi">400</span><span class="p">;</span>
 <span class="n">let</span> <span class="n">hourHand</span><span class="p">,</span> <span class="n">minuteHand</span><span class="p">,</span> <span class="n">secondHand</span><span class="p">;</span>
 <span class="n">let</span> <span class="n">hourSlider</span><span class="p">,</span> <span class="n">minuteSlider</span><span class="p">,</span> <span class="n">secondSlider</span><span class="p">;</span>
 <span class="n">let</span> <span class="n">manualMode</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
 
 <span class="n">function</span> <span class="n">setup</span><span class="p">()</span> <span class="p">{</span>
   <span class="n">const</span> <span class="n">canvas</span> <span class="o">=</span> <span class="n">createCanvas</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mi">400</span><span class="p">);</span>
+  <span class="o">//</span> <span class="n">use</span> <span class="n">this</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">web</span>
   <span class="n">canvas</span><span class="o">.</span><span class="n">parent</span><span class="p">(</span><span class="s1">&#39;canvas-container&#39;</span><span class="p">);</span>
-  <span class="c1"># createCanvas(canvasSize, canvasSize);</span>
+  <span class="o">//</span> <span class="n">use</span> <span class="n">this</span> <span class="ow">in</span> <span class="n">editor</span>
+  <span class="o">//</span> <span class="n">createCanvas</span><span class="p">(</span><span class="n">canvasSize</span><span class="p">,</span> <span class="n">canvasSize</span><span class="p">);</span>
   <span class="n">background</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 
   <span class="o">//</span> <span class="n">Create</span> <span class="n">sliders</span> <span class="k">for</span> <span class="n">manual</span> <span class="n">mode</span>

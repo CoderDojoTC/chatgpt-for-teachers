@@ -2442,14 +2442,16 @@
 
 <h1 id="analog-clock-face">Analog Clock Face</h1>
 <h2 id="prompt">Prompt</h2>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>Create a single p5.js sketch file that uses a 400x400 canvas.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>Create a single p5.js sketch file that uses a 400x400 canvas.
 The file is a simulation of an analog clock face.
 The clock face has a black background.
 The clock has white hands for the minute and hour hand.
@@ -2457,6 +2459,8 @@ The clock as a red second hand.
 There are two modes: manual and automtic
 Manual mode allows the use to manually set the time using three sliders for hours, minute and seconds.
 Automatic mode use the local time to update the display.
+Add labels and values for the sliders.
+Make sure to reenable the controls as we switch back to manual mode.
 </code></pre></div></td></tr></table></div>
 <p><a href="../analog-clock-face.html">Link to Demo</a></p>
 <h2 id="code">Code</h2>
@@ -2541,7 +2545,15 @@ of the tip of the second hand.</p>
 <span class="normal">64</span>
 <span class="normal">65</span>
 <span class="normal">66</span>
-<span class="normal">67</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">let</span> <span class="n">canvasSize</span> <span class="o">=</span> <span class="mi">400</span><span class="p">;</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">let</span> <span class="n">canvasSize</span> <span class="o">=</span> <span class="mi">400</span><span class="p">;</span>
 <span class="n">let</span> <span class="n">hourHand</span><span class="p">,</span> <span class="n">minuteHand</span><span class="p">,</span> <span class="n">secondHand</span><span class="p">;</span>
 <span class="n">let</span> <span class="n">hourSlider</span><span class="p">,</span> <span class="n">minuteSlider</span><span class="p">,</span> <span class="n">secondSlider</span><span class="p">;</span>
 <span class="n">let</span> <span class="n">manualMode</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
@@ -2577,10 +2589,10 @@ of the tip of the second hand.</p>
     <span class="n">mn</span> <span class="o">=</span> <span class="n">minuteSlider</span><span class="o">.</span><span class="n">value</span><span class="p">();</span>
     <span class="n">sc</span> <span class="o">=</span> <span class="n">secondSlider</span><span class="o">.</span><span class="n">value</span><span class="p">();</span>
   <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-    <span class="n">let</span> <span class="n">currentTime</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Date</span><span class="p">();</span>
-    <span class="n">hr</span> <span class="o">=</span> <span class="n">currentTime</span><span class="o">.</span><span class="n">getHours</span><span class="p">()</span> <span class="o">%</span> <span class="mi">12</span><span class="p">;</span>
-    <span class="n">mn</span> <span class="o">=</span> <span class="n">currentTime</span><span class="o">.</span><span class="n">getMinutes</span><span class="p">();</span>
-    <span class="n">sc</span> <span class="o">=</span> <span class="n">currentTime</span><span class="o">.</span><span class="n">getSeconds</span><span class="p">();</span>
+    <span class="n">let</span> <span class="n">now</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Date</span><span class="p">();</span>
+    <span class="n">hr</span> <span class="o">=</span> <span class="n">now</span><span class="o">.</span><span class="n">getHours</span><span class="p">()</span> <span class="o">%</span> <span class="mi">12</span><span class="p">;</span>
+    <span class="n">mn</span> <span class="o">=</span> <span class="n">now</span><span class="o">.</span><span class="n">getMinutes</span><span class="p">();</span>
+    <span class="n">sc</span> <span class="o">=</span> <span class="n">now</span><span class="o">.</span><span class="n">getSeconds</span><span class="p">();</span>
   <span class="p">}</span>
 
   <span class="o">//</span> <span class="n">Draw</span> <span class="n">hour</span> <span class="n">hand</span>
@@ -2604,9 +2616,17 @@ of the tip of the second hand.</p>
 <span class="n">function</span> <span class="n">switchMode</span><span class="p">()</span> <span class="p">{</span>
   <span class="n">manualMode</span> <span class="o">=</span> <span class="err">!</span><span class="n">manualMode</span><span class="p">;</span>
 
-  <span class="n">hourSlider</span><span class="o">.</span><span class="n">attribute</span><span class="p">(</span><span class="s1">&#39;disabled&#39;</span><span class="p">,</span> <span class="err">!</span><span class="n">manualMode</span><span class="p">);</span>
-  <span class="n">minuteSlider</span><span class="o">.</span><span class="n">attribute</span><span class="p">(</span><span class="s1">&#39;disabled&#39;</span><span class="p">,</span> <span class="err">!</span><span class="n">manualMode</span><span class="p">);</span>
-  <span class="n">secondSlider</span><span class="o">.</span><span class="n">attribute</span><span class="p">(</span><span class="s1">&#39;disabled&#39;</span><span class="p">,</span> <span class="err">!</span><span class="n">manualMode</span><span class="p">);</span>
+  <span class="o">//</span> <span class="n">disable</span> <span class="n">the</span> <span class="n">controls</span>
+  <span class="k">if</span> <span class="n">manualMode</span> <span class="p">{</span>
+    <span class="n">hourSlider</span><span class="o">.</span><span class="n">attribute</span><span class="p">(</span><span class="s1">&#39;disabled&#39;</span><span class="p">,</span> <span class="err">!</span><span class="n">manualMode</span><span class="p">);</span>
+    <span class="n">minuteSlider</span><span class="o">.</span><span class="n">attribute</span><span class="p">(</span><span class="s1">&#39;disabled&#39;</span><span class="p">,</span> <span class="err">!</span><span class="n">manualMode</span><span class="p">);</span>
+    <span class="n">secondSlider</span><span class="o">.</span><span class="n">attribute</span><span class="p">(</span><span class="s1">&#39;disabled&#39;</span><span class="p">,</span> <span class="err">!</span><span class="n">manualMode</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">hourSlider</span><span class="o">.</span><span class="n">attribute</span><span class="p">(</span><span class="s1">&#39;enabled&#39;</span><span class="p">,</span> <span class="err">!</span><span class="n">manualMode</span><span class="p">);</span>
+    <span class="n">minuteSlider</span><span class="o">.</span><span class="n">attribute</span><span class="p">(</span><span class="s1">&#39;enabled&#39;</span><span class="p">,</span> <span class="err">!</span><span class="n">manualMode</span><span class="p">);</span>
+    <span class="n">secondSlider</span><span class="o">.</span><span class="n">attribute</span><span class="p">(</span><span class="s1">&#39;enabled&#39;</span><span class="p">,</span> <span class="err">!</span><span class="n">manualMode</span><span class="p">);</span>
+  <span class="p">}</span>
+
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 

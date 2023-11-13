@@ -1,105 +1,86 @@
 // p5.js code to generate a sine wave with amplitude and period controls
 
-let xspacing = 10; // Distance between each horizontal location
-let w; // Width of entire wave
-let theta = 0.0; // Start angle at 0
-let amplitude; // Height of wave
-let period; // How many pixels before the wave repeats
-let dx; // Value for incrementing x
-let yvalues; // Using an array to store height values for the wave
-let canvasHeight = 400;
-let canvasWidth = 700;
-let percentHeightDraw = .75;
-let verticalDrawHight = canvasHeight * percentHeightDraw;
-let horzAxisHeight = (canvasHeight * percentHeightDraw) / 2;
+// sine wave with 3 sliders
+let width = 600;
+let height = 400;
+let halfWidth = width / 2
+let halfHeight = height / 2
+let amplitude = 100;
+let phase = 0;
 
 let amplitudeSlider, periodSlider, phaseSlider;
-let animateButton;
-//let animate = true;
+let labelValueMargin = 120;
 
 function setup() {
-  const canvas = createCanvas(canvasWidth, canvasHeight);
+  const canvas = createCanvas(width, height);
   canvas.parent('canvas-container');
-  w = width + 16;
+  textSize(16)
   
   // Create sliders
-  amplitudeSlider = createSlider(0, 130, 100);
-  amplitudeSlider.position(110, canvasHeight - 90);
-  amplitudeSlider.style('width', '220px')
+  amplitudeSlider = createSlider(0, 200, 100);
+  amplitudeSlider.position(labelValueMargin, height - 20);
+  amplitudeSlider.style('width', width - labelValueMargin + 'px')
   
-  periodSlider = createSlider(0, 1000, 500);
-  periodSlider.position(110, canvasHeight - 60);
-  periodSlider.style('width', '220px')
+  periodSlider = createSlider(1, 100, 50);
+  periodSlider.position(labelValueMargin, height - 40);
+  periodSlider.style('width', width - labelValueMargin + 'px')
   
-  // default is zero
-  phaseSlider = createSlider(-TWO_PI, TWO_PI, 0, 0.01);
-  phaseSlider.position(110, canvasHeight - 30);
-  phaseSlider.style('width', '220px')
-  
-  // Create animate button
-  //animateButton = createButton('Stop Animation');
-  //animateButton.position(20, 80);
-  //animateButton.mousePressed(toggleAnimation);
-
-  yvalues = new Array(floor(w / xspacing));
+  phaseSlider = createSlider(-PI*100, PI*100, 0, 0.01);
+  phaseSlider.position(labelValueMargin, height - 60);
+  phaseSlider.style('width', width - labelValueMargin + 'px')
 }
 
 function draw() {
-  background(255);  // white background
+  background(240);
   
-  // Use the slider values
   amplitude = amplitudeSlider.value();
   period = periodSlider.value();
-  theta = phaseSlider.value();
-  dx = (TWO_PI / period) * xspacing;
+  phase = phaseSlider.value();
   
-  calcWave();
-  renderWave();
+  // draw on the standard axis to keep text upright
+  drawAxis();
+  translate(width / 2, height / 2); // Shift origin to center
+  scale(1, -1); // Flip y-axis to make positive y up
   
-  // Draw text for sliders
+  drawSineWave(amplitude, 1/period, phase);
+}
+
+function setLineDash(list) {
+  drawingContext.setLineDash(list);
+}
+
+function drawAxis() {
+  fill('black')
+  strokeWeight(0)
+  text('y', halfWidth-20, 15)
+  text('x', width-20, halfHeight + 20)
+  stroke('gray')
+  strokeWeight(1)
+  setLineDash([5, 5])
+  
+  // horizontal line
+  line(0, halfHeight, width, halfHeight)
+  // vertical line
+  line(halfWidth, 0, halfWidth, height)
+  
   stroke(0)
   strokeWeight(0);
   fill('black'); // Text color
-  text('Amplitude: ' + amplitude/100, 10, canvasHeight-90);
-  text('Period: ' + period, 10, canvasHeight-60);
-  let theta2 = theta + 1.25;
-  text('Phase: ' + theta2.toFixed(2), 10, canvasHeight-30);
-  
-  // Draw x and y axis
-  stroke('gray');
-  strokeWeight(1);
-  // horizontal axis
-  line(0, horzAxisHeight, width, horzAxisHeight); // x-axis
-  // vertical
-  line(width / 2, 0, width / 2, verticalDrawHight); // y-axis
+  text('Amplitude: ' + amplitude/100,    10, height - 5);
+  text('Period: '    + period,           10, height - 25);
+  text('Phase: '     + phase.toFixed(2), 10, height - 45);
 }
 
-// used for animation
-function calcWave() {
-  // print('in calcWave')
-  // Increment theta (try different values for 'angular speed')
-  // theta += 0.02;
-
-  // For every x value, calculate a y value with sine function
-  let x = theta;
-  for (let i = 0; i < yvalues.length; i++) {
-    yvalues[i] = sin(x) * amplitude;
-    x += dx;
-  }
-}
-
-function renderWave() {
+function drawSineWave(amplitude, frequency, phase) {
+  stroke('blue');
+  strokeWeight(3)
   noFill();
-  strokeWeight(4);
-  stroke('blue'); // wave color
+  // turn off dash line
+  setLineDash([1, 0])
   beginShape();
-  for (let x = 0; x < yvalues.length; x++) {
-    vertex(x * xspacing, horzAxisHeight + yvalues[x]);
-  }
+    for (let x = -width / 2; x < width / 2; x++) {
+      let y = amplitude * sin(frequency * (x - phase));
+      vertex(x, y);
+    }
   endShape();
 }
-
-//function toggleAnimation() {
-//  animate = !animate;
-//  animateButton.html(animate ? 'Stop Animation' : 'Start Animation');
-//}

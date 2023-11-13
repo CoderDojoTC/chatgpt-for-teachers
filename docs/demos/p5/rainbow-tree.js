@@ -1,37 +1,40 @@
-// rainbow tree
+// Create a two branch recursive tree drawing with sliders for length and angle
+// Vary the length of the branch to be 0 to 200 with a default of 150
+// Vary the angle from 0 to PI/2 with a default of PI/8
+let width = 450
+let height = 450
 let sliderLength, sliderAngle;
 let rainbowColors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', 'cyan'];
-let lenLabel, angleLabel;
+// 16 point label and value width for left margin of sliders
 let labelWidth = 100;
 
 function setup() {
-  const canvas = createCanvas(450, 450);
+  const canvas = createCanvas(width, height);
+  textSize(16)
   canvas.parent('canvas-container');
-  background(0);
-  
-  lenLabel = createDiv('Length:');
-  lenLabel.position(10, 410);
-  lenLabel.style('color', 'white');
-  sliderLength = createSlider(0, 200, 150);
-  sliderLength.position(labelWidth, 410);
-  sliderLength.style('width', width - labelWidth + 'px');
 
-  angleLabel = createDiv('Angle:');
-  angleLabel.position(10, 430);
-  angleLabel.style('color', 'white');
+  sliderLength = createSlider(0, 200, 150);
+  sliderLength.position(labelWidth, height - 45);
+  sliderLength.style('width', width - labelWidth - 10 + 'px');
+
   sliderAngle = createSlider(0, PI / 2, PI / 8, 0.01);
-  sliderAngle.position(labelWidth, 430);
-  sliderAngle.style('width', width - labelWidth + 'px');
+  sliderAngle.position(labelWidth, height - 25);
+  sliderAngle.style('width', width - labelWidth - 10 + 'px');
 }
 
 function draw() {
-  background(0);
-  translate(width/2, height);
+  background('black');
+  // move the coordinate system
+  
   let len = sliderLength.value();
   let angle = sliderAngle.value();
-  lenLabel.html(`Length: ${len}`);
-  angleLabel.html(`Angle: ${int(angle * 115)}`);
+  // draw the label and values
+  fill('white')
+  strokeWeight(0)
+  text("Length:" + len, 10, height - 30);
+  text("Angle:" + int(angle * 115), 10, height - 10);
   strokeWeight(7);
+  translate(width/2, height);
   branch(len, angle, 0);
 }
 

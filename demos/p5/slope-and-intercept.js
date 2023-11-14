@@ -33,13 +33,13 @@ function setup() {
   // Slope slider
   text('Slope', 20, 320);
   slopeSlider = createSlider(0, 5, 0.5, 0.1);
-  slopeSlider.position(labelValueWidth, height - 40);
+  slopeSlider.position(labelValueWidth, height - 35);
   slopeSlider.style('width', width -labelValueWidth - 20 + 'px');
 
   // Intercept slider
   text('Intercept', 20, 360);
   interceptSlider = createSlider(0, 300, 50, 1);
-  interceptSlider.position(labelValueWidth, height - 20);
+  interceptSlider.position(labelValueWidth, height - 15);
   interceptSlider.style('width', width -labelValueWidth - 20 + 'px');
 }
 

@@ -22,6 +22,15 @@ Here's a basic outline of the p5.js code for this simulation:
 **Circuit Diagrams:** Have students draw the circuit diagram based on the simulation, then build the actual circuit using physical components.
 **Exploring Variables:** Modify the code to represent different battery voltages or bulb wattages.
 
+## Demos of Circuits
+
+1. [Simple Circuit](./circuits.html)
+2. [Switch](./switch.md)
+3. [Battery With LED Circuit](./battery-circuit.md)
+4. [Wire Animate](./wire-animate.md)
+5. [Motor Circuit](./motor.md)
+6. [H-Bridge](./h-bridge.md)
+
 ## Sample Prompt
 
 ```linenubs="0"

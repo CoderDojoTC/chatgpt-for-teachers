@@ -4,7 +4,7 @@ Although the least-squares fit algorithm is simple,
 
 ## Prompt
 
-```linenums="0"_
+```linenums="0"
 Create a single p5.js sketch JavaScript file on a 600x400 canvas.
 DO NOT generate any python code.
 ONLY return a single p5.js file.

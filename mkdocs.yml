@@ -94,7 +94,6 @@ nav:
       - 7-Segment Display: demos/p5/7-segment-display.md
       - Analog Clock Face: demos/p5/analog-clock-face.md
       - Neural Network: demos/p5/neural-network.md
-      - Least Squares Fit: demos/p5/least-square-fit.md
       - Reference Frames: demos/p5/reference-frames.md
       - Slope and Intercept: demos/p5/slope-and-intercept.md
   - The Future of AI:

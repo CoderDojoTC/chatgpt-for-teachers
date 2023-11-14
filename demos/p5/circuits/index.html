@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../sine/">
+        <link rel="prev" href="../switch/">
       
       
-        <link rel="next" href="../wave-sums/">
+        <link rel="next" href="../wire-animate/">
       
       
       <link rel="icon" href="../../../img/code-savvy-logo.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Pulse-Width Modulation - Generative AI for Teachers</title>
+        <title>Simple Circuit - Generative AI for Teachers</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pulse-width-modulation" class="md-skip">
+        <a href="#circuits" class="md-skip">
           Skip to content
         </a>
       
@@ -120,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pulse-Width Modulation
+              Simple Circuit
             
           </span>
         </div>
@@ -931,27 +931,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Pulse-Width Modulation
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../pwm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -960,31 +942,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#pulse-width-modulation" class="md-nav__link">
-    Pulse-Width Modulation
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1114,9 +1071,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../circuits/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Simple Circuit
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1125,6 +1102,54 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    Background
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classroom-implementation-ideas" class="md-nav__link">
+    Classroom Implementation Ideas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-extensions" class="md-nav__link">
+    Further Extensions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-prompt" class="md-nav__link">
+    Sample Prompt
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1544,6 +1569,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1552,8 +1579,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pulse-width-modulation" class="md-nav__link">
-    Pulse-Width Modulation
+  <a href="#background" class="md-nav__link">
+    Background
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classroom-implementation-ideas" class="md-nav__link">
+    Classroom Implementation Ideas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-extensions" class="md-nav__link">
+    Further Extensions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-prompt" class="md-nav__link">
+    Sample Prompt
   </a>
   
 </li>
@@ -1576,14 +1624,196 @@
   
 
 
-  <h1>Pulse-Width Modulation</h1>
+<h1 id="circuits">Circuits</h1>
+<h2 id="background">Background</h2>
+<p>Creating a simulation of a basic electrical circuit with an on/off switch, a battery, and a light bulb is a great way to teach students about electricity and circuits. We'll use p5.js to create this interactive simulation. In this simulation, students can toggle the switch to turn the light bulb on and off, visually seeing how closing and opening a circuit works.</p>
+<p>Here's a basic outline of the p5.js code for this simulation:</p>
+<ol>
+<li><strong>Setup:</strong> Define the canvas and initial state of the switch (on or off).</li>
+<li><strong>Draw:</strong> Render the battery, switch, and light bulb. The light bulb's brightness changes based on the switch's state.</li>
+<li><strong>Mouse Interaction:</strong> Allow the switch to be toggled on and off with a mouse click.</li>
+</ol>
+<h2 id="classroom-implementation-ideas">Classroom Implementation Ideas</h2>
+<p><strong>Concept Visualization:</strong> Use this simulation to help students visualize how a simple circuit works, emphasizing the role of each component.
+<strong>Interactive Learning:</strong> Encourage students to toggle the switch and observe changes, fostering understanding through interaction.
+<strong>Critical Thinking:</strong> Pose questions like "What happens if the battery is reversed?" or "What changes if we add another light bulb?"</p>
+<h2 id="further-extensions">Further Extensions</h2>
+<p><strong>Additional Components:</strong> Introduce resistors or variable resistors (like a potentiometer) to the circuit.
+<strong>Circuit Diagrams:</strong> Have students draw the circuit diagram based on the simulation, then build the actual circuit using physical components.
+<strong>Exploring Variables:</strong> Modify the code to represent different battery voltages or bulb wattages.</p>
+<h2 id="sample-prompt">Sample Prompt</h2>
+<p>```linenubs="0"
+Create a single file p5.js sketch on a 300x200 canvas.
+Subject: simple electrical circiuts.
+Create a simulation of an electrical circuit with a batter, an on/off switch, a light bulb and the connecting wires.
+Make the default text size be 16.
+Add the title "Click Anywhere to Toggle The Switch" to the top of the canvas.
+Place the battery standing vertically on the left with the positive side up and the negative side down.
+Draw the top of the battery as a gold rectangle on the top with a "+" on it.
+Draw the bottom of the battery as a black rectangle "-" near the bottom.
+The top row of connection points are at y=50.
+The bottom row of connection points are at y=150.
+Make the wires toogle from black (circuit off) to red (circuit on).
+Make all the wires width 3.
+Make the switch be a rectangle that is horizontal and 50px wide when on.
+Make the swtich rectangle rotate up 45 degrees when the switch is off.
+Complete the circuit with the light going to the negative battery terminal in a column at x=250.
+Make sure to reset the stroke width to 0 after drawing wires.
+Allow the user to click anywhere on the canvas to toggle the switch.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span></pre></div></td><td class="code"><div><pre><span></span><code>## Sample Code
 
-<h3 id="pulse-width-modulation">Pulse-Width Modulation</h3>
-<p><img alt="PWM" src="../../../img/pwm.png" /></p>
-<p>Pulse-width modulation is the way that microcontrollers send a precise signal to a 
-device such as a motor controller.  This simulation models an old CRT oscilloscope display
-with a bright green line on a black background.</p>
-<p><a href="../pwm.html">Pulse-Width Modulation</a></p>
+```js
+let switchOn = false; // Initial state of the switch
+let switchAngle = 45; // Angle of the switch when off
+
+function setup() {
+  createCanvas(300, 200);
+  textSize(16);
+}
+
+function draw() {
+  background(220);
+
+  // Draw title
+  fill(0);
+  strokeWeight(0);
+  text(&quot;Click Anywhere to Toggle The Switch&quot;, 10, 20);
+
+  // Draw the battery
+  drawBattery();
+
+  // Draw the switch
+  drawSwitch();
+
+  // Draw the light bulb
+  drawLightBulb();
+
+  // Draw wires
+  drawWires();
+}
+
+function drawBattery() {
+  fill(&#39;grey&#39;);
+  rect(20, 100, 20, 50); // battery body
+  rect(20, 95, 20, 5); // positive terminal
+  rect(20, 150, 20, 5); // negative terminal
+}
+
+function drawSwitch() {
+  push();
+    translate(80, 50); // Move origin to switch pivot
+    rotate(radians(switchOn ? 0 : switchAngle)); // Rotate when off
+    fill(&#39;black&#39;);
+    rect(0, 0, 50, 10); // switch
+  pop();
+}
+
+function drawLightBulb() {
+  if (switchOn) {
+    fill(&#39;yellow&#39;);
+  } else {
+    fill(&#39;white&#39;);
+  }
+  ellipse(250, 50, 30, 30); // light bulb
+}
+
+function drawWires() {
+  stroke(switchOn ? &#39;red&#39; : &#39;black&#39;);
+  strokeWeight(3);
+
+  // Wire from battery top to switch
+  line(40, 100, 40, 50);
+  line(40, 50, 80, 50);
+
+  // Wire from switch to light bulb
+  line(130, 50, 250, 50);
+
+  // Wire from light bulb to battery bottom
+  line(250, 50, 250, 150);
+  line(250, 150, 40, 150);
+}
+
+function mousePressed() {
+  switchOn = !switchOn; // Toggle the switch
+  switchAngle = switchOn ? 0 : 45; // Adjust switch angle
+}
+</code></pre></div></td></tr></table></div>
 
 
   
@@ -1612,7 +1842,7 @@ with a bright green line on a black background.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../sine/" title="Sine Wave" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../switch/" title="Electrical Switch" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1621,19 +1851,19 @@ with a bright green line on a black background.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Sine Wave
+                Electrical Switch
               </span>
             </div>
           </a>
         
         
-          <a href="../wave-sums/" title="Wave Sums" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../wire-animate/" title="Wire Animation" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Wave Sums
+                Wire Animation
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

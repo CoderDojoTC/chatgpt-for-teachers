@@ -1541,8 +1541,7 @@
 <h1 id="least-square-fit">Least Square Fit</h1>
 <p>Although the least-squares fit algorithm is simple, </p>
 <h2 id="prompt">Prompt</h2>
-<p>```linenums="0"_
-Create a single p5.js sketch JavaScript file on a 600x400 canvas.
+<div class="highlight"><pre><span></span><code>Create a single p5.js sketch JavaScript file on a 600x400 canvas.
 DO NOT generate any python code.
 ONLY return a single p5.js file.
 The file will be an interactive demonstration of a least squares fit for home sales data.
@@ -1556,6 +1555,8 @@ Draw a line that is calculated using the least-squares fit.
 Add sliders for both the slope and the intercept.
 Place the sliders under the plot.
 Label the slope and intercept and show the value using the text() function.
+</code></pre></div>
+<p><a href="../least-squares-fit.html">Link to Demo</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
 <span class="normal">  2</span>
 <span class="normal">  3</span>
@@ -1680,138 +1681,132 @@ Label the slope and intercept and show the value using the text() function.
 <span class="normal">122</span>
 <span class="normal">123</span>
 <span class="normal">124</span>
-<span class="normal">125</span>
-<span class="normal">126</span>
-<span class="normal">127</span>
-<span class="normal">128</span></pre></div></td><td class="code"><div><pre><span></span><code>[Link to Demo](./least-squares-fit.html)
+<span class="normal">125</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cm">/*</span>
+<span class="cm">Generate a single file p5.js sketch on a 300x400 canvas.</span>
+<span class="cm">Set a global variable &quot;width&quot; to be 300.</span>
+<span class="cm">Set a global variable &quot;height&quot; to be 400.</span>
+<span class="cm">Set a global variable &quot;drawingRegionHeight&quot; to be 400.</span>
+<span class="cm">The purpose of this sketch is to demonstrate the concepts of slope and intercept.</span>
+<span class="cm">Divide the canvas into two regions on top of each other.</span>
+<span class="cm">The top region is called the &quot;drawing&quot; region.</span>
+<span class="cm">The drawing region is 300x300 and has a light gray background of 240.</span>
+<span class="cm">The bottom region is the &quot;controls&quot; region.</span>
+<span class="cm">The controls region holds the controls and is 300x100.</span>
+<span class="cm">The background for the controls is white of 255.</span>
+<span class="cm">The controls holds two sliders with labels and values on the left.</span>
+<span class="cm">The width of the sliders are both 180px.</span>
+<span class="cm">The slope slider ranges from -2 to 3 with the default of .5.</span>
+<span class="cm">The intercept slider ranges from -100 to 100.</span>
+<span class="cm">Draw the slope and the intercept only in the top drawing region.</span>
+<span class="cm">The top drawing region uses a cartesian coordinate system with the center at 150, 150.</span>
+<span class="cm">In the drawing region, positive Y is at the top.</span>
+<span class="cm">*/</span>
 
-```js
-/*
-Generate a single file p5.js sketch on a 300x400 canvas.
-Set a global variable &quot;width&quot; to be 300.
-Set a global variable &quot;height&quot; to be 400.
-Set a global variable &quot;drawingRegionHeight&quot; to be 400.
-The purpose of this sketch is to demonstrate the concepts of slope and intercept.
-Divide the canvas into two regions on top of each other.
-The top region is called the &quot;drawing&quot; region.
-The drawing region is 300x300 and has a light gray background of 240.
-The bottom region is the &quot;controls&quot; region.
-The controls region holds the controls and is 300x100.
-The background for the controls is white of 255.
-The controls holds two sliders with labels and values on the left.
-The width of the sliders are both 180px.
-The slope slider ranges from -2 to 3 with the default of .5.
-The intercept slider ranges from -100 to 100.
-Draw the slope and the intercept only in the top drawing region.
-The top drawing region uses a cartesian coordinate system with the center at 150, 150.
-In the drawing region, positive Y is at the top.
-*/
+<span class="kd">let</span><span class="w"> </span><span class="nx">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">500</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">550</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">drawingRegionHeight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">500</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">labelValueWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">110</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">slopeSlider</span><span class="p">,</span><span class="w"> </span><span class="nx">interceptSlider</span><span class="p">;</span>
+<span class="c1">// test points</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">100</span><span class="p">,</span><span class="w"> </span><span class="mf">280</span><span class="p">]</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">200</span><span class="p">,</span><span class="w"> </span><span class="mf">320</span><span class="p">]</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">p3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">300</span><span class="p">,</span><span class="w"> </span><span class="mf">200</span><span class="p">]</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">p4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">400</span><span class="p">,</span><span class="w"> </span><span class="mf">210</span><span class="p">]</span>
 
-let width = 500;
-let height = 550;
-let drawingRegionHeight = 500;
-let labelValueWidth = 110;
-let slopeSlider, interceptSlider;
-// test points
-let p1 = [100, 280]
-let p2 = [200, 320]
-let p3 = [300, 200]
-let p4 = [400, 210]
+<span class="kd">function</span><span class="w"> </span><span class="nx">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">canvas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createCanvas</span><span class="p">(</span><span class="nx">width</span><span class="p">,</span><span class="w"> </span><span class="nx">height</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">textSize</span><span class="p">(</span><span class="mf">16</span><span class="p">);</span>
 
-function setup() {
-  const canvas = createCanvas(width, height);
-  textSize(16);
+<span class="w">  </span><span class="c1">// Slope slider</span>
+<span class="w">  </span><span class="nx">text</span><span class="p">(</span><span class="s1">&#39;Slope&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">320</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">slopeSlider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createSlider</span><span class="p">(</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">slopeSlider</span><span class="p">.</span><span class="nx">position</span><span class="p">(</span><span class="nx">labelValueWidth</span><span class="p">,</span><span class="w"> </span><span class="nx">height</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">45</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">slopeSlider</span><span class="p">.</span><span class="nx">style</span><span class="p">(</span><span class="s1">&#39;width&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">width</span><span class="w"> </span><span class="o">-</span><span class="nx">labelValueWidth</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">20</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;px&#39;</span><span class="p">);</span>
 
-  // Slope slider
-  text(&#39;Slope&#39;, 20, 320);
-  slopeSlider = createSlider(-0.2, 5, 0.5, 0.1);
-  slopeSlider.position(labelValueWidth, height - 45);
-  slopeSlider.style(&#39;width&#39;, width -labelValueWidth - 20 + &#39;px&#39;);
+<span class="w">  </span><span class="c1">// Intercept slider</span>
+<span class="w">  </span><span class="nx">text</span><span class="p">(</span><span class="s1">&#39;Intercept&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">360</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">interceptSlider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createSlider</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">300</span><span class="p">,</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">interceptSlider</span><span class="p">.</span><span class="nx">position</span><span class="p">(</span><span class="nx">labelValueWidth</span><span class="p">,</span><span class="w"> </span><span class="nx">height</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">25</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">interceptSlider</span><span class="p">.</span><span class="nx">style</span><span class="p">(</span><span class="s1">&#39;width&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">width</span><span class="w"> </span><span class="o">-</span><span class="nx">labelValueWidth</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">20</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;px&#39;</span><span class="p">);</span>
+<span class="p">}</span>
 
-  // Intercept slider
-  text(&#39;Intercept&#39;, 20, 360);
-  interceptSlider = createSlider(0, 300, 100, 1);
-  interceptSlider.position(labelValueWidth, height - 25);
-  interceptSlider.style(&#39;width&#39;, width -labelValueWidth - 20 + &#39;px&#39;);
-}
+<span class="kd">function</span><span class="w"> </span><span class="nx">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Redraw drawing region</span>
+<span class="w">  </span><span class="nx">noStroke</span><span class="p">();</span>
 
-function draw() {
-  // Redraw drawing region
-  noStroke();
+<span class="w">  </span><span class="c1">// Drawing region</span>
+<span class="w">  </span><span class="nx">fill</span><span class="p">(</span><span class="mf">230</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">rect</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">width</span><span class="p">,</span><span class="w"> </span><span class="nx">drawingRegionHeight</span><span class="p">);</span>
 
-  // Drawing region
-  fill(230);
-  rect(0, 0, width, drawingRegionHeight);
+<span class="w">  </span><span class="c1">// Controls region</span>
+<span class="w">  </span><span class="nx">fill</span><span class="p">(</span><span class="mf">245</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">rect</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">drawingRegionHeight</span><span class="p">,</span><span class="w"> </span><span class="nx">width</span><span class="p">,</span><span class="w"> </span><span class="mf">100</span><span class="p">);</span>
 
-  // Controls region
-  fill(245);
-  rect(0, drawingRegionHeight, width, 100);
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">slope</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">slopeSlider</span><span class="p">.</span><span class="nx">value</span><span class="p">();</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">intercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">interceptSlider</span><span class="p">.</span><span class="nx">value</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">drawGridLines</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">drawLine</span><span class="p">(</span><span class="nx">slope</span><span class="p">,</span><span class="w"> </span><span class="nx">intercept</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">drawLabelValues</span><span class="p">(</span><span class="nx">slope</span><span class="p">,</span><span class="w"> </span><span class="nx">intercept</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">drawPoints</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">drawLinesToPoints</span><span class="p">(</span><span class="nx">slope</span><span class="p">,</span><span class="w"> </span><span class="nx">intercept</span><span class="p">);</span>
+<span class="p">}</span>
 
-  let slope = slopeSlider.value();
-  let intercept = interceptSlider.value();
-  drawGridLines();
-  drawLine(slope, intercept);
-  drawLabelValues(slope, intercept);
-  drawPoints();
-  drawLinesToPoints(slope, intercept);
-}
+<span class="kd">function</span><span class="w"> </span><span class="nx">drawPoints</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;green&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">noStroke</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">circle</span><span class="p">(</span><span class="nx">p1</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span><span class="w"> </span><span class="nx">p1</span><span class="p">[</span><span class="mf">1</span><span class="p">],</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">circle</span><span class="p">(</span><span class="nx">p2</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span><span class="w"> </span><span class="nx">p2</span><span class="p">[</span><span class="mf">1</span><span class="p">],</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">circle</span><span class="p">(</span><span class="nx">p3</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span><span class="w"> </span><span class="nx">p3</span><span class="p">[</span><span class="mf">1</span><span class="p">],</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">circle</span><span class="p">(</span><span class="nx">p4</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span><span class="w"> </span><span class="nx">p4</span><span class="p">[</span><span class="mf">1</span><span class="p">],</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
+<span class="p">}</span>
 
-function drawPoints() {
-  fill(&#39;green&#39;);
-  noStroke();
-  circle(p1[0], p1[1], 10);
-  circle(p2[0], p2[1], 10);
-  circle(p3[0], p3[1], 10);
-  circle(p4[0], p4[1], 10);
-}
+<span class="kd">function</span><span class="w"> </span><span class="nx">drawLinesToPoints</span><span class="p">(</span><span class="nx">slope</span><span class="p">,</span><span class="w"> </span><span class="nx">intercept</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">stroke</span><span class="p">(</span><span class="s1">&#39;orange&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">strokeWeight</span><span class="p">(</span><span class="mf">5</span><span class="p">);</span>
 
-function drawLinesToPoints(slope, intercept) {
-  stroke(&#39;orange&#39;);
-  strokeWeight(5);
+<span class="w">  </span><span class="nx">line</span><span class="p">(</span><span class="nx">p1</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span><span class="w"> </span><span class="nx">p1</span><span class="p">[</span><span class="mf">1</span><span class="p">],</span><span class="w"> </span><span class="nx">p1</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span><span class="w"> </span><span class="nx">drawingRegionHeight</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="nx">slope</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">p1</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">intercept</span><span class="p">));</span>
+<span class="w">  </span><span class="nx">line</span><span class="p">(</span><span class="nx">p2</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span><span class="w"> </span><span class="nx">p2</span><span class="p">[</span><span class="mf">1</span><span class="p">],</span><span class="w"> </span><span class="nx">p2</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span><span class="w"> </span><span class="nx">drawingRegionHeight</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="nx">slope</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">p2</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">intercept</span><span class="p">));</span>
+<span class="w">  </span><span class="nx">line</span><span class="p">(</span><span class="nx">p3</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span><span class="w"> </span><span class="nx">p3</span><span class="p">[</span><span class="mf">1</span><span class="p">],</span><span class="w"> </span><span class="nx">p3</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span><span class="w"> </span><span class="nx">drawingRegionHeight</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="nx">slope</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">p3</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">intercept</span><span class="p">));</span>
+<span class="w">  </span><span class="nx">line</span><span class="p">(</span><span class="nx">p4</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span><span class="w"> </span><span class="nx">p4</span><span class="p">[</span><span class="mf">1</span><span class="p">],</span><span class="w"> </span><span class="nx">p4</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span><span class="w"> </span><span class="nx">drawingRegionHeight</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="nx">slope</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">p4</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">intercept</span><span class="p">));</span>
 
-  line(p1[0], p1[1], p1[0], drawingRegionHeight - (slope * p1[0] + intercept));
-  line(p2[0], p2[1], p2[0], drawingRegionHeight - (slope * p2[0] + intercept));
-  line(p3[0], p3[1], p3[0], drawingRegionHeight - (slope * p3[0] + intercept));
-  line(p4[0], p4[1], p4[0], drawingRegionHeight - (slope * p4[0] + intercept));
+<span class="w">  </span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;green&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">noStroke</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">circle</span><span class="p">(</span><span class="nx">p1</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span><span class="w"> </span><span class="nx">drawingRegionHeight</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="nx">slope</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">p1</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">intercept</span><span class="p">),</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">circle</span><span class="p">(</span><span class="nx">p2</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span><span class="w"> </span><span class="nx">drawingRegionHeight</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="nx">slope</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">p2</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">intercept</span><span class="p">),</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">circle</span><span class="p">(</span><span class="nx">p3</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span><span class="w"> </span><span class="nx">drawingRegionHeight</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="nx">slope</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">p3</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">intercept</span><span class="p">),</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">circle</span><span class="p">(</span><span class="nx">p4</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span><span class="w"> </span><span class="nx">drawingRegionHeight</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="nx">slope</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">p4</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">intercept</span><span class="p">),</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
+<span class="p">}</span>
 
-  fill(&#39;green&#39;);
-  noStroke();
-  circle(p1[0], drawingRegionHeight - (slope * p1[0] + intercept), 10);
-  circle(p2[0], drawingRegionHeight - (slope * p2[0] + intercept), 10);
-  circle(p3[0], drawingRegionHeight - (slope * p3[0] + intercept), 10);
-  circle(p4[0], drawingRegionHeight - (slope * p4[0] + intercept), 10);
-}
+<span class="kd">function</span><span class="w"> </span><span class="nx">drawGridLines</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">stroke</span><span class="p">(</span><span class="s1">&#39;silver&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">strokeWeight</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+<span class="w">  </span><span class="c1">// horizontal lines</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">&lt;</span><span class="mf">11</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">line</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="o">*</span><span class="mf">50</span><span class="p">,</span><span class="w"> </span><span class="nx">width</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="o">*</span><span class="mf">50</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="c1">// Vertical lines</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">&lt;</span><span class="mf">10</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">line</span><span class="p">(</span><span class="nx">i</span><span class="o">*</span><span class="mf">50</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="o">*</span><span class="mf">50</span><span class="p">,</span><span class="w"> </span><span class="nx">drawingRegionHeight</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 
-function drawGridLines() {
-  stroke(&#39;silver&#39;);
-  strokeWeight(1);
-  // horizontal lines
-  for (let i=0; i&lt;11; i++) {
-    line(0, i*50, width, i*50);
-  }
-  // Vertical lines
-  for (let i=0; i&lt;10; i++) {
-    line(i*50, 0, i*50, drawingRegionHeight);
-  }
-}
+<span class="kd">function</span><span class="w"> </span><span class="nx">drawLabelValues</span><span class="p">(</span><span class="nx">slope</span><span class="p">,</span><span class="w"> </span><span class="nx">intercept</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;black&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">strokeWeight</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">text</span><span class="p">(</span><span class="s1">&#39;Slope: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">slope</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">drawingRegionHeight</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">20</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">text</span><span class="p">(</span><span class="s1">&#39;Intercept: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">intercept</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">drawingRegionHeight</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">40</span><span class="p">);</span>
+<span class="p">}</span>
 
-function drawLabelValues(slope, intercept) {
-  fill(&#39;black&#39;);
-  strokeWeight(0);
-  text(&#39;Slope: &#39; + slope, 10, drawingRegionHeight + 20);
-  text(&#39;Intercept: &#39; + intercept, 10, drawingRegionHeight + 40);
-}
+<span class="kd">function</span><span class="w"> </span><span class="nx">drawLine</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">slope</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">slopeSlider</span><span class="p">.</span><span class="nx">value</span><span class="p">();</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">intercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">interceptSlider</span><span class="p">.</span><span class="nx">value</span><span class="p">();</span>
 
-function drawLine() {
-  let slope = slopeSlider.value();
-  let intercept = interceptSlider.value();
-
-  // Draw line in the drawing region
-  stroke(&#39;blue&#39;);
-  strokeWeight(2);
-  line(0, drawingRegionHeight - intercept, width, drawingRegionHeight - (drawingRegionHeight * slope + intercept));
-}
-</code></pre></div></td></tr></table></div></p>
+<span class="w">  </span><span class="c1">// Draw line in the drawing region</span>
+<span class="w">  </span><span class="nx">stroke</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">strokeWeight</span><span class="p">(</span><span class="mf">2</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">line</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">drawingRegionHeight</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">intercept</span><span class="p">,</span><span class="w"> </span><span class="nx">width</span><span class="p">,</span><span class="w"> </span><span class="nx">drawingRegionHeight</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="nx">drawingRegionHeight</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">slope</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">intercept</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 
 
   

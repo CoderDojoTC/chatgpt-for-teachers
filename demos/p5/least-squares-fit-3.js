@@ -22,7 +22,7 @@ In the drawing region, positive Y is at the top.
 let width = 500;
 let height = 550;
 let drawingRegionHeight = 500;
-let labelValueWidth = 110;
+let labelValueWidth = 120;
 let slopeSlider, interceptSlider;
 // test points
 let p1 = [100, 280]
@@ -38,13 +38,13 @@ function setup() {
   // Slope slider
   text('Slope', 20, 320);
   slopeSlider = createSlider(-0.2, 5, 0.5, 0.1);
-  slopeSlider.position(labelValueWidth, height - 45);
+  slopeSlider.position(labelValueWidth, height - 35);
   slopeSlider.style('width', width -labelValueWidth - 20 + 'px');
 
   // Intercept slider
   text('Intercept', 20, 360);
   interceptSlider = createSlider(0, 300, 100, 1);
-  interceptSlider.position(labelValueWidth, height - 25);
+  interceptSlider.position(labelValueWidth, height - 15);
   interceptSlider.style('width', width -labelValueWidth - 20 + 'px');
 }
 

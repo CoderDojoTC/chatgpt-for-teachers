@@ -880,6 +880,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Alpha
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -889,6 +900,46 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-this-simulation-in-a-classroom-setting" class="md-nav__link">
+    How to use this simulation in a classroom setting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt" class="md-nav__link">
+    Prompt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-code" class="md-nav__link">
+    Sample Code
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1492,6 +1543,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-this-simulation-in-a-classroom-setting" class="md-nav__link">
+    How to use this simulation in a classroom setting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt" class="md-nav__link">
+    Prompt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-code" class="md-nav__link">
+    Sample Code
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1509,6 +1589,84 @@
 
 
 <h1 id="set-the-alpha-channel-on-a-rectangle">Set the Alpha Channel on a Rectangle</h1>
+<h2 id="how-to-use-this-simulation-in-a-classroom-setting">How to use this simulation in a classroom setting</h2>
+<p><strong>Concept Understanding:</strong> Introduce students to the concept of transparency and alpha values in digital graphics.</p>
+<p><strong>Interactive Learning:</strong> Allow students to interact with the slider and observe how the transparency of the rectangle changes in real-time.</p>
+<p><strong>Experimentation:</strong> Encourage students to predict what will happen when they adjust the slider before they do it, fostering hypothesis testing and observation skills.</p>
+<p><strong>Extension Activities:</strong></p>
+<ol>
+<li>Ask students to create multiple shapes with different transparency levels.</li>
+<li>Introduce RGB color values and let students adjust the color of the rectangle along with the transparency.</li>
+<li>To extend this simulation, you could add more sliders to control other aspects, like the rectangle's position, size, or the background color of the canvas. This would give students a more comprehensive introduction to graphical programming concepts.</li>
+</ol>
+<p>You can copy this code directly into the p5.js web editor to see it in action and share it with your students.</p>
+<h2 id="prompt">Prompt</h2>
+<div class="highlight"><pre><span></span><code>Create a single file p5.ja sketch.
+Create a demonstration of changing the transparency of a rectangle.
+Create a canvas of 300x150.
+Have a slider change the alpha value.
+Position the slider 30 up from the bottum.
+The slider should range from 0 to 255 with a default of 100.
+The slider should have a label and value to the left of it.
+The slider should span the width of the canvas less the margin for the label and value.
+Make the margin to the left of the slider be 100.
+Place the label and value to the left of the slider at the bottom.
+Reset the alpha to 255 before drawing the label and value.
+</code></pre></div>
+<p><a href="../alpha.html">Demo of Alpha Channel</a></p>
+<h2 id="sample-code">Sample Code</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">300</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">150</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">labelValueWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">100</span><span class="p">;</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">canvas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createCanvas</span><span class="p">(</span><span class="nx">width</span><span class="p">,</span><span class="w"> </span><span class="nx">height</span><span class="p">)</span>
+<span class="w">  </span><span class="nx">canvas</span><span class="p">.</span><span class="nx">parent</span><span class="p">(</span><span class="s1">&#39;canvas-container&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">textSize</span><span class="p">(</span><span class="mf">16</span><span class="p">)</span>
+
+<span class="w">  </span><span class="nx">alphaSlider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createSlider</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">256</span><span class="p">,</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">alphaSlider</span><span class="p">.</span><span class="nx">position</span><span class="p">(</span><span class="nx">labelValueWidth</span><span class="p">,</span><span class="w"> </span><span class="nx">height</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">25</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">alphaSlider</span><span class="p">.</span><span class="nx">style</span><span class="p">(</span><span class="s1">&#39;width&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">width</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">labelValueWidth</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">20</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;px&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">clear</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">background</span><span class="p">(</span><span class="mf">240</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">alphaValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">alphaSlider</span><span class="p">.</span><span class="nx">value</span><span class="p">();</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">squareColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">color</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">255</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">squareColor</span><span class="p">.</span><span class="nx">setAlpha</span><span class="p">(</span><span class="nx">alphaValue</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">fill</span><span class="p">(</span><span class="nx">squareColor</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">rect</span><span class="p">(</span><span class="mf">13</span><span class="p">,</span><span class="w"> </span><span class="mf">13</span><span class="p">,</span><span class="w"> </span><span class="nx">width</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">26</span><span class="p">,</span><span class="w"> </span><span class="nx">height</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">50</span><span class="p">);</span>
+<span class="w">  </span><span class="c1">// Reset alpha to 255 for label and value</span>
+<span class="w">  </span><span class="nx">fill</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">255</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">text</span><span class="p">(</span><span class="s1">&#39;Alpha: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">alphaValue</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">height</span><span class="o">-</span><span class="mf">10</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 
 
   

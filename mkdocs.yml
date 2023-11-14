@@ -57,6 +57,11 @@ nav:
     - advanced-topics/fine-tuning.md
     - prompts/15-micropython.md
     - prompts/20-website-analytics.md
+    - prompts/21-scatter-ploys.md
+    - prompts/22-lists.md
+    - prompts/23-dataframes.md
+    - prompts/24-numpy.md
+    - prompts/25-linear-regression.md
     - prompts/26-systems-thinking.md
     - prompts/27-regression-line.md
     - advanced-topics/data-analysis.md

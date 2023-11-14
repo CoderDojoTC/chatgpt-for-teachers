@@ -1,37 +1,9 @@
-# Least Square Fit
-
-Although the least-squares fit algorithm is simple, 
-
-## Prompt
-
-```linenums="0"
-Create a single p5.js sketch JavaScript file on a 600x400 canvas.
-DO NOT generate any python code.
-ONLY return a single p5.js file.
-The file will be an interactive demonstration of a least squares fit for home sales data.
-Generate 20 sample home sales and plot them.
-Have all the home sales be within 10% of a least-square line that shows home price increasing with square footage.
-Have the square footage range from 1,500 to 3,500 square feet.
-Have the price of homes range from $150,000 to $500,000.
-Put home price on the vertical axis.
-Put square footage on the horizontal axis.
-Draw a line that is calculated using the least-squares fit.
-Add sliders for both the slope and the intercept.
-Place the sliders under the plot.
-Label the slope and intercept and show the value using the text() function.
-```
-
-* [Link to Demo](./least-squares-fit.html)
-* [Link to Demo Version 2](./least-squares-fit-2.html)
-* [Link to Demo Version 3](./least-squares-fit-3.html) - boxes for error function
-
-```js
 /*
-Generate a single file p5.js sketch on a 300x400 canvas.
-Set a global variable "width" to be 300.
-Set a global variable "height" to be 400.
-Set a global variable "drawingRegionHeight" to be 400.
+Generate a single file p5.js sketch on a 500x550 canvas.
 The purpose of this sketch is to demonstrate the concepts of slope and intercept.
+Set a global variable "width" to be 500.
+Set a global variable "height" to be 550.
+Set a global variable "drawingRegionHeight" to be 500.
 Divide the canvas into two regions on top of each other.
 The top region is called the "drawing" region.
 The drawing region is 300x300 and has a light gray background of 240.
@@ -43,7 +15,7 @@ The width of the sliders are both 180px.
 The slope slider ranges from -2 to 3 with the default of .5.
 The intercept slider ranges from -100 to 100.
 Draw the slope and the intercept only in the top drawing region.
-The top drawing region uses a cartesian coordinate system with the center at 150, 150.
+The top drawing region uses a cartesian coordinate system with the center at width/2, height/2.
 In the drawing region, positive Y is at the top.
 */
 
@@ -60,6 +32,7 @@ let p4 = [400, 210]
 
 function setup() {
   const canvas = createCanvas(width, height);
+  canvas.parent('canvas-container');
   textSize(16);
 
   // Slope slider
@@ -92,8 +65,9 @@ function draw() {
   drawGridLines();
   drawLine(slope, intercept);
   drawLabelValues(slope, intercept);
+  
+  drawSquares(slope, intercept);
   drawPoints();
-  drawLinesToPoints(slope, intercept);
 }
 
 function drawPoints() {
@@ -105,16 +79,55 @@ function drawPoints() {
   circle(p4[0], p4[1], 10);
 }
 
-function drawLinesToPoints(slope, intercept) {
-  stroke('orange');
-  strokeWeight(5);
+function drawSquares(slope, intercept) {
   
-  line(p1[0], p1[1], p1[0], drawingRegionHeight - (slope * p1[0] + intercept));
-  line(p2[0], p2[1], p2[0], drawingRegionHeight - (slope * p2[0] + intercept));
-  line(p3[0], p3[1], p3[0], drawingRegionHeight - (slope * p3[0] + intercept));
-  line(p4[0], p4[1], p4[0], drawingRegionHeight - (slope * p4[0] + intercept));
+  strokeWeight(0);
   
-  fill('green');
+  // predicted y point on line
+  p = drawingRegionHeight - (slope * p1[0] + intercept)
+  // absolute distance between the points
+  d = dist(p1[0], p1[1], p1[0], p)
+  // if prediction is above
+  if (p > p1[1]) {
+     fill('red');
+     rect(p1[0], p1[1], d, d) }
+  else {
+    fill('orange');
+    rect(p1[0], p, d, d)
+  }
+  
+  p = drawingRegionHeight - (slope * p2[0] + intercept)
+  d = dist(p2[0], p2[1], p2[0], p)
+  if (p > p2[1]) {
+     fill('yellow');
+     rect(p2[0], p2[1], d, d) }
+  else {
+    fill('pink');
+    rect(p2[0], p, d, d)
+  }
+  
+  p = drawingRegionHeight - (slope * p3[0] + intercept)
+  d = dist(p3[0], p3[1], p3[0], p)
+  if (p > p3[1]) {
+     fill('cyan');
+     rect(p3[0], p3[1], d, d) }
+  else {
+    fill('blue');
+    rect(p3[0], p, d, d)
+  }
+  
+  p = drawingRegionHeight - (slope * p4[0] + intercept)
+  d = dist(p4[0], p4[1], p4[0], p)
+  if (p > p4[1]) {
+     fill('lightgreen');
+     rect(p4[0], p4[1], d, d) }
+  else {
+    fill('olive');
+    rect(p4[0], p, d, d)
+  }
+  
+ 
+  fill('purple');
   noStroke();
   circle(p1[0], drawingRegionHeight - (slope * p1[0] + intercept), 10);
   circle(p2[0], drawingRegionHeight - (slope * p2[0] + intercept), 10);
@@ -124,13 +137,14 @@ function drawLinesToPoints(slope, intercept) {
 
 function drawGridLines() {
   stroke('silver');
-  strokeWeight(1);
   // horizontal lines
   for (let i=0; i<11; i++) {
+    if (i%2) strokeWeight(1); else strokeWeight(2);
     line(0, i*50, width, i*50);
   }
   // Vertical lines
   for (let i=0; i<10; i++) {
+    if (i%2) strokeWeight(1); else strokeWeight(2);
     line(i*50, 0, i*50, drawingRegionHeight);
   }
 }
@@ -151,4 +165,3 @@ function drawLine() {
   strokeWeight(2);
   line(0, drawingRegionHeight - intercept, width, drawingRegionHeight - (drawingRegionHeight * slope + intercept));
 }
-```

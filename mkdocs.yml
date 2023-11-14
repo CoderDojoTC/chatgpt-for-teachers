@@ -85,6 +85,7 @@ nav:
       - Brownian Motion: demos/p5/brownian-motion.md
       - Least Squares Fit: demos/p5/least-squares-fit.md
       - Electrical Switch: demos/p5/switch.md
+      - Simple Circuit: demos/p5/circuits.md
       - Wire Animation: demos/p5/wire-animate.md
       - Battery Circuit: demos/p5/battery-circuit.md
       - H-Bridge Circuit: demos/p5/h-bridge.md

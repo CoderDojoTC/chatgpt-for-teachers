@@ -81,6 +81,7 @@ nav:
       - Rainbow Tree: demos/p5/rainbow-tree.md
       - Conway's Game of Life: demos/p5/conways-life.md
       - Brownian Motion: demos/p5/brownian-motion.md
+      - Least Squares Fit: demos/p5/least-squares-fit.md
       - Electrical Switch: demos/p5/switch.md
       - Wire Animation: demos/p5/wire-animate.md
       - Battery Circuit: demos/p5/battery-circuit.md
@@ -91,6 +92,7 @@ nav:
       - The Office DVD Logo: demos/p5/the-office-dvd-logo.md
       - 7-Segment Display: demos/p5/7-segment-display.md
       - Analog Clock Face: demos/p5/analog-clock-face.md
+      - Neural Network: demos/p5/neural-network.md
   - The Future of AI:
     - Introduction: future/index.md
     - Today: future/ai-today.md

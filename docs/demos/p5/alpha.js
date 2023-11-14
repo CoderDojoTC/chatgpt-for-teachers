@@ -20,8 +20,7 @@ function draw() {
   squareColor.setAlpha(alphaValue);
   fill(squareColor);
   rect(13, 13, width - 26, height - 50);
-  const textColor = color(0);
-  textColor.setAlpha(255);
-  fill(textColor);
+  // Reset alpha to 255 for label and value
+  fill(0, 255);
   text('Alpha: ' + alphaValue, 10, height-10)
 }

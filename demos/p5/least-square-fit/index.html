@@ -1563,7 +1563,7 @@
 <h1 id="least-square-fit">Least Square Fit</h1>
 <p>Although the least-squares fit algorithm is simple, </p>
 <h2 id="prompt">Prompt</h2>
-<p><code>linenums="0"_
+<p>```linenums="0"_
 Create a single p5.js sketch JavaScript file on a 600x400 canvas.
 DO NOT generate any python code.
 ONLY return a single p5.js file.
@@ -1577,8 +1577,263 @@ Put square footage on the horizontal axis.
 Draw a line that is calculated using the least-squares fit.
 Add sliders for both the slope and the intercept.
 Place the sliders under the plot.
-Label the slope and intercept and show the value using the text() function.</code></p>
-<p><a href="../least-squares-fit.html"></a></p>
+Label the slope and intercept and show the value using the text() function.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span></pre></div></td><td class="code"><div><pre><span></span><code>[Link to Demo](./least-squares-fit.html)
+
+```js
+/*
+Generate a single file p5.js sketch on a 300x400 canvas.
+Set a global variable &quot;width&quot; to be 300.
+Set a global variable &quot;height&quot; to be 400.
+Set a global variable &quot;drawingRegionHeight&quot; to be 400.
+The purpose of this sketch is to demonstrate the concepts of slope and intercept.
+Divide the canvas into two regions on top of each other.
+The top region is called the &quot;drawing&quot; region.
+The drawing region is 300x300 and has a light gray background of 240.
+The bottom region is the &quot;controls&quot; region.
+The controls region holds the controls and is 300x100.
+The background for the controls is white of 255.
+The controls holds two sliders with labels and values on the left.
+The width of the sliders are both 180px.
+The slope slider ranges from -2 to 3 with the default of .5.
+The intercept slider ranges from -100 to 100.
+Draw the slope and the intercept only in the top drawing region.
+The top drawing region uses a cartesian coordinate system with the center at 150, 150.
+In the drawing region, positive Y is at the top.
+*/
+
+let width = 500;
+let height = 550;
+let drawingRegionHeight = 500;
+let labelValueWidth = 110;
+let slopeSlider, interceptSlider;
+// test points
+let p1 = [100, 280]
+let p2 = [200, 320]
+let p3 = [300, 200]
+let p4 = [400, 210]
+
+function setup() {
+  const canvas = createCanvas(width, height);
+  textSize(16);
+
+  // Slope slider
+  text(&#39;Slope&#39;, 20, 320);
+  slopeSlider = createSlider(-0.2, 5, 0.5, 0.1);
+  slopeSlider.position(labelValueWidth, height - 45);
+  slopeSlider.style(&#39;width&#39;, width -labelValueWidth - 20 + &#39;px&#39;);
+
+  // Intercept slider
+  text(&#39;Intercept&#39;, 20, 360);
+  interceptSlider = createSlider(0, 300, 100, 1);
+  interceptSlider.position(labelValueWidth, height - 25);
+  interceptSlider.style(&#39;width&#39;, width -labelValueWidth - 20 + &#39;px&#39;);
+}
+
+function draw() {
+  // Redraw drawing region
+  noStroke();
+
+  // Drawing region
+  fill(230);
+  rect(0, 0, width, drawingRegionHeight);
+
+  // Controls region
+  fill(245);
+  rect(0, drawingRegionHeight, width, 100);
+
+  let slope = slopeSlider.value();
+  let intercept = interceptSlider.value();
+  drawGridLines();
+  drawLine(slope, intercept);
+  drawLabelValues(slope, intercept);
+  drawPoints();
+  drawLinesToPoints(slope, intercept);
+}
+
+function drawPoints() {
+  fill(&#39;green&#39;);
+  noStroke();
+  circle(p1[0], p1[1], 10);
+  circle(p2[0], p2[1], 10);
+  circle(p3[0], p3[1], 10);
+  circle(p4[0], p4[1], 10);
+}
+
+function drawLinesToPoints(slope, intercept) {
+  stroke(&#39;orange&#39;);
+  strokeWeight(5);
+
+  line(p1[0], p1[1], p1[0], drawingRegionHeight - (slope * p1[0] + intercept));
+  line(p2[0], p2[1], p2[0], drawingRegionHeight - (slope * p2[0] + intercept));
+  line(p3[0], p3[1], p3[0], drawingRegionHeight - (slope * p3[0] + intercept));
+  line(p4[0], p4[1], p4[0], drawingRegionHeight - (slope * p4[0] + intercept));
+
+  fill(&#39;green&#39;);
+  noStroke();
+  circle(p1[0], drawingRegionHeight - (slope * p1[0] + intercept), 10);
+  circle(p2[0], drawingRegionHeight - (slope * p2[0] + intercept), 10);
+  circle(p3[0], drawingRegionHeight - (slope * p3[0] + intercept), 10);
+  circle(p4[0], drawingRegionHeight - (slope * p4[0] + intercept), 10);
+}
+
+function drawGridLines() {
+  stroke(&#39;silver&#39;);
+  strokeWeight(1);
+  // horizontal lines
+  for (let i=0; i&lt;11; i++) {
+    line(0, i*50, width, i*50);
+  }
+  // Vertical lines
+  for (let i=0; i&lt;10; i++) {
+    line(i*50, 0, i*50, drawingRegionHeight);
+  }
+}
+
+function drawLabelValues(slope, intercept) {
+  fill(&#39;black&#39;);
+  strokeWeight(0);
+  text(&#39;Slope: &#39; + slope, 10, drawingRegionHeight + 20);
+  text(&#39;Intercept: &#39; + intercept, 10, drawingRegionHeight + 40);
+}
+
+function drawLine() {
+  let slope = slopeSlider.value();
+  let intercept = interceptSlider.value();
+
+  // Draw line in the drawing region
+  stroke(&#39;blue&#39;);
+  strokeWeight(2);
+  line(0, drawingRegionHeight - intercept, width, drawingRegionHeight - (drawingRegionHeight * slope + intercept));
+}
+</code></pre></div></td></tr></table></div></p>
 
 
   

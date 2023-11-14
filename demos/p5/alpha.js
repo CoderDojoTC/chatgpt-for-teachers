@@ -8,7 +8,7 @@ function setup() {
   textSize(16)
   
   alphaSlider = createSlider(0, 256, 100, 1);
-  alphaSlider.position(labelValueWidth, height - 25);
+  alphaSlider.position(labelValueWidth, height - 15);
   alphaSlider.style('width', width - labelValueWidth - 20 + 'px');
 }
 

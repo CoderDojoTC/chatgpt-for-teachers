@@ -36,7 +36,7 @@ nav:
     - Designing Robots: prompts/18-designing-robots.md
     - Comparing Microcontrollers: prompts/19-comparing-microcontrollers.md
     - Charts and Plotting: prompts/13-charts.md
-    - List: prompts/22.lists.md
+    - List: prompts/22-lists.md
     - Tables: prompts/14-tables.md
     - Scatter Plots: prompts/21-scatter-plots.md
     - Dataframes: prompts/23-dataframes.md
@@ -58,9 +58,6 @@ nav:
     - prompts/15-micropython.md
     - prompts/20-website-analytics.md
     - prompts/21-scatter-plots.md
-    - prompts/22-lists.md
-
-
     - prompts/26-systems-thinking.md
     - prompts/27-regression-line.md
     - advanced-topics/data-analysis.md

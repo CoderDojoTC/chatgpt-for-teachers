@@ -26,7 +26,9 @@ function setup() {
 function draw() {
   fill(240);
   noStroke();
-  rect(0, 0, width, drHeight+1);
+  rect(0, 0, width, drHeight+1); // fill drawing area with light gray
+  fill('white');
+  rect(0, drHeight, width, drHeight-height); // fill drawing area with light gray
   textSize(16);
   
   speed = speedSlider.value()

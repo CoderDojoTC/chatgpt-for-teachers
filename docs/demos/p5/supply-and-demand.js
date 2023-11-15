@@ -11,7 +11,7 @@ let labelValueMargin = 140
 
 function setup() {
   const canvas = createCanvas(width, height);
-  // canvas.parent('canvas-container');
+  canvas.parent('canvas-container');
   textSize(16);
   
   // Create a slider element for price adjustment

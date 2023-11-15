@@ -12,7 +12,7 @@ The slider should have a label "Speed: " and the speed value to the left of the 
 The slider should span the width of the canvas after the label and value.
 ```
 
-[Link to Demo](./bouncing-ball.js)
+[Link to Demo](./bouncing-ball.html)
 
 ## Sample Code
 

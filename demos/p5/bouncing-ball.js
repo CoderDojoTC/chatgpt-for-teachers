@@ -12,13 +12,13 @@ speed = 3; // default speed
 // direction of motion
 dx = speed;
 dy = speed;
-sliderLeftMargin = 83;
+sliderLeftMargin = 90;
 
 function setup() {
   const canvas = createCanvas(width, height);
   canvas.parent('canvas-container');
   speedSlider = createSlider(0, 20, speed);
-  speedSlider.position(sliderLeftMargin, height - 25);
+  speedSlider.position(sliderLeftMargin, height - 15);
   speedSlider.style('width', width - sliderLeftMargin - 15 + 'px');
 }
 

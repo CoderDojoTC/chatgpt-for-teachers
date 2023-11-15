@@ -1,8 +1,9 @@
 // bouncing ball - version 2
-// designed for touch sensitive whiteboard in a classroom
+// with radius added to edge check and drawing region above controls
 
 let width = 500;
-let height = 300;
+let height = 350;
+let drHeight = 320; // region for drawing
 r = 20; // radius of the ball
 
 // initial position
@@ -23,7 +24,9 @@ function setup() {
 }
 
 function draw() {
-  background(240);
+  fill(240);
+  noStroke();
+  rect(0, 0, width, drHeight+1);
   textSize(16);
   
   speed = speedSlider.value()
@@ -41,12 +44,13 @@ function draw() {
   if ((x > width-r) || (x < r)) {
     dx = dx * -1;
   }
-  if ((y > height - r) || (y < r)) {
+  if ((y > drHeight - r) || (y < r)) {
     dy = dy * -1;
   }
 
   fill('blue');
   circle(x, y, r*2);
   fill('black');
+  strokeWeight(0);
   text('Speed: ' + speed, 10, height-10)
 }

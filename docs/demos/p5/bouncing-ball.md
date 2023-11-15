@@ -13,7 +13,7 @@ The slider should span the width of the canvas after the label and value.
 ```
 
 [Link to Version 1 Demo](./bouncing-ball.html) - the simplest code
-[Link to Version 2 Demo](./bouncing-ball.html) - with fix for radius
+[Link to Version 2 Demo](./bouncing-ball-v2.html) - with fix for radius
 
 
 ## Sample Code
@@ -23,7 +23,8 @@ The slider should span the width of the canvas after the label and value.
 // designed for use using touch sensitive whiteboard in a classroom
 
 let width = 500;
-let height = 300;
+let height = 350;
+let drHieght = 320; // region for drawing
 r = 20; // radius of the ball
 
 // initial position
@@ -61,7 +62,7 @@ function draw() {
   if ((x > width) || (x < 0)) {
     dx = dx * -1;
   }
-  if ((y > height) || (y < 0)) {
+  if ((y > drHieght) || (y < 0)) {
     dy = dy * -1;
   }
 

@@ -1,79 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <style>
-    body {
-      font-family: ;
-    }
-    .slider {
-      width: 90%;
-      margin: 10px auto;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Supply and Demand</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    <!-- Put your script file name here -->
+    <script src="./supply-and-demand.js"></script>
 </head>
 <body>
-
-<h2>Supply and Demand</h2>
-
-<div class="slider">
-  <span>Price:</span><span id="price"></span>
-  <input type="range" min="0" max="350" value="200" class="slider" id="priceRange" style="width:380px">
-</div>
-<svg id="chart" width="600" height="400"></svg>
-<script>
-let svg = document.getElementById('chart');
-let priceRange = document.getElementById('priceRange');
-let priceSpan = document.getElementById('price');
-
-let axisSize = 50;
-let chartWidth = svg.getAttribute('width') - axisSize;
-let chartHeight = svg.getAttribute('height') - axisSize;
-
-function draw() {
-  let price = priceRange.value;
-  priceSpan.innerText = price;
-  
-  svg.innerHTML = '';
-
-  // Draw x and y axis
-  let line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-  line.setAttribute('x1', axisSize);
-  line.setAttribute('y1', 0);
-  line.setAttribute('x2', axisSize);
-  line.setAttribute('y2', chartHeight);
-  line.setAttribute('stroke', 'black');
-  svg.appendChild(line);
-
-  line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-  line.setAttribute('x1', axisSize);
-  line.setAttribute('y1', chartHeight);
-  line.setAttribute('x2', chartWidth);
-  line.setAttribute('y2', chartHeight);
-  line.setAttribute('stroke', 'black');
-  svg.appendChild(line);
-
-  // Draw demand line (downwards sloping)
-  line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-  line.setAttribute('x1', axisSize);
-  line.setAttribute('y1', chartHeight - price);
-  line.setAttribute('x2', chartWidth);
-  line.setAttribute('y2', chartHeight);
-  line.setAttribute('stroke', 'red');
-  svg.appendChild(line);
-
-  // Draw supply line (upwards sloping)
-  line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-  line.setAttribute('x1', axisSize);
-  line.setAttribute('y1', chartHeight);
-  line.setAttribute('x2', chartWidth);
-  line.setAttribute('y2', chartHeight - price);
-  line.setAttribute('stroke', 'blue');
-  svg.appendChild(line);
-}
-
-priceRange.addEventListener('input', draw);
-draw();
-</script>
-
+    <!-- Put the following lines in your setup() function
+    const canvas = createCanvas(400, 400);
+    canvas.parent('canvas-container');
+    -->
+    <div id="canvas-container"></div>
 </body>
 </html>

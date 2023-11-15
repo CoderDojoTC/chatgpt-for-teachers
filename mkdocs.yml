@@ -84,6 +84,7 @@ nav:
       - Conway's Game of Life: demos/p5/conways-life.md
       - Brownian Motion: demos/p5/brownian-motion.md
       - Least Squares Fit: demos/p5/least-squares-fit.md
+      - Supply and Demand: demos/p5/supply-and-demand.md
       - Electrical Switch: demos/p5/switch.md
       - Simple Circuit: demos/p5/circuits.md
       - Wire Animation: demos/p5/wire-animate.md

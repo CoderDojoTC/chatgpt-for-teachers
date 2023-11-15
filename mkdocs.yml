@@ -71,6 +71,7 @@ nav:
       - Introduction: demos/p5/index.md
       - Sketch Structure: demos/p5/sketch-structure.md
       - Prompt Templates: demos/p5/prompt-templates.md
+      - Bouncing Ball: demos/p5/bouncing-ball.md
       - Circle Slider: demos/p5/circle-slider.md
       - Dual Sliders: demos/p5/sliders.md
       - Polygon: demos/p5/polygon.md

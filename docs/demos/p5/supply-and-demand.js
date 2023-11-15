@@ -16,7 +16,7 @@ function setup() {
   
   // Create a slider element for price adjustment
   priceSlider = createSlider(0, maxPrice, price);
-  priceSlider.position(labelValueMargin, height - 15);
+  priceSlider.position(labelValueMargin, height - 10);
   priceSlider.style('width', width - labelValueMargin - 20 + 'px');
   
   // Define the demand curve as a function

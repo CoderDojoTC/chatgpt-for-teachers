@@ -72,7 +72,7 @@ function draw() {
   textSize(16);
   text("Price and Demand Curve", 120, 30);
   text(`Input Price: ${price}`, 10, height - 30);
-  text(`Output Quantity: ${quantity}`, 10, height - 10);
+  text(`Quantity Sold: ${quantity}`, 10, height - 10);
   textSize(12);
   
   // instructions

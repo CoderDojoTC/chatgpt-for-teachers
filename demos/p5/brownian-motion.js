@@ -2,11 +2,16 @@ let molecules = [];
 let sliderTemp, sliderMol;
 
 function setup() {
-    createCanvas(800, 400);
+    const canvas = createCanvas(800, 400);
+    canvas.parent('canvas-container');
+    textSize(16);
+
     sliderTemp = createSlider(1, 10, 5);
     sliderTemp.style('width', '340px');
+
     sliderMol = createSlider(1, 100, 50);
     sliderMol.style('width', '340px');
+    
     for (let i = 0; i < sliderMol.value(); i++) {
         molecules[i] = new Molecule();
     }

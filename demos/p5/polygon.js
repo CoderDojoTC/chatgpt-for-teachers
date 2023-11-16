@@ -6,6 +6,7 @@ let pointSlider;
 function setup() { 
     const canvas = createCanvas(canvasSize, canvasSize);
     canvas.parent('canvas-container');
+    textSize(16);
     colorMode(HSB, 255);
 
     // number of points (or edges) in polygon

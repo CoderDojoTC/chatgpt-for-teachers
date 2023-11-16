@@ -18,6 +18,7 @@ sliderLeftMargin = 90;
 function setup() {
   const canvas = createCanvas(width, height);
   canvas.parent('canvas-container');
+  textSize(16);
   speedSlider = createSlider(0, 20, speed);
   speedSlider.position(sliderLeftMargin, height - 15);
   speedSlider.style('width', width - sliderLeftMargin - 15 + 'px');
@@ -28,8 +29,7 @@ function draw() {
   noStroke();
   rect(0, 0, width, drHeight+1); // fill drawing area with light gray
   fill('white');
-  rect(0, drHeight, width, drHeight-height); // fill drawing area with light gray
-  textSize(16);
+  rect(0, drHeight, width, height-drHeight); // fill control with white
   
   // get the new speed from the UI
   speed = speedSlider.value();

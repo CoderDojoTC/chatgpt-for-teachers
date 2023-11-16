@@ -823,8 +823,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#stem-1-generate-a-file" class="md-nav__link">
-    Stem 1: Generate a File
+  <a href="#stem-1-generate-a-single-file" class="md-nav__link">
+    Stem 1: Generate a Single File
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-add-controls-and-buttons" class="md-nav__link">
+    Step 2: Add Controls and Buttons
   </a>
   
 </li>
@@ -1623,8 +1630,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#stem-1-generate-a-file" class="md-nav__link">
-    Stem 1: Generate a File
+  <a href="#stem-1-generate-a-single-file" class="md-nav__link">
+    Stem 1: Generate a Single File
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-add-controls-and-buttons" class="md-nav__link">
+    Step 2: Add Controls and Buttons
   </a>
   
 </li>
@@ -1669,13 +1683,11 @@
 
 
 <h1 id="prompt-templates">Prompt Templates</h1>
-<h2 id="stem-1-generate-a-file">Stem 1: Generate a File</h2>
-<div class="highlight"><pre><span></span><code>Generate a single p5.js sketch file that draws on a 400x400 canvas.
-
-## Step 2: Add Controls and Buttons
-
-```linenums=&quot;0&quot;
-Add range control sliders at the bottom of the canvas for changing the X and Y.
+<h2 id="stem-1-generate-a-single-file">Stem 1: Generate a Single File</h2>
+<div class="highlight"><pre><span></span><code>Generate a single p5.js sketch file on a 400x300 canvas.
+</code></pre></div>
+<h2 id="step-2-add-controls-and-buttons">Step 2: Add Controls and Buttons</h2>
+<div class="highlight"><pre><span></span><code>Add range control sliders at the bottom of the canvas for changing the X and Y.
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>Add range control sliders at the bottom of the canvas for changing the X and Y.
 Include the label and values for the sliders.
@@ -1694,15 +1706,26 @@ Have the sliders begin at x=100 and span the rest of the width of the canvas.
   // canvas.parent(&#39;canvas-container&#39;);
 </code></pre></div>
 <h2 id="example">Example</h2>
-<p>```linenums="0"
-Generate a p5.js sketch file that teaches trigonometry concepts on a 400x400 canvas.</p>
-<p>Allow the user to change two values using range control sliders placed at the bottom of the canvas.</p>
-<p>The canvas contains a plot of a sine wave from -2 PI to 2 PI.</p>
-<p>The first slider should control the amplitude of a sine curve ranging from .1 to 2 in .1 steps and the default amplitude of 1.0</p>
-<p>The second slider should control the frequency of the sine wave.</p>
-<p>The third slider should control the phase of the sine wave.</p>
-<p>At the end of the draw() function use the text() function to draw the labels and values of the sliders.</p>
-<p>Make the sliders span the width of the canvas minus the label and values.</p>
+<div class="highlight"><pre><span></span><code>Generate a p5.js sketch file that teaches trigonometry concepts on a 400x400 canvas.
+
+Allow the user to change two values using range control sliders placed at
+the bottom of the canvas.
+
+The canvas contains a plot of a sine wave from -2 PI to 2 PI.
+
+The first slider should control the amplitude of a sine curve ranging
+from .1 to 2 in .1 steps and the default amplitude of 1.0
+
+The second slider should control the frequency of the sine wave.
+
+The third slider should control the phase of the sine wave.
+
+At the end of the draw() function use the text() function to draw the
+labels and values of the sliders.
+
+Make the sliders span the width of the canvas minus the width of
+the label and values.
+</code></pre></div>
 
 
   

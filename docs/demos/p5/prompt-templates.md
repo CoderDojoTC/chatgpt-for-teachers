@@ -1,9 +1,10 @@
 # Prompt Templates
 
-## Stem 1: Generate a File
+## Stem 1: Generate a Single File
 
 ```linenums="0"
-Generate a single p5.js sketch file that draws on a 400x400 canvas.
+Generate a single p5.js sketch file on a 400x300 canvas.
+```
 
 ## Step 2: Add Controls and Buttons
 
@@ -41,16 +42,21 @@ Add the following at the start of the draw function:
 ```linenums="0"
 Generate a p5.js sketch file that teaches trigonometry concepts on a 400x400 canvas.
 
-Allow the user to change two values using range control sliders placed at the bottom of the canvas.
+Allow the user to change two values using range control sliders placed at
+the bottom of the canvas.
 
 The canvas contains a plot of a sine wave from -2 PI to 2 PI.
 
-The first slider should control the amplitude of a sine curve ranging from .1 to 2 in .1 steps and the default amplitude of 1.0
+The first slider should control the amplitude of a sine curve ranging
+from .1 to 2 in .1 steps and the default amplitude of 1.0
 
 The second slider should control the frequency of the sine wave.
 
 The third slider should control the phase of the sine wave.
 
-At the end of the draw() function use the text() function to draw the labels and values of the sliders.
+At the end of the draw() function use the text() function to draw the
+labels and values of the sliders.
 
-Make the sliders span the width of the canvas minus the label and values.
+Make the sliders span the width of the canvas minus the width of
+the label and values.
+```

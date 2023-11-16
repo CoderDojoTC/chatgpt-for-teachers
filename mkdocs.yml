@@ -100,6 +100,9 @@ nav:
       - Neural Network: demos/p5/neural-network.md
       - Reference Frames: demos/p5/reference-frames.md
       - Slope and Intercept: demos/p5/slope-and-intercept.md
+    - Matter:
+      - Introduction: demos/matter/index.md
+      - Bouncing Ball: demos/matter/bouncing-ball.md
   - The Future of AI:
     - Introduction: future/index.md
     - Today: future/ai-today.md

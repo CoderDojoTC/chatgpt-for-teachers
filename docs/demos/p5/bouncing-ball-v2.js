@@ -31,7 +31,10 @@ function draw() {
   rect(0, drHeight, width, drHeight-height); // fill drawing area with light gray
   textSize(16);
   
-  speed = speedSlider.value()
+  // get the new speed from the UI
+  speed = speedSlider.value();
+
+  // adjust the x and y directions
   if (dx > 0) dx = speed;
      else dx = -speed;
   
@@ -42,9 +45,9 @@ function draw() {
   x += dx;
   y += dy;
 
-  // checks for edges
+  // checks for edges right or left
   if ((x > width-r) || (x < r)) {
-    dx = dx * -1;
+    dx = dx * -1; // change direction
   }
   if ((y > drHeight - r) || (y < r)) {
     dy = dy * -1;

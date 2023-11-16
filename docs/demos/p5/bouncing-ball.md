@@ -1,8 +1,21 @@
 # Bouncing Ball
 
+![](../../img/bouncing-ball.png)
+
+The bouncing ball is the "Hello World!" of the Processing system.
+It contains the key element that shows the power of Processing:
+graphics with movement.  In the area of MicroSims, we also
+want clearly visible user interface elements that can control
+the running of our simulations.  This version contains a 
+slider to control the speed of the ball's movement.
+
 ## Prompt
 
+Here is a precise prompt to get you started.
+
 ```linenums="0"
+Generate a single p5.js sketch on a 500x300 canvas.
+The sketch shows a ball boucing around a rectagular area.
 The canvas should be 500 wide and 300 high.
 The default text size is 16.
 The ball is blue and has a radius of 20.
@@ -10,7 +23,13 @@ There is a slider that changes the speed from 0 to 20 with a default speed of 3.
 The slider should be placed at the bottom of the canvas.
 The slider should have a label "Speed: " and the speed value to the left of the slider.
 The slider should span the width of the canvas after the label and value.
+DD NOT use objects - just functions.
 ```
+
+Copy the prompt into ChatGPT.  It will generate a JavaScript file you can copy and paste or download
+into the p5.js editor to test.
+
+Here are two examples:
 
 * [Link to Version 1 Demo](./bouncing-ball.html) - the simplest code [source](./bouncing-ball.js)
 * [Link to Version 2 Demo](./bouncing-ball-v2.html) - with fixes for radius and display area [source](./bouncing-ball-v2.js)
